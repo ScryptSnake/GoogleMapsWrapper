@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper.Containers
 {
     public interface IContainer
     {
         public object? AssociatedData { get; }
-
-        public object? 
 
     }
 }

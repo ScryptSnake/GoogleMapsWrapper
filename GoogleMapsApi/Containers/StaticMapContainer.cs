@@ -12,7 +12,7 @@ using System.Xml;
 using GoogleMapsWrapper.StaticMaps;
 
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper.Containers
 {
     public record StaticMapContainer(
        byte[] image,

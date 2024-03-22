@@ -20,4 +20,8 @@
     <Using Include="GoogleMapsApi.StaticMaps" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Responses\" />
+  </ItemGroup>
+
 </Project>

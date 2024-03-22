@@ -31,8 +31,8 @@ namespace GoogleMapsWrapper.Elements
 
             //defaults:
             Color = "red";
-            Scale = MarkerScaleTypes.normal;
-            Size = MarkerSizes.mid;
+            Scale = MarkerScaleTypes.Normal;
+            Size = MarkerSizes.Mid;
         }
     }
 
