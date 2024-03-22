@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleMapsWrapper", "GoogleMapsApi\GoogleMapsWrapper.csproj", "{7C1D14F3-77A5-44F6-B525-825738634719}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SnakeDB.Old", "..\SnakeDB_Solution\SnakeDB.Old\SnakeDB.Old.vbproj", "{6AFC8464-4A82-4163-A225-AE0F88B881BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C1D14F3-77A5-44F6-B525-825738634719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1D14F3-77A5-44F6-B525-825738634719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1D14F3-77A5-44F6-B525-825738634719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1D14F3-77A5-44F6-B525-825738634719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AFC8464-4A82-4163-A225-AE0F88B881BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFC8464-4A82-4163-A225-AE0F88B881BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFC8464-4A82-4163-A225-AE0F88B881BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFC8464-4A82-4163-A225-AE0F88B881BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B8255B6-6400-4A22-925C-F07BA41A1E6F}
+	EndGlobalSection
+EndGlobal
