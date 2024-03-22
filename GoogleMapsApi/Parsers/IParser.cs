@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper.Parsers
 {
-    public interface IParser
+    public interface IParser<TOutput>
     {
-
-
+        public TOutput Parse(object input);
 
     }
 }

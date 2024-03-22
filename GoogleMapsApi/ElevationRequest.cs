@@ -1,4 +1,5 @@
-﻿using GoogleMapsWrapper.Types;
+﻿using GoogleMapsWrapper.Containers;
+using GoogleMapsWrapper.Types;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

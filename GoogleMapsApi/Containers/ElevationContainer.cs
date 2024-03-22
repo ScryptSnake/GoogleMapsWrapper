@@ -11,7 +11,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper.Containers
 {
     public record ElevationContainer(
         [JsonProperty("elevation")]

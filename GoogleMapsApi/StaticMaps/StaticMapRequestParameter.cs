@@ -12,8 +12,8 @@ using GoogleMapsWrapper.Types;
 namespace GoogleMapsWrapper.StaticMaps
 {
     public record StaticMapRequestParameter(
-               MapTypes MapType = MapTypes.hybrid,
-               MapScaleTypes MapScaleType = MapScaleTypes.highres,
+               MapTypes MapType = MapTypes.Hybrid,
+               MapScaleTypes MapScaleType = MapScaleTypes.HighRes,
                int MapWidth = 640,
                int MapHeight = 640,
                int MapZoom = 0,

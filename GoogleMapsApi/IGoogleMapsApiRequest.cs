@@ -4,20 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
-
+using System.Dynamic;
+using GoogleMapsWrapper.Containers;
+using GoogleMapsWrapper.Parsers;
 namespace GoogleMapsWrapper
 {
+
+
 
 
     public interface IResponse<TResponse> //TResponse: the type of content returned 
     {
         public IRequest SentRequest { get; }
         public HttpResponseMessage ResponseMessage { get; }
-        public HttpContent Content { get; }
-        public TResponse Value { get; }
+        public TResponse Content { get; }
 
-        //public IContainer Parse(IParser)
+        public T Parse<T>(IParser<T> parser);
     }
+
+
 
 
     public class JsonResponse : IResponse<JsonDocument>
@@ -28,51 +33,61 @@ namespace GoogleMapsWrapper
         private HttpResponseMessage responseMessage;
         public HttpResponseMessage ResponseMessage => responseMessage;
 
-        private HttpContent content;
-        public HttpContent Content => Content;
+        private JsonDocument content;
+        public JsonDocument Content { get; }
 
 
-        private JsonDocument value;
-        public JsonDocument Value { get =>  throw new NotImplementedException(); }
-
-
-
-        public JsonResponse(HttpContent Content, IRequest SentRequest, HttpResponseMessage ResponseMessage)
+        public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
         {
             this.content = Content;
             this.sentRequest = SentRequest;
             this.responseMessage = ResponseMessage;
 
-            Task<string> task = Task.Run(async () =>
-            {
-                return await Content.ReadAsStringAsync();
-            });
-
-            var result = task.GetAwaiter().GetResult();
-            this.value = JsonDocument.Parse(result);
         }
-
 
         public T Parse<T>(IParser<T> parser)
         {
             throw new NotImplementedException();
         }
-
-
-
     }
 
 
 
-    public interface IParser<TResult>
+
+
+
+
+    public class ByteResponse : IResponse<byte[]>
     {
+        private IRequest sentRequest;
+        public IRequest SentRequest => throw new NotImplementedException();
 
-        TResult Parse();
+        private HttpResponseMessage responseMessage;
+        public HttpResponseMessage ResponseMessage => responseMessage;
+
+        private byte[] content;
+        public byte[] Content { get; }
 
 
+        public ByteResponse(IRequest SentRequest, byte[] Content, HttpResponseMessage ResponseMessage)
+        {
+            this.content = Content;
+            this.sentRequest = SentRequest;
+            this.responseMessage = ResponseMessage;
 
+        }
 
+        public T Parse<T>(IParser<T> parser)
+        {
+            parser.Parse()
+        }
     }
+
+
+
+
+
+
 
     public class ElevationParser : IParser<ElevationContainer>
     {
@@ -82,5 +97,7 @@ namespace GoogleMapsWrapper
         }
     }
 
-    //public class ElevationParser: IParser<ElevationContainer, JsonDocument>
-}
+
+
+        //public class ElevationParser: IParser<ElevationContainer, JsonDocument>
+    }

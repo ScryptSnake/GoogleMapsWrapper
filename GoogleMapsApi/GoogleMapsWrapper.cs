@@ -54,21 +54,24 @@ namespace GoogleMapsWrapper
         //    return response;
         //}
 
-        public async Task<IResponse<TResponse>>SendRequestAsync<TResponse>(IRequest request)
+
+
+
+
+
+        public async Task<IResponse<JsonDocument>>GetJsonAsync(IRequest request)
         {
             HttpResponseMessage responseMessage = await httpClient.GetAsync(request.Url);
-            TResponse response = new TResponse();
-
-
-
-
-
-            this.responseMessage = response;
-            jsonResult = JsonDocument.Parse(result);
-            return jsonResult;
+            var result = await responseMessage.Content.ReadAsStringAsync();
+            return new JsonResponse(request, JsonDocument.Parse(result), responseMessage);
         }
 
-
+        public async Task<IResponse<byte[]>> GetBytesAsync(IRequest request)
+        {
+            HttpResponseMessage responseMessage = await httpClient.GetAsync(request.Url);
+            var result = await responseMessage.Content.ReadAsByteArrayAsync();
+            return new ByteResponse(request, result, responseMessage);
+        }
 
 
 
