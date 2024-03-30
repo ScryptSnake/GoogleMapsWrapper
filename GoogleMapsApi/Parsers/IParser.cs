@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Parsers
 {
-    public interface IParser<TOutput>
+    public interface IParser<TOutput, TInput>
     {
-        public TOutput Parse(object? input);
+        public TOutput Parse(TInput input);
+
+        
 
     }
 }

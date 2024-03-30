@@ -7,10 +7,9 @@ using System.Text.Json;
 using System.Dynamic;
 using GoogleMapsWrapper.Containers;
 using GoogleMapsWrapper.Parsers;
+using GoogleMapsWrapper.Requests;
 namespace GoogleMapsWrapper.Responses
 {
-
-
 
 
     public class JsonResponse : IResponse<JsonDocument>
@@ -18,23 +17,20 @@ namespace GoogleMapsWrapper.Responses
         private IRequest sentRequest;
         public IRequest SentRequest { get=> sentRequest;}
 
-
         private HttpResponseMessage responseMessage;
         public HttpResponseMessage ResponseMessage => responseMessage;
 
         private JsonDocument content;
         public JsonDocument Content { get; }
-
         public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
         {
             content = Content;
             sentRequest = SentRequest;
             responseMessage = ResponseMessage;
         }
-
-        public T Parse<T>(IParser<T> parser)
+        public T Parse<T>(IParser<T,JsonDocument> parser)
         {
-            throw new NotImplementedException();
+            return parser.Parse(this.content);
         }
     }
 

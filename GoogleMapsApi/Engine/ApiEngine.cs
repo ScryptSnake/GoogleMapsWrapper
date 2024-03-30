@@ -15,44 +15,49 @@ using GoogleMapsWrapper.Types;
 using GoogleMapsWrapper.Responses;
 using GoogleMapsWrapper.Exceptions;
 using System.Runtime.InteropServices;
+using GoogleMapsWrapper.Requests;
+using System.Net.WebSockets;
 namespace GoogleMapsWrapper.Engine
 {
 
-    public class ApiEngine
+    public class ApiEngine : IApiEngine
     {
         private readonly string key;
         private readonly HttpClient httpClient;
-        private readonly ApiEngineOptions? options;
 
         //AIzaSyDHaNIVpQ-Iy02FTY4x2NfpI2zOag_Xwuk
 
-        private const string defaultBaseUri = "https://maps.googleapis.com/maps/api/";
-        private Uri baseUri;
+        private const string defaultBaseUrl = "https://maps.googleapis.com/maps/api/";
 
         //Constructor
-        public ApiEngine(string key, HttpClient httpClient, ApiEngineOptions? options=null) //IHttpClientFactory httpClientFactory)
+        public ApiEngine(string key, HttpClient httpClient, ApiEngineOptions? options = null)
         {
-            this.options = options;
-            if (options is not null)
-                this.baseUri = options.BaseUri;
-            else
-                this.baseUri = new Uri(defaultBaseUri);
-            
             this.key = key;
             this.httpClient = httpClient;
+
+            if (options is not null)
+            {
+                this.Options = options;
+            }
         }
 
-        public IRequest RequestFactory()
+        private ApiEngineOptions options = new ApiEngineOptions(new Uri(defaultBaseUrl));
+        public ApiEngineOptions Options { set => this.options = value; get => this.options; }
+
+
+
+
+
+        private KeyedRequest CreateKeyedRequest(IRequest request)
         {
+            //appends the API key to the request for sending *within* the engine. 
+            var builder = new UriBuilder(request.Url);
+            builder.Query = builder.Query + $"&key={this.key}";
 
+            return new KeyedRequest(builder.Uri, request.Api, request.Category,request.Id);
         }
 
-
-
-
-
-
-        private async Task<HttpResponseMessage> sendGetRequestAsync(IRequest request)
+        private async Task<HttpResponseMessage> sendGetRequestAsync(KeyedRequest request)
         // Sends an http request
         {
             var responseMessage = await httpClient.GetAsync(request.Url);
@@ -67,17 +72,18 @@ namespace GoogleMapsWrapper.Engine
 
         public async Task<IResponse<JsonDocument>> GetJsonAsync(IRequest request)
         {
-            var response = await sendGetRequestAsync(request);
+            var response = await sendGetRequestAsync(CreateKeyedRequest(request));
             var result = await response.Content.ReadAsStringAsync();
             return new JsonResponse(request, JsonDocument.Parse(result), response);
         }
 
         public async Task<IResponse<byte[]>> GetBytesAsync(IRequest request)
         {
-            HttpResponseMessage responseMessage = await httpClient.GetAsync(request.Url);
-            var result = await responseMessage.Content.ReadAsByteArrayAsync();
-            return new ByteResponse(request, result, responseMessage);
+            var response = await sendGetRequestAsync(CreateKeyedRequest(request));
+            var result = await response.Content.ReadAsByteArrayAsync();
+            return new ByteResponse(request, result, response);
         }
+
 
 
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -15,9 +15,15 @@
 
   <ItemGroup>
     <Using Include="GoogleMapsWrapper" />
-    <Using Include="GoogleMapsApi.Elements" />
-    <Using Include="GoogleMapsApi.Types" />
-    <Using Include="GoogleMapsApi.StaticMaps" />
+    <Using Include="GoogleMapsWrapper.Engine" />
+    <Using Include="GoogleMapsWrapper.Exceptions" />
+    <Using Include="GoogleMapsWrapper.Requests" />
+    <Using Include="GoogleMapsWrapper.Responses" />
+    <Using Include="GoogleMapsWrapper.Containers" />
+    <Using Include="GoogleMapsWrapper.Types" />
+    <Using Include="GoogleMapsWrapper.Elements" />
+    <Using Include="GoogleMapsWrapper.Types" />
+    <Using Include="GoogleMapsWrapper.StaticMaps" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using GoogleMapsWrapper.Parsers;
+using GoogleMapsWrapper.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace GoogleMapsWrapper.Responses
         public HttpResponseMessage ResponseMessage { get; }
         public TResponse Content { get; }
 
-        public T Parse<T>(IParser<T> parser);
+        public T Parse<T>(IParser<T,TResponse> parser);
     }
 
 

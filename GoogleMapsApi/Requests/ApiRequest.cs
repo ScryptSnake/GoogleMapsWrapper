@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper.Requests
 {
     internal class ApiRequest : IRequest
     {
         public string? Id { get; }
-
-        public Uri Url { get; }
+        //note:  Url should not every contain the API Key!, this is done in the engine and never exposed in a returned reponse.
+        public Uri Url { get; } 
 
         public string Query { get => Url.Query; }
         public ApiType Api { get; }
