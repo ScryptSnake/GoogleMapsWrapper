@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using GoogleMapsWrapper;
+using GoogleMapsWrapper.Api;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -17,17 +18,14 @@ namespace GoogleMapsWrapper
             var testClient = new HttpClient();
 
 
-            var api = new GMapsApi("API_KEY_REDACTED_4-22-24",testClient);
+            var api = new ApiEngine("API_KEY_REDACTED_4-22-24",testClient);
             var coord = new GpsCoordinate(40.803143m, -79.507266m);
-            var result = await api.Geocode(coord);
 
-            Console.WriteLine(result.ResponseMessage.Content.ToString());
+            var googapi = new GeocodeApi(api);
 
-            var container = result.Parse();
-            PrintProperties(container);
-
-            var result2 = await api.GetElevation(coord);
-            PrintProperties(result2.Parse());
+           var container =  await googapi.GeocodeParse(coord);
+            
+            Console.WriteLine(container.ToString());    
 
 
 
