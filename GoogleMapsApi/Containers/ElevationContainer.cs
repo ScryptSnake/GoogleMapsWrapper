@@ -15,13 +15,13 @@ namespace GoogleMapsWrapper.Containers
 {
     public record ElevationContainer(
         [JsonProperty("elevation")]
-        decimal ElevationMeters,
+        double ElevationMeters,
 
         [JsonProperty("resolution")]
-        decimal Resolution,
+        double Resolution,
 
         //this property is manually converted
-        decimal ElevationFeet,
+        double ElevationFeet,
 
         //this property is not de-serialized.but manually added in GeocodeResponse, the reponse returns a list
         GpsCoordinate? Coordinates,

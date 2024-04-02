@@ -12,6 +12,23 @@ namespace GoogleMapsWrapper.Parsers
 {
     public class ElevationParser : IParser<ElevationContainer, JsonDocument>
     {
+
+        public bool TryParse(JsonDocument input, out ElevationContainer? output)
+        {
+            try
+            {
+                output = Parse(input);
+                return true;
+            }
+            catch
+            {
+                output = null;
+                return false;
+            }
+        }
+
+
+
         public ElevationContainer Parse(JsonDocument input)
         {
             //create a dictionary to hold retrieved data
@@ -36,9 +53,8 @@ namespace GoogleMapsWrapper.Parsers
                 {
                     Coordinates = findGpsCoordinate(firstResult.GetProperty("location")),
                     AssociatedData = input.ToString(),
-                    ElevationFeet = container.ElevationMeters * 3.28084m
+                    ElevationFeet = container.ElevationMeters * 3.28084d
                 };
-
                 return containerCopied ?? throw new JsonSerializationException("Failed to parse elevation.");
             }
             else

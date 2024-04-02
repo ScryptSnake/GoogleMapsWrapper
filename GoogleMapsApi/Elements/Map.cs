@@ -12,12 +12,21 @@ namespace GoogleMapsWrapper.Elements
 {
     public class Map : GoogleMapElement
     {
-        public MapTypes MapType { get; set; }
-        public MapScaleTypes Scale { get; set; }
-        public MapImageFormats ImageFormat { get; set; }
-        public int Height { get; set; }
-        public int Width { get; set; }
 
+        private MapTypes mapType;
+        public MapTypes MapType { get => mapType; set => value=mapType; }
+
+        private MapScaleTypes scale;
+        public MapScaleTypes Scale { get => scale; set => value = scale; } 
+
+        private MapImageFormats imageFormat;
+        public MapImageFormats ImageFormat { get => imageFormat; set => value = imageFormat; }
+
+        private int height;
+        public int Height { get => height; set => value = height; }
+
+        private int width;
+        public int Width { get => width; set => value = width; }
 
         private int zoom = 0;
         public int Zoom
@@ -40,8 +49,15 @@ namespace GoogleMapsWrapper.Elements
             get => $"{Height}X{Width}";
             set
             {
-                this.Height = int.Parse(value.Split('X')[0]);
-                this.Width = int.Parse(value.Split('X')[1]);
+                try
+                {
+                    this.Height = int.Parse(value.Split('X')[0]);
+                    this.Width = int.Parse(value.Split('X')[1]);
+                }
+                catch
+                {
+                    throw new ArgumentException("Failed to parse dimension string.");
+                }
             }
         }
         public override string? Color
@@ -55,13 +71,24 @@ namespace GoogleMapsWrapper.Elements
             set => throw new NotSupportedException();
         }
 
-        public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.Normal, 
-            GpsCoordinate Center = default, string? Id = null, string? Name = null)
+        private GpsCoordinate? center;
+        public GpsCoordinate? Center { get => center; set => value = center; }
+
+
+        public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.HighRes, 
+            GpsCoordinate? Center = null, string? Id = null, string? Name = null)
         {
             //note: map styles not supported in this API.
 
+            this.MapType = MapType;
+            this.Scale = Scale;
+            this.Center = Center;
+            this.Id = Id;
+            this.Name = Name;
+
+
             //defaults:
-            Scale = MapScaleTypes.HighRes;
+            this.Scale = MapScaleTypes.HighRes;
             this.Dimensions = "640x640";
             this.ImageFormat = MapImageFormats.Jpg;
         }
