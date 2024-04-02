@@ -45,9 +45,6 @@ namespace GoogleMapsWrapper.Engine
         public ApiEngineOptions Options { set => this.options = value; get => this.options; }
 
 
-
-
-
         private KeyedRequest CreateKeyedRequest(IRequest request)
         {
             //appends the API key to the request for sending *within* the engine. 
@@ -56,6 +53,7 @@ namespace GoogleMapsWrapper.Engine
 
             return new KeyedRequest(builder.Uri, request.Api, request.Category,request.Id);
         }
+
 
         private async Task<HttpResponseMessage> sendGetRequestAsync(KeyedRequest request)
         // Sends an http request

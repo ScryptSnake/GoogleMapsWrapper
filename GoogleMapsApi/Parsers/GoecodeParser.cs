@@ -12,6 +12,22 @@ namespace GoogleMapsWrapper.Parsers
 {
     public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>
     {
+
+        public bool TryParse(JsonDocument input, out GeocodeContainer? output)
+        {
+            try
+            {
+                output = Parse(input);
+                return true;
+            }
+            catch
+            {
+                output = null;
+                return false;
+            }
+        }
+
+
         public GeocodeContainer Parse(JsonDocument input)
         {
             //create a dictionary to hold retrieved data

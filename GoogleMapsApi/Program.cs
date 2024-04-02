@@ -24,9 +24,9 @@ namespace GoogleMapsWrapper
             var googapi = new GeocodeApi(api);
 
            var container =  await googapi.GeocodeParse(coord);
-            
-            Console.WriteLine(container.ToString());    
-
+            var container2  = await googapi.GetElevationParsed(coord);
+            Console.WriteLine(container.ToString());
+            Console.WriteLine(container2.ToString());
 
 
         }

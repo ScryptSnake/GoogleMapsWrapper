@@ -10,7 +10,7 @@ namespace GoogleMapsWrapper.Parsers
     {
         public TOutput Parse(TInput input);
 
-        
+        public bool TryParse(TInput input, out TOutput? output); 
 
     }
 }
