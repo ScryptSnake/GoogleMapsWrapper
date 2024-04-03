@@ -17,11 +17,12 @@ namespace GoogleMapsWrapper.Elements
         public string? Name { get; set; }
         public string? Id { get; set; }
         public object? AssociatedData { get; set; }
-        public virtual string? Color { get; set; }
-        public virtual string? FillColor {  get; set; }
+        public Color Color { get; set; }
+        public Color SecondaryColor {  get; set; }
+        public bool Visible { get; set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
 
-        public virtual bool Visible { get; set; }
-    
     }
 
 }

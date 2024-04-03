@@ -58,7 +58,7 @@ namespace GoogleMapsWrapper.Engine
         private async Task<HttpResponseMessage> sendGetRequestAsync(KeyedRequest request)
         // Sends an http request
         {
-            var responseMessage = await httpClient.GetAsync(request.Url);
+            var responseMessage = await httpClient.GetAsync(request.Url.AbsoluteUri);
             if (responseMessage.IsSuccessStatusCode == false)
             {
                 var message = await responseMessage.Content.ReadAsStringAsync();

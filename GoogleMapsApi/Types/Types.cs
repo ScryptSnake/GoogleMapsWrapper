@@ -24,14 +24,14 @@ namespace GoogleMapsWrapper.Types
 
     ///<summary> Type of map. 
     public enum MapTypes
-    //member names should match exact string inputs for the API!
+    //member names should match string inputs for the API!
     {
         RoadMap, Satellite, Terrain, Hybrid
     }
 
     ///<summary> Static map image formats.</summary>
     public enum MapImageFormats
-    //member names should match exact string inputs for the API!
+    //member names should match string inputs for the API!
     {
         Png, Png32, Gif, Jpg
     }

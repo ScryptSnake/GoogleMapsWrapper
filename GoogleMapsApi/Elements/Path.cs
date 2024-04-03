@@ -16,25 +16,24 @@ namespace GoogleMapsWrapper.Elements
 
     public class Path : GoogleMapElement
     {
-
         public int Weight { get; set; } //pixels
         public bool Geodesic { get; set; }
         public char? Label { get; set; }
 
         public ReadOnlyCollection<GpsCoordinate> Coordinates
         {
-            get
-            {
-                return new ReadOnlyCollection<GpsCoordinate>(coordinates); //readonly snapshot of the internal private collection.
-            }
+            get => new ReadOnlyCollection<GpsCoordinate>(coordinates); //readonly snapshot of the internal private collection.
         }
         private Collection<GpsCoordinate> coordinates;
 
         public Path(Collection<GpsCoordinate> Coordinates, string? Id = null, string? Name = null)
         {
             this.coordinates = Coordinates;
+            this.Id= Id;
+            this.Name= Name;
+
             //defaults:
-            Color = "red";
+            base.Color = Color.Red;
             Geodesic = false;
             Weight = 5;
         }
