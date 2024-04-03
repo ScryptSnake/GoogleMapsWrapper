@@ -21,12 +21,21 @@ namespace GoogleMapsWrapper
             var api = new ApiEngine("AIzaSyDHaNIVpQ-Iy02FTY4x2NfpI2zOag_Xwuk",testClient);
             var coord = new GpsCoordinate(40.803143m, -79.507266m);
 
-            var googapi = new GeocodeApi(api);
+            var googapi = new StaticMapsApi(api);
 
-           var container =  await googapi.GeocodeParse(coord);
-            var container2  = await googapi.GetElevationParsed(coord);
-            Console.WriteLine(container.ToString());
-            Console.WriteLine(container2.ToString());
+            var map = new Map(MapTypes.Hybrid);
+            
+            var markers = new List<Marker>();
+            var marker = new Marker(GpsCoordinate.Parse("41.40484,-71.02829"));
+            var marker2 = new Marker(GpsCoordinate.Parse("41.42484,-71.04829"));
+            var marker3 = new Marker(GpsCoordinate.Parse("41.43484,-71.07829"));
+
+            markers.Add(marker);
+            markers.Add(marker2);
+            markers.Add(marker3);
+
+            var img = await googapi.GetMap(map, markers);
+
 
 
         }

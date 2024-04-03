@@ -16,23 +16,45 @@ namespace GoogleMapsWrapper.Elements
 
     public class Marker : GoogleMapElement
     {
-        public char Label { get; set; }
+
+
+        private char label = '\0'; //initialize to null character
+        public char Label
+        {
+            get => label;
+            set
+            {
+                bool isUppercaseAlphanumeric =
+                    value == '\0' ||                    //allow null
+                    (value >= 'A' && value <= 'Z') ||   // Check if it's uppercase letter
+                    (value >= '0' && value <= '9');     // Check if it's digit
+                if (!isUppercaseAlphanumeric) 
+                    throw new FormatException("Invalid character provided for label.");
+                label = value;
+            }
+        }
+
+
         public MarkerScaleTypes Scale;
         public MarkerSizes Size;
         public StaticMapCustomIcon? CustomIcon { get; set; }
 
-        public readonly GpsCoordinate Coordinate;
 
-        public override string FillColor => throw new NotSupportedException();  
+        //24 bit hexedcimal string from color value (for static maps API)
 
-        public Marker(GpsCoordinate Coordinates, string? Id = null, string? Name = null)
+
+        public GpsCoordinate Coordinate { get; }
+        public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
         {
-            Coordinate = Coordinates;
+            this.Coordinate = Coordinate;
+            this.Id = Id;
+            this.Name = Name;
 
             //defaults:
-            Color = "red";
+            Color = Color.Red;
             Scale = MarkerScaleTypes.Normal;
             Size = MarkerSizes.Mid;
+            
         }
     }
 

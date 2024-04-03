@@ -14,22 +14,19 @@ namespace GoogleMapsWrapper.Elements
     {
 
         private MapTypes mapType;
-        public MapTypes MapType { get => mapType; set => value=mapType; }
+        public MapTypes MapType { get => mapType; set => mapType=value; }
+
 
         private MapScaleTypes scale;
-        public MapScaleTypes Scale { get => scale; set => value = scale; } 
+        public MapScaleTypes Scale { get => scale; set => scale = value; } 
+
 
         private MapImageFormats imageFormat;
-        public MapImageFormats ImageFormat { get => imageFormat; set => value = imageFormat; }
+        public MapImageFormats ImageFormat { get => imageFormat; set => imageFormat = value; }
 
-        private int height;
-        public int Height { get => height; set => value = height; }
-
-        private int width;
-        public int Width { get => width; set => value = width; }
 
         private int zoom = 0;
-        public int Zoom
+        public int Zoom //not required for static maps if adding markers/paths.
         {
             get => zoom;
             set
@@ -42,33 +39,24 @@ namespace GoogleMapsWrapper.Elements
             }
         }
 
-
-        private string dimensions;
+        private string dimensions = string.Empty;
         public string Dimensions
         {
-            get => $"{Height}X{Width}";
+            get => $"{Height}x{Width}";
             set
             {
                 try
                 {
-                    this.Height = int.Parse(value.Split('X')[0]);
-                    this.Width = int.Parse(value.Split('X')[1]);
+                    value = value.ToLower();
+                    this.Height = int.Parse(value.Split('x')[0]);
+                    this.Width = int.Parse(value.Split('x')[1]);
+                    dimensions = value;
                 }
                 catch
                 {
                     throw new ArgumentException("Failed to parse dimension string.");
                 }
             }
-        }
-        public override string? Color
-        {
-            get => throw new NotSupportedException();
-            set => throw new NotSupportedException();
-        }
-        public override string? FillColor
-        {
-            get => throw new NotSupportedException();
-            set => throw new NotSupportedException();
         }
 
         private GpsCoordinate? center;
@@ -79,13 +67,12 @@ namespace GoogleMapsWrapper.Elements
             GpsCoordinate? Center = null, string? Id = null, string? Name = null)
         {
             //note: map styles not supported in this API.
-
             this.MapType = MapType;
             this.Scale = Scale;
             this.Center = Center;
             this.Id = Id;
             this.Name = Name;
-
+            
 
             //defaults:
             this.Scale = MapScaleTypes.HighRes;
