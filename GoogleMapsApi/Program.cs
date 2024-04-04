@@ -34,7 +34,17 @@ namespace GoogleMapsWrapper
             markers.Add(marker2);
             markers.Add(marker3);
 
-            var img = await googapi.GetMap(map, markers);
+            var uri = new Uri("https://www.google.com");
+            var builder = new UriBuilder(uri);
+            builder.AddParameter("map", MapScaleTypes.HighRes);
+            builder.AddParameter("places22", "*&&*");
+            builder.AddParameter("places", 03930);
+            Debug.Print("abolsute =====  " + builder.Uri.AbsoluteUri.ToString());
+            Debug.Print("regualr uri =====  " + uri.
+
+
+
+           // var img = await googapi.GetMap(map, markers);
 
 
 

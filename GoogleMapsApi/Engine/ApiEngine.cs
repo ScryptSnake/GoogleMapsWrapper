@@ -62,6 +62,8 @@ namespace GoogleMapsWrapper.Engine
             if (responseMessage.IsSuccessStatusCode == false)
             {
                 var message = await responseMessage.Content.ReadAsStringAsync();
+                Debug.Print(message);
+                Debug.Print(request.Url.ToString());    
                 throw new GoogleMapsApiException($"API request returned an invalid response. " +
                 $"Status Code: '{responseMessage.StatusCode}' ; Message='{message}'");
             }
