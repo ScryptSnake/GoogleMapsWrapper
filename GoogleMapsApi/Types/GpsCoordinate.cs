@@ -49,7 +49,7 @@ namespace GoogleMapsWrapper.Types
         {
             if (format is not null)
                 throw new NotImplementedException();
-            return $"{Latitude}, {Longitude}";
+            return $"{Latitude},{Longitude}";
         }
 
         public bool Equals(GpsCoordinate other)
