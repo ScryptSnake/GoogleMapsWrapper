@@ -18,7 +18,7 @@ namespace GoogleMapsWrapper
             var testClient = new HttpClient();
 
 
-            var api = new ApiEngine("API_KEY_REDACTED_4-22-24",testClient);
+            var ,testClient);
             var coord = new GpsCoordinate(40.803143m, -79.507266m);
 
             var googapi = new StaticMapsApi(api);
