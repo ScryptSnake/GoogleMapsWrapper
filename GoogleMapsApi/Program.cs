@@ -2,6 +2,7 @@
 using GoogleMapsWrapper;
 using GoogleMapsWrapper.Api;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -29,22 +30,15 @@ namespace GoogleMapsWrapper
             var marker = new Marker(GpsCoordinate.Parse("41.40484,-71.02829"));
             var marker2 = new Marker(GpsCoordinate.Parse("41.42484,-71.04829"));
             var marker3 = new Marker(GpsCoordinate.Parse("41.43484,-71.07829"));
-
+            marker.Color = Color.Purple;
             markers.Add(marker);
             markers.Add(marker2);
             markers.Add(marker3);
 
-            var uri = new Uri("https://www.google.com");
-            var builder = new UriBuilder(uri);
-            builder.AddParameter("map", MapScaleTypes.HighRes);
-            builder.AddParameter("places22", "*&&*");
-            builder.AddParameter("places", 03930);
-            Debug.Print("abolsute =====  " + builder.Uri.AbsoluteUri.ToString());
-            Debug.Print("regualr uri =====  " + uri.
 
 
 
-           // var img = await googapi.GetMap(map, markers);
+            var img = await googapi.GetMap(map, markers);
 
 
 
