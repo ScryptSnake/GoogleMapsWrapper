@@ -12,6 +12,8 @@ using System.Data.Common;
 using System.Drawing;
 using GoogleMapsWrapper.Elements;
 using System.Diagnostics;
+using Flurl;
+using System.Collections.ObjectModel;
 namespace GoogleMapsWrapper.Api;
 
 public class StaticMapsApi
@@ -54,7 +56,7 @@ public class StaticMapsApi
         //format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
 
         //Grab the main API Url...
-        var builder = new UriBuilder(apiEngine.Options.BaseUri + "staticmap");
+        var builder = new Flurl.Url(apiEngine.Options.BaseUri + "staticmap?");
 
         //convert map type to string:
         var mapType = Enum.GetName(typeof(MapTypes), mapSettings.MapType);
@@ -62,34 +64,38 @@ public class StaticMapsApi
 
         //convert image format to string:
         var mapFormat = Enum.GetName(typeof(MapImageFormats), mapSettings.ImageFormat);
-        mapFormat = mapType = mapFormat?.ToLower() ?? "jpg";
-
-        //build query - url format:  staticmap?center=Berkeley,CA&zoom=14&size=400x400
-        builder.Query = $"?maptype={mapType}," +
-            $"format={mapFormat}," +
-            $"scale={mapSettings.Scale}," +
-            $"size={mapSettings.Dimensions}";
+        mapFormat = mapFormat?.ToLower() ?? "jpg";
 
         //check if caller provided a centering coordinate:
-        if (mapSettings.Center != null) builder.Query = builder.Query + $",center={mapSettings.Center}";
-        if (mapSettings.Zoom != 0) builder.Query = builder.Query + $",zoom={mapSettings.Zoom}";
-        //grab markers:
-        builder.Query = builder.Query + BuildMarkerString(markers);
-        Console.WriteLine(builder.Uri.ToString());
-        Debug.Print(builder.Uri.ToString());
-        var s = "";
+        if (mapSettings.Center != null) builder.SetQueryParam("center", mapSettings.Center.ToString());
+        if (mapSettings.Zoom != 0) builder.SetQueryParam("zoom", mapSettings.Zoom);
 
-        return builder.Uri;
+        builder.SetQueryParam("maptype", mapType);
+        builder.SetQueryParam("format", mapFormat);
+        //builder.SetQueryParam("scale", mapSettings.Scale); //TODO: FIX TO CONVERT TO INT.
+        builder.SetQueryParam("size", mapSettings.Dimensions);
+
+
+        Debug.Print("DEBUG === " + builder.ToString());
+
+
+        //grab markers:
+        if (markers != null)
+        {
+            builder.SetQueryParam("markers",buildMarkers(markers));
+        }
+        return builder.ToUri();
     }
 
 
 
 
-    private string BuildMarkerString(IEnumerable<Marker> markers)
+    private List<string> buildMarkers(IEnumerable<Marker> markers)
         //generates the url query string for a list of markers.
     {
         //Filter out null markers, group by custom icon / no custom icon.
         var groupedMarkers = markers.Where(m => m != null).GroupBy(m => m.CustomIcon == null);
+
         var output = new List<string>();
 
         foreach (var group in groupedMarkers)
@@ -105,7 +111,7 @@ public class StaticMapsApi
 
                     //grab marker color, check if has value, convert to hex
                     var markerColor = marker.Color;
-                    if (marker.Color == Color.Empty) markerColor = Color.Red;
+                    if (marker.Color == Color.Empty) markerColor = Color.Green;
                     var markerColorHex = ColorToHex(markerColor);
 
                     //check if marker label supplied, if not, provide one
@@ -114,7 +120,7 @@ public class StaticMapsApi
 
 
                     //url format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates
-                    output.Add($"markers=size:{markerSize}" +
+                    output.Add($"size:{markerSize}" +
                         $"|color:{markerColorHex}" +
                         $"|label:{markerLabel}" +
                         $"|{marker.Coordinate.ToString()}");
@@ -126,19 +132,20 @@ public class StaticMapsApi
                 foreach (var customMarker in group)
                 {
                     //note: using null forgiving operator, as LINQ filtered by nulls.
-                    output.Add($"markers=icon:{customMarker.CustomIcon!.Url.AbsoluteUri}" +
+                    output.Add($"icon:{customMarker.CustomIcon!.Url.AbsoluteUri}" +
                         $"|{customMarker.Coordinate.ToString()}");
                 }
             }
         }
-        return "&" + string.Join("&", output);
+        return output;
 
     }
 
     static string ColorToHex(Color color)
         //convert a color object to a 24bit hex string representation
     {
-        return $"#{color.R:X2}{color.G:X2}{color.B:X2}";
+        return $"0x{color.R:X2}{color.G:X2}{color.B:X2}";
+
     }
 
 }

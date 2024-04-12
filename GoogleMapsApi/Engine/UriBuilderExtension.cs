@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Markup;
+using Flurl;
 
 namespace GoogleMapsWrapper.Engine
 {
-    public static class UriBuilderExtension
+    public static class UriExtension
     {
 
         ///<summary> An extension method to add a URL query parameter to a UriBuilder. 
@@ -18,7 +19,7 @@ namespace GoogleMapsWrapper.Engine
             Object? value, string? defaultValue=null, bool overwrite = true)
 
         {
-
+            
             //forget HttpUtility for this - maybe use Flurl for a better solution? Heres a roll-your-own:
             if(value == null)
             {

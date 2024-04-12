@@ -17,6 +17,7 @@ using GoogleMapsWrapper.Exceptions;
 using System.Runtime.InteropServices;
 using GoogleMapsWrapper.Requests;
 using System.Net.WebSockets;
+using Flurl;
 namespace GoogleMapsWrapper.Engine
 {
 
@@ -29,7 +30,10 @@ namespace GoogleMapsWrapper.Engine
 
         private const string defaultBaseUrl = "https://maps.googleapis.com/maps/api/";
 
-        //Constructor
+        private ApiEngineOptions options = new ApiEngineOptions(new Uri(defaultBaseUrl));
+        public ApiEngineOptions Options { set => this.options = value; get => this.options; }
+
+
         public ApiEngine(string key, HttpClient httpClient, ApiEngineOptions? options = null)
         {
             this.key = key;
@@ -40,18 +44,24 @@ namespace GoogleMapsWrapper.Engine
                 this.Options = options;
             }
         }
-
-        private ApiEngineOptions options = new ApiEngineOptions(new Uri(defaultBaseUrl));
-        public ApiEngineOptions Options { set => this.options = value; get => this.options; }
-
-
         private KeyedRequest CreateKeyedRequest(IRequest request)
         {
             //appends the API key to the request for sending *within* the engine. 
-            var builder = new UriBuilder(request.Url);
-            builder.Query = builder.Query + $"&key={this.key}";
 
-            return new KeyedRequest(builder.Uri, request.Api, request.Category,request.Id);
+
+            Debug.Print("inotu====" + request.Url.ToString());
+
+
+            //var uri = new Flurl.Url(request.Url); //create a new uri
+            //uri.SetQueryParam("key", this.key); //note: this will not work because of multiple markers parameters, must manually string-append key
+
+            string url = request.Url.AbsoluteUri + $"&key={this.key}";
+
+
+            Debug.Print("OUTPUT====" + url.ToString());
+            return new KeyedRequest(url, request.Api, request.Category,request.Id); //create keyed req.
+
+
         }
 
 
