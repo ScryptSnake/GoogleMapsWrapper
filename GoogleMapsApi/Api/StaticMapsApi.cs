@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
-using GoogleMapsWrapper.Api;
 using System.Text.Json;
 using GoogleMapsWrapper.Containers;
 using GoogleMapsWrapper.Parsers;
@@ -14,6 +13,7 @@ using GoogleMapsWrapper.Elements;
 using System.Diagnostics;
 using Flurl;
 using System.Collections.ObjectModel;
+using GoogleMapsWrapper.Utilities;
 namespace GoogleMapsWrapper.Api;
 
 public class StaticMapsApi
@@ -30,8 +30,10 @@ public class StaticMapsApi
         this.apiEngine = engine;
     }
 
-
-    public async Task<IResponse<byte[]>> GetMap(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<GoogleMapsWrapper.Elements.Path>? paths=null)
+    /// <summary>
+    /// Make a request to the API for a static map and return a Byte Response. Markers are optional. Paths are also optional. 
+    /// </summary>
+    public async Task<IResponse<byte[]>> GetMap(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<Polyline>? paths=null)
     {
         var url = BuildUrl(mapSettings, markers, paths);
         //build request
@@ -42,7 +44,11 @@ public class StaticMapsApi
         return response;
     }
 
-    public async Task<byte[]> GetMapBytes(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<GoogleMapsWrapper.Elements.Path>? paths = null)
+
+    /// <summary>
+    /// Make a request to the API for a static map and return a byte array of the resultant image. Markers are optional. Paths are also optional. 
+    /// </summary>
+    public async Task<byte[]> GetMapBytes(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //shortcut method
         var response = await GetMap(mapSettings, markers, paths);
@@ -50,52 +56,88 @@ public class StaticMapsApi
     }
 
 
-
-    private Uri BuildUrl(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<GoogleMapsWrapper.Elements.Path>? paths = null)
+    private Uri BuildUrl(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
 
-        //Grab the main API Url...
-        var builder = new Flurl.Url(apiEngine.Options.BaseUri + "staticmap?");
+        //Grab the main API Url:
+        var builder = new Flurl.Url(apiEngine.BaseUrl + "staticmap?");
 
-        //convert map type to string:
-        var mapType = Enum.GetName(typeof(MapTypes), mapSettings.MapType);
-        mapType = mapType?.ToLower() ?? "roadmap";
-
-        //convert image format to string:
-        var mapFormat = Enum.GetName(typeof(MapImageFormats), mapSettings.ImageFormat);
-        mapFormat = mapFormat?.ToLower() ?? "jpg";
-
-        //check if caller provided a centering coordinate:
-        if (mapSettings.Center != null) builder.SetQueryParam("center", mapSettings.Center.ToString());
+        //check if caller provided a centering or zoom parameters, if null ignored.
+        builder.SetQueryParam("center", mapSettings.Center); 
         if (mapSettings.Zoom != 0) builder.SetQueryParam("zoom", mapSettings.Zoom);
 
-        builder.SetQueryParam("maptype", mapType);
-        builder.SetQueryParam("format", mapFormat);
-        //builder.SetQueryParam("scale", mapSettings.Scale); //TODO: FIX TO CONVERT TO INT.
-        builder.SetQueryParam("size", mapSettings.Dimensions);
+        //set parameters with defaults:
+        builder.SetQueryParamWithDefault("maptype", mapSettings.MapType.ToString().ToLower(),"hybrid");
+        builder.SetQueryParamWithDefault("format", mapSettings.ImageFormat.ToString().ToLower(), "png");
+        builder.SetQueryParamWithDefault("scale", (int)mapSettings.Scale, 2);
+        builder.SetQueryParamWithDefault("size", mapSettings.Dimensions, "640x640");
 
-
-        Debug.Print("DEBUG === " + builder.ToString());
-
-
-        //grab markers:
+        //build list of markers parameters, add to URL
         if (markers != null)
         {
-            builder.SetQueryParam("markers",buildMarkers(markers));
+            foreach (var marker in buildMarkers(markers))
+            {
+                builder.AppendQueryParam("markers", marker, true);
+            }
         }
+
+        //build list of paths parameters, add to URL
+        if (paths!= null)
+        {
+            foreach (var path in buildPaths(paths))
+            {
+                builder.AppendQueryParam("path", path,false);
+            }
+        }
+
+        //perform check for max URL size:
+        if (builder.ToString().Length > MaxUrlLength) { 
+            throw new GoogleMapsApiException("Resultant static map URL exceeds allowable size: Max = " + MaxUrlLength);
+        }
+
         return builder.ToUri();
     }
 
 
 
+    private List<string> buildPaths(IEnumerable<Polyline> paths)
+    {
+        //format: path=color:0xff0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397
+        const string pipeEncoded = "|";
+
+        var output = new List<string>();
+
+        foreach (var path in paths)
+        {
+            if (!path.IsEmpty())
+            {
+                var hexColor = Utilities.Utilities.ColorToHex(path.Color);
+
+                var encodedCoords = Utilities.PolylineEncoder.Encode(path.Coordinates);
+
+                output.Add($"color:{hexColor}{pipeEncoded}" +
+                    $"weight:{path.Weight}{pipeEncoded}enc:{encodedCoords}");
+            }
+        }
+        return output;
+
+
+
+    }
+
 
     private List<string> buildMarkers(IEnumerable<Marker> markers)
-        //generates the url query string for a list of markers.
+        //generates a collection of markers queries
+        //this is passed as same-named parameters using Flurl.AppendQueryParam
+        //The value of each collection item is an ALREADY url encoded value.
     {
         //Filter out null markers, group by custom icon / no custom icon.
         var groupedMarkers = markers.Where(m => m != null).GroupBy(m => m.CustomIcon == null);
 
+        const string colonEncoded = "%3A";
+        const string pipeEncoded = "%7C";
+        
         var output = new List<string>();
 
         foreach (var group in groupedMarkers)
@@ -106,24 +148,35 @@ public class StaticMapsApi
                 foreach (var marker in group)
                 {
                     //convert size enum value to string representation:
-                    var markerSize = Enum.GetName(typeof(MarkerSizes), marker.Size);
-                    markerSize = markerSize?.ToLower() ?? "mid";
+                    var markerSize = marker.Size.ToString().ToLower();
 
                     //grab marker color, check if has value, convert to hex
                     var markerColor = marker.Color;
                     if (marker.Color == Color.Empty) markerColor = Color.Green;
-                    var markerColorHex = ColorToHex(markerColor);
-
+                    var markerColorHex = Utilities.Utilities.ColorToHex(markerColor);
+                    
                     //check if marker label supplied, if not, provide one
                     var markerLabel = marker.Label;
-                    if (markerLabel == '\0') markerLabel = 'a';
-
+                    if (markerLabel == '\0') markerLabel = 'A'; 
 
                     //url format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates
-                    output.Add($"size:{markerSize}" +
-                        $"|color:{markerColorHex}" +
-                        $"|label:{markerLabel}" +
-                        $"|{marker.Coordinate.ToString()}");
+
+                    var outputString = $"size{colonEncoded}{markerSize}" +
+                        $"{pipeEncoded}color{colonEncoded}{markerColorHex}" +
+                        $"{pipeEncoded}";
+
+                    if (marker.Label != '\0')
+                    {
+                        //UrlEncodeChar is required to use certain characters that conflict with the %3A colon encoding.
+                        //for example:  label%3AB => label:Z works fine, But label%3AA => label:A expected,
+                        //but the API does not process it properly because 'A' conflicts with %3A
+                        //using a regular colon decoded in the URL works fine, but its poor practice to not encode it.
+                        var markerLabelEncoded = Utilities.Utilities.UrlEncodeChar(markerLabel);
+                        outputString = outputString + $"label{colonEncoded}{markerLabelEncoded}";
+                    }
+
+                    outputString = outputString + $"{pipeEncoded}{marker.Coordinate.ToString()}";
+
                 }
             }
             else //custom icons
@@ -132,7 +185,7 @@ public class StaticMapsApi
                 foreach (var customMarker in group)
                 {
                     //note: using null forgiving operator, as LINQ filtered by nulls.
-                    output.Add($"icon:{customMarker.CustomIcon!.Url.AbsoluteUri}" +
+                    output.Add($"icon:{customMarker.CustomIcon!.Uri.AbsoluteUri}" +
                         $"|{customMarker.Coordinate.ToString()}");
                 }
             }
@@ -141,11 +194,6 @@ public class StaticMapsApi
 
     }
 
-    static string ColorToHex(Color color)
-        //convert a color object to a 24bit hex string representation
-    {
-        return $"0x{color.R:X2}{color.G:X2}{color.B:X2}";
 
-    }
 
 }

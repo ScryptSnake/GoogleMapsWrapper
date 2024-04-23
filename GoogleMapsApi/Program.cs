@@ -1,9 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using GoogleMapsWrapper;
-using GoogleMapsWrapper.Api;
+using GoogleMapsWrapper.Utilities;
+using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace GoogleMapsWrapper
@@ -18,29 +20,47 @@ namespace GoogleMapsWrapper
 
             var testClient = new HttpClient();
 
+            var configpath = "C:/GoogleMapsApi/GoogleMapsApi/Configuration/appSettings.json";
 
-            var api = new ApiEngine("API_KEY_REDACTED_4-22-24",testClient);
+            var config = new ConfigurationBuilder()
+            .AddJsonFile(configpath)
+            .Build();
+            
+            var wrapper = new GoogleMapsWrapper.Api.GoogleMapsApi(testClient, config);    
+
+           
             var coord = new GpsCoordinate(40.803143m, -79.507266m);
 
-            var googapi = new StaticMapsApi(api);
 
             var map = new Map(MapTypes.Hybrid);
-            
+            map.Dimensions = "200X200";
+
             var markers = new List<Marker>();
-            var marker = new Marker(GpsCoordinate.Parse("41.40484,-71.02829"));
-            var marker2 = new Marker(GpsCoordinate.Parse("41.42484,-71.04829"));
-            var marker3 = new Marker(GpsCoordinate.Parse("41.43484,-71.07829"));
+            var marker = new Marker(GpsCoordinate.Parse("41.40484,-77.02829"));
+            var marker2 = new Marker(GpsCoordinate.Parse("41.42484,-77.04829"));
+            var marker3 = new Marker(GpsCoordinate.Parse("41.43484,-77.07829"));
+
             marker.Color = Color.Purple;
             markers.Add(marker);
             markers.Add(marker2);
             markers.Add(marker3);
 
+            var coords = new List<GpsCoordinate>();
+            foreach (var m in markers)
+            {
+                coords.Add(m.Coordinate);
+            }
+
+            var path = new Polyline(coords);
+            path.Color = Color.BlanchedAlmond;
+
+            //Debug.Print("ENCODED =========== " + path.Encode());
 
 
+            string encodedPolyline = PolylineEncoder.Encode(coords);
+            Console.WriteLine("Encoded Polyline: " + encodedPolyline);
 
-            var img = await googapi.GetMap(map, markers);
-
-
+            var img = await wrapper.StaticMapsApi.GetMap(map, markers, new List<GoogleMapsWrapper.Elements.Polyline> { path });
 
         }
 

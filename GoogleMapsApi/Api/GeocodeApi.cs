@@ -31,7 +31,7 @@ public class GeocodeApi
     public async Task<IResponse<JsonDocument>> Geocode(GpsCoordinate coordinate, string? identifier = default)
     {
         //Grab the main API Url...
-        var builder = new UriBuilder(apiEngine.Options.BaseUri + "geocode/json");
+        var builder = new UriBuilder(apiEngine.BaseUrl + "geocode/json");
         //build query
         builder.Query = $"?latlng={coordinate.ToString()}";
         //build request
@@ -61,7 +61,7 @@ public class GeocodeApi
     }
     public async Task<IResponse<JsonDocument>> GetElevation(GpsCoordinate coordinate, string? Identifier = default)
     {
-        var builder = new UriBuilder(apiEngine.Options.BaseUri + "elevation/json");
+        var builder = new UriBuilder(apiEngine.BaseUrl + "elevation/json");
         builder.Query = $"?locations={coordinate.Latitude},{coordinate.Longitude}";
         var request = new ApiRequest(builder.Uri, this.apiType, RequestType.Elevation, Identifier);
         return await this.apiEngine.GetJsonAsync(request);

@@ -18,6 +18,7 @@ using System.Runtime.InteropServices;
 using GoogleMapsWrapper.Requests;
 using System.Net.WebSockets;
 using Flurl;
+using Microsoft.Extensions.Configuration;
 namespace GoogleMapsWrapper.Engine
 {
 
@@ -26,42 +27,28 @@ namespace GoogleMapsWrapper.Engine
         private readonly string key;
         private readonly HttpClient httpClient;
 
-        //API_KEY_REDACTED_4-22-24
 
-        private const string defaultBaseUrl = "https://maps.googleapis.com/maps/api/";
-
-        private ApiEngineOptions options = new ApiEngineOptions(new Uri(defaultBaseUrl));
-        public ApiEngineOptions Options { set => this.options = value; get => this.options; }
+        private string baseUrl = "https://maps.googleapis.com/maps/api/";
+        public string BaseUrl { get => baseUrl; }
 
 
-        public ApiEngine(string key, HttpClient httpClient, ApiEngineOptions? options = null)
+        private IConfiguration configuration;
+
+        public ApiEngine(HttpClient httpClient, IConfiguration config)
         {
-            this.key = key;
-            this.httpClient = httpClient;
+            this.configuration = config;
+            this.key = config["AppSettings:ApiKey"] ?? 
+                throw new Exception("Configuration invalid. Failed to find key.");
 
-            if (options is not null)
-            {
-                this.Options = options;
-            }
+            this.httpClient = httpClient;
         }
         private KeyedRequest CreateKeyedRequest(IRequest request)
         {
             //appends the API key to the request for sending *within* the engine. 
-
-
-            Debug.Print("inotu====" + request.Url.ToString());
-
-
-            //var uri = new Flurl.Url(request.Url); //create a new uri
-            //uri.SetQueryParam("key", this.key); //note: this will not work because of multiple markers parameters, must manually string-append key
-
-            string url = request.Url.AbsoluteUri + $"&key={this.key}";
-
-
-            Debug.Print("OUTPUT====" + url.ToString());
-            return new KeyedRequest(url, request.Api, request.Category,request.Id); //create keyed req.
-
-
+            var uri = new Flurl.Url(request.Url); //create a new uri
+            uri.AppendQueryParam("key",this.key);
+            Debug.Print("OUTPUT==" + uri.ToString());
+            return new KeyedRequest(uri, request.Api, request.Category,request.Id); //create keyed req.
         }
 
 
@@ -80,13 +67,18 @@ namespace GoogleMapsWrapper.Engine
             return responseMessage;
         }
 
+        /// <summary>
+        /// Make a GET request to the API endpoint and return a JSON response.
+        /// </summary>
         public async Task<IResponse<JsonDocument>> GetJsonAsync(IRequest request)
         {
             var response = await sendGetRequestAsync(CreateKeyedRequest(request));
             var result = await response.Content.ReadAsStringAsync();
             return new JsonResponse(request, JsonDocument.Parse(result), response);
         }
-
+        /// <summary>
+        /// Make a GET request to the API endpoint and return a byte array response.
+        /// </summary>
         public async Task<IResponse<byte[]>> GetBytesAsync(IRequest request)
         {
             var response = await sendGetRequestAsync(CreateKeyedRequest(request));

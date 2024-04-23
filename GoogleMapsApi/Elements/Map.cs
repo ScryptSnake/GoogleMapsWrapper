@@ -1,4 +1,4 @@
-﻿using GoogleMapsWrapper.StaticMaps;
+﻿using GoogleMapsWrapper.Api;
 using GoogleMapsWrapper.Types;
 using System;
 using System.Collections.Generic;

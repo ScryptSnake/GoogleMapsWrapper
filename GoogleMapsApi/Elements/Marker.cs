@@ -9,15 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using GoogleMapsWrapper.Types;
 using GoogleMapsWrapper.Elements;
-using GoogleMapsWrapper.StaticMaps;
+using GoogleMapsWrapper.Api;
 
 namespace GoogleMapsWrapper.Elements
 {
 
     public class Marker : GoogleMapElement
     {
-
-
         private char label = '\0'; //initialize to null character
         public char Label
         {
