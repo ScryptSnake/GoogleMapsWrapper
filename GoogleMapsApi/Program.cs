@@ -22,13 +22,7 @@ namespace GoogleMapsWrapper
 
             var configpath = "C:/GoogleMapsApi/GoogleMapsApi/Configuration/appSettings.json";
 
-            var config = new ConfigurationBuilder()
-            .AddJsonFile(configpath)
-            .Build();
-            
-            var wrapper = new GoogleMapsWrapper.Api.GoogleMapsApi(testClient, config);    
-
-           
+            var api = new ApiEngine("AIzaSyDHaNIVpQ-Iy02FTY4x2NfpI2zOag_Xwuk",testClient);
             var coord = new GpsCoordinate(40.803143m, -79.507266m);
 
 
