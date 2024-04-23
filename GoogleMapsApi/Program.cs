@@ -21,9 +21,15 @@ namespace GoogleMapsWrapper
             var testClient = new HttpClient();
 
             var configpath = "C:/GoogleMapsApi/GoogleMapsApi/Configuration/appSettings.json";
+          
 
-            var api = new ApiEngine("AIzaSyDHaNIVpQ-Iy02FTY4x2NfpI2zOag_Xwuk",testClient);
-            var coord = new GpsCoordinate(40.803143m, -79.507266m);
+
+            var config = new ConfigurationBuilder()
+            .AddJsonFile(configpath)
+            .Build();
+
+            var wrapper = new GoogleMapsApi(testClient, config);    
+
 
 
             var map = new Map(MapTypes.Hybrid);
