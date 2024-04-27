@@ -12,7 +12,6 @@ namespace GoogleMapsWrapper.Parsers
 {
     public class ElevationParser : IParser<ElevationContainer, JsonDocument>
     {
-
         public bool TryParse(JsonDocument input, out ElevationContainer? output)
         {
             try
@@ -26,9 +25,6 @@ namespace GoogleMapsWrapper.Parsers
                 return false;
             }
         }
-
-
-
         public ElevationContainer Parse(JsonDocument input)
         {
             //create a dictionary to hold retrieved data
@@ -44,9 +40,7 @@ namespace GoogleMapsWrapper.Parsers
 
                 //Deserialize into result object
                 var container = JsonConvert.DeserializeObject<ElevationContainer>(firstResult.ToString());
-
                 if (container == null) throw new System.Text.Json.JsonException("Failed to derserialize elevation response");
-
 
                 // Find coordinates and create new container with coords added...
                 var containerCopied = container with

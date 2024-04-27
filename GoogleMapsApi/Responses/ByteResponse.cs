@@ -8,30 +8,28 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Responses
 {
-
     public class ByteResponse : IResponse<byte[]>
     {
         private IRequest sentRequest;
         public IRequest SentRequest { get => sentRequest; }
 
         private HttpResponseMessage responseMessage;
-        public HttpResponseMessage ResponseMessage => responseMessage;
+        public HttpResponseMessage ResponseMessage { get => responseMessage; }
 
-        private byte[] content;
-        public byte[] Content { get; }
-
+        public byte[]? content;
+        public byte[]? Content { get=>content; }
 
         public ByteResponse(IRequest SentRequest, byte[] Content, HttpResponseMessage ResponseMessage)
         {
-            this.content = Content;
             this.sentRequest = SentRequest;
+            this.content = Content;
             this.responseMessage = ResponseMessage;
-
         }
 
         public T Parse<T>(IParser<T, byte[]> parser)
         {
-            return parser.Parse(this.content);
+            if(this.Content==null) { throw new NullReferenceException("Content of response is null."); }
+            return parser.Parse(this.Content);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace GoogleMapsWrapper.Elements
         }
 
         private GpsCoordinate? center;
-        public GpsCoordinate? Center { get => center; set => value = center; }
+        public GpsCoordinate? Center { get => center; set => center=value; }
 
 
         public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.HighRes, 

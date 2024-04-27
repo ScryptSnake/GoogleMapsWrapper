@@ -21,7 +21,7 @@ namespace GoogleMapsWrapper.Responses
         public HttpResponseMessage ResponseMessage => responseMessage;
 
         private JsonDocument content;
-        public JsonDocument Content { get; }
+        public JsonDocument Content { get=>content; }
         public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
         {
             content = Content;

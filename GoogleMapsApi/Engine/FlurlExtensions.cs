@@ -18,13 +18,13 @@ namespace GoogleMapsWrapper.Engine
         /// If the value passed is null or an empty string, the default value is used.
         /// If the default value is null, Flurl.NullValueHandling.Remove is enacted.
         /// </summary>
-        public static Flurl.Url SetQueryParamWithDefault(this Flurl.Url url, string name,
-            Object? value, object? defaultValue, bool isEncoded = false)
+        public static Url SetQueryParamWithDefault(this Url url, string name,
+            object? value, object? defaultValue, bool isEncoded = false)
         {
             //initialize null string
             string? stringValue = null;
             //check if value is not null;
-            if(value is not null)
+            if (value is not null)
             {
                 //convert to string
                 stringValue = value.ToString();
@@ -35,7 +35,7 @@ namespace GoogleMapsWrapper.Engine
                 }
             }
 
-            if(defaultValue is not null && stringValue is null)
+            if (defaultValue is not null && stringValue is null)
             {
                 stringValue = defaultValue.ToString(); //set the default
             }

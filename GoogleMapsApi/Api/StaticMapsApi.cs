@@ -13,7 +13,6 @@ using GoogleMapsWrapper.Elements;
 using System.Diagnostics;
 using Flurl;
 using System.Collections.ObjectModel;
-using GoogleMapsWrapper.Utilities;
 namespace GoogleMapsWrapper.Api;
 
 public class StaticMapsApi
@@ -48,7 +47,7 @@ public class StaticMapsApi
     /// <summary>
     /// Make a request to the API for a static map and return a byte array of the resultant image. Markers are optional. Paths are also optional. 
     /// </summary>
-    public async Task<byte[]> GetMapBytes(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    public async Task<byte[]?> GetMapBytes(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //shortcut method
         var response = await GetMap(mapSettings, markers, paths);

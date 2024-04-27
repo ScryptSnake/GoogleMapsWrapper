@@ -13,7 +13,7 @@ namespace GoogleMapsWrapper.Responses
     {
         public IRequest SentRequest { get; }
         public HttpResponseMessage ResponseMessage { get; }
-        public TResponse Content { get; }
+        public TResponse? Content { get; }
 
         public T Parse<T>(IParser<T,TResponse> parser);
     }

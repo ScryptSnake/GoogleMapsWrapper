@@ -12,7 +12,6 @@ namespace GoogleMapsWrapper.Parsers
 {
     public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>
     {
-
         public bool TryParse(JsonDocument input, out GeocodeContainer? output)
         {
             try
@@ -63,7 +62,6 @@ namespace GoogleMapsWrapper.Parsers
                     Coordinates = FindGpsCoordinate(secondResult.GetProperty("geometry").GetProperty("location")),
                     AssociatedData = input.ToString()
                 };
-
                 return containerWithCoordinates ?? throw new JsonSerializationException("Failed to parse.");
             }
             else

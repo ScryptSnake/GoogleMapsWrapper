@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace GoogleMapsWrapper.Engine
 {
     internal class KeyedRequest : IRequest 
-        //A typical IRequest is converted to a KeyedRequest, by appending the API Key. 
-        //It is never exposed outside the Engine. 
+        //A typical IRequest is converted to a KeyedRequest in the API Engine, by appending the API Key. 
+        //It is never exposed outside the engine. 
     {
         public string? Id { get; }
         

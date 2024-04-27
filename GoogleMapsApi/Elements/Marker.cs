@@ -32,15 +32,12 @@ namespace GoogleMapsWrapper.Elements
             }
         }
 
-
         public MarkerScaleTypes Scale;
         public MarkerSizes Size;
         public StaticMapCustomIcon? CustomIcon { get; set; }
 
 
         //24 bit hexedcimal string from color value (for static maps API)
-
-
         public GpsCoordinate Coordinate { get; }
         public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
         {
