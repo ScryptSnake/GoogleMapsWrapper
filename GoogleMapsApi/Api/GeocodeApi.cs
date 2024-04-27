@@ -23,12 +23,12 @@ public class GeocodeApi
         this.apiEngine = engine;
     }
 
-    public async Task<IResponse<JsonDocument>> Geocode(string latitude, string longitude, string? identifier = default)
+    public async Task<IResponse<JsonDocument>> GeocodeAsync(string latitude, string longitude, string? identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
-        return await this.Geocode(coordinate,identifier);
+        return await this.GeocodeAsync(coordinate,identifier);
     }
-    public async Task<IResponse<JsonDocument>> Geocode(GpsCoordinate coordinate, string? identifier = default)
+    public async Task<IResponse<JsonDocument>> GeocodeAsync(GpsCoordinate coordinate, string? identifier = default)
     {
         //Grab the main API Url...
         var builder = new UriBuilder(apiEngine.BaseUrl + "geocode/json");
@@ -42,19 +42,19 @@ public class GeocodeApi
     }
 
 
-    public async Task<GeocodeContainer> GeocodeParse(string latitude, string longitude)
+    public async Task<GeocodeContainer> GeocodeParseAsync(string latitude, string longitude)
     {
-        var response =await Geocode(latitude, longitude);
+        var response =await GeocodeAsync(latitude, longitude);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
-    public async Task<GeocodeContainer> GeocodeParse(GpsCoordinate coordinate)
+    public async Task<GeocodeContainer> GeocodeParseAsync(GpsCoordinate coordinate)
     {
-        var response = await Geocode(coordinate);
+        var response = await GeocodeAsync(coordinate);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
 
 
-    public async Task<IResponse<JsonDocument>>GetElevation(string latitude, string longitude, string? Identifier = default)
+    public async Task<IResponse<JsonDocument>>GetElevationAsync(string latitude, string longitude, string? Identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await GetElevation(coordinate, Identifier);
@@ -67,12 +67,12 @@ public class GeocodeApi
         return await this.apiEngine.GetJsonAsync(request);
     }
 
-    public async Task<ElevationContainer>GetElevationParsed(string latitude, string longitude)
+    public async Task<ElevationContainer>GetElevationParsedAsync(string latitude, string longitude)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
-        return await GetElevationParsed(coordinate);
+        return await GetElevationParsedAsync(coordinate);
     }
-    public async Task<ElevationContainer> GetElevationParsed(GpsCoordinate coordinate)
+    public async Task<ElevationContainer> GetElevationParsedAsync(GpsCoordinate coordinate)
     {
         var response = await GetElevation(coordinate);
         return response.Parse<ElevationContainer>(new ElevationParser());

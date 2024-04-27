@@ -32,7 +32,7 @@ public class StaticMapsApi
     /// <summary>
     /// Make a request to the API for a static map and return a Byte Response. Markers are optional. Paths are also optional. 
     /// </summary>
-    public async Task<IResponse<byte[]>> GetMap(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<Polyline>? paths=null)
+    public async Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<Polyline>? paths=null)
     {
         var url = BuildUrl(mapSettings, markers, paths);
         //build request
@@ -47,10 +47,10 @@ public class StaticMapsApi
     /// <summary>
     /// Make a request to the API for a static map and return a byte array of the resultant image. Markers are optional. Paths are also optional. 
     /// </summary>
-    public async Task<byte[]?> GetMapBytes(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    public async Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //shortcut method
-        var response = await GetMap(mapSettings, markers, paths);
+        var response = await GetMapAsync(mapSettings, markers, paths);
         return response.Content;
     }
 
@@ -174,7 +174,7 @@ public class StaticMapsApi
                         outputString = outputString + $"label{colonEncoded}{markerLabelEncoded}";
                     }
 
-                    outputString = outputString + $"{pipeEncoded}{marker.Coordinate.ToString()}";
+                    output.Add(outputString + $"{pipeEncoded}{marker.Coordinate.ToString()}");
 
                 }
             }

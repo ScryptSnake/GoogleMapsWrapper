@@ -41,6 +41,7 @@ namespace GoogleMapsWrapper.Elements
         }
 
 
+
         public void AddCoordinate(GpsCoordinate coordinate)
         {
             coordinates.Add(coordinate);
