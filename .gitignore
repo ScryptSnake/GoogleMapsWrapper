@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /GoogleMapsApi/Configuration/appSettings.json
 /GoogleMapsApi/TextFile2.txt
+/GoogleMapsJavascriptApi/GoogleMapsJavascriptApi.csproj
+/GoogleMapsJavascriptApi/GoogleMapsJavascriptApi.csproj
+/GoogleMapsJavascriptApi
