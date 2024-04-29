@@ -45,7 +45,7 @@ namespace GoogleMapsWrapper
             markers.Add(marker2);
 
             //manipulate marker colors
-            marker1.Color = Color.Chartreuse;
+            marker1.Color = Color.Purple;
 
             //Get the map from the endpoint - this is a non-async context because awaiting task NEVER returns to main(). 
             var byteResponse = Task.Run(async () => await wrapper.StaticMapsApi.GetMapBytesAsync(map, markers)).Result;
