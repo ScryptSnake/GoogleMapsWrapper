@@ -19,446 +19,459 @@
         }
     </style>
 
-    <!--callback=Function.prototype is a Javacript way to specify an empty function - google throws err message if no callback. will still run but this removes the err.-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=*APIKEY*&callback=Function.prototype"></script>
 
     <script type="text/javascript">
-        (async function () {
-            await CefSharp.BindObjectAsync("boundAsync"); // Bind the registered vb.net object
-        })();
+        //Define a function to handle console errors
+        function handleConsoleErrors(message, source, lineno, colno, error) {
+            // Log the error message
+            console.error("Window error:\n", message, source, lineno, colno, error);
+            // Optionally, display an alert
+            alert("Window error:\n" + message, source, lineno, colno, error);
+        }
+        // Subscribe to the window.onerror event to capture errors
+        window.onerror = handleConsoleErrors;
     </script>
 
+
+    <!--callback=Function.prototype is a Javacript way to specify an empty function - google throws err message if no callback. will still run but this removes the err.-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=*APIKEY*&loading=async&callback=Function.prototype"></script>
+
+
+
+
+
+
     <script type="text/javascript">
-        var map;
-        var markers = []; // Initialize markers array
-        var polylines = [];
-        var polylineMarkerPrefix = "POLY_AUTO_"; //prefix added to markers that are reserved for polylines only
+                var map;
+            var markers = []; // Initialize markers array
+            var polylines = [];
+            var polylineMarkerPrefix = "POLY_AUTO_"; //prefix added to markers that are reserved for polylines only
 
 
-        // error handler.... idk if this even works. errors are thrown back to vb from the calling function most of the time.
-        window.onerror = function (message, source, lineno, colno, error) {
-            // Handle the error here
-        var errorDetails = "Error message: " + message + "\n" +
-                          "Source: " + source + "\n" +
-                          "Line number: " + lineno + "\n" +
-                          "Column number: " + colno;
-            // Optionally, you can log the full error object
-            if (error) {
-                console.error("Error object:", error);
+            //set border around canvas
+            function setBorder(color, thickness, radius) {
+                var mapCanvas = document.getElementById("map-canvas");
+                mapCanvas.style.border = thickness + "px solid " + color;
+                mapCanvas.style.borderRadius = radius + "px"; // Add rounded corners
             }
-            boundAsyc.onJavascriptError(errorDetails);
-            // Prevent the default browser error handling
-            return true;
-        };
 
-        //set border around canvas
-        function setBorder(color,thickness,radius) {
-            var mapCanvas = document.getElementById("map-canvas");
-            mapCanvas.style.border = thickness + "px solid " + color;
-            mapCanvas.style.borderRadius = radius + "px"; // Add rounded corners
-        }
+            function initialize() {
+                // ...
+                //load the map with settings
+                var mapType = '*MAPTYPE*'; // Set the desired map type: 'roadmap', 'satellite', 'hybrid', 'terrain'
+                var zoomLevel = * ZOOM *;    // Set the desired zoom level
+                var centerLatLng = new google.maps.LatLng(* LATITUDE *,* LONGITUDE *); // Set the desired center coordinates
 
-        function initialize() {
-            // ...
-            //load the map with settings
-            var mapType = '*MAPTYPE*'; // Set the desired map type: 'roadmap', 'satellite', 'hybrid', 'terrain'
-            var zoomLevel = *ZOOM*;    // Set the desired zoom level
-            var centerLatLng = new google.maps.LatLng(*LATITUDE*,*LONGITUDE*); // Set the desired center coordinates
+                var mapOptions = {
+                    center: centerLatLng,
+                    zoom: zoomLevel,
+                    mapTypeId: mapType,
+                    streetViewControl: false, // Remove the street view control button
+                    fullscreenControl: false,  // Remove the fullscreen control button
+                    keyboardShortcuts: false,
+                    zoomControl: false,
 
-            var mapOptions = {
-                center: centerLatLng,
-                zoom: zoomLevel,
-                mapTypeId: mapType,
-                streetViewControl: false, // Remove the street view control button
-                fullscreenControl: false,  // Remove the fullscreen control button
-                keyboardShortcuts: false,
-                zoomControl: false,
+                };
+                map = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
 
-            };
-            map = new google.maps.Map(document.getElementById("map-canvas"),
-                mapOptions);
-
-            // Add a 'click' event listener to the map
-            map.addListener('click', function (event) {
-                var latitude = event.latLng.lat();
-                var longitude = event.latLng.lng();
-                boundAsync.onMapClick(latitude, longitude); //trigger vb
-            });
-            // Add a listener for double-click event on the map
-            google.maps.event.addListener(map, 'dblclick', function(event) {
-                // Handle the double-click event here
-                var latitude = event.latLng.lat();
-                var longitude = event.latLng.lng();
-                boundAsync.onMapDblClicked(latitude, longitude);
-            });
-            // Add a listener for right-click event on the map
-            google.maps.event.addListener(map, 'rightclick', function(event) {
-                // Handle the double-click event here
-                var latitude = event.latLng.lat();
-                var longitude = event.latLng.lng();
-                boundAsync.onMapRightClicked(latitude, longitude);
-            });
-
-        }
+                // Add a 'click' event listener to the map
+                map.addListener('click', function (event) {
+                    var latitude = event.latLng.lat();
+                    var longitude = event.latLng.lng();
+                    //boundObject.onMapClick(latitude, longitude); //trigger vb
 
 
-        //add a polyline to the map
-        function addPolyline(polyId, coordinates, color, opacity, weight) {
-
-            var coordArray = parseCoordinateString(coordinates);
-
-            // Define the polyline properties
-            var polylineOptions = {
-                path: coordArray,
-                geodesic: true,
-                strokeColor: color || "#FF0000",
-                strokeOpacity: opacity || 1.0,
-                strokeWeight: weight || 2,
-                map: map,
-                id: polyId,
-                labelMarker: null //add marker to attach label, etc
-            };
-            // Create the polyline and add it to the map
-            var polyline = new google.maps.Polyline(polylineOptions);
-            polylines.push(polyline);
-
-            //create and add labelMarker 
-            var idString = polylineMarkerPrefix + polyId; //see global vars at top
-            var midCoordinate = coordArray[Math.floor(coordArray.length / 2)];
-            var labelMarker = addMarker(midCoordinate.lat(), midCoordinate.lng(), idString);
-            polyline.labelMarker = labelMarker;
-            labelMarker.setMap(null); //remove marker from map
-           
-            // Add a 'click' event listener to the polyline
-            google.maps.event.addListener(polyline,'click', function (event) {
-                boundAsync.onPolylineClicked(polyId); //trigger vb
-            });
-                        // Add a 'click' event listener to the polyline
-            google.maps.event.addListener(polyline,'dblclick', function (event) {
-                boundAsync.onPolylineDblClicked(polyId); //trigger vb
-            });
-                        // Add a 'click' event listener to the polyline
-            google.maps.event.addListener(polyline,'rightclick', function (event) {
-                boundAsync.onPolylineRightClick(polyId); //trigger vb
-            });
-                        //attach mouseover
-            google.maps.event.addListener(polyline, 'mouseover', function() {
-                boundAsync.onPolylineMouseOver(polyid);
-            });
-                        //attach mouseover
-            google.maps.event.addListener(polyline, 'mouseout', function() {
-                boundAsync.onPolylineMouseOut(polyid);
-            });
-
-        }
-
-        // Takes coordinates in format: lat1,lng1;lat2,lng2;... and returns an array of LatLng objects
-        function parseCoordinateString(coordinateString) {
-            var latLngArray = coordinateString.split(";").map(function(coordString) {
-                var latLngValues = coordString.split(",").map(parseFloat); // Use a different variable name
-                var lat = latLngValues[0]; // Use latLngValues here
-                var lng = latLngValues[1]; // Use latLngValues here
-                return new google.maps.LatLng(lat, lng);
-            });
-            return latLngArray;
-
-        }
+                    //chrome.webview.hostObjects.testBoundObject.OnMapClick();
 
 
-        //find polyline by ID inside the global variable
-        function findPolyByID(id) {
-            for (var i = 0; i < polylines.length; i++) {
-                if (polylines[i].id === id) {
-                    return polylines[i];
-                }
-            }
-            console.error("Failed to resolve Polyline from ID: " + ID);
-        }
-
-        function setPolylineCoordinates(id, coordinates) {
-            
-            var coordArray = parseCoordinateString(coordinates);
-            var poly = findPolyByID(id);
-            poly.setPath(coordArray);
-        }
 
 
-        function setPolylineOptions(id, color, weight, opacity) {
-            var poly = findPolyByID(id);
-            // Update the polyline properties
-            poly.setOptions({
-                strokeWeight: weight || poly.strokeWeight,
-                strokeColor: color || poly.strokeColor,
-                strokeOpacity: opacity || poly.strokeOpacity
-            });
-        }
+                    //                callBridgeFunc();
 
-        //delete a marker - with right click and confirmation box.
-        function deletePolyline(id) {
-            var poly = findPolyByID(id);
-            var index = polylines.indexOf(poly);
-            if (index !== -1) {
-                poly.setMap(null); // Remove the poly from the map
-                polylines.splice(index, 1); // Remove the marker from the markers array
-
-            }
-        }
-
-        //hide or display label/infobox for a polyline
-        function setPolylineInfoWindowLabel(id, infoText, labelText) {
-            var poly = findPolyByID(id);
-            var marker = poly.labelMarker;
-
-            var transparentIcon = {
-                path: 'M 0,0 1,0 1,1 0,1 Z',
-                fillOpacity: 0,
-                strokeOpacity: 0,
-                scale: 1, // Adjust the scale as needed
-            };
-            // Check if both infoText and labelText are defined
-            if (infoText !== undefined && labelText !== undefined) {
-                marker.setMap(map);
-                marker.setIcon(transparentIcon); //set icon to transparent
-                setMarkerLabel(marker.id, labelText);
-                setInfoWindow(marker.id, infoText);
-            } else {
-                marker.setMap(null);
-            }
-        }
+                    chrome.webview.hostObjects.log = function (message) {
+                        alert("Debug Info: " + message);
+                    };
 
 
-        // Add a marker to the map
-        function addMarker(markerId, latitude, longitude) {
-            //note multiselect is handled at the caller level.
-
-            //create info window object and attach to marker in case used.      
-            var infoWindow = new google.maps.InfoWindow({ 
-                content: "",
-            });
-
-            infoWindow.close(); //make hidden
-
-            var marker = new google.maps.Marker({
-                position: { lat: latitude, lng: longitude },
-                map: map,
-                id: markerId, //custom variable
-                infoWindow: infoWindow //custom var to store info window when/if opened
-            });
-
-            markers.push(marker); // Add marker to the markers array
 
 
-            if (!markerId.startsWith(polylineMarkerPrefix)) { //add events if not a hidden polyLineevent.
-
-                //click event for the marker 
-                google.maps.event.addListener(marker, 'click', function () {
-                    boundAsync.onMarkerClicked(markerId); //trigger vb
                 });
-                // Add a double-click event listener to the marker
-                google.maps.event.addListener(marker, 'dblclick', function () {
-                    // Your code to handle the double-click event here
-                    boundAsync.onMarkerDblClicked(markerId);
+                // Add a listener for double-click event on the map
+                google.maps.event.addListener(map, 'dblclick', function (event) {
+                    // Handle the double-click event here
+                    var latitude = event.latLng.lat();
+                    var longitude = event.latLng.lng();
+                    boundObject.onMapDblClicked(latitude, longitude);
                 });
-                // Attach right click
-                google.maps.event.addListener(marker, 'rightclick', function (event) {
-                    boundAsyc.onMarkerRightClick(markerId);
+                // Add a listener for right-click event on the map
+                google.maps.event.addListener(map, 'rightclick', function (event) {
+                    // Handle the double-click event here
+                    var latitude = event.latLng.lat();
+                    var longitude = event.latLng.lng();
+                    boundObject.onMapRightClicked(latitude, longitude);
+                });
+
+            }
+
+
+            //add a polyline to the map
+            function addPolyline(polyId, coordinates, color, opacity, weight) {
+
+                var coordArray = parseCoordinateString(coordinates);
+
+                // Define the polyline properties
+                var polylineOptions = {
+                    path: coordArray,
+                    geodesic: true,
+                    strokeColor: color || "#FF0000",
+                    strokeOpacity: opacity || 1.0,
+                    strokeWeight: weight || 2,
+                    map: map,
+                    id: polyId,
+                    labelMarker: null //add marker to attach label, etc
+                };
+                // Create the polyline and add it to the map
+                var polyline = new google.maps.Polyline(polylineOptions);
+                polylines.push(polyline);
+
+                //create and add labelMarker
+                var idString = polylineMarkerPrefix + polyId; //see global vars at top
+                var midCoordinate = coordArray[Math.floor(coordArray.length / 2)];
+                var labelMarker = addMarker(midCoordinate.lat(), midCoordinate.lng(), idString);
+                polyline.labelMarker = labelMarker;
+                labelMarker.setMap(null); //remove marker from map
+
+                // Add a 'click' event listener to the polyline
+                google.maps.event.addListener(polyline, 'click', function (event) {
+                    boundObject.onPolylineClicked(polyId); //trigger vb
+                });
+                // Add a 'click' event listener to the polyline
+                google.maps.event.addListener(polyline, 'dblclick', function (event) {
+                    boundObject.onPolylineDblClicked(polyId); //trigger vb
+                });
+                // Add a 'click' event listener to the polyline
+                google.maps.event.addListener(polyline, 'rightclick', function (event) {
+                    boundObject.onPolylineRightClick(polyId); //trigger vb
                 });
                 //attach mouseover
-                google.maps.event.addListener(marker, 'mouseover', function () {
-                    boundAsync.onMarkerMouseOver(markerId);
+                google.maps.event.addListener(polyline, 'mouseover', function () {
+                    boundObject.onPolylineMouseOver(polyid);
                 });
                 //attach mouseover
-                google.maps.event.addListener(marker, 'mouseout', function () {
-                    boundAsync.onMarkerMouseOut(markerId);
+                google.maps.event.addListener(polyline, 'mouseout', function () {
+                    boundObject.onPolylineMouseOut(polyid);
                 });
-                // Add a dragend event listener to the marker
-                marker.addListener('dragend', function (event) {
-                    var newLatitude = event.latLng.lat();
-                    var newLongitude = event.latLng.lng();
-                    // Call a function with the new coordinates
-                    boundAsync.onMarkerDragged(markerId, newLatitude, newLongitude);  //the marker object 'position' property is updated also as expected
+
+            }
+
+            // Takes coordinates in format: lat1,lng1;lat2,lng2;... and returns an array of LatLng objects
+            function parseCoordinateString(coordinateString) {
+                var latLngArray = coordinateString.split(";").map(function (coordString) {
+                    var latLngValues = coordString.split(",").map(parseFloat); // Use a different variable name
+                    var lat = latLngValues[0]; // Use latLngValues here
+                    var lng = latLngValues[1]; // Use latLngValues here
+                    return new google.maps.LatLng(lat, lng);
+                });
+                return latLngArray;
+
+            }
+
+
+            //find polyline by ID inside the global variable
+            function findPolyByID(id) {
+                for (var i = 0; i < polylines.length; i++) {
+                    if (polylines[i].id === id) {
+                        return polylines[i];
+                    }
+                }
+                console.error("Failed to resolve Polyline from ID: " + ID);
+            }
+
+            function setPolylineCoordinates(id, coordinates) {
+
+                var coordArray = parseCoordinateString(coordinates);
+                var poly = findPolyByID(id);
+                poly.setPath(coordArray);
+            }
+
+
+            function setPolylineOptions(id, color, weight, opacity) {
+                var poly = findPolyByID(id);
+                // Update the polyline properties
+                poly.setOptions({
+                    strokeWeight: weight || poly.strokeWeight,
+                    strokeColor: color || poly.strokeColor,
+                    strokeOpacity: opacity || poly.strokeOpacity
                 });
             }
-            return marker
-        }
 
-        function findMarkerById(id) {
-            for (var i = 0; i < markers.length; i++) {
-                if (markers[i].id === id) {
-                    return markers[i];
+            //delete a marker - with right click and confirmation box.
+            function deletePolyline(id) {
+                var poly = findPolyByID(id);
+                var index = polylines.indexOf(poly);
+                if (index !== -1) {
+                    poly.setMap(null); // Remove the poly from the map
+                    polylines.splice(index, 1); // Remove the marker from the markers array
+
                 }
             }
-            console.error("Failed to resolve Marker from ID: " + ID);
-        }
 
-                // Function to set marker position by ID
-        function setMarkerPosition(id, latitude, longitude) {
+            //hide or display label/infobox for a polyline
+            function setPolylineInfoWindowLabel(id, infoText, labelText) {
+                var poly = findPolyByID(id);
+                var marker = poly.labelMarker;
+
+                var transparentIcon = {
+                    path: 'M 0,0 1,0 1,1 0,1 Z',
+                    fillOpacity: 0,
+                    strokeOpacity: 0,
+                    scale: 1, // Adjust the scale as needed
+                };
+                // Check if both infoText and labelText are defined
+                if (infoText !== undefined && labelText !== undefined) {
+                    marker.setMap(map);
+                    marker.setIcon(transparentIcon); //set icon to transparent
+                    setMarkerLabel(marker.id, labelText);
+                    setInfoWindow(marker.id, infoText);
+                } else {
+                    marker.setMap(null);
+                }
+            }
+
+
+            // Add a marker to the map
+            function addMarker(markerId, latitude, longitude) {
+                //note multiselect is handled at the caller level.
+
+                //create info window object and attach to marker in case used.
+                var infoWindow = new google.maps.InfoWindow({
+                    content: "",
+                });
+
+                infoWindow.close(); //make hidden
+
+                var marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map,
+                    id: markerId, //custom variable
+                    infoWindow: infoWindow //custom var to store info window when/if opened
+                });
+
+                markers.push(marker); // Add marker to the markers array
+
+
+                if (!markerId.startsWith(polylineMarkerPrefix)) { //add events if not a hidden polyLineevent.
+
+                    //click event for the marker
+                    google.maps.event.addListener(marker, 'click', function () {
+                        boundObject.onMarkerClicked(markerId); //trigger vb
+                    });
+                    // Add a double-click event listener to the marker
+                    google.maps.event.addListener(marker, 'dblclick', function () {
+                        // Your code to handle the double-click event here
+                        boundObject.onMarkerDblClicked(markerId);
+                    });
+                    // Attach right click
+                    google.maps.event.addListener(marker, 'rightclick', function (event) {
+                        boundAsyc.onMarkerRightClick(markerId);
+                    });
+                    //attach mouseover
+                    google.maps.event.addListener(marker, 'mouseover', function () {
+                        boundObject.onMarkerMouseOver(markerId);
+                    });
+                    //attach mouseover
+                    google.maps.event.addListener(marker, 'mouseout', function () {
+                        boundObject.onMarkerMouseOut(markerId);
+                    });
+                    // Add a dragend event listener to the marker
+                    marker.addListener('dragend', function (event) {
+                        var newLatitude = event.latLng.lat();
+                        var newLongitude = event.latLng.lng();
+                        // Call a function with the new coordinates
+                        boundObject.onMarkerDragged(markerId, newLatitude, newLongitude);  //the marker object 'position' property is updated also as expected
+                    });
+                }
+                return marker
+            }
+
+            function findMarkerById(id) {
+                for (var i = 0; i < markers.length; i++) {
+                    if (markers[i].id === id) {
+                        return markers[i];
+                    }
+                }
+                console.error("Failed to resolve Marker from ID: " + ID);
+            }
+
+            // Function to set marker position by ID
+            function setMarkerPosition(id, latitude, longitude) {
                 var marker = findMarkerById(id);
                 var newPosition = new google.maps.LatLng(latitude, longitude);
                 marker.setPosition(newPosition);
-        }
-
-
-        // Add a label to the marker - call with label = null to remove
-        function setMarkerLabel(id, label) {
-            var marker = findMarkerById(id);
-
-            if (label === undefined || label === "") {
-                marker.setLabel(null);
-            } else {
-                marker.setLabel({
-                    color: 'white',     // New color
-                    fontWeight: 'bold', // New font weight
-                    text: label          // New label text
-                });
             }
-        }
 
-        function setInfoWindow(id, info) {
-            var marker = findMarkerById(id);
-            // Check if marker.infoWindow is defined and not null
-            if (marker.infoWindow) { // Removed the function call ()
-                var window = marker.infoWindow;
-                // Check if info is defined and not empty
-                if (info && info !== "") {
-                    window.setContent(info);
-                    window.open(map, marker);
+
+            // Add a label to the marker - call with label = null to remove
+            function setMarkerLabel(id, label) {
+                var marker = findMarkerById(id);
+
+                if (label === undefined || label === "") {
+                    marker.setLabel(null);
                 } else {
-                    // If info is undefined or empty, close the existing info window
-                    window.close();
+                    marker.setLabel({
+                        color: 'white',     // New color
+                        fontWeight: 'bold', // New font weight
+                        text: label          // New label text
+                    });
                 }
             }
-        }
 
-        function setMarkerDraggable(id, enable) {
-            var marker = findMarkerById(id);
-            var boolEnable = JSON.parse(enable.toLowerCase()); // covert to bool
-            marker.setDraggable(boolEnable);
-        }
-
-                //change the icon for a marker with a png image...
-        function setMarkerIconFromImage(id, iconUrl, scale, opacity) {
-            var marker = findMarkerById(id);
-
-            var markerIcon = {
-                url: iconUrl,         // URL of the static icon image
-                scaledSize: new google.maps.Size(scale, scale),  // Adjust the size as needed
-                fillOpacity: opacity  // Set the opacity (1 is fully opaque)
-            };
-
-            marker.setIcon(markerIcon);
-        }
-
-        //change the icon for marker using the svg path 
-        function setMarkerIcon(id, svgPath, color, scale, opacity, outlineColor, outlineWeight) {
-            var marker = findMarkerById(id);
-            //svg graphics pin
-            console.log("setting marker icon....");
-            var markerIcon= {
-                path: svgPath,
-                fillColor: color,
-                fillOpacity: opacity,
-                strokeColor: outlineColor,
-                strokeWeight: outlineWeight,
-                scale: scale
-            };
-            marker.setIcon(markerIcon);
-            console.log("icon is set!")
-        }
-
-
-        // Animate  and stop the animation after a duration
-        function animateMarker(id, duration) {
-            var marker = findMarkerById(id);
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-            // Stop the animation after the specified duration
-            setTimeout(function () {
-                marker.setAnimation(null);
-            }, duration);
-
-        }
-
-        //called from VB - to delete a marker programatically
-        function deleteMarkerByID(id) {
-            var marker = findMarkerById(id);
-            if (marker !== null) {
-                deleteMarker(marker);
+            function setInfoWindow(id, info) {
+                var marker = findMarkerById(id);
+                // Check if marker.infoWindow is defined and not null
+                if (marker.infoWindow) { // Removed the function call ()
+                    var window = marker.infoWindow;
+                    // Check if info is defined and not empty
+                    if (info && info !== "") {
+                        window.setContent(info);
+                        window.open(map, marker);
+                    } else {
+                        // If info is undefined or empty, close the existing info window
+                        window.close();
+                    }
+                }
             }
-        }
 
-        //delete a marker - with right click and confirmation box.
-        function deleteMarker(marker) {
-            var index = markers.indexOf(marker);
-            if (index !== -1) {
-                marker.setMap(null); // Remove the marker from the map
-                markers.splice(index, 1); // Remove the marker from the markers array
-                boundAsync.onMarkerDeleted(marker.id);
+            function setMarkerDraggable(id, enable) {
+                var marker = findMarkerById(id);
+                var boolEnable = JSON.parse(enable.toLowerCase()); // covert to bool
+                marker.setDraggable(boolEnable);
+            }
+
+            //change the icon for a marker with a png image...
+            function setMarkerIconFromImage(id, iconUrl, scale, opacity) {
+                var marker = findMarkerById(id);
+
+                var markerIcon = {
+                    url: iconUrl,         // URL of the static icon image
+                    scaledSize: new google.maps.Size(scale, scale),  // Adjust the size as needed
+                    fillOpacity: opacity  // Set the opacity (1 is fully opaque)
+                };
+
+                marker.setIcon(markerIcon);
+            }
+
+            //change the icon for marker using the svg path
+            function setMarkerIcon(id, svgPath, color, scale, opacity, outlineColor, outlineWeight) {
+                var marker = findMarkerById(id);
+                //svg graphics pin
+                console.log("setting marker icon....");
+                var markerIcon = {
+                    path: svgPath,
+                    fillColor: color,
+                    fillOpacity: opacity,
+                    strokeColor: outlineColor,
+                    strokeWeight: outlineWeight,
+                    scale: scale
+                };
+                marker.setIcon(markerIcon);
+                console.log("icon is set!")
+            }
+
+
+            // Animate  and stop the animation after a duration
+            function animateMarker(id, duration) {
+                var marker = findMarkerById(id);
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+                // Stop the animation after the specified duration
+                setTimeout(function () {
+                    marker.setAnimation(null);
+                }, duration);
 
             }
-        }
 
-        // Function to fit the map to all markers
-        function fitMap() {
-            var bounds = new google.maps.LatLngBounds();
-
-            // Extend the bounds for each marker
-            markers.forEach(function (marker) {
-                bounds.extend(marker.getPosition());
-            });
-
-            // Fit the map to the bounds
-            map.fitBounds(bounds);
-        }
-
-        function setMapCenter(latitude,longitude,zoom) {
-            var targetLatLng = new google.maps.LatLng(latitude, longitude);
-            map.setCenter(targetLatLng);
-            map.setZoom(zoom);
-        }
-
-
-        function getMapCenter() {
-            var lat = map.getCenter().lat();
-            var lng = map.getCenter().lng();
-            return lat + "," + lng
-        }
-
-        function getMapZoom() {
-            return map.getZoom();
-        }
-
-
-        function setMapCursor(cursor) {
-            // use empty string for clearing to auto
-            // use 'pointer' for a pointer
-            // use 'crosshair'
-            map.setOptions({draggableCursor: cursor});
-        }
-
-
-
-         // Calculate distance between 2 or more coordinates - returns meters
-        // coord string is:  lat1,lng1;lat2,lng2....
-        function computeDistance(coordinateString) {
-            // Parse the coordinate string into an array of LatLng objects
-            var path = parseCoordinateString(coordinateString);
-            if (path.length < 2) {
-                console.error("Path should contain at least two coordinates");
-                return;
+            //called from VB - to delete a marker programatically
+            function deleteMarkerByID(id) {
+                var marker = findMarkerById(id);
+                if (marker !== null) {
+                    deleteMarker(marker);
+                }
             }
-            var totalDistance = 0;
-            // Loop through the coordinates to calculate the distances between 
-            for (var i = 1; i < path.length; i++) {
-                var distance = google.maps.geometry.spherical.computeDistanceBetween(path[i - 1], path[i]);
-                totalDistance += distance;
+
+            //delete a marker - with right click and confirmation box.
+            function deleteMarker(marker) {
+                var index = markers.indexOf(marker);
+                if (index !== -1) {
+                    marker.setMap(null); // Remove the marker from the map
+                    markers.splice(index, 1); // Remove the marker from the markers array
+                    boundObject.onMarkerDeleted(marker.id);
+
+                }
             }
-            return totalDistance //meters
-        }
+
+            // Function to fit the map to all markers
+            function fitMap() {
+                var bounds = new google.maps.LatLngBounds();
+
+                // Extend the bounds for each marker
+                markers.forEach(function (marker) {
+                    bounds.extend(marker.getPosition());
+                });
+
+                // Fit the map to the bounds
+                map.fitBounds(bounds);
+            }
+
+            function setMapCenter(latitude, longitude, zoom) {
+                var targetLatLng = new google.maps.LatLng(latitude, longitude);
+                map.setCenter(targetLatLng);
+                map.setZoom(zoom);
+            }
+
+
+            function getMapCenter() {
+                var lat = map.getCenter().lat();
+                var lng = map.getCenter().lng();
+                return lat + "," + lng
+            }
+
+            function getMapZoom() {
+                return map.getZoom();
+            }
+
+
+            function setMapCursor(cursor) {
+                // use empty string for clearing to auto
+                // use 'pointer' for a pointer
+                // use 'crosshair'
+                map.setOptions({ draggableCursor: cursor });
+            }
+
+
+
+            // Calculate distance between 2 or more coordinates - returns meters
+            // coord string is:  lat1,lng1;lat2,lng2....
+            function computeDistance(coordinateString) {
+                // Parse the coordinate string into an array of LatLng objects
+                var path = parseCoordinateString(coordinateString);
+                if (path.length < 2) {
+                    console.error("Path should contain at least two coordinates");
+                    return;
+                }
+                var totalDistance = 0;
+                // Loop through the coordinates to calculate the distances between
+                for (var i = 1; i < path.length; i++) {
+                    var distance = google.maps.geometry.spherical.computeDistanceBetween(path[i - 1], path[i]);
+                    totalDistance += distance;
+                }
+                return totalDistance //meters
+            }
 
 
 
 
-        window.addEventListener('load', initialize);
+            window.addEventListener('load', initialize);
     </script>
 </head>
 

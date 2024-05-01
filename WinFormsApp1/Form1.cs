@@ -27,19 +27,30 @@ namespace WinFormsApp1
 
 
                 engine = new JavascriptApiEngine(config, new GpsCoordinate(41.0389390m, -77.39383m));
-                Debug.Print(engine.GetHtml());
+                engine.DownloadHtml(@"\\Mac\Home\Desktop\TestFile.html");
+
 
                 InitializeComponent();
-            } 
+            }
         }
 
 
         async void Form1_Load(object sender, EventArgs e)
         {
-            Debug.Print("Loading");
+            Debug.Print("Loading.............");
             await webView.EnsureCoreWebView2Async();
-                //webView.CoreWebView2.AddHostObjectToScript("dotnetObject", new MyDotNetObject());
-                webView.CoreWebView2.NavigateToString(engine.GetHtml());
+
+            // Bind a .NET object to JavaScript
+            webView.CoreWebView2.AddHostObjectToScript("testBoundObject", new TestBoundObject());
+
+            webView.CoreWebView2.NavigateToString(engine.GetHtml());
+
+
+        }
+
+        private void webView_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

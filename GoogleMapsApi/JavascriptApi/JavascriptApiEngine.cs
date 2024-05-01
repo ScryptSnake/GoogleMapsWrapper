@@ -34,8 +34,16 @@ namespace GoogleMapsWrapper.JavascriptApi
             template = template.Replace("*APIKEY*", this.key);
             template = template.Replace("*LATITUDE*",this.center.Latitude.ToString());
             template = template.Replace("*LONGITUDE*", this.center.Longitude.ToString());
-
+            template = template.Replace("*ZOOM*", "10");
+            template = template.Replace("*MAPTYPE*", "hybrid");
             return template;
+        }
+
+
+
+        public void DownloadHtml(string outputFilename)
+        {
+            File.WriteAllText(outputFilename, GetHtml());
         }
 
 
