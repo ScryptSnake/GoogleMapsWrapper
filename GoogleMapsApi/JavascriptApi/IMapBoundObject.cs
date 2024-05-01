@@ -8,30 +8,37 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.JavascriptApi;
 
-public interface IMapBoundObject
+public interface IMapBoundObject //NOTE: THIS TYPE SHOULD BE COM-VISIBLE
 {
 
-   
+
+
+    event EventHandler<MarkerEventArgs> OnMarkerAdded;
+
+    event EventHandler<MarkerEventArgs> OnMarkerRemoved;
+
+    event EventHandler<MarkerEventArgs> OnMarkerUpdated;
+
+    //----- event marshal methods called from JS
+    public void _OnDebug(string message);
+    public void _OnMarkerAdded(string latitude, string longitude);
+    public void _OnMarkerRemoved(string id);
+    public void _OnMarkerUpdated(string id);
+    //----------------------------------------------
 
 
 
-    //event EventHandler<EventArgs> OnDataReceived;
+    public Task AddMarkerAsync(Marker marker);
+    public Task RemoveMarkerAsync(Marker marker);
+    public Task UpdateMarkerAsync(Marker marker);
 
 
-
-    //public Task SetMapBorderAsync(Color Color, int Weight = 5, int Radius = 0);
-
-    //public Task FitMapAsync();
-
+    public Task AddPoylineAsync(Polyline polyline);
+    public Task RemovePolylineAsync(Polyline polyline);
+    public Task UpdatePolylineAsync(Polyline polyline);
 
 
-
-
-    //public Task AddMarkerAsync(string markerId, string latitude, string longitude);
-
-    //public Task AddPolylineAsync(string id, string coordinates, string color, decimal opacity, int weight);
-
-
+    public Task SetMapAsync(Map map);
 
 
 

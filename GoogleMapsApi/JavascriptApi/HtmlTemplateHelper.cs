@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.JavascriptApi
 {
-    internal class HtmlTemplateHelper
+    public class HtmlTemplateHelper
     {
 
         private string templateContent;
@@ -21,19 +21,28 @@ namespace GoogleMapsWrapper.JavascriptApi
             this.content = string.Empty;
 
         }
-        public string LoadParameters(string apiKey, GpsCoordinate center, string mapType = "hybrid", int zoom = 10)
+        public void LoadParameters(string apiKey, GpsCoordinate center, string mapType = "hybrid", int zoom = 10)
         {
             var html = this.templateContent;
-            html = html.Replace("*APIKEY*", apiKey);
-            html = html.Replace("*LATITUDE*", center.Latitude.ToString());
-            html = html.Replace("*LONGITUDE*", center.Longitude.ToString());
-            html = html.Replace("*ZOOM*", zoom.ToString());
-            html = html.Replace("*MAPTYPE*", mapType);
+            html = html.Replace("__APIKEY__", apiKey);
+            html = html.Replace("__LATITUDE__", center.Latitude.ToString());
+            html = html.Replace("__LONGITUDE__", center.Longitude.ToString());
+            html = html.Replace("__ZOOM__", zoom.ToString());
+            html = html.Replace("__MAPTYPE__", mapType);
 
             this.content = html;
-            return html;
         }
 
+        public void SetBindingScript(string script)
+        {
+            //script must not include script tags
+            if (string.IsNullOrEmpty(this.content)){
+                throw new System.Exception("Parameters must be set.");
+            }
+            this.content = this.content.Replace("__INJECT_BINDING_SCRIPT__", script);
+
+
+        }
         
 
 

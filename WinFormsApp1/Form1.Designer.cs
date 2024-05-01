@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             webView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)webView).BeginInit();
             SuspendLayout();
             // 
@@ -44,11 +45,22 @@
             webView.ZoomFactor = 1D;
             webView.Click += webView_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(757, 46);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(763, 500);
+            ClientSize = new Size(901, 539);
+            Controls.Add(button1);
             Controls.Add(webView);
             Name = "Form1";
             Text = "Form1";
@@ -61,5 +73,6 @@
 
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView;
+        private Button button1;
     }
 }
