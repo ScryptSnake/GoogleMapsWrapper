@@ -24,6 +24,8 @@ public interface IMapBoundObject //NOTE: THIS TYPE SHOULD BE COM-VISIBLE
     public void _OnMarkerAdded(string latitude, string longitude);
     public void _OnMarkerRemoved(string id);
     public void _OnMarkerUpdated(string id);
+
+    public void _OnMapException(string message);
     //----------------------------------------------
 
 

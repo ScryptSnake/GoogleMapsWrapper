@@ -28,6 +28,42 @@ namespace GoogleMapsWrapper.JavascriptApi
         }
 
 
+        public AddMarker(BoundMarker marker)
+            //adds a marker to the browser map
+        {
+            browser.ExecuteScriptAsync("Script AddMarker(marker.id)"); //execute on browser, store marker id in javascript
+            markerCollection.Add(marker);   //add to C# collection
+
+            //now... if user changed a marker property after its added, somewhere else in code 
+            // how do i make the marker 'dirty', i can't use a property because I need to read and write to it.
+        
+        }
+
+        public UpdateMarker(BoundMarker marker)
+            //updates a marker on the browser map
+        {
+            browser.ExecuteScriptAsync("Scirpt UpdateMarker(marker.id, marker.coordinates, marker.color");
+            marker.Updated = true;
+        }
+
+
+        public BoundMarker OnMarkerReceived(string markerId, latitude, longitude)
+            //Fired from javascript, return a bound marker
+        {
+
+
+            //... find the bound marker by id?
+            var foundMarker = markerCollection.Find(markerId);
+            //update properties from script
+            foundMarker.latitude = latitude;
+            foundMarker.longitude = longitude;
+
+            return foundMarker;
+          
+            
+        }
+
+
 
 
 
@@ -87,6 +123,8 @@ namespace GoogleMapsWrapper.JavascriptApi
         {
             throw new NotImplementedException();
         }
+
+        public void _OnMapException(string message);
     }
 
 }

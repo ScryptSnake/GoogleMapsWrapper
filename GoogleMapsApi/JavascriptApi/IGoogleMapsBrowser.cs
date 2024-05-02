@@ -10,16 +10,15 @@ namespace GoogleMapsWrapper.JavascriptApi;
 
 public interface IGoogleMapsBrowser {
 
-
     public object GetBrowserObject();
 
     public string Html { get; }
 
     public IMapBoundObject BoundObject { get; } 
 
-    public Task InitializeAsync();
+    public GoogleMapsHtmlTemplate HtmlTemplate { get; }
 
-    public void Load();
+    public Task LoadAsync();
 
     public void BindObject(IMapBoundObject boundObject);
 

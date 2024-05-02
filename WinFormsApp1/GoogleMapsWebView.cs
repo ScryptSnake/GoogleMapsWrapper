@@ -20,30 +20,23 @@ namespace WinFormsApp1
         private IMapBoundObject boundObject;
         public IMapBoundObject BoundObject { get => boundObject; }
 
+        private GoogleMapsHtmlTemplate htmlTemplate;
+        public GoogleMapsHtmlTemplate HtmlTemplate { get=> htmlTemplate; }
+
 
         private WebView2 webView;
-
 
         private string html = string.Empty;
         public string Html { get => html; }
 
-
-        private IConfiguration configuration;
-
-        public GoogleMapsWebView(WebView2 webViewControl, IConfiguration config)
+        public GoogleMapsWebView(WebView2 webViewControl, GoogleMapsHtmlTemplate template, IMapBoundObject boundObject)
         {
             this.webView = webViewControl;
-            this.configuration = config;
-
-            var doc = new HtmlTemplateHelper(htmlTemplatePath);
-            var key = config["AppSettings:ApiKey"] ??
-                throw new Exception("Configuration invalid. Failed to find key.");
-            doc.LoadParameters(key, GpsCoordinate.Parse("41.03930,-77.038393"));
-            doc.SetBindingScript("var boundObject = chrome.webview.hostObjects.boundObject;");
-            this.html = doc.Content;
+            this.htmlTemplate = template;
+            this.boundObject = boundObject;
         }
 
- 
+
         public object GetBrowserObject()
         {
             return webView;
@@ -51,7 +44,14 @@ namespace WinFormsApp1
 
         public void BindObject(IMapBoundObject boundObject)
         {
-            this.webView.CoreWebView2.AddHostObjectToScript("boundObject", boundObject);
+            if (this.boundObject != null) {
+
+                this.webView.CoreWebView2.AddHostObjectToScript("boundObject", boundObject);
+            }
+            else
+            {
+                throw new System.Exception("Browser bound object is already set.");
+            }
         }
 
 
@@ -61,20 +61,17 @@ namespace WinFormsApp1
         }
 
 
-        public async Task InitializeAsync()
+        public async Task LoadAsync()
         {
-            await webView.EnsureCoreWebView2Async();
-        }
-
-        public void Load()
-        {
-            webView.CoreWebView2.NavigateToString(this.html);
+            await webView.EnsureCoreWebView2Async(); //may need to be called earlier in form_open, for example
+            await Task.Run(() =>webView.CoreWebView2.NavigateToString(this.html));
         }
 
         public async Task ExecuteScriptAsync(string script)
         {
             await webView.ExecuteScriptAsync(script); 
         }
+
 
     }
 }

@@ -38,13 +38,8 @@
         window.onerror = handleConsoleErrors;
     </script>
 
-
     <!--callback=Function.prototype is a Javacript way to specify an empty function - google throws err message if no callback. will still run but this removes the err.-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=__APIKEY__&loading=async&callback=Function.prototype"></script>
-
-
-
-
 
 
     <script type="text/javascript">
@@ -53,13 +48,6 @@
         var polylines = [];
         var polylineMarkerPrefix = "POLY_AUTO_"; //prefix added to markers that are reserved for polylines only
 
-
-        //set border around canvas
-        function setBorder(color, thickness, radius) {
-            var mapCanvas = document.getElementById("map-canvas");
-            mapCanvas.style.border = thickness + "px solid " + color;
-            mapCanvas.style.borderRadius = radius + "px"; // Add rounded corners
-        }
 
         function initialize() {
             // ...
@@ -86,7 +74,6 @@
                 var latitude = event.latLng.lat();
                 var longitude = event.latLng.lng();
                 boundObject._OnMarkerAdded(latitude, longitude); //trigger net
-
 
                 //chrome.webview.hostObjects.testBoundObject.OnMapClick();
 
@@ -416,6 +403,7 @@
             }
         }
 
+
         // Function to fit the map to all markers
         function fitMap() {
             var bounds = new google.maps.LatLngBounds();
@@ -427,6 +415,14 @@
 
             // Fit the map to the bounds
             map.fitBounds(bounds);
+        }
+
+
+        //set border around canvas
+        function setMapBorder(color, thickness, radius) {
+            var mapCanvas = document.getElementById("map-canvas");
+            mapCanvas.style.border = thickness + "px solid " + color;
+            mapCanvas.style.borderRadius = radius + "px"; // Add rounded corners
         }
 
         function setMapCenter(latitude, longitude, zoom) {
@@ -453,6 +449,7 @@
             // use 'crosshair'
             map.setOptions({ draggableCursor: cursor });
         }
+
 
 
 

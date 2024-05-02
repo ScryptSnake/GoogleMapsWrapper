@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +16,7 @@ namespace GoogleMapsWrapper.Elements
     public abstract class GoogleMapElement
     {
         public string? Name { get; set; }
-        public string? Id { get; set; }
+        public string? Id { get; }
         public object? AssociatedData { get; set; }
         public Color Color { get; set; }
         public Color SecondaryColor {  get; set; }
