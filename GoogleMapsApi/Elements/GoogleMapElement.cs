@@ -16,7 +16,7 @@ namespace GoogleMapsWrapper.Elements
     public abstract class GoogleMapElement
     {
         public string? Name { get; set; }
-        public string? Id { get; }
+        public string? Id { get; set; }
         public object? AssociatedData { get; set; }
         public Color Color { get; set; }
         public Color SecondaryColor {  get; set; }

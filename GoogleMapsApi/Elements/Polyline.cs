@@ -21,11 +21,12 @@ namespace GoogleMapsWrapper.Elements
         public bool Geodesic { get; set; }
         public char? Label { get; set; }
 
-        public ReadOnlyCollection<GpsCoordinate> Coordinates
+        public IReadOnlyList<GpsCoordinate> Coordinates
         {
-            get => new ReadOnlyCollection<GpsCoordinate>(coordinates);
+            get => coordinates.AsReadOnly();
 
         }
+
         private IList<GpsCoordinate> coordinates;
 
         public Polyline(IList<GpsCoordinate> Coordinates, string? Id = null, string? Name = null)
