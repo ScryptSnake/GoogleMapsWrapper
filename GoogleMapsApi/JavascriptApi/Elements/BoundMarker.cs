@@ -8,18 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-namespace GoogleMapsWrapper.Elements
+namespace GoogleMapsWrapper.JavascriptApi.Elements
 {
     public record BoundMarker(
-        string? id,
-        GpsCoordinate? coordinates, 
-        Color color = default, 
-        string? info = null, 
-        bool draggable = false)
+        string? Id,
+        GpsCoordinate? coordinates,
+        Color color = default,
+        string? info = null,
+        bool draggable = false) : IMapBoundElement
     {
         public string Serialize()
         {
             return JsonSerializer.Serialize(this);
+            
         }
 
 

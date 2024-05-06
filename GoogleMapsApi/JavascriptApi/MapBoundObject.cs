@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using GoogleMapsWrapper.JavascriptApi.Elements;
 
 namespace GoogleMapsWrapper.JavascriptApi
 {
@@ -10,10 +11,9 @@ namespace GoogleMapsWrapper.JavascriptApi
         public event EventHandler<MarkerEventArgs> OnMarkerRemoved;
         public event EventHandler<MarkerEventArgs> OnMarkerUpdated;
 
-        private HashSet<string> MarkerUniqueIds = new HashSet<string>();
 
+        private LockSafeHashSet<BoundMarker> markers = new LockSafeHashSet<BoundMarker>(new MapBoundElementEqualityComparer());
 
-        private IList<BoundMarker> markers = new List<BoundMarker>();
         public IReadOnlyList<BoundMarker> MarkersCollection { get => markers.AsReadOnly(); }
 
         private IGoogleMapsBrowser browser;
@@ -22,28 +22,6 @@ namespace GoogleMapsWrapper.JavascriptApi
         {
             this.browser = browser;
         }
-
-        private readonly object locker = new();
-        private void AppendMarkerListItem(BoundMarker marker)
-        {
-            lock (locker)
-            {
-                MarkerUniqueIds.Add
-                this.markers.Add(marker);
-            }
-        }
-        private void RemoveMarkerListItem(BoundMarker marker)
-        {
-            lock (locker)
-            {
-                markers.Remove(marker);
-            }
-        }
-        
-        private void
-
-        private bool markerExists(BoundMarker marker) => 
-            markers.Any(m => m.id == marker.id);
 
         public async Task<BoundMarker> AddUpdateMarker(BoundMarker marker)
         {
