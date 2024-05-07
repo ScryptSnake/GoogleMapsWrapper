@@ -10,6 +10,8 @@ namespace GoogleMapsWrapper.JavascriptApi
     {
         public string Id { get; }
 
+
+
         public MarkerEventArgs(string id)
         {
             this.Id = id;

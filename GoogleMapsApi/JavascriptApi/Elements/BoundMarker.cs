@@ -23,6 +23,13 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             
         }
 
+        public static BoundMarker FromJson(string json)
+        {
+            var result = JsonSerializer.Deserialize<BoundMarker>(json)
+                ?? throw new NullReferenceException("Failed to serialize");
+            return result;
+        }
+
 
     }
 

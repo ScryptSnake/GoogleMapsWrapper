@@ -46,13 +46,9 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             lock (locker)
             {
                 if (hashSet.Contains(item))
-                {
                     Replace(item); //this methods calls two locks
-                }
                 else
-                {
                     Add(item); //this method also locks
-                }
             }
         }
 
