@@ -28,7 +28,6 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             hashSet = new HashSet<T>(comparer);
         }
 
-
         public void Add(T item, bool throwIfExists = true)
         {
             if (item == null) { throw new ArgumentNullException(nameof(item)); }
@@ -40,7 +39,6 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
                 hashSet.Add(item); //item is ignored, add returns false if item exists and ignoreExistsException is true.
             }
         }
-
         public void AddOrReplace(T item)
         {
             lock (locker)
@@ -51,8 +49,6 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
                     Add(item); //this method also locks
             }
         }
-
-
         public void Remove(T item)
         {
             if (item == null) { throw new ArgumentNullException(nameof(item)); }

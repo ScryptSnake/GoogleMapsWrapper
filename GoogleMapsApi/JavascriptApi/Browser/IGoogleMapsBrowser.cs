@@ -1,4 +1,5 @@
 ﻿using GoogleMapsWrapper.JavascriptApi.Elements;
+using GoogleMapsWrapper.JavascriptApi.Html;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,16 +7,20 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using GoogleMapsWrapper.JavascriptApi.Listener;
 
-namespace GoogleMapsWrapper.JavascriptApi;
+namespace GoogleMapsWrapper.JavascriptApi.Browser;
 
-public interface IGoogleMapsBrowser {
+public interface IGoogleMapsBrowser
+{
 
     public object GetBrowserObject();
 
     public string Html { get; }
 
     public IGoogleMapsJavascriptRepository Repository { get; }
+
+    public IGoogleMapsJavascriptListener Listener { get; }
 
     public GoogleMapsHtmlTemplate HtmlTemplate { get; }
 
@@ -27,21 +32,13 @@ public interface IGoogleMapsBrowser {
 
     public void UpdateMarker(BoundMarker marker);
 
+    public void BindListener(IGoogleMapsJavascriptListener listener)
+    {
+
+    }
 
 
-    public void _OnMapClicked(string? json);
 
-    public event EventHandler<MapClickedEventArgs> OnMapClicked;
-
-    public void _OnError(string? error);
-
-    public event EventHandler<EventArgs> OnError;
-
-    public void _OnMarkerClicked(string? json);
-
-    public void _OnMarkerDblClicked(string? json);
-
-    public void _On
 
 
 

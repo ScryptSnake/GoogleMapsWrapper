@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GoogleMapsWrapper.Types;
-namespace GoogleMapsWrapper.JavascriptApi
+namespace GoogleMapsWrapper.JavascriptApi.Html
 {
 
 
@@ -15,18 +15,18 @@ namespace GoogleMapsWrapper.JavascriptApi
     {
         //the template source html
         private string templateHtml = string.Empty;
-        public string TemplateHtml { get => this.templateHtml; }
+        public string TemplateHtml { get => templateHtml; }
 
         //the modified html:
         private string html;
-        public string Html { get => this.html; }
+        public string Html { get => html; }
 
 
         public GoogleMapsHtmlTemplate(string templateHtml, string apiKey, string objectBindingScript, Map? loadMap = null)
         {
             if (string.IsNullOrEmpty(templateHtml)) throw new ArgumentNullException(nameof(templateHtml));
             if (string.IsNullOrEmpty(objectBindingScript)) throw new ArgumentNullException(nameof(templateHtml));
-            this.html = ModifyTemplate(templateHtml, apiKey, objectBindingScript, loadMap);
+            html = ModifyTemplate(templateHtml, apiKey, objectBindingScript, loadMap);
         }
 
         private string ModifyTemplate(string templateHtml, string apiKey, string objectBindingScript, Map? loadMap)
