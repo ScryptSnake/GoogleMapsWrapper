@@ -4,94 +4,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GoogleMapsWrapper.Elements;
+using GoogleMapsWrapper.JavascriptApi;
 using GoogleMapsWrapper.JavascriptApi.Browser;
 using GoogleMapsWrapper.JavascriptApi.Elements;
 using GoogleMapsWrapper.JavascriptApi.Html;
+using GoogleMapsWrapper.JavascriptApi.Listener;
 using GoogleMapsWrapper.Types;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Web.WebView2.WinForms;
 
 namespace WinFormsApp1
 {
-    internal class GoogleMapsWebView : IGoogleMapsBrowser
+    internal class WebViewBrowser : IBrowser
     {
-
-        private const string htmlTemplatePath = "C:\\GoogleMapsApi\\GoogleMapsApi\\JavascriptApi\\GoogleMapsJavascriptTemplate.html";
-
-
-        private IGoogleMapsJavascriptRepository repository;
-        public IGoogleMapsJavascriptRepository Repository { get => repository; }
-
-        private GoogleMapsHtmlTemplate htmlTemplate;
-        public GoogleMapsHtmlTemplate HtmlTemplate { get=> htmlTemplate; }
+        archit
+        public string Html => throw new NotImplementedException();
 
 
         private WebView2 webView;
-
-
-        public event EventHandler<MapClickedEventArgs> OnMapClicked = delegate { };
-        public event EventHandler<EventArgs> OnError = delegate { };
-
-        public string Html { get => HtmlTemplate.Html; }
-
-        public GoogleMapsWebView(WebView2 webViewControl, GoogleMapsHtmlTemplate template, IGoogleMapsJavascriptRepository repository)
+        public WebViewBrowser(WebView2 webViewCtl)
         {
-            this.webView = webViewControl;
-            this.htmlTemplate = template;
-            this.repository = repository;
+            this.webView = webViewCtl;
+            webView.EnsureCoreWebView2Async();
         }
 
-
-        public object GetBrowserObject()
+        public void BindObject(string name, object sourceObject)
         {
-            return webView;
+            webView.CoreWebView2.AddHostObjectToScript(name, sourceObject);
         }
-
 
         public void Close()
         {
             throw new NotImplementedException();
         }
 
-        public async Task LoadAsync()
+        public async Task ExecuteScriptAsync(string script)
         {
-            await webView.EnsureCoreWebView2Async(); //may need to be called earlier in form_open, for example
-            webView.CoreWebView2.NavigateToString(this.HtmlTemplate.Html);
+            await webView.ExecuteScriptAsync(script);
+        }
+
+        public void Navigate(string html)
+        {
+            webView.NavigateToString(html);
+        }
+        public void Navigate(Uri source)
+        {
+            webView.Source = source;    
         }
 
 
-
-
-
-
-        public void AddMarker(BoundMarker marker)
-        {
-            webView.ExecuteScriptAsync($"addMarker({marker.Serialize()})");
-            repository.AddMarker(marker);   
-        }
-
-        public void UpdateMarker(BoundMarker marker)
+        public object SourceObject()
         {
             throw new NotImplementedException();
         }
-
-
-
-
-        public void _OnMapClicked(string? json)
-        {
-            throw new NotImplementedException();
-        }
-        public void _OnError(string? error)
-        {
-            throw new NotImplementedException();
-        }
-        public void _OnM(string error)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
     }
+
+
 }

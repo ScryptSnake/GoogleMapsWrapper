@@ -10,7 +10,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
 
     /// <summary>
     /// An equality comparer for IMapBoundElement type, to check if two IMapBoundElements are
-    /// have equal ID values. Recommended use is within a IMapBoundElement's hashset. 
+    /// have equal ID values.
     /// </summary>
     public class MapBoundElementEqualityComparer : IEqualityComparer<IMapBoundElement>
     {

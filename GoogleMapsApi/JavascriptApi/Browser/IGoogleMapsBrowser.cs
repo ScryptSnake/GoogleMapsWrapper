@@ -8,19 +8,19 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using GoogleMapsWrapper.JavascriptApi.Listener;
+using GoogleMapsWrapper.JavascriptApi.Sender;
 
 namespace GoogleMapsWrapper.JavascriptApi.Browser;
 
-public interface IGoogleMapsBrowser
+/// <summary>
+/// Defines a browser that interacts directly with the Google Maps Javascript file,
+/// via HTML template file. Implements I..Sendable and I...Listenable to send/receive data to and from browser.
+/// Recommended usage:  constructor takes params IBrowser and IGoogleMapsJsReadonlyRepository
+public interface IGoogleMapsBrowser : IGoogleMapsJsSendable, IGoogleMapsJsListenable
 {
+    public IBrowser Browser { get; }
 
-    public object GetBrowserObject();
-
-    public string Html { get; }
-
-    public IGoogleMapsJavascriptRepository Repository { get; }
-
-    public IGoogleMapsJavascriptListener Listener { get; }
+    public IGoogleMapsJsReadonlyRepository Repository { get; }
 
     public GoogleMapsHtmlTemplate HtmlTemplate { get; }
 
@@ -28,20 +28,7 @@ public interface IGoogleMapsBrowser
 
     public void Close();
 
-    public void AddMarker(BoundMarker marker);
-
-    public void UpdateMarker(BoundMarker marker);
-
-    public void BindListener(IGoogleMapsJavascriptListener listener)
-    {
-
-    }
-
-
-
-
-
-
+    
 
 
 

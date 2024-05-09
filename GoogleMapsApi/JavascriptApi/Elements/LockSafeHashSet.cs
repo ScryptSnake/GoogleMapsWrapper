@@ -28,17 +28,30 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             hashSet = new HashSet<T>(comparer);
         }
 
+        /// <summary>
+        /// Add item. 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="throwIfExists"> Throw exception if item exists. Else ignore quietly.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
         public void Add(T item, bool throwIfExists = true)
         {
             if (item == null) { throw new ArgumentNullException(nameof(item)); }
-
             lock (locker)
             {
-                if (hashSet.Contains(item) && throwIfExists == true)
-                    throw new InvalidOperationException("Item already exists");
-                hashSet.Add(item); //item is ignored, add returns false if item exists and ignoreExistsException is true.
+                var result = hashSet.Add(item);
+                if (throwIfExists ==true && result == false)
+                {
+                    throw new InvalidOperationException("Item already exists in set.");
+                }
             }
         }
+
+        /// <summary>
+        /// Add or replace item. 
+        /// </summary>
+        /// <param name="item"></param>
         public void AddOrReplace(T item)
         {
             lock (locker)
@@ -49,6 +62,11 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
                     Add(item); //this method also locks
             }
         }
+        /// <summary>
+        /// Removes item from set.
+        /// </summary>
+        /// <param name="item"> Ignored if doesn't exist.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void Remove(T item)
         {
             if (item == null) { throw new ArgumentNullException(nameof(item)); }
@@ -58,6 +76,10 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             }
         }
 
+        /// <summary>
+        /// Replace an item in the set with a new item. Existing item is determined by the comparer. 
+        /// </summary>
+        /// <param name="item"></param>
         public void Replace(T item)
         {
             //already inside locks...

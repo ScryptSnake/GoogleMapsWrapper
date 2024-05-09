@@ -7,19 +7,12 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.JavascriptApi.Browser
 {
-    public interface IGoogleMapsJavascriptRepository
+    /// <summary>
+    /// A repository for storing map state. Data is loaded into this object by IGoogleMapsJsRepository
+    /// </summary>
+    public interface IGoogleMapsJsReadonlyRepository
     {
-
-        public void AddMarker(BoundMarker marker);
-
-        public void RemoveMarker(BoundMarker marker);
-
-        public void UpdateMarker(BoundMarker marker);
-
         public IReadOnlyList<BoundMarker> Markers { get; }
-
-
-
 
     }
 }
