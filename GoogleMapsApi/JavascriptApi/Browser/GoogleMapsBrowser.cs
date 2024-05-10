@@ -3,12 +3,16 @@ using GoogleMapsWrapper.JavascriptApi.Html;
 using GoogleMapsWrapper.JavascriptApi.Listener;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.JavascriptApi.Browser
 {
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true)]
     public class GoogleMapsBrowser : IGoogleMapsBrowser
     {
 
@@ -18,8 +22,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
         private IGoogleMapsJsRepository repository; //Writeable version private
         public IGoogleMapsJsReadonlyRepository Repository { get => repository.AsReadonly(); }
 
-        private GoogleMapsHtmlTemplate htmlTemplate;
-        public GoogleMapsHtmlTemplate HtmlTemplate { get=> htmlTemplate; }  
+        //private GoogleMapsHtmlTemplate htmlTemplate;
+        //public GoogleMapsHtmlTemplate HtmlTemplate { get=> htmlTemplate; }  
 
         //public event EventHandler<BrowserErrorEventArgs>? OnError;
         public event EventHandler<MapClickEventArgs>? OnMapClick;
@@ -33,13 +37,17 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
         public event EventHandler<MarkerMouseEventArgs>? OnMarkerMouseOut;
 
 
-        public GoogleMapsBrowser(IBrowser browser, GoogleMapsHtmlTemplate htmlTemplate)
+        public GoogleMapsBrowser(IBrowser browser)
         {
             this.browser = browser;
             this.repository = new GoogleMapsRepository();
-            this.htmlTemplate = htmlTemplate;
+            browser.BindObject("boundObject", this);
         }
 
+        public void Navigate(GoogleMapsHtmlTemplate template)
+        {
+            this.browser.Navigate(template.Html);   
+        }
 
         public async Task AddMarkerAsync(BoundMarker boundMarker)
         {
@@ -52,13 +60,17 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
                     marker = BoundMarker.CopyAssignNewId(boundMarker);
                 }
                 //execute in browser
-                await browser.ExecuteScriptAsync($"AddMarker({boundMarker.Serialize()})");
-                //add to repo
-                repository.AddMarker(marker);
-            }
-            else
-            {
-                throw new GoogleMapsJavascriptException("Marker exists in repository.");
+                var result = await browser.ExecuteScriptAsync($"addMarker('{boundMarker.Serialize()}')");
+
+                if (result.IsSuccess)
+                {
+                    Debug.Print("success AddMarkerAsync???");
+                    repository.AddMarker(marker);
+                }
+                else
+                {
+                    throw new System.Exception("Script Error returned from browser: " + result.ExceptionMessage);
+                }
             }
         }
 
@@ -99,6 +111,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void _OnMapDblClick(string coordinate)
         {
+            Debug.Print("Adding........");
+
             var coord = GpsCoordinate.Parse(coordinate); //validate
             var newMarker = new BoundMarker(coord);
             Task.Run(async () =>
@@ -111,6 +125,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void _OnMapRightClick(string coordinate)
         {
+            
             var coord = GpsCoordinate.Parse(coordinate); //validate
             this.OnMapRightClick?.Invoke(this, new MapClickEventArgs(coord));
         }

@@ -113,7 +113,10 @@ public class StaticMapsApi
             {
                 var hexColor = Utilities.Utilities.ColorToHex(path.Color);
 
-                var encodedCoords = Utilities.PolylineEncoder.Encode(path.Coordinates);
+                //convert to non-readonly list
+                IList<GpsCoordinate> pathCoords = new List<GpsCoordinate>(path.Coordinates);
+
+                var encodedCoords = Utilities.PolylineEncoder.Encode(pathCoords);
 
                 output.Add($"color:{hexColor}{pipeEncoded}" +
                     $"weight:{path.Weight}{pipeEncoded}enc:{encodedCoords}");

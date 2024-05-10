@@ -24,9 +24,11 @@ namespace GoogleMapsWrapper.JavascriptApi.Html
 
         public GoogleMapsHtmlTemplate(string templateHtml, string apiKey, string objectBindingScript, Map? loadMap = null)
         {
+            if (string.IsNullOrEmpty(apiKey)) throw new ArgumentNullException(nameof(apiKey));
             if (string.IsNullOrEmpty(templateHtml)) throw new ArgumentNullException(nameof(templateHtml));
-            if (string.IsNullOrEmpty(objectBindingScript)) throw new ArgumentNullException(nameof(templateHtml));
-            html = ModifyTemplate(templateHtml, apiKey, objectBindingScript, loadMap);
+            if (string.IsNullOrEmpty(objectBindingScript)) throw new ArgumentNullException(nameof(objectBindingScript));
+            this.templateHtml = templateHtml ?? string.Empty;    
+            html = ModifyTemplate(this.templateHtml, apiKey, objectBindingScript, loadMap);
         }
 
         private string ModifyTemplate(string templateHtml, string apiKey, string objectBindingScript, Map? loadMap)
@@ -37,20 +39,21 @@ namespace GoogleMapsWrapper.JavascriptApi.Html
             var defaultMapCenter = GpsCoordinate.Parse("40.7128,-74.0060");
 
             //use var map to set params, establish default map obj if null
-            var map = loadMap ?? new Map(MapTypes.Hybrid, MapScaleTypes.HighRes, defaultMapCenter);
+            var map = loadMap ?? new Map(MapTypes.Hybrid, MapScaleTypes.HighRes, defaultMapCenter) { Zoom=8};
 
             //check if loadMap.Center has a value, otherwise can't access properties of nullable struct
             var centerCoord = map.Center ?? defaultMapCenter;
 
             //alter html template
             var html = templateHtml;
+            html = InsertParam(html, "__APIKEY__", apiKey);
             html = InsertParam(html, "__LATITUDE__", centerCoord.Latitude.ToString());
             html = InsertParam(html, "__LONGITUDE__", centerCoord.Longitude.ToString());
             html = InsertParam(html, "__ZOOM__", map.Zoom.ToString());
             html = InsertParam(html, "__MAPTYPE__", map.MapType.ToString().ToLower());
 
             //inject script 
-            if (objectBindingScript != null) html = InsertParam(html, "__INJECT BINDING SCRIPT__", objectBindingScript);
+            if (objectBindingScript != null) html = InsertParam(html, "__INJECT_BINDING_SCRIPT__", objectBindingScript);
 
             return html;
         }

@@ -23,7 +23,9 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void Navigate(string html);
 
-        public Task ExecuteScriptAsync(string script);
+        public Task<ScriptResult> ExecuteScriptAsync(string script);
+
+        public Task<ScriptResult> ExecuteScriptAsyncInvoke(string script);
 
         public void Close();
 

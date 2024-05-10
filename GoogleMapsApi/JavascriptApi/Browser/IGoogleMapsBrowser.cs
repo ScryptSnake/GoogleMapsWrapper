@@ -22,9 +22,9 @@ public interface IGoogleMapsBrowser : IGoogleMapsJsSendable, IGoogleMapsJsListen
 
     public IGoogleMapsJsReadonlyRepository Repository { get; }
 
-    public GoogleMapsHtmlTemplate HtmlTemplate { get; }
+    //public GoogleMapsHtmlTemplate HtmlTemplate { get; }
 
-    public Task LoadAsync();
+    public void Navigate(GoogleMapsHtmlTemplate template);
 
     public void Close();
 

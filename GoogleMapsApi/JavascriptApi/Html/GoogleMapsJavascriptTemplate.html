@@ -19,9 +19,12 @@
         }
     </style>
 
+    <body>
+        <div id="map-canvas"></div>
+    </body>
 
     <script type="text/javascript">
-        //Placeholder for injection, should set a variable 'boundObject' to the NET bound obj. 
+        //Placeholder for injection, should set a variable 'boundObject' to the NET bound obj.
         __INJECT_BINDING_SCRIPT__
     </script>
 
@@ -49,35 +52,50 @@
         var map;  //the window variable for the active map
         var markers = []; //markers array to hold added markers on the map
         var polylines = []; //polyline array to hold added polylines on the map
-        var polylineMarkers = []; //markers that are associated only with polylines, 
+        var polylineMarkers = []; //markers that are associated only with polylines,
 
+        var mapLib;
+        var markerLib;
 
-        async function initMap() {
+        async function initialize() {
 
             try {
                 // Request libraries:
                 const { Map } = await google.maps.importLibrary("maps");
                 const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
+                mapLib = Map;
+                markerLib = AdvancedMarkerElement;
+
+
                 //establish map initialization options
                 var mapOptions = {
                     center: { lat: __LATITUDE__, lng: __LONGITUDE__ },
                     zoom: __ZOOM__,
-                    mapTypeId: __MAPTYPE__,
+                    mapTypeId: '__MAPTYPE__',
                     streetViewControl: false, // Remove the street view control button
                     fullscreenControl: false,  // Remove the fullscreen control button
                     keyboardShortcuts: false,
                     zoomControl: false,
                 };
                 //create map, store in window var.
-                map = new Map(document.getElementById("map"), mapOptions);
+                map = new Map(document.getElementById("map-canvas"), mapOptions);
 
-                //add map events, delegate to bound objects methods
-                map.addListener("click", event => boundObject._OnMapClicked(event.latLng.toJSON()));
-                map.addListener("dblclick", event => boundObject._OnMapDblClicked(event.latLng.toJSON()));
-                map.addListener("rightclick", event => boundObject._OnMapRightClicked(event.latLng.toJSON()));
+
+
+                map.addListener("dblclick", (e) => {
+                    // 3 seconds after the center of the map has changed, pan back to the
+                    // marker.
+                    var coord = e.latLng.lat() + "," + e.latLng.lng();
+                    boundObject._OnMapDblClick(coord); //trigger net
+                });
+
+
+                //map.addListener("click", event => boundObject._OnMapClicked(event.latLng.toJSON()));
+                //map.addListener("dblclick", event => boundObject._OnMapDblClicked(event.latLng.toJSON()));
+                //map.addListener("rightclick", event => boundObject._OnMapRightClicked(event.latLng.toJSON()));
             }
-            catch(err) {
+            catch (err) {
                 boundObject._OnError("Failed to initialize map:" + err.message);
                 throw err;
             }
@@ -88,51 +106,57 @@
         function addMarker(json) {
 
             try {
+
+                //parse
+                json = JSON.parse(json);
+
+
+                //import marker
+
+
                 //create info window object and attach to marker in case used.
                 var infoWindow = new google.maps.InfoWindow({
                     content: json.info,
                 });
 
+
+
                 //intialize a marker, but wait to assign map to ensure json parses correctly.
-                var marker = new AdvancedMarkerElement({
+                var marker = new google.maps.Marker({
                     id: json.Id,
-                    position: { lat: json.Coordinate.Latitude, lng: json.Coordinate.Longitude },
-                    map: null,
-                    infoWindow: infoWindow //add custom var to store info window when/if opened
-
-
+                    position: { lat: json.Coordinates.Latitude, lng: json.Coordinates.Longitude },
+                    map: null, 
+                    infoWindow: infoWindow
                 });
-
-                map.addListener("click", event => boundObject._OnMarkerInteraction(event.latLng.toJSON()));
 
                 //add events to marker...
                 //click event for the marker
                 google.maps.event.addListener(marker, 'click', function () {
-                    boundObject._OnMarkerClick(markerId); //trigger vb
+                    boundObject._OnMarkerClick(maker.id); //trigger vb
                 });
                 // Add a double-click event listener to the marker
                 google.maps.event.addListener(marker, 'dblclick', function () {
                     // Your code to handle the double-click event here
-                    boundObject._OnMarkerDblClick(markerId);
+                    boundObject._OnMarkerDblClick(marker.id);
                 });
                 // Attach right click
                 google.maps.event.addListener(marker, 'rightclick', function (event) {
-                    boundAsyc._OnMarkerRightClick(markerId);
+                    boundAsyc._OnMarkerRightClick(marker.id);
                 });
                 //attach mouseover
                 google.maps.event.addListener(marker, 'mouseover', function () {
-                    boundObject._OnMarkerMouseOver(markerId);
+                    boundObject._OnMarkerMouseOver(marker.id);
                 });
                 //attach mouseover
                 google.maps.event.addListener(marker, 'mouseout', function () {
-                    boundObject._OnMarkerMouseOut(markerId);
+                    boundObject._OnMarkerMouseOut(marker.id);
                 });
-                // Add a dragend event listener to the marker
+                 //Add a dragend event listener to the marker
                 marker.addListener('dragend', function (event) {
                     var newLatitude = event.latLng.lat();
                     var newLongitude = event.latLng.lng();
                     // Call a function with the new coordinates
-                    boundObject._OnMarkerDrag(markerId, `${newLatitude},${newLongitude}`);  //the marker object 'position' property is updated also as expected
+                    boundObject._OnMarkerDrag(marker.id, `${newLatitude},${newLongitude}`);  //the marker object 'position' property is updated also as expected
                 });
 
 
@@ -566,7 +590,4 @@
     </script>
 </head>
 
-<body>
-    <div id="map-canvas"></div>
-</body>
 </html>
