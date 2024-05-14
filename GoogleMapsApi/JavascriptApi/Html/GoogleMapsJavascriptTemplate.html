@@ -42,10 +42,8 @@
 
     </script>
 
-
-
     <!--callback=Function.prototype is a Javacript way to specify an empty function - google throws err message if no callback. will still run but this removes the err.-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=__APIKEY__&loading=async&callback=Function.prototype"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=__APIKEY__&loading=async&callback=Function.protoype"></script>
 
 
     <script type="text/javascript">
@@ -67,7 +65,6 @@
                 mapLib = Map;
                 markerLib = AdvancedMarkerElement;
 
-
                 //establish map initialization options
                 var mapOptions = {
                     center: { lat: __LATITUDE__, lng: __LONGITUDE__ },
@@ -82,18 +79,24 @@
                 map = new Map(document.getElementById("map-canvas"), mapOptions);
 
 
+                alert("init");
 
-                map.addListener("dblclick", (e) => {
-                    // 3 seconds after the center of the map has changed, pan back to the
-                    // marker.
-                    var coord = e.latLng.lat() + "," + e.latLng.lng();
-                    boundObject._OnMapDblClick(coord); //trigger net
-                });
+                ////add events
+                //map.addListener("dblclick", (e) => {
+                //    var coord = e.latLng.lat() + "," + e.latLng.lng();
+                //    boundObject._OnMapDblClick(coord); //trigger net
+                //});
+                //map.addListener("click", (e) => {
+                //    var coord = e.latLng.lat() + "," + e.latLng.lng();
+                //    boundObject._OnMapClick(coord); //trigger net
+                //});
+                //map.addListener("rightclick", (e) => {
+                //    // 3 seconds after the center of the map has changed, pan back to the
+                //    // marker.
+                //    var coord = e.latLng.lat() + "," + e.latLng.lng();
+                //    boundObject._OnMapRightClick(coord); //trigger net
+                //});
 
-
-                //map.addListener("click", event => boundObject._OnMapClicked(event.latLng.toJSON()));
-                //map.addListener("dblclick", event => boundObject._OnMapDblClicked(event.latLng.toJSON()));
-                //map.addListener("rightclick", event => boundObject._OnMapRightClicked(event.latLng.toJSON()));
             }
             catch (err) {
                 boundObject._OnError("Failed to initialize map:" + err.message);
@@ -103,65 +106,62 @@
 
 
 
-        function addMarker(json) {
+        window.addEventListener('load', initialize);
 
+
+        function addMarker(json) {
+            //Add a marker to the map.
+            //Called from .NET.
             try {
 
+                alert("addMarker(" + json + ")");
                 //parse
                 json = JSON.parse(json);
-
-
-                //import marker
-
-
-                //create info window object and attach to marker in case used.
-                var infoWindow = new google.maps.InfoWindow({
-                    content: json.info,
-                });
-
-
 
                 //intialize a marker, but wait to assign map to ensure json parses correctly.
                 var marker = new google.maps.Marker({
                     id: json.Id,
                     position: { lat: json.Coordinates.Latitude, lng: json.Coordinates.Longitude },
-                    map: null, 
-                    infoWindow: infoWindow
+                    map: null,
+                    infoWindow: json.Info,
+                    label: json.Label,
+                    draggable: json.Draggable
                 });
 
-                //add events to marker...
-                //click event for the marker
-                google.maps.event.addListener(marker, 'click', function () {
-                    boundObject._OnMarkerClick(maker.id); //trigger vb
-                });
-                // Add a double-click event listener to the marker
-                google.maps.event.addListener(marker, 'dblclick', function () {
-                    // Your code to handle the double-click event here
-                    boundObject._OnMarkerDblClick(marker.id);
-                });
-                // Attach right click
-                google.maps.event.addListener(marker, 'rightclick', function (event) {
-                    boundAsyc._OnMarkerRightClick(marker.id);
-                });
-                //attach mouseover
-                google.maps.event.addListener(marker, 'mouseover', function () {
-                    boundObject._OnMarkerMouseOver(marker.id);
-                });
-                //attach mouseover
-                google.maps.event.addListener(marker, 'mouseout', function () {
-                    boundObject._OnMarkerMouseOut(marker.id);
-                });
-                 //Add a dragend event listener to the marker
-                marker.addListener('dragend', function (event) {
-                    var newLatitude = event.latLng.lat();
-                    var newLongitude = event.latLng.lng();
-                    // Call a function with the new coordinates
-                    boundObject._OnMarkerDrag(marker.id, `${newLatitude},${newLongitude}`);  //the marker object 'position' property is updated also as expected
-                });
+                //with (google.maps.event) {
+                //    //add events to marker...
+                //    addListener(marker, 'click', function () {
+                //        boundObject._OnMarkerClick(marker.id); //trigger vb
+                //    });
+                //    addListener(marker, 'dblclick', function () {
+                //        boundObject._OnMarkerDblClick(marker.id);
+                //    });
+                //    addListener(marker, 'rightclick', function (event) {
+                //        boundObject._OnMarkerRightClick(marker.id);
+                //    });
+                //    addListener(marker, 'mouseover', function () {
+                //        boundObject._OnMarkerMouseOver(marker.id);
+                //    });
+                //    addListener(marker, 'mouseout', function () {
+                //        boundObject._OnMarkerMouseOut(marker.id);
+                //    });
+                //}
 
 
-                //Add to markers array
+                ////Add a dragend event listener to the marker
+                //marker.addListener('dragend', function (event) {
+                //    var newLatitude = event.latLng.lat();
+                //    var newLongitude = event.latLng.lng();
+                //    // Call a function with the new coordinates
+                //    boundObject._OnMarkerDrag(marker.id, `${newLatitude},${newLongitude}`);  //the marker object 'position' property is updated also as expected
+                //});
+
+
+                //Add to markers to internal array
                 markers.push(marker);
+
+
+                // updateMarker(serializeMarker(marker));
 
                 //Add to map officially
                 marker.setMap(map);
@@ -172,8 +172,49 @@
                 boundObject._OnError("Failed to add marker: " + err.message);
                 throw err;
             }
+        }
 
 
+        function updateMarker(json) {
+            try {
+                var json = JSON.parse(json);
+
+                //grab marker from JS array....
+                var marker = getMarker(json.Id);
+                if (marker == null) throw new Error("Marker not found.");
+
+                //update position
+                var newPosition = new google.maps.LatLng(json.Coordinates.Latitude, json.Coordinates.Longitude);
+                marker.setPosition(newPosition);
+
+                //check for info window content
+                if (json.info != null && json.info != "") {
+                    //create info window
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: json.info
+                    });
+                    infoWindow.open(map, marker); //display
+                    marker.infoWindow = infoWindow; //attach to object
+                } else {
+                    marker.infoWindow = null; //remove
+                }
+
+                //check for label:
+                if (json.Label != null && json.Label != "") {
+                    var newLabel = { color: 'white', fontWeight: 'bold', text: json.Label, backgroundColor: 'transparent' };
+                    marker.setLabel(newLabel); //display
+                    marker.label = newLabel; //attach
+                } else {
+                    marker.label = null; //remove
+                }
+
+                //drag
+                marker.setDraggable(json.Draggable);
+            }
+            catch (err) {
+                boundObject._OnError("Failed to update marker:" + err.message);
+                throw err;
+            }
 
 
 
@@ -181,9 +222,11 @@
 
         }
 
-        // Function to search for marker by id
-        //if not found or id is null, returns null
+
+
         function getMarker(id) {
+            // helper function. Returns a marker from internal array based on id.
+            // if not found, returns null.
             if (id == null) { return null; }
             for (const marker of markers) {
                 if (marker.id === id) {
@@ -193,17 +236,26 @@
             return null;
         }
 
-        //function that stringifys a marker to JSON.
-        function serializeMarker(id) {
+
+        function serializeMarker(marker) {
+            // Extract necessary properties from the marker object
+
             try {
-                let marker = getMarker(id);
-                if (marker == null) {
-                    throw new Error("Marker not found.")
-                }
-                return JSON.stringify(marker);
+                var serialized = {
+                    Id: marker.id,
+                    Coordinates: {
+                        Latitude: marker.getPosition().lat(),
+                        Longitude: marker.getPosition().lng()
+                    },
+                    Info: marker.infoWindow ? marker.infoWindow.content : null,
+                    Label: marker.label,
+                    Draggable: marker.draggable
+                };
+                // Serialize the extracted properties to JSON
+                return JSON.stringify(serialized);
             }
             catch (err) {
-                boundObject._OnError("Failed to serialize marker:" + err.message + " Id=" + id);
+                boundObject._OnError("Failed to serialize marker:" + err.message);
                 throw err;
             }
         }
@@ -409,50 +461,50 @@
 
 
 
-        //// Function to set marker position by ID
-        //function setMarkerPosition(id, latitude, longitude) {
-        //    var marker = findMarkerById(id);
-        //    var newPosition = new google.maps.LatLng(latitude, longitude);
-        //    marker.setPosition(newPosition);
-        //}
+        // Function to set marker position by ID
+        function setMarkerPosition(id, latitude, longitude) {
+            var marker = findMarkerById(id);
+            var newPosition = new google.maps.LatLng(latitude, longitude);
+            marker.setPosition(newPosition);
+        }
 
 
-        //// Add a label to the marker - call with label = null to remove
-        //function setMarkerLabel(id, label) {
-        //    var marker = findMarkerById(id);
+        // Add a label to the marker - call with label = null to remove
+        function setMarkerLabel(id, label) {
+            var marker = findMarkerById(id);
 
-        //    if (label === undefined || label === "") {
-        //        marker.setLabel(null);
-        //    } else {
-        //        marker.setLabel({
-        //            color: 'white',     // New color
-        //            fontWeight: 'bold', // New font weight
-        //            text: label          // New label text
-        //        });
-        //    }
-        //}
+            if (label === undefined || label === "") {
+                marker.setLabel(null);
+            } else {
+                marker.setLabel({
+                    color: 'white',     // New color
+                    fontWeight: 'bold', // New font weight
+                    text: label          // New label text
+                });
+            }
+        }
 
-        //function setInfoWindow(id, info) {
-        //    var marker = findMarkerById(id);
-        //    // Check if marker.infoWindow is defined and not null
-        //    if (marker.infoWindow) { // Removed the function call ()
-        //        var window = marker.infoWindow;
-        //        // Check if info is defined and not empty
-        //        if (info && info !== "") {
-        //            window.setContent(info);
-        //            window.open(map, marker);
-        //        } else {
-        //            // If info is undefined or empty, close the existing info window
-        //            window.close();
-        //        }
-        //    }
-        //}
+        function setInfoWindow(id, info) {
+            var marker = findMarkerById(id);
+            // Check if marker.infoWindow is defined and not null
+            if (marker.infoWindow) { // Removed the function call ()
+                var window = marker.infoWindow;
+                // Check if info is defined and not empty
+                if (info && info !== "") {
+                    window.setContent(info);
+                    window.open(map, marker);
+                } else {
+                    // If info is undefined or empty, close the existing info window
+                    window.close();
+                }
+            }
+        }
 
-        //function setMarkerDraggable(id, enable) {
-        //    var marker = findMarkerById(id);
-        //    var boolEnable = JSON.parse(enable.toLowerCase()); // covert to bool
-        //    marker.setDraggable(boolEnable);
-        //}
+        function setMarkerDraggable(id, enable) {
+            var marker = findMarkerById(id);
+            var boolEnable = JSON.parse(enable.toLowerCase()); // covert to bool
+            marker.setDraggable(boolEnable);
+        }
 
         ////change the icon for a marker with a png image...
         //function setMarkerIconFromImage(id, iconUrl, scale, opacity) {
@@ -585,8 +637,6 @@
 
 
 
-
-        window.addEventListener('load', initialize);
     </script>
 </head>
 

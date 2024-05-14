@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,25 +44,34 @@ namespace WinFormsApp1
         public async Task<ScriptResult> ExecuteScriptAsyncInvoke(string script)
         {
             //this is called from outside UI thread
+            Debug.Print("Executing invoke....");
             return await webView.Invoke(async () => await ExecuteScriptAsync(script));
-
-
         }
 
         public async Task<ScriptResult> ExecuteScriptAsync(string script)
         {
             var output = string.Empty;
-            var outputInt = 0;
 
+            Debug.Print("Executing script async...");
 
             await webView.ExecuteScriptAsync(script);
             var execution = await webView.CoreWebView2.ExecuteScriptWithResultAsync(script);
-            
-            //get the result
-            execution.TryGetResultAsString(out output, out outputInt); //wtf is the int 'value' argument ?
+
+            Debug.Print("Received result");
+
+            var exception = string.Empty;
+            if (execution.Succeeded == false) //Must! check for succeeded first to access Exception.Message;
+            {
+                exception = execution.Exception.Message;
+            }
+
             //return a script result from the execution
-            var result = new ScriptResult(output, execution.Succeeded, execution.Exception.Message);
+            var result = new ScriptResult(execution.ResultAsJson, execution.Succeeded, exception);
+            Debug.Print("ScriptResult=" + result.ToString());
             return result;
+
+            //return new ScriptResult(output, true, "");
+
         }
 
         public void Navigate(string html)

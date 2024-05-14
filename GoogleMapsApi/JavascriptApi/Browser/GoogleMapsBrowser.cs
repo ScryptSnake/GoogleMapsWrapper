@@ -51,6 +51,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public async Task AddMarkerAsync(BoundMarker boundMarker)
         {
+            Debug.Print("Executing AddMarkerAsync...");
+
             var marker = boundMarker;
             if (!repository.ContainsMarker(marker))
             {
@@ -59,7 +61,6 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
                     //copy the passed marker with a new GUID id. 
                     marker = BoundMarker.CopyAssignNewId(boundMarker);
                 }
-                //execute in browser
                 var result = await browser.ExecuteScriptAsync($"addMarker('{boundMarker.Serialize()}')");
 
                 if (result.IsSuccess)
@@ -100,31 +101,31 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void _OnError(string message)
         {
-            throw new GoogleMapsJavascriptException(message);
+            Debug.Print("ON ERROR: " + message);
         }
 
         public void _OnMapClick(string coordinate)
         {
+            Debug.Print("On Map click called");
             var coord = GpsCoordinate.Parse(coordinate); //validate
             this.OnMapClick?.Invoke(this, new MapClickEventArgs(coord));
         }
 
         public void _OnMapDblClick(string coordinate)
         {
-            Debug.Print("Adding........");
+            Debug.Print("on map dbl click called........");
 
             var coord = GpsCoordinate.Parse(coordinate); //validate
-            var newMarker = new BoundMarker(coord);
-            Task.Run(async () =>
-            {
-                await AddMarkerAsync(newMarker);
-            }).GetAwaiter().GetResult();
+            //var newMarker = new BoundMarker(coord);
+            //AddMarkerAsync(newMarker); //fire and forget not advised.
+
 
             this.OnMapDblClick?.Invoke(this, new MapClickEventArgs(coord));
         }
 
         public void _OnMapRightClick(string coordinate)
         {
+            Debug.Print("On map right clicked called: " + coordinate);
             
             var coord = GpsCoordinate.Parse(coordinate); //validate
             this.OnMapRightClick?.Invoke(this, new MapClickEventArgs(coord));
@@ -132,32 +133,32 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void _OnMarkerClick(string id)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marked clicked: id=" + id);
         }
 
         public void _OnMarkerDblClick(string id)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marker dbl click: id=" + id);
         }
 
         public void _OnMarkerDrag(string id, string coordinate)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marked dragged: id=" + id + "coords=" + coordinate);   
         }
 
         public void _OnMarkerMouseOut(string id)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marker moused out");
         }
 
         public void _OnMarkerMouseOver(string id)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marker moused in");
         }
 
         public void _OnMarkerRightClick(string id)
         {
-            throw new NotImplementedException();
+            Debug.Print("Marker right clicked: id=" + id);
         }
     }
 }

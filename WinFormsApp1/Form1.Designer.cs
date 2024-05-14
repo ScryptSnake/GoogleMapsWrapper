@@ -43,7 +43,6 @@
             webView.Size = new Size(597, 476);
             webView.TabIndex = 0;
             webView.ZoomFactor = 1D;
-            webView.Click += webView_Click;
             // 
             // button1
             // 

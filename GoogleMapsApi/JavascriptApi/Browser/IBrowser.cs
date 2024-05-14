@@ -19,9 +19,9 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
 
         public void BindObject(string name, object sourceObject);
 
-        public void Navigate(Uri destination);
-
         public void Navigate(string html);
+
+        public void Navigate(Uri source);
 
         public Task<ScriptResult> ExecuteScriptAsync(string script);
 

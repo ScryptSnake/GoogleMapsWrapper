@@ -37,6 +37,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
     public record BoundMarker(
         string? Id,
         GpsCoordinate? Coordinates,
+        string ? Label = null,
         Color Color = default,
         string? Info = null,
         bool Draggable = false) : IMapBoundElement
@@ -50,8 +51,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
         /// <param name="color"></param>
         /// <param name="info"></param>
         /// <param name="draggable"></param>
-        public BoundMarker(GpsCoordinate? coordinates, Color color = default, string? info = null, bool draggable = false)
-            : this(Guid.NewGuid().ToString(), coordinates, color, info, draggable) { }
+        public BoundMarker(GpsCoordinate? coordinates, string? Label = null, Color color = default, string? info = null, bool draggable = false)
+            : this(Guid.NewGuid().ToString(), coordinates, Label, color, info, draggable) { }
 
         public string Serialize()
         {
@@ -64,6 +65,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             var newMarker = new BoundMarker(
                 source.Id,
                 source.Coordinates,
+                source.Label,
                 source.Color,
                 source.Info,
                 source.Draggable);
@@ -74,6 +76,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             //use constructor that generate new GUID.
             var newMarker = new BoundMarker(
                 source.Coordinates,
+                source.Label,
                 source.Color,
                 source.Info,
                 source.Draggable);
