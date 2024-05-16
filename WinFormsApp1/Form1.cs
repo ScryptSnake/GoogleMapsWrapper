@@ -13,7 +13,7 @@ namespace WinFormsApp1
     {
 
         private string htmlContent;
-        private GoogleMapsHtmlTemplate template;    
+        private GoogleMapsHtmlTemplate template;
         public Form1()
         {
             {
@@ -31,7 +31,7 @@ namespace WinFormsApp1
 
                 var key = config["AppSettings:ApiKey"];
 
-                var html = new GoogleMapsHtmlTemplate(File.ReadAllText(templatePath), 
+                var html = new GoogleMapsHtmlTemplate(File.ReadAllText(templatePath),
                     key, "var boundObject = window.chrome.webview.hostObjects.boundObject;");
 
 
@@ -65,7 +65,7 @@ namespace WinFormsApp1
 
             File.WriteAllText(@"\\Mac\\Home\\Desktop\\outputtt.html", template.Html);
 
-            
+
         }
 
 
@@ -73,14 +73,23 @@ namespace WinFormsApp1
         private async void button1_Click(object sender, EventArgs e)
         {
 
+            for(int i = 1; i < 2; i++)
+            {
+                var lat = 41.0393093 + (i * .005);
+                var coordString = lat.ToString() + ",-77.03839";
+                var marker = new BoundMarker(GpsCoordinate.Parse(coordString),MapSvgIcon.PinIcon(Color.Teal), i.ToString(), "info window!", true);
+                await browser.AddMarkerAsync(marker);
+            }
 
-            var marker = new BoundMarker(GpsCoordinate.Parse("41.038930,-77.03839"), "1", Color.Red, "1", true);
-            var marker2 = new BoundMarker(GpsCoordinate.Parse("41.138930,-77.93839"), "2!", Color.Red, "2", true);
-            var marker3 = new BoundMarker(GpsCoordinate.Parse("41.088930,-77.08839"), "3!", Color.Red, "3", true);
 
-            await browser.AddMarkerAsync(marker);
-            //await browser.AddMarkerAsync(marker2);
-            //await browser.AddMarkerAsync(marker3);
+
+
+            webView.CoreWebView2.OpenDevToolsWindow();
+        }
+
+        private void webView_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

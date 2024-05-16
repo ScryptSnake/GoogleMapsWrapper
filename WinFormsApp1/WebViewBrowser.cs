@@ -54,7 +54,6 @@ namespace WinFormsApp1
 
             Debug.Print("Executing script async...");
 
-            await webView.ExecuteScriptAsync(script);
             var execution = await webView.CoreWebView2.ExecuteScriptWithResultAsync(script);
 
             Debug.Print("Received result");

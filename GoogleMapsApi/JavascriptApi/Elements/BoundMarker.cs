@@ -37,8 +37,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
     public record BoundMarker(
         string? Id,
         GpsCoordinate? Coordinates,
+        MapSvgIcon Icon,
         string ? Label = null,
-        Color Color = default,
         string? Info = null,
         bool Draggable = false) : IMapBoundElement
     {
@@ -51,11 +51,24 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
         /// <param name="color"></param>
         /// <param name="info"></param>
         /// <param name="draggable"></param>
-        public BoundMarker(GpsCoordinate? coordinates, string? Label = null, Color color = default, string? info = null, bool draggable = false)
-            : this(Guid.NewGuid().ToString(), coordinates, Label, color, info, draggable) { }
+        /// 
+
+        //Constructor for auto generating guid id. 
+        public BoundMarker(GpsCoordinate? coordinates, MapSvgIcon icon, string? Label = null, string? info = null, bool draggable = false)
+            : this(Guid.NewGuid().ToString(), coordinates, icon, Label, info, draggable) { }
+
+
+        //Overload for auto-icon.
+        public BoundMarker(GpsCoordinate? coordinates, string? Label = null, string? info = null, bool draggable = false)
+            : this(Guid.NewGuid().ToString(),coordinates, MapSvgIcon.PinIcon(Color.Red), Label, info, draggable) { }
 
         public string Serialize()
         {
+            //set up the serializer converter for this object:
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                Converters = { new BoundMarkerJsonConverter() }
+            };   
             return JsonSerializer.Serialize(this);
         }
         
@@ -65,8 +78,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             var newMarker = new BoundMarker(
                 source.Id,
                 source.Coordinates,
+                source.Icon,
                 source.Label,
-                source.Color,
                 source.Info,
                 source.Draggable);
             return newMarker;
@@ -76,8 +89,8 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             //use constructor that generate new GUID.
             var newMarker = new BoundMarker(
                 source.Coordinates,
+                source.Icon,
                 source.Label,
-                source.Color,
                 source.Info,
                 source.Draggable);
             return newMarker;

@@ -54,6 +54,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
             Debug.Print("Executing AddMarkerAsync...");
 
             var marker = boundMarker;
+
             if (!repository.ContainsMarker(marker))
             {
                 if (string.IsNullOrEmpty(boundMarker.Id))
@@ -72,6 +73,10 @@ namespace GoogleMapsWrapper.JavascriptApi.Browser
                 {
                     throw new System.Exception("Script Error returned from browser: " + result.ExceptionMessage);
                 }
+            }
+            else
+            {
+                throw new System.Exception("Bound marker object already exists.");
             }
         }
 
