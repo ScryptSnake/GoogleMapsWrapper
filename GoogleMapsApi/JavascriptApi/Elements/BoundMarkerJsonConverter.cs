@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
@@ -18,28 +19,35 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
 
         public override void Write(Utf8JsonWriter writer, BoundMarker value, JsonSerializerOptions options)
         {
+            string iconSerialized = value.Icon.Serialize();
+
+            writer.WriteStartObject();
 
             // Get all properties of the Parent class
             var properties = typeof(BoundMarker).GetProperties();
 
-            // reflection for reliability - might be perf hit?
+            // Loop through each property
             foreach (var property in properties)
             {
-                // Skip Icon property 
+                // Skip MapIcon property
                 if (property.Name == "Icon")
-                    continue; 
+                    continue;
 
                 // Serialize property
                 writer.WritePropertyName(property.Name);
                 JsonSerializer.Serialize(writer, property.GetValue(value), options);
             }
 
-            // Serialize Icon property using its Serialize method
+            // Serialize MapIcon property using its Serialize method
             writer.WritePropertyName("Icon");
-            writer.WriteStringValue(value.Icon.Serialize());
+            writer.WriteRawValue(value.Icon.Serialize());
 
+            writer.WriteEndObject();
+
+
+        
 
         }
-
     }
+
 }

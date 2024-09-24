@@ -10,35 +10,11 @@ using System.Text.Json;
 using System.Threading.Tasks;
 namespace GoogleMapsWrapper.JavascriptApi.Elements
 {
-    //public record BoundMarker(
-    //    string? Id,
-    //    GpsCoordinate? coordinates,
-    //    Color color = default,
-    //    string? info = null,
-    //    bool draggable = false) : IMapBoundElement
-    //{
-    //    public string Serialize()
-    //    {
-    //        return JsonSerializer.Serialize(this);
-            
-    //    }
-
-    //    public static BoundMarker FromJson(string json)
-    //    {
-    //        var result = JsonSerializer.Deserialize<BoundMarker>(json)
-    //            ?? throw new NullReferenceException("Failed to serialize");
-    //        return result;
-    //    }
-
-
-    //}
-
-
     public record BoundMarker(
         string? Id,
         GpsCoordinate? Coordinates,
         MapSvgIcon Icon,
-        string ? Label = null,
+        MapLabel Label,
         string? Info = null,
         bool Draggable = false) : IMapBoundElement
     {
@@ -54,13 +30,13 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
         /// 
 
         //Constructor for auto generating guid id. 
-        public BoundMarker(GpsCoordinate? coordinates, MapSvgIcon icon, string? Label = null, string? info = null, bool draggable = false)
-            : this(Guid.NewGuid().ToString(), coordinates, icon, Label, info, draggable) { }
+        public BoundMarker(GpsCoordinate? coordinates, MapSvgIcon icon, MapLabel label, string? info = null, bool draggable = false)
+            : this(Guid.NewGuid().ToString(), coordinates, icon, label, info, draggable) { }
 
 
         //Overload for auto-icon.
-        public BoundMarker(GpsCoordinate? coordinates, string? Label = null, string? info = null, bool draggable = false)
-            : this(Guid.NewGuid().ToString(),coordinates, MapSvgIcon.PinIcon(Color.Red), Label, info, draggable) { }
+        public BoundMarker(GpsCoordinate? coordinates, MapLabel label, string? info = null, bool draggable = false)
+            : this(Guid.NewGuid().ToString(),coordinates, MapSvgIcon.PinIcon(Color.Red), label, info, draggable) { }
 
         public string Serialize()
         {
@@ -68,10 +44,14 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
             JsonSerializerOptions options = new JsonSerializerOptions
             {
                 Converters = { new BoundMarkerJsonConverter() }
-            };   
-            return JsonSerializer.Serialize(this);
+            };
+            var dblquote = (char)34;
+            var result = JsonSerializer.Serialize(this, options);
+            var result2 = result.Replace("\\u0022", dblquote.ToString()); //Nested serialization problem with Icon proerty - see converter.
+            
+            return result2;
         }
-        
+
         public static BoundMarker CopyAssignNewId(string? id, BoundMarker source)
         {
             //use primary constructor

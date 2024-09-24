@@ -111,12 +111,7 @@
             try {
                 //parse
 
-
-                alert(json);
-
-
                 json = JSON.parse(json);
-
 
                 if (getMarker(json.Id) != null) {
                     throw new Error("Marker with id already exists: " + json.Id)
@@ -124,7 +119,7 @@
 
                 //estbalish an icon json object for icon property below:
                 var jIcon = json.Icon;
-
+                var jLabel = json.Label;
                 //intialize a marker, but wait to assign map to ensure json parses correctly.
                 var marker = new google.maps.Marker({
                     id: json.Id,
@@ -132,7 +127,7 @@
                     map: null,
                     info: json.Info,
                     infoWindow: null,
-                    label: { color: 'white', fontWeight: 'bold', text: json.Label, backgroundColor: 'transparent' },
+                    label: { color: jLabel.Color, fontWeight: 'bold', text: jLabel.Text, backgroundColor: jLabel.BackgroundColor },
                     draggable: json.Draggable,
                     icon: { path: jIcon.SvgPath, fillColor: jIcon.Color, fillOpacity: jIcon.Opacity, strokeColor: jIcon.OutlineColor, strokeWeight: jIcon.Weight, scale: jIcon.Scale }
                 });
@@ -225,17 +220,15 @@
                     newMarker.infoWindow = infoWindow; //attach to object
                 } 
 
+                var jLabel = json.Label;
                 //check for label in JSON
-                if (json.Label != null && json.Label != "") {
-                    var newLabel = { color: 'white', fontWeight: 'bold', text: json.Label, backgroundColor: 'transparent' };
+                if (json.Label != null && json.Label.Text != "") {
+                    var newLabel = { color: jLabel.Color, fontWeight: jLabel.FontWeight, text: jLabel.Text, backgroundColor: jLabel.BackgroundColor };
                     newMarker.setLabel(newLabel); //display
                     newMarker.label = newLabel; //attach
                 } else {
                     marker.label = null; //remove
                 }
-
-                //set icon:
-
                 
 
                 // check draggable in JSON
@@ -267,7 +260,8 @@
                         Longitude: marker.getPosition().lng()
                     },
                     Info: marker.info,
-                    Label: marker.label,
+                    Label: { Color: label.Color, FontWeight: label.fontWeight, Text: label.text, BackgroundColor: label.backgroundColor },
+                    Icon: marker.icon,
                     Draggable: marker.draggable
                 };
                 // Serialize the extracted properties to JSON

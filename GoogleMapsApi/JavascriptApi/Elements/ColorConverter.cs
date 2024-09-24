@@ -20,7 +20,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Elements
         public override void Write(Utf8JsonWriter writer, Color value, JsonSerializerOptions options)
         {
             // Convert to hex notation.
-            string hexColor = ColorTranslator.ToHtml(value);
+            string hexColor = $"#{value.R:X2}{value.G:X2}{value.B:X2}";
 
             // write to json output
             writer.WriteStringValue(hexColor);

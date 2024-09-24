@@ -73,11 +73,17 @@ namespace WinFormsApp1
         private async void button1_Click(object sender, EventArgs e)
         {
 
-            for(int i = 1; i < 2; i++)
+
+            for (int i = 1; i < 2; i++)
             {
                 var lat = 41.0393093 + (i * .005);
                 var coordString = lat.ToString() + ",-77.03839";
-                var marker = new BoundMarker(GpsCoordinate.Parse(coordString),MapSvgIcon.PinIcon(Color.Teal), i.ToString(), "info window!", true);
+                var icon = MapSvgIcon.CircleHollowIcon(Color.AliceBlue,1.0);
+                var label = new MapLabel("HelloWorld");
+                Debug.Print("ICON = " + icon.Serialize()); 
+                var marker = new BoundMarker(GpsCoordinate.Parse(coordString), icon, label, "info window!", true);
+
+                Debug.Print("MARKER = " + marker.Serialize());
                 await browser.AddMarkerAsync(marker);
             }
 
