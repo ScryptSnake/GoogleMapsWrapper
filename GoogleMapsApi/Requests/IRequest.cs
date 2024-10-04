@@ -1,4 +1,5 @@
-﻿using GoogleMapsWrapper.Types;
+﻿using GoogleMapsWrapper.Requests;
+using GoogleMapsWrapper.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,16 @@ namespace GoogleMapsWrapper.Requests
     public interface IRequest
     {
         public string? Id { get; }
-        public Uri Url { get; } //note:  Url should not every contain the API Key!, this is done in the engine and never exposed in a returned reponse.
+
+        public Uri Url { get; } //note:  Url should not ever contain the API Key!, this is done in the engine and never exposed in a returned reponse.
+
         public string Query { get; }
+
         public ApiType Api { get; }
+
         public RequestType Category { get; }
+
 
     }
 }
+

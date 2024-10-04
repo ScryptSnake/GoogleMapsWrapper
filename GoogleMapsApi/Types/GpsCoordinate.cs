@@ -4,7 +4,6 @@ namespace GoogleMapsWrapper.Types
 {
     public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable
     {
-
         //Constructor
         public GpsCoordinate(decimal latitude, decimal longitude)
         {

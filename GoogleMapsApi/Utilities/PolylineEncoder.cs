@@ -14,7 +14,7 @@ namespace GoogleMapsWrapper.Utilities
         public static string Encode(IList<GpsCoordinate> coordinates)
         {
 
-            if (coordinates.Count < 2) { throw new GoogleMapsApiException("Insufficient number of coordinates."); }
+            if (coordinates.Count < 2) { throw new GoogleMapsApiException("Invalid number of coordinates."); }
 
             StringBuilder encodedString = new StringBuilder();
             long prevLat = 0;

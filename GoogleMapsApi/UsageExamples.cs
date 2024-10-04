@@ -18,21 +18,20 @@ namespace GoogleMapsWrapper
         public static void Example_CreateStaticMap(string outputFile)
         {
             //Demonstrates how to create a static map with the wrapper:
-
             var client = new HttpClient();
 
             //Point to the config file. The engine needs a config source that contains: "{AppSettings": {"ApiKey": "INSERT KEY HERE"}}
-            var configJson = "C:/GoogleMapsApi/GoogleMapsApi/Configuration/appSettings.json";
+            var configJson = "C:\\Users\\WIN11PC\\source\\repos\\GoogleMapsWrapper\\GoogleMapsApi\\Configuration\\appSettings.json";
 
             //Create an IConfiguration to be passed to the api.
             var config = new ConfigurationBuilder()
             .AddJsonFile(configJson)
             .Build();
 
-            //Create an API object
+            //Create an API object.
             var wrapper = new GoogleMapsApi(client, config);
 
-            //Declare a new map object
+            //Declare a new map object.
             var map = new Map(MapTypes.Hybrid);
             map.ImageFormat = MapImageFormats.Jpg;
 
@@ -65,7 +64,8 @@ namespace GoogleMapsWrapper
             var client = new HttpClient();
 
             //Point to the config file. The engine needs a config json file that contains: "{AppSettings": {"ApiKey": "INSERT KEY HERE"}}
-            var configJson = "C:/GoogleMapsApi/GoogleMapsApi/Configuration/appSettings.json";
+            var configJson = "C:\\Users\\WIN11PC\\source\\repos\\GoogleMapsWrapper\\GoogleMapsApi\\Configuration\\appSettings.json";
+
 
             //Create the IConfiguration to be passed to the api.
             var config = new ConfigurationBuilder()

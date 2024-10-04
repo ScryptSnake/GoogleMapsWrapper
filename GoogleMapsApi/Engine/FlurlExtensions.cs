@@ -12,7 +12,6 @@ namespace GoogleMapsWrapper.Engine
 {
     public static class FlurlExtensions
     {
-
         /// <summary>
         /// An extension method to flur url to SetQueryParam with a default value.
         /// If the value passed is null or an empty string, the default value is used.

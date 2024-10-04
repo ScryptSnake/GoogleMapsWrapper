@@ -59,8 +59,8 @@ namespace GoogleMapsWrapper.Parsers
 
         private GpsCoordinate findGpsCoordinate(JsonElement jsonElement)
         {
-            //find gps Coordinate in Json result. 
-            // Used by the Parse routine.
+            //Find gps Coordinate in Json result. 
+            //Used by the Parse routine.
             try
             {
                 decimal latitude = 0;

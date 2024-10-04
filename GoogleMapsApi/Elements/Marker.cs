@@ -13,7 +13,6 @@ using GoogleMapsWrapper.Api;
 
 namespace GoogleMapsWrapper.Elements
 {
-
     public class Marker : GoogleMapElement
     {
         private char label = '\0'; //initialize to null character

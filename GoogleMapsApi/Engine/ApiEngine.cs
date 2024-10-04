@@ -19,27 +19,26 @@ using GoogleMapsWrapper.Requests;
 using System.Net.WebSockets;
 using Flurl;
 using Microsoft.Extensions.Configuration;
+
+
 namespace GoogleMapsWrapper.Engine
 {
-
     public class ApiEngine : IApiEngine
+        //The API engine is responsible for receiving IRequests and sending via http GET.
+        //The methods in the engine return an IResponse to the caller for processing.
     {
         private readonly string key;
         private readonly HttpClient httpClient;
 
-
         private string baseUrl = "https://maps.googleapis.com/maps/api/";
         public string BaseUrl { get => baseUrl; }
 
-
         private IConfiguration configuration;
-
         public ApiEngine(HttpClient httpClient, IConfiguration config)
         {
             this.configuration = config;
             this.key = config["AppSettings:ApiKey"] ?? 
                 throw new Exception("Configuration invalid. Failed to find key.");
-
             this.httpClient = httpClient;
         }
         private KeyedRequest CreateKeyedRequest(IRequest request)
@@ -50,17 +49,13 @@ namespace GoogleMapsWrapper.Engine
             Debug.Print("OUTPUT==" + uri.ToString());
             return new KeyedRequest(uri, request.Api, request.Category,request.Id); //create keyed req.
         }
-
-
         private async Task<HttpResponseMessage> sendGetRequestAsync(KeyedRequest request)
         // Sends an http request
         {
             var responseMessage = await httpClient.GetAsync(request.Url.AbsoluteUri);
             if (responseMessage.IsSuccessStatusCode == false)
             {
-                var message = await responseMessage.Content.ReadAsStringAsync();
-                Debug.Print(message);
-                Debug.Print(request.Url.ToString());    
+                var message = await responseMessage.Content.ReadAsStringAsync();  
                 throw new GoogleMapsApiException($"API request returned an invalid response. " +
                 $"Status Code: '{responseMessage.StatusCode}' ; Message='{message}'");
             }

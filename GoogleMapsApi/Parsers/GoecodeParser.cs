@@ -38,7 +38,7 @@ namespace GoogleMapsWrapper.Parsers
             // Get second item in result, ignore first and others
             if (results.GetArrayLength() >= 2)
             {
-                // Access the second result - it is unclear what the other results are expressing. Partial info.
+                // Access the second result - it is unclear from the web API what the other results are describing. Partial info?
                 JsonElement secondResult = results[1];
 
                 // find address_components array item in second result, the array contains the bulk of info needed.

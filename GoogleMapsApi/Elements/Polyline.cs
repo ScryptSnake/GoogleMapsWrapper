@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Elements
 {
-
     public class Polyline : GoogleMapElement
     {
         public int Weight { get; set; } //pixels
