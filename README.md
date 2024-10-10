@@ -1,43 +1,42 @@
-Google Maps Wrapper
-Documentation 
+# **Google Maps Wrapper**
+
+*A .NET wrapper to intergrate with Google Maps APIs.* \
+(Supports: [Static API](https://developers.google.com/maps/documentation/maps-static/]), [Elevation API](https://developers.google.com/maps/documentation/elevation/overview), [Geocoding API](https://developers.google.com/maps/documentation/geocoding))  
+
+(Support for [Javascript API](https://developers.google.com/maps/documentation/javascript) in development)
 
 
-
-
-Author:
+Project Owner:
 https://github.com/ScryptSnake/GoogleMapsWrapper
 
 
 
-Version: 10/2024
+## Overview
+GoogleMapsWrapper is a project that interfaces with some [Google Maps Platform APIs](https://mapsplatform.google.com/maps-products/). \
+This project does not attempt to provide a one-to-one .NET mapping of Google's platforms, but rather, is a tool that provides utility by using these API services. This project is best suited as a supplement to other projects, but can be used as a standalone tool. This is a backend project and contains no front-end GUI. 
 
 
 
 
-
-
-
-Project Overview:
-GoogleMapsWrapper is a project that interfaces with the Google Maps API ecosystem. While Google offers dozens of API’s for geocoding/mapping, this software targets only 3 primary API services:
 1.)	GeocodeAPI:  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.
 
 2.)	StaticMapsAPI: produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map. 
 
 3.)	JavascriptAPI: spawns a web browser to work interactively with a map. Data can be sent/received from .NET. 
 
-
-Project Status:
+## Project Status:
 This project is under development--particularly, the JavascriptAPI is incomplete. 
 Recommended Usage:
 This software is best utilized as a supplement to an existing project, but can be used for simple requests (see Usage examples). 
-
-
 Usage Prerequisites:
 This software requires a valid API key from Google. 
 See: https://developers.google.com/maps
 
 Usage Disclaimer:
 This software attempts to optimize the use of requests to Google’s API. However, users are solely responsible for all requests made from their accounts. The developer assumes no liability for any charges incurred due to excessive requests or for the frequency of requests sent to Google’s services. Further, the developer does not make any guarantees of accuracy of data yielded from this software. 
+
+
+
 
 
 
@@ -53,7 +52,6 @@ This application can be conceptually divided into 7 primary components:
 6.	Containers (namespace: GoogleMapsWrapper.Containers…):  These are DTO or data containers that hold parsed information from a response.
 7.	Elements (GoogleMapsWrapper.Elements…): Elements are objects which model map features. This includes Map, Marker, Polyline. Elements are used throughout the application, primarily for passing as a parameter to an API method.
 Note: The javascript API is conceptualized as a different component entirely. 
-
 
 Security
 A user’s API key should be contained within the IConfiguration passed at the application entry point (GoogleMapsWrapper.Api.GoogleMapsApi). The engine is also constructed via the IConfiguration and therefore has access to the key. When requests are created and passed to the engine for sending, the provided request’s Uri does not contain the user’s key. Likewise, when a response is returned from the engine, the SentRequest property (stored request) of the response does not contain the Uri with the key. The engine constructs a private KeyedRequest object from the received request, which contains the key, and therefore can be appended to the Uri and sent via HttpClient. This choice in design was chosen to ensure stored requests within responses (SentRequest property) do not expose the key to other parts of the application. 
