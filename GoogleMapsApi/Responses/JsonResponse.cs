@@ -8,48 +8,46 @@ using System.Dynamic;
 using GoogleMapsWrapper.Containers;
 using GoogleMapsWrapper.Parsers;
 using GoogleMapsWrapper.Requests;
-namespace GoogleMapsWrapper.Responses
+
+
+namespace GoogleMapsWrapper.Responses;
+public class JsonResponse : IResponse<JsonDocument>
 {
+    private IRequest sentRequest;
+    public IRequest SentRequest { get=> sentRequest;}
 
+    private HttpResponseMessage responseMessage;
+    public HttpResponseMessage ResponseMessage => responseMessage;
 
-    public class JsonResponse : IResponse<JsonDocument>
+    private JsonDocument content;
+    public JsonDocument Content { get=>content; }
+    public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
     {
-        private IRequest sentRequest;
-        public IRequest SentRequest { get=> sentRequest;}
-
-        private HttpResponseMessage responseMessage;
-        public HttpResponseMessage ResponseMessage => responseMessage;
-
-        private JsonDocument content;
-        public JsonDocument Content { get=>content; }
-        public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
-        {
-            content = Content;
-            sentRequest = SentRequest;
-            responseMessage = ResponseMessage;
-        }
-        public T Parse<T>(IParser<T,JsonDocument> parser)
-        {
-            return parser.Parse(this.content);
-        }
+        content = Content;
+        sentRequest = SentRequest;
+        responseMessage = ResponseMessage;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //public class ElevationParser: IParser<ElevationContainer, JsonDocument>
+    public T Parse<T>(IParser<T,JsonDocument> parser)
+    {
+        return parser.Parse(this.content);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public class ElevationParser: IParser<ElevationContainer, JsonDocument>

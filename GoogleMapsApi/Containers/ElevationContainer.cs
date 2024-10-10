@@ -11,26 +11,23 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace GoogleMapsWrapper.Containers
+namespace GoogleMapsWrapper.Containers;
+public record ElevationContainer(
+    [JsonProperty("elevation")]
+    double ElevationMeters,
+
+    [JsonProperty("resolution")]
+    double Resolution,
+
+    //this property is manually converted
+    double ElevationFeet,
+
+    //this property is not de-serialized.but manually added in GeocodeResponse, the reponse returns a list
+    GpsCoordinate? Coordinates,
+
+   object? AssociatedData
+
+    ) : IContainer
 {
-    public record ElevationContainer(
-        [JsonProperty("elevation")]
-        double ElevationMeters,
-
-        [JsonProperty("resolution")]
-        double Resolution,
-
-        //this property is manually converted
-        double ElevationFeet,
-
-        //this property is not de-serialized.but manually added in GeocodeResponse, the reponse returns a list
-        GpsCoordinate? Coordinates,
-
-       object? AssociatedData
-
-        ) : IContainer
-    {
-        object? IContainer.AssociatedData => AssociatedData;
-    }
-
+    object? IContainer.AssociatedData => AssociatedData;
 }

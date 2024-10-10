@@ -4,22 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper.Exceptions
+
+namespace GoogleMapsWrapper.Exceptions;
+public class GoogleMapsApiException : Exception
 {
-    public class GoogleMapsApiException : Exception
+    public GoogleMapsApiException()
     {
-        public GoogleMapsApiException()
-        {
-        }
-
-        public GoogleMapsApiException(string message)
-            : base(message)
-        {
-        }
-
-        public GoogleMapsApiException(string message, Exception innerException)
-            : base(message, innerException)
-        {
-        }
+    }
+    public GoogleMapsApiException(string message)
+        : base(message)
+    {
+    }
+    public GoogleMapsApiException(string message, Exception innerException)
+        : base(message, innerException)
+    {
     }
 }

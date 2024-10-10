@@ -11,11 +11,7 @@ namespace GoogleMapsWrapper.Engine
     public interface IApiEngine
     {
         public Task<IResponse<JsonDocument>> GetJsonAsync(IRequest request);
-
         public Task<IResponse<byte[]>> GetBytesAsync(IRequest request);
-
         public string BaseUrl { get; }
-
-
     }
 }

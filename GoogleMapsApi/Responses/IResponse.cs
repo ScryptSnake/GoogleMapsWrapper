@@ -6,17 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper.Responses
+
+namespace GoogleMapsWrapper.Responses;
+public interface IResponse<TResponse> //TResponse: the type of content returned 
 {
+    public IRequest SentRequest { get; }
+    public HttpResponseMessage ResponseMessage { get; }
+    public TResponse? Content { get; }
 
-    public interface IResponse<TResponse> //TResponse: the type of content returned 
-    {
-        public IRequest SentRequest { get; }
-        public HttpResponseMessage ResponseMessage { get; }
-        public TResponse? Content { get; }
-
-        public T Parse<T>(IParser<T,TResponse> parser);
-    }
-
-
+    public T Parse<T>(IParser<T,TResponse> parser);
 }

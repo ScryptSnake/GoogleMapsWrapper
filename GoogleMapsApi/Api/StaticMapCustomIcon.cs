@@ -9,28 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using GoogleMapsWrapper.Types;
 
-
-namespace GoogleMapsWrapper.Api
+namespace GoogleMapsWrapper.Api;
+public record StaticMapCustomIcon(Uri Uri, 
+    MarkerIconAnchorTypes AnchorType=MarkerIconAnchorTypes.Center)
 {
-
-    public record StaticMapCustomIcon(Uri Uri, 
-        MarkerIconAnchorTypes AnchorType=MarkerIconAnchorTypes.Center)
+    public StaticMapCustomIcon(string uri, 
+        MarkerIconAnchorTypes anchorType=MarkerIconAnchorTypes.Center) : this(new Uri(uri), anchorType)
     {
-        public StaticMapCustomIcon(string uri, 
-            MarkerIconAnchorTypes anchorType=MarkerIconAnchorTypes.Center) : this(new Uri(uri), anchorType)
-        {
-        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

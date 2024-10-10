@@ -40,8 +40,6 @@ namespace GoogleMapsWrapper.Elements
             Weight = 5;
         }
 
-
-
         public void AddCoordinate(GpsCoordinate coordinate)
         {
             coordinates.Add(coordinate);
@@ -57,7 +55,6 @@ namespace GoogleMapsWrapper.Elements
         {
             coordinates.Insert(index, coordinate);
         }
-
         public void RemoveCoordinate(GpsCoordinate coordinate)
         {
             coordinates.Remove(coordinate);

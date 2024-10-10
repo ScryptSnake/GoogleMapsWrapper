@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using GoogleMapsWrapper;
+﻿using GoogleMapsWrapper;
 using GoogleMapsWrapper.Utilities;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
@@ -8,22 +7,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace GoogleMapsWrapper
+namespace GoogleMapsWrapper;
+class Program
 {
-    class Program
+    static async Task Main()
     {
-        static async Task Main()
+        //Usage example 1...
+        //Creates a static map, downloads as filename provided:
+        //See method definition below for info on config file - API key must be provided in appSettings.json
+        UsageExamples.Example_CreateStaticMap("C:\\Users\\WIN11PC\\source\\repos\\GoogleMapsWrapper\\GoogleMapsApi\\Configuration\\outputExample.jpeg");
 
-        {
-            //Usage example 1...
-            //Creates a static map, downloads as filename provided:
-            //See method definition below for info on config file - API key must be provided in appSettings.json
-            UsageExamples.Example_CreateStaticMap("C:\\Users\\WIN11PC\\source\\repos\\GoogleMapsWrapper\\GoogleMapsApi\\Configuration\\outputExample.jpeg");
-
-            //Usage example 2...
-            //Reverse geocodes coordinate for mount rushmore. Prints to console.
-            UsageExamples.Example_ReverseGeocode(); 
-        }
+        //Usage example 2...
+        //Reverse geocodes coordinate for mount rushmore. Prints to console.
+        UsageExamples.Example_ReverseGeocode(); 
     }
-
 }

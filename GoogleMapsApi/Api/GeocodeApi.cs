@@ -9,14 +9,14 @@ using System.Text.Json;
 using GoogleMapsWrapper.Containers;
 using GoogleMapsWrapper.Parsers;
 using System.Data.Common;
-namespace GoogleMapsWrapper.Api;
 
+
+namespace GoogleMapsWrapper.Api;
 public class GeocodeApi
 {
     private IApiEngine apiEngine;
 
     private ApiType apiType = ApiType.Maps;
-
 
     public GeocodeApi(IApiEngine engine)
     {
@@ -28,6 +28,7 @@ public class GeocodeApi
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await this.GeocodeAsync(coordinate,identifier);
     }
+
     public async Task<IResponse<JsonDocument>> GeocodeAsync(GpsCoordinate coordinate, string? identifier = default)
     {
         //Grab the main API Url...
@@ -41,24 +42,24 @@ public class GeocodeApi
         return response;
     }
 
-
     public async Task<GeocodeContainer> GeocodeParseAsync(string latitude, string longitude)
     {
         var response =await GeocodeAsync(latitude, longitude);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
+
     public async Task<GeocodeContainer> GeocodeParseAsync(GpsCoordinate coordinate)
     {
         var response = await GeocodeAsync(coordinate);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
 
-
     public async Task<IResponse<JsonDocument>>GetElevationAsync(string latitude, string longitude, string? Identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await GetElevation(coordinate, Identifier);
     }
+
     public async Task<IResponse<JsonDocument>> GetElevation(GpsCoordinate coordinate, string? Identifier = default)
     {
         var builder = new UriBuilder(apiEngine.BaseUrl + "elevation/json");
@@ -72,6 +73,7 @@ public class GeocodeApi
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await GetElevationParsedAsync(coordinate);
     }
+
     public async Task<ElevationContainer> GetElevationParsedAsync(GpsCoordinate coordinate)
     {
         var response = await GetElevation(coordinate);

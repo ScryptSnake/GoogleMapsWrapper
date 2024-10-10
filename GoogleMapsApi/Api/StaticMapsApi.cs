@@ -13,8 +13,8 @@ using GoogleMapsWrapper.Elements;
 using System.Diagnostics;
 using Flurl;
 using System.Collections.ObjectModel;
-namespace GoogleMapsWrapper.Api;
 
+namespace GoogleMapsWrapper.Api;
 public class StaticMapsApi
 {
     private const int MaxUrlLength = 16384; //maximum allowed Url length per API documentation. 
@@ -22,7 +22,6 @@ public class StaticMapsApi
     private IApiEngine apiEngine;
 
     private ApiType apiType = ApiType.Maps;
-
 
     public StaticMapsApi(IApiEngine engine)
     {
@@ -43,7 +42,6 @@ public class StaticMapsApi
         return response;
     }
 
-
     /// <summary>
     /// Make a request to the API for a static map and return a byte array of the resultant image. Markers are optional. Paths are also optional. 
     /// </summary>
@@ -54,11 +52,9 @@ public class StaticMapsApi
         return response.Content;
     }
 
-
     private Uri BuildUrl(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
-
         //Grab the main API Url:
         var builder = new Flurl.Url(apiEngine.BaseUrl + "staticmap?");
 
@@ -98,13 +94,10 @@ public class StaticMapsApi
         return builder.ToUri();
     }
 
-
-
     private List<string> buildPaths(IEnumerable<Polyline> paths)
     {
         //format: path=color:0xff0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397
         const string pipeEncoded = "|";
-
         var output = new List<string>();
 
         foreach (var path in paths)
@@ -123,11 +116,7 @@ public class StaticMapsApi
             }
         }
         return output;
-
-
-
     }
-
 
     private List<string> buildMarkers(IEnumerable<Marker> markers)
         //generates a collection of markers queries
@@ -151,16 +140,13 @@ public class StaticMapsApi
                 {
                     //convert size enum value to string representation:
                     var markerSize = marker.Size.ToString().ToLower();
-
                     //grab marker color, check if has value, convert to hex
                     var markerColor = marker.Color;
                     if (marker.Color == Color.Empty) markerColor = Color.Green;
                     var markerColorHex = Utilities.Utilities.ColorToHex(markerColor);
-                    
                     //check if marker label supplied, if not, provide one
                     var markerLabel = marker.Label;
                     if (markerLabel == '\0') markerLabel = 'A'; 
-
                     //url format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates
 
                     var outputString = $"size{colonEncoded}{markerSize}" +
@@ -176,9 +162,7 @@ public class StaticMapsApi
                         var markerLabelEncoded = Utilities.Utilities.UrlEncodeChar(markerLabel);
                         outputString = outputString + $"label{colonEncoded}{markerLabelEncoded}";
                     }
-
                     output.Add(outputString + $"{pipeEncoded}{marker.Coordinate.ToString()}");
-
                 }
             }
             else //custom icons
@@ -193,9 +177,5 @@ public class StaticMapsApi
             }
         }
         return output;
-
     }
-
-
-
 }

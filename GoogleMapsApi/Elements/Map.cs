@@ -8,11 +8,9 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper.Elements
-{
+namespace GoogleMapsWrapper.Elements;
     public class Map : GoogleMapElement
     {
-
         private MapTypes mapType;
         public MapTypes MapType { get => mapType; set => mapType=value; }
 
@@ -23,7 +21,6 @@ namespace GoogleMapsWrapper.Elements
 
         private MapImageFormats imageFormat;
         public MapImageFormats ImageFormat { get => imageFormat; set => imageFormat = value; }
-
 
         private int zoom = 0;
         public int Zoom //not required for static maps if adding markers/paths.
@@ -61,8 +58,6 @@ namespace GoogleMapsWrapper.Elements
 
         private GpsCoordinate? center;
         public GpsCoordinate? Center { get => center; set => center=value; }
-
-
         public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.HighRes, 
             GpsCoordinate? Center = null, string? Id = null, string? Name = null)
         {
@@ -71,18 +66,11 @@ namespace GoogleMapsWrapper.Elements
             this.Scale = Scale;
             this.Center = Center;
             this.Id = Id;
-            this.Name = Name;
-            
-
+        this.Name = Name;
             //defaults:
             this.Scale = MapScaleTypes.HighRes;
             this.Dimensions = "640x640";
             this.ImageFormat = MapImageFormats.Jpg;
         }
 
-
-
-
-
     }
-}

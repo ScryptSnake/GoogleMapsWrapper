@@ -8,22 +8,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper.Requests
+
+namespace GoogleMapsWrapper.Requests;
+public interface IRequest
 {
-
-    public interface IRequest
-    {
-        public string? Id { get; }
-
-        public Uri Url { get; } //note:  Url should not ever contain the API Key!, this is done in the engine and never exposed in a returned reponse.
-
-        public string Query { get; }
-
-        public ApiType Api { get; }
-
-        public RequestType Category { get; }
-
-
-    }
+    public string? Id { get; }
+    public Uri Url { get; } //note:  Url should not ever contain the API Key!, this is done in the engine and never exposed in a returned reponse.
+    public string Query { get; }
+    public ApiType Api { get; }
+    public RequestType Category { get; }
 }
 

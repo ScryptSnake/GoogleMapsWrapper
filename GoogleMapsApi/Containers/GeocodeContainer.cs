@@ -11,35 +11,33 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace GoogleMapsWrapper.Containers
+
+namespace GoogleMapsWrapper.Containers;
+public record GeocodeContainer(
+    [JsonProperty("administrative_area_level_1")]
+    string Country,
+
+    [JsonProperty("administrative_area_level_2")]
+    string State,
+
+    [JsonProperty("locality")]
+    string City,
+
+    [JsonProperty("administrative_area_level_3")]
+    string Municipality,
+
+    [JsonProperty("postal_code")]
+    int ZipCode,
+
+    [JsonProperty("formatted_address")]
+    string Address,
+
+    //this property is not de-serialized.but manually added in GeocodeResponse.
+    GpsCoordinate? Coordinates,
+
+   object? AssociatedData
+
+    ) : IContainer
 {
-    public record GeocodeContainer(
-        [JsonProperty("administrative_area_level_1")]
-        string Country,
-
-        [JsonProperty("administrative_area_level_2")]
-        string State,
-
-        [JsonProperty("locality")]
-        string City,
-
-        [JsonProperty("administrative_area_level_3")]
-        string Municipality,
-
-        [JsonProperty("postal_code")]
-        int ZipCode,
-
-        [JsonProperty("formatted_address")]
-        string Address,
-
-        //this property is not de-serialized.but manually added in GeocodeResponse.
-        GpsCoordinate? Coordinates,
-
-       object? AssociatedData
-
-        ) : IContainer
-    {
-        object? IContainer.AssociatedData => AssociatedData;
-    }
-
+    object? IContainer.AssociatedData => AssociatedData;
 }
