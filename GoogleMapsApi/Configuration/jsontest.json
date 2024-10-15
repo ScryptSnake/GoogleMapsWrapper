@@ -1,0 +1,705 @@
+﻿{
+   "plus_code" : 
+   {
+      "compound_code" : "VGGJ+4Q6 Keystone, SD, USA",
+      "global_code" : "85MRVGGJ+4Q6"
+   },
+   "results" : 
+   [
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "VGGJ+4Q",
+               "short_name" : "VGGJ+4Q",
+               "types" : 
+               [
+                  "plus_code"
+               ]
+            },
+            {
+               "long_name" : "Keystone",
+               "short_name" : "Keystone",
+               "types" : 
+               [
+                  "locality",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Mount Rushmore Unorganized Territory",
+               "short_name" : "Mount Rushmore Unorganized Territory",
+               "types" : 
+               [
+                  "administrative_area_level_3",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Pennington County",
+               "short_name" : "Pennington County",
+               "types" : 
+               [
+                  "administrative_area_level_2",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "57751",
+               "short_name" : "57751",
+               "types" : 
+               [
+                  "postal_code"
+               ]
+            }
+         ],
+         "formatted_address" : "VGGJ+4Q Keystone, SD, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.875375,
+                  "lng" : -103.468
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.87525,
+                  "lng" : -103.468125
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.8753,
+               "lng" : -103.4681
+            },
+            "location_type" : "GEOMETRIC_CENTER",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.8766614802915,
+                  "lng" : -103.4667135197085
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8739635197085,
+                  "lng" : -103.4694114802915
+               }
+            }
+         },
+         "place_id" : "GhIJKhiV1AnwRUARfNCzWfXdWcA",
+         "plus_code" : 
+         {
+            "compound_code" : "VGGJ+4Q Keystone, SD, USA",
+            "global_code" : "85MRVGGJ+4Q"
+         },
+         "types" : 
+         [
+            "plus_code"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "South Dakota 244",
+               "short_name" : "SD-244",
+               "types" : 
+               [
+                  "route"
+               ]
+            },
+            {
+               "long_name" : "Keystone",
+               "short_name" : "Keystone",
+               "types" : 
+               [
+                  "locality",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Mount Rushmore Unorganized Territory",
+               "short_name" : "Mount Rushmore Unorganized Territory",
+               "types" : 
+               [
+                  "administrative_area_level_3",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Pennington County",
+               "short_name" : "Pennington County",
+               "types" : 
+               [
+                  "administrative_area_level_2",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "57751",
+               "short_name" : "57751",
+               "types" : 
+               [
+                  "postal_code"
+               ]
+            }
+         ],
+         "formatted_address" : "SD-244, Keystone, SD 57751, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.87771,
+                  "lng" : -103.4560443
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8741351,
+                  "lng" : -103.4611319
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.8742828,
+               "lng" : -103.4605632
+            },
+            "location_type" : "GEOMETRIC_CENTER",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.87771,
+                  "lng" : -103.4560443
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8741351,
+                  "lng" : -103.4611319
+               }
+            }
+         },
+         "place_id" : "ChIJ-zinFNo1fYcR_PNCTDdEeuI",
+         "types" : 
+         [
+            "route"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "64",
+               "short_name" : "64",
+               "types" : 
+               [
+                  "street_number"
+               ]
+            },
+            {
+               "long_name" : "Presidential Trail",
+               "short_name" : "Presidential Trail",
+               "types" : 
+               [
+                  "route"
+               ]
+            },
+            {
+               "long_name" : "Keystone",
+               "short_name" : "Keystone",
+               "types" : 
+               [
+                  "locality",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Mount Rushmore Unorganized Territory",
+               "short_name" : "Mount Rushmore Unorganized Territory",
+               "types" : 
+               [
+                  "administrative_area_level_3",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Pennington County",
+               "short_name" : "Pennington County",
+               "types" : 
+               [
+                  "administrative_area_level_2",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "57751",
+               "short_name" : "57751",
+               "types" : 
+               [
+                  "postal_code"
+               ]
+            }
+         ],
+         "formatted_address" : "64 Presidential Trail, Keystone, SD 57751, USA",
+         "geometry" : 
+         {
+            "location" : 
+            {
+               "lat" : 43.877506,
+               "lng" : -103.4583681
+            },
+            "location_type" : "RANGE_INTERPOLATED",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.8788549802915,
+                  "lng" : -103.4570191197085
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8761570197085,
+                  "lng" : -103.4597170802915
+               }
+            }
+         },
+         "place_id" : "Ei42NCBQcmVzaWRlbnRpYWwgVHJhaWwsIEtleXN0b25lLCBTRCA1Nzc1MSwgVVNBIhoSGAoUChIJPRgN09s1fYcR3BLwhS54GFUQQA",
+         "types" : 
+         [
+            "street_address"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "57751",
+               "short_name" : "57751",
+               "types" : 
+               [
+                  "postal_code"
+               ]
+            },
+            {
+               "long_name" : "Keystone",
+               "short_name" : "Keystone",
+               "types" : 
+               [
+                  "locality",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            }
+         ],
+         "formatted_address" : "Keystone, SD 57751, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.9301861,
+                  "lng" : -103.2996849
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8241249,
+                  "lng" : -103.584588
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.8825124,
+               "lng" : -103.4742993
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 43.9301861,
+                  "lng" : -103.2996849
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.8241249,
+                  "lng" : -103.584588
+               }
+            }
+         },
+         "place_id" : "ChIJZexUpTk2fYcRwewsHT81qPo",
+         "types" : 
+         [
+            "postal_code"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "Mount Rushmore Unorganized Territory",
+               "short_name" : "Mount Rushmore Unorganized Territory",
+               "types" : 
+               [
+                  "administrative_area_level_3",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "Pennington County",
+               "short_name" : "Pennington County",
+               "types" : 
+               [
+                  "administrative_area_level_2",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            }
+         ],
+         "formatted_address" : "Mount Rushmore Unorganized Territory, SD, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 44.1408759,
+                  "lng" : -103.186155
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.855816,
+                  "lng" : -103.5860709
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.9492343,
+               "lng" : -103.3684019
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 44.1408759,
+                  "lng" : -103.186155
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.855816,
+                  "lng" : -103.5860709
+               }
+            }
+         },
+         "place_id" : "ChIJX8I8FTlPfYcRYVfbU9FGLYc",
+         "types" : 
+         [
+            "administrative_area_level_3",
+            "political"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "Pennington County",
+               "short_name" : "Pennington County",
+               "types" : 
+               [
+                  "administrative_area_level_2",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            }
+         ],
+         "formatted_address" : "Pennington County, SD, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 44.510926,
+                  "lng" : -102.000776
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.685119,
+                  "lng" : -104.055487
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.8901111,
+               "lng" : -102.2547919
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 44.510926,
+                  "lng" : -102.000776
+               },
+               "southwest" : 
+               {
+                  "lat" : 43.685119,
+                  "lng" : -104.055487
+               }
+            }
+         },
+         "place_id" : "ChIJqR63oBhrfYcRKx7-WHYCfB8",
+         "types" : 
+         [
+            "administrative_area_level_2",
+            "political"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "South Dakota",
+               "short_name" : "SD",
+               "types" : 
+               [
+                  "administrative_area_level_1",
+                  "political"
+               ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            }
+         ],
+         "formatted_address" : "South Dakota, USA",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 45.945377,
+                  "lng" : -96.43647199999999
+               },
+               "southwest" : 
+               {
+                  "lat" : 42.479686,
+                  "lng" : -104.0578791
+               }
+            },
+            "location" : 
+            {
+               "lat" : 43.9695148,
+               "lng" : -99.9018131
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 45.945377,
+                  "lng" : -96.43647199999999
+               },
+               "southwest" : 
+               {
+                  "lat" : 42.479686,
+                  "lng" : -104.0578791
+               }
+            }
+         },
+         "place_id" : "ChIJpTjphS1DfYcRt6SGMSnW8Ac",
+         "types" : 
+         [
+            "administrative_area_level_1",
+            "political"
+         ]
+      },
+      {
+         "address_components" : 
+         [
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : 
+               [
+                  "country",
+                  "political"
+               ]
+            }
+         ],
+         "formatted_address" : "United States",
+         "geometry" : 
+         {
+            "bounds" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 74.071038,
+                  "lng" : -66.885417
+               },
+               "southwest" : 
+               {
+                  "lat" : 18.7763,
+                  "lng" : 166.9999999
+               }
+            },
+            "location" : 
+            {
+               "lat" : 38.7945952,
+               "lng" : -106.5348379
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : 
+            {
+               "northeast" : 
+               {
+                  "lat" : 74.071038,
+                  "lng" : -66.885417
+               },
+               "southwest" : 
+               {
+                  "lat" : 18.7763,
+                  "lng" : 166.9999999
+               }
+            }
+         },
+         "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+         "types" : 
+         [
+            "country",
+            "political"
+         ]
+      }
+   ],
+   "status" : "OK"
+} /n {
+   "results" : 
+   [
+      {
+         "elevation" : 1668.5537109375,
+         "location" : 
+         {
+            "lat" : 43.8753,
+            "lng" : -103.4681
+         },
+         "resolution" : 9.543951988220215
+      }
+   ],
+   "status" : "OK"
+}

@@ -78,7 +78,18 @@ namespace GoogleMapsWrapper.Elements
             return string.Join(';', this.Coordinates);
         }
 
-
+        public static Polyline Parse(string input, string separator)
+        {
+            var coordinates = new List<GpsCoordinate>();    
+            var array = input.Split(separator);
+            foreach (string value in array)
+            {
+                var coord = GpsCoordinate.Parse(value);
+                coordinates.Add(coord);
+            }
+            var output = new Polyline(coordinates);
+            return output;
+        }
 
 
     }

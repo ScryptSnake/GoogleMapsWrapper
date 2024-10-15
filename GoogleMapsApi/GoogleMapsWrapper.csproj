@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>GoogleMapsWrapper.Program</StartupObject>
     <UserSecretsId>751a9acb-9cc7-48d2-9f7a-0546404ef106</UserSecretsId>
   </PropertyGroup>
 

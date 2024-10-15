@@ -14,11 +14,14 @@ using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
 public record GeocodeContainer(
-    [JsonProperty("administrative_area_level_1")]
+    [JsonProperty("country")]
     string Country,
 
-    [JsonProperty("administrative_area_level_2")]
+    [JsonProperty("administrative_area_level_1")]
     string State,
+
+    [JsonProperty("administrative_area_level_2")]
+    string County,
 
     [JsonProperty("locality")]
     string City,
@@ -40,4 +43,19 @@ public record GeocodeContainer(
     ) : IContainer
 {
     object? IContainer.AssociatedData => AssociatedData;
+
+    public override string ToString()
+    {
+        // Use string interpolation and handle null values
+        return $"Country: {Country}, " +
+               $"State: {State}, " +
+               $"City: {City}, " +
+               $"Municipality: {Municipality}, " +
+               $"ZipCode: (ZipCode.ToString(), " +
+               $"Address: {Address}, " +
+               $"Coordinates: (Coordinates.ToString(), " +
+               $"AssociatedData: {AssociatedData?.ToString() ?? "EMPTY"}";
+    }
+
+
 }

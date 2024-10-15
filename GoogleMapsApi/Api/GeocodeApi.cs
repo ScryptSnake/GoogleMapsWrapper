@@ -57,10 +57,10 @@ public class GeocodeApi
     public async Task<IResponse<JsonDocument>>GetElevationAsync(string latitude, string longitude, string? Identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
-        return await GetElevation(coordinate, Identifier);
+        return await GetElevationAsync(coordinate, Identifier);
     }
 
-    public async Task<IResponse<JsonDocument>> GetElevation(GpsCoordinate coordinate, string? Identifier = default)
+    public async Task<IResponse<JsonDocument>> GetElevationAsync(GpsCoordinate coordinate, string? Identifier = default)
     {
         var builder = new UriBuilder(apiEngine.BaseUrl + "elevation/json");
         builder.Query = $"?locations={coordinate.Latitude},{coordinate.Longitude}";
@@ -76,7 +76,7 @@ public class GeocodeApi
 
     public async Task<ElevationContainer> GetElevationParsedAsync(GpsCoordinate coordinate)
     {
-        var response = await GetElevation(coordinate);
+        var response = await GetElevationAsync(coordinate);
         return response.Parse<ElevationContainer>(new ElevationParser());
     }
 
