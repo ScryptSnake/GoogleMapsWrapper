@@ -15,9 +15,13 @@ using Flurl;
 using System.Collections.ObjectModel;
 
 namespace GoogleMapsWrapper.Api;
+/// <summary>
+/// Provides methods for retrieiving a static image of a map from Google's Static API.
+/// </summary>
 public class StaticMapsApi
 {
-    private const int MaxUrlLength = 16384; //maximum allowed Url length per API documentation. 
+    //The maximum length of a URL per Google API documentation.
+    private const int MAX_URL_LENGTH = 16384;  
 
     private IApiEngine apiEngine;
 
