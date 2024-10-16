@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Elements;
+/// <summary>
+/// An abstract base class that contains properties from which map elements derrive.
+/// A GoogleMapElement can be defined as a geolocational data type, such as a Map, Marker, or Polyline that is leveraged by the wrapper. 
 public abstract class GoogleMapElement
 {
     public string? Name { get; set; }
