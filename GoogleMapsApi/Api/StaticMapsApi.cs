@@ -20,7 +20,7 @@ namespace GoogleMapsWrapper.Api;
 /// </summary>
 public class StaticMapsApi
 {
-    //The maximum length of a URL per Google API documentation.
+    // Maximum length of a URL per Google API documentation.
     private const int MAX_URL_LENGTH = 16384;  
 
     private IApiEngine apiEngine;
@@ -33,22 +33,32 @@ public class StaticMapsApi
     }
 
     /// <summary>
-    /// Make a request to the API for a static map and return a Byte Response. Markers are optional. Paths are also optional. 
+    /// Retrieves a response containing image content from provided map settings, markers(placemarks), and paths(polylines).
     /// </summary>
+    /// <param name="mapSettings">A <see cref=>"Map"/> element that defines key features about the map.></param>
+    /// <param name="markers">Optional. "Markers"/>s to be included in the map.</param>
+    /// <param name="paths">Optional. <see cref=>"Polyline"/>s to be included in the map.</param>
+    /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
+    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw byte[] response from the Google API.</returns>
     public async Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<Polyline>? paths=null)
     {
+        // Assemble a URL for the API.
         var url = BuildUrl(mapSettings, markers, paths);
-        //build request
+        // Build a request object.
         var request = new ApiRequest(url, apiType, RequestTypes.StaticMaps, mapSettings.Id);
-
-        //send request
+        // Send a request. 
         var response = await this.apiEngine.GetBytesAsync(request);
         return response;
     }
 
     /// <summary>
-    /// Make a request to the API for a static map and return a byte array of the resultant image. Markers are optional. Paths are also optional. 
+    /// Retrieves a byte array containing image content from provided map settings, markers(placemarks), and paths(polylines).
     /// </summary>
+    /// <param name="mapSettings">A <see cref=>"Map"/> element that defines key features about the map.></param>
+    /// <param name="markers">Optional. "Markers"/>s to be included in the map.</param>
+    /// <param name="paths">Optional. <see cref=>"Polyline"/>s to be included in the map.</param>
+    /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
+    /// <returns>A byte array of the image.</returns>
     public async Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         //shortcut method
@@ -56,23 +66,26 @@ public class StaticMapsApi
         return response.Content;
     }
 
+    ///<summary>Assembles the URL to be provided to the engine for http processing.
+    /// Example of the base format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
+    ///</summary>
+    /// <returns>A URI object for Google's API.</returns>
     private Uri BuildUrl(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
-        //format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
-        //Grab the main API Url:
+        // Assemble a URL builder object from the engine's base URL.  
         var builder = new Flurl.Url(apiEngine.BaseUrl + "staticmap?");
-
-        //check if caller provided a centering or zoom parameters, if null ignored.
+        
+        // Check if caller provided centering or zoom parameters, if null ignored.
         builder.SetQueryParam("center", mapSettings.Center); 
         if (mapSettings.Zoom != 0) builder.SetQueryParam("zoom", mapSettings.Zoom);
 
-        //set parameters with defaults:
+        // Set parameters with default values.
         builder.SetQueryParamWithDefault("maptype", mapSettings.MapType.ToString().ToLower(),"hybrid");
         builder.SetQueryParamWithDefault("format", mapSettings.ImageFormat.ToString().ToLower(), "png");
         builder.SetQueryParamWithDefault("scale", (int)mapSettings.Scale, 2);
         builder.SetQueryParamWithDefault("size", mapSettings.Dimensions, "640x640");
-
-        //build list of markers parameters, add to URL
+        
+        // Build a list of marker parameters, append to the URL builder.
         if (markers != null)
         {
             foreach (var marker in buildMarkers(markers))
@@ -81,7 +94,7 @@ public class StaticMapsApi
             }
         }
 
-        //build list of paths parameters, add to URL
+        // Build a list of path parameters, append to the URL builder.
         if (paths!= null)
         {
             foreach (var path in buildPaths(paths))
@@ -90,55 +103,36 @@ public class StaticMapsApi
             }
         }
 
-        //perform check for max URL size:
+        // Perform a check against URL maximum size.
         if (builder.ToString().Length > MaxUrlLength) { 
             throw new GoogleMapsApiException("Resultant static map URL exceeds allowable size: Max = " + MaxUrlLength);
         }
-
+        
         return builder.ToUri();
     }
 
-    private List<string> buildPaths(IEnumerable<Polyline> paths)
-    {
-        //format: path=color:0xff0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397
-        const string pipeEncoded = "|";
-        var output = new List<string>();
-
-        foreach (var path in paths)
-        {
-            if (!path.IsEmpty())
-            {
-                var hexColor = Utilities.Utilities.ColorToHex(path.Color);
-
-                //convert to non-readonly list
-                IList<GpsCoordinate> pathCoords = new List<GpsCoordinate>(path.Coordinates);
-
-                var encodedCoords = Utilities.PolylineEncoder.Encode(pathCoords);
-
-                output.Add($"color:{hexColor}{pipeEncoded}" +
-                    $"weight:{path.Weight}{pipeEncoded}enc:{encodedCoords}");
-            }
-        }
-        return output;
-    }
-
+    ///<summary>Converts a list of marker objects into a list of string, 
+    ///    representing a URL query for the marker(s).
+    /// Note: This method url encodes each query value in the resultant list before output.
+    ///</summary>
+    ///<returns>A list of string, where each value in the list represents a URL query for a marker. 
     private List<string> buildMarkers(IEnumerable<Marker> markers)
-        //generates a collection of markers queries
-        //this is passed as same-named parameters using Flurl.AppendQueryParam
-        //The value of each collection item is an ALREADY url encoded value.
     {
-        //Filter out null markers, group by custom icon / no custom icon.
+        // Filter out null markers, group by custom icon / no custom icon.
         var groupedMarkers = markers.Where(m => m != null).GroupBy(m => m.CustomIcon == null);
-
-        const string colonEncoded = "%3A";
-        const string pipeEncoded = "%7C";
         
+        // Establish some URL encoded characters.
+        const string COLON_ENCODED = "%3A";
+        const string PIPE_ENCODED = "%7C";
+        
+        // Instantiate an output list.
         var output = new List<string>();
 
+        // Loop through grouped markers.
         foreach (var group in groupedMarkers)
         {
+            // Markers WITHOUT a custom icon.
             if (group.Key)
-            //markers without custom icon
             {
                 foreach (var marker in group)
                 {
@@ -153,9 +147,9 @@ public class StaticMapsApi
                     if (markerLabel == '\0') markerLabel = 'A'; 
                     //url format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates
 
-                    var outputString = $"size{colonEncoded}{markerSize}" +
-                        $"{pipeEncoded}color{colonEncoded}{markerColorHex}" +
-                        $"{pipeEncoded}";
+                    var outputString = $"size{COLON_ENCODED}{markerSize}" +
+                        $"{PIPE_ENCODED}color{COLON_ENCODED}{markerColorHex}" +
+                        $"{PIPE_ENCODED}";
 
                     if (marker.Label != '\0')
                     {
@@ -164,9 +158,9 @@ public class StaticMapsApi
                         //but the API does not process it properly because 'A' conflicts with %3A
                         //using a regular colon decoded in the URL works fine, but its poor practice to not encode it.
                         var markerLabelEncoded = Utilities.Utilities.UrlEncodeChar(markerLabel);
-                        outputString = outputString + $"label{colonEncoded}{markerLabelEncoded}";
+                        outputString = outputString + $"label{COLON_ENCODED}{markerLabelEncoded}";
                     }
-                    output.Add(outputString + $"{pipeEncoded}{marker.Coordinate.ToString()}");
+                    output.Add(outputString + $"{PIPE_ENCODED}{marker.Coordinate.ToString()}");
                 }
             }
             else //custom icons
@@ -179,6 +173,38 @@ public class StaticMapsApi
                         $"|{customMarker.Coordinate.ToString()}");
                 }
             }
+        }
+        return output;
+    }
+
+    ///<summary>Converts a list of Polyline objects into a list of string, 
+    ///    representing a URL query for the polylines(s).
+    /// Note: This method uses an implementation of Google's Polyline encoding algorithm.
+    /// Each value in the resultant list contains an encoded parameter with the algorithm.
+    ///</summary>
+    ///<returns>A list of string, where each value in the list represents a URL query for a Poyline. 
+    private List<string> buildPaths(IEnumerable<Polyline> paths)
+    {
+        // Establish a constant for the pipe delimeter.
+        // Note: This is not URL encoded.
+        const string PIPE_ENCODED = "|";
+
+        // Instantiate a list for output.
+        var output = new List<string>();
+
+        // Loop through the Polylines provided.
+        foreach (var path in paths)
+        {
+            if (path.IsEmpty()) { continue;}
+            // Convert the Polyline's color property to a hex string for the API.
+            var hexColor = Utilities.Utilities.ColorToHex(path.Color);
+            // Create a write-able list from the Polyline's coordinate list.
+            IList<GpsCoordinate> pathCoords = new List<GpsCoordinate>(path.Coordinates);
+            // Encode the coordinates with the Poyline encoding algorithm (space saver).
+            var encodedCoords = Utilities.PolylineEncoder.Encode(pathCoords);
+            // Example format: path=color:0xff0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397
+            output.Add($"color:{hexColor}{pipeEncoded}" +
+                $"weight:{path.Weight}{pipeEncoded}enc:{encodedCoords}");
         }
         return output;
     }
