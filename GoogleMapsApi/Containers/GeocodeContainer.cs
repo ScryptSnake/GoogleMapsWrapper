@@ -13,6 +13,7 @@ using System.Xml;
 
 
 namespace GoogleMapsWrapper.Containers;
+
 public record GeocodeContainer(
     [JsonProperty("country")]
     string Country,

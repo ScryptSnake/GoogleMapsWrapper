@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Types;
 ///<summary> Type of request. For categorization purposes.</summary>
-public enum RequestType
+public enum RequestTypes
 {
     StaticMaps, Elevation, Geocoding //there are others, but these are supported. 
 }

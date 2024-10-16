@@ -14,12 +14,12 @@ using GoogleMapsWrapper.Utilities;
 
 
 namespace ExampleProject;
-public partial class Form1 : Form
+public partial class MainForm : Form
 {
     private IConfiguration config;
     private GoogleMapsApi api { get; set; }
 
-    public Form1()
+    public MainForm()
     {
         InitializeComponent();
     }

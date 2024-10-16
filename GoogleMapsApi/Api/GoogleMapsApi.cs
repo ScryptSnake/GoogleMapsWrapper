@@ -6,25 +6,31 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Api;
+/// <summary>
+/// The entry point of the wrapper. Sub-API's are exposed:
+/// <para><see cref="GeocodeApi"/></para>
+/// <para><see cref="StaticMapsApi"/></para>
+/// </summary>
 public class GoogleMapsApi
 {
     private ApiEngine engine;
-    private IConfiguration configuration;
+    public GeocodeApi GeocodeApi { get; private set; }
+    public StaticMapsApi StaticMapsApi { get; private set; }
 
-    private GeocodeApi geocodeApi;
-    public GeocodeApi GeocodeApi { get => geocodeApi; set => geocodeApi = value; }
-
-    private StaticMapsApi staticMapsApi;
-    public StaticMapsApi StaticMapsApi { get => staticMapsApi; set => staticMapsApi = value; }
-
+    /// <summary>
+    /// Initializes a new instance of the class, using the provided <see cref="HttpClient"/> 
+    /// and configuration settings.
+    /// </summary>
+    /// <param name="httpClient"> An <see cref="HttpClient"/> to be used to process web requests. </param>
+    /// <param name="config"> An <see cref="IConfiguration"/> which contains the API key.</param>
+    /// 
     public GoogleMapsApi(HttpClient httpClient, IConfiguration config)
     {
-        this.engine = new ApiEngine(httpClient,config);
-        this.configuration = config;
+        //Instantiate a new API engine, provide client and config.
+        engine = new ApiEngine(httpClient,config);
 
-        //instance properties...
-        this.geocodeApi = new GeocodeApi(engine);
-        this.staticMapsApi = new StaticMapsApi(engine);
+        //Construct sub-APIs.
+        this.GeocodeApi = new GeocodeApi(engine);
+        this.StaticMapsApi = new StaticMapsApi(engine);
     }
-
 }

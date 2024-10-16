@@ -21,7 +21,7 @@ public class StaticMapsApi
 
     private IApiEngine apiEngine;
 
-    private ApiType apiType = ApiType.Maps;
+    private ApiTypes apiType = ApiTypes.Maps;
 
     public StaticMapsApi(IApiEngine engine)
     {
@@ -35,7 +35,7 @@ public class StaticMapsApi
     {
         var url = BuildUrl(mapSettings, markers, paths);
         //build request
-        var request = new ApiRequest(url, apiType, RequestType.StaticMaps, mapSettings.Id);
+        var request = new ApiRequest(url, apiType, RequestTypes.StaticMaps, mapSettings.Id);
 
         //send request
         var response = await this.apiEngine.GetBytesAsync(request);

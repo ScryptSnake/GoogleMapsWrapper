@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 
 namespace GoogleMapsWrapper.Responses;
-public interface IResponse<TResponse> //TResponse: the type of content returned 
+public interface IResponse<TResponse> //TResponse: the type of content that the response returns/represents.
 {
     public IRequest SentRequest { get; }
     public HttpResponseMessage ResponseMessage { get; }
