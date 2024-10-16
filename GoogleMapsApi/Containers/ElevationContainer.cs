@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
+/// <summary>A object to hold parsed JSON data from Elevation API responses.</summary>
 public record ElevationContainer(
     [JsonProperty("elevation")]
     double ElevationMeters,
@@ -19,12 +20,13 @@ public record ElevationContainer(
     [JsonProperty("resolution")]
     double Resolution,
 
-    //this property is manually converted
+    // Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API.
     double ElevationFeet,
 
-    //this property is not de-serialized.but manually added in GeocodeResponse, the reponse returns a list
+    // Note: This property is not de-serialized. Rather, It is manually provided by the caller/setter.
     GpsCoordinate? Coordinates,
-
+    
+    // A property to append any relevant information to the object.
    object? AssociatedData
 
     ) : IContainer
