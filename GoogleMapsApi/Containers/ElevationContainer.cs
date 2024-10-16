@@ -13,6 +13,8 @@ using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
 /// <summary>A object to hold parsed JSON data from Elevation API responses.</summary>
+/// <param name="ElevationMeters">The elevation in unit meters.</param>
+/// <param name="Resolution">The elevation in meters.</param>
 public record ElevationContainer(
     [JsonProperty("elevation")]
     double ElevationMeters,
