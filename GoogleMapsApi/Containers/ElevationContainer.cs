@@ -32,7 +32,7 @@ public record ElevationContainer(
     ///<Summary>Location of the request.</summary>
     GpsCoordinate? Coordinates,
     
-    ///<Summary>Holds any relevant data, such as the associated IRequest.</summary>
+    ///<Summary>Associated data related to the request. This contains the IRequest object.</summary>.</summary>
    object? AssociatedData
 
     ) : IContainer
