@@ -18,11 +18,15 @@ public record ElevationContainer(
     [JsonProperty("elevation")]
     double ElevationMeters,
     
-    ///<Summary>Indicates the maximum distance between data points from which the elevation was interpolated, in meters.</summary>
+    ///<Summary>Indicates the maximum distance between data points from which the elevation was interpolated, in meters.
+    ///<para>This property is acquired from the JSON response's 'administrative_area_level_1' property.</para>
+    ///</summary>
     [JsonProperty("resolution")]
     double Resolution,
     
-    ///<Summary>The elevation in feet. Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API. </summary>
+    ///<Summary>The elevation in feet. 
+    ///<para>Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API.</para>
+    </summary>
     double ElevationFeet,
 
     ///<Summary>Location of the request.</summary>
