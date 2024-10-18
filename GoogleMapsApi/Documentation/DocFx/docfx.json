@@ -1,0 +1,44 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "../GoogleMapsWrapper.csproj" // Use the relative path from the DocFx folder
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}" // Include any markdown or YAML files here
+        ],
+        "exclude": [
+          "_site/**" // Exclude the output directory
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**" // For any images you might include
+        ]
+      }
+    ],
+    "output": "_site", // Output directory
+    "template": [
+      "default", // Use default template
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "docfx_site",
+      "_appTitle": "docfx_site",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

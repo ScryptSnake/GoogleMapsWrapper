@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>751a9acb-9cc7-48d2-9f7a-0546404ef106</UserSecretsId>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+	
   <ItemGroup>
     <Using Include="GoogleMapsWrapper" />
     <Using Include="GoogleMapsWrapper.Api" />
@@ -29,6 +31,10 @@
     <Using Include="GoogleMapsWrapper.Elements" />
     <Using Include="GoogleMapsWrapper.Types" />
     <Using Include="GoogleMapsWrapper.Utilities" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documentation\DocFx\" />
   </ItemGroup>
 
 </Project>

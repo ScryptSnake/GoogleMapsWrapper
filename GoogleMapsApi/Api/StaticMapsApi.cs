@@ -27,6 +27,11 @@ public class StaticMapsApi
 
     private ApiTypes apiType = ApiTypes.Maps;
 
+
+    /// <summary>
+    /// Initializes a new instance of the StaticMapsAPI.
+    /// </summary>
+    /// <param name="engine"> An <see cref="IApiEngine" to manage API requests and responses./></param>
     public StaticMapsApi(IApiEngine engine)
     {
         this.apiEngine = engine;
@@ -104,8 +109,8 @@ public class StaticMapsApi
         }
 
         // Perform a check against URL maximum size.
-        if (builder.ToString().Length > MaxUrlLength) { 
-            throw new GoogleMapsApiException("Resultant static map URL exceeds allowable size: Max = " + MaxUrlLength);
+        if (builder.ToString().Length > MAX_URL_LENGTH) { 
+            throw new GoogleMapsApiException("Resultant static map URL exceeds allowable size: Max = " + MAX_URL_LENGTH);
         }
         
         return builder.ToUri();
@@ -203,8 +208,8 @@ public class StaticMapsApi
             // Encode the coordinates with the Poyline encoding algorithm (space saver).
             var encodedCoords = Utilities.PolylineEncoder.Encode(pathCoords);
             // Example format: path=color:0xff0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397
-            output.Add($"color:{hexColor}{pipeEncoded}" +
-                $"weight:{path.Weight}{pipeEncoded}enc:{encodedCoords}");
+            output.Add($"color:{hexColor}{PIPE_ENCODED}" +
+                $"weight:{path.Weight}{PIPE_ENCODED}enc:{encodedCoords}");
         }
         return output;
     }
