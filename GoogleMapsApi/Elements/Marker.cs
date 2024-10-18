@@ -38,14 +38,21 @@ public class Marker : GoogleMapElement
             label = value;
         }
     }
-
+    
+    ///<summary>Affects the scale of the marker graphic rendered on a static map. </summary>
     public MarkerScaleTypes Scale;
+    
+    ///<summary>Affects the scale of the marker graphic rendered on a static map. </summary>
     public MarkerSizes Size;
+
+    ///<summary>A custom icon to represent the marker. </summary>
     public StaticMapCustomIcon? CustomIcon { get; set; }
 
     ///<summary> The location of the marker. </summary>
     public GpsCoordinate Coordinate { get; }
+    
     ///<summary> Constructs a new marker instance. </summary>
+    
     public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
     {
         this.Coordinate = Coordinate;
