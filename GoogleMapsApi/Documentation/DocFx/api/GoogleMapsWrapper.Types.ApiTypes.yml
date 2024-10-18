@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Types.ApiTypes
+  commentId: T:GoogleMapsWrapper.Types.ApiTypes
+  id: ApiTypes
+  parent: GoogleMapsWrapper.Types
+  children:
+  - GoogleMapsWrapper.Types.ApiTypes.Environment
+  - GoogleMapsWrapper.Types.ApiTypes.Maps
+  - GoogleMapsWrapper.Types.ApiTypes.Places
+  - GoogleMapsWrapper.Types.ApiTypes.Routes
+  langs:
+  - csharp
+  - vb
+  name: ApiTypes
+  nameWithType: ApiTypes
+  fullName: GoogleMapsWrapper.Types.ApiTypes
+  type: Enum
+  source:
+    remote:
+      path: GoogleMapsApi/Types/ApiTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ApiTypes
+    path: ../../Types/ApiTypes.cs
+    startLine: 9
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Type of API per google. For categorization purposes.
+  example: []
+  syntax:
+    content: public enum ApiTypes
+    content.vb: Public Enum ApiTypes
+- uid: GoogleMapsWrapper.Types.ApiTypes.Maps
+  commentId: F:GoogleMapsWrapper.Types.ApiTypes.Maps
+  id: Maps
+  parent: GoogleMapsWrapper.Types.ApiTypes
+  langs:
+  - csharp
+  - vb
+  name: Maps
+  nameWithType: ApiTypes.Maps
+  fullName: GoogleMapsWrapper.Types.ApiTypes.Maps
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/ApiTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Maps
+    path: ../../Types/ApiTypes.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: Maps = 0
+    return:
+      type: GoogleMapsWrapper.Types.ApiTypes
+- uid: GoogleMapsWrapper.Types.ApiTypes.Routes
+  commentId: F:GoogleMapsWrapper.Types.ApiTypes.Routes
+  id: Routes
+  parent: GoogleMapsWrapper.Types.ApiTypes
+  langs:
+  - csharp
+  - vb
+  name: Routes
+  nameWithType: ApiTypes.Routes
+  fullName: GoogleMapsWrapper.Types.ApiTypes.Routes
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/ApiTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Routes
+    path: ../../Types/ApiTypes.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: Routes = 1
+    return:
+      type: GoogleMapsWrapper.Types.ApiTypes
+- uid: GoogleMapsWrapper.Types.ApiTypes.Places
+  commentId: F:GoogleMapsWrapper.Types.ApiTypes.Places
+  id: Places
+  parent: GoogleMapsWrapper.Types.ApiTypes
+  langs:
+  - csharp
+  - vb
+  name: Places
+  nameWithType: ApiTypes.Places
+  fullName: GoogleMapsWrapper.Types.ApiTypes.Places
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/ApiTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Places
+    path: ../../Types/ApiTypes.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: Places = 2
+    return:
+      type: GoogleMapsWrapper.Types.ApiTypes
+- uid: GoogleMapsWrapper.Types.ApiTypes.Environment
+  commentId: F:GoogleMapsWrapper.Types.ApiTypes.Environment
+  id: Environment
+  parent: GoogleMapsWrapper.Types.ApiTypes
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: ApiTypes.Environment
+  fullName: GoogleMapsWrapper.Types.ApiTypes.Environment
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/ApiTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Environment
+    path: ../../Types/ApiTypes.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: Environment = 3
+    return:
+      type: GoogleMapsWrapper.Types.ApiTypes
+references:
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Types.ApiTypes
+  commentId: T:GoogleMapsWrapper.Types.ApiTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.ApiTypes.html
+  name: ApiTypes
+  nameWithType: ApiTypes
+  fullName: GoogleMapsWrapper.Types.ApiTypes

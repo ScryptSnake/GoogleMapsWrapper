@@ -1,0 +1,2288 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  id: GoogleMapsBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapDblClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapRightClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDblClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDrag
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOut
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOver
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerRightClick
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag(System.String,System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick(System.String)
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsBrowser
+  nameWithType: GoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GoogleMapsBrowser
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: >-
+      [ClassInterface(ClassInterfaceType.AutoDual)]
+
+      [ComVisible(true)]
+
+      public class GoogleMapsBrowser : IGoogleMapsBrowser, IGoogleMapsJsSendable, IGoogleMapsJsListenable
+    content.vb: >-
+      <ClassInterface(ClassInterfaceType.AutoDual)>
+
+      <ComVisible(True)>
+
+      Public Class GoogleMapsBrowser Implements IGoogleMapsBrowser, IGoogleMapsJsSendable, IGoogleMapsJsListenable
+  inheritance:
+  - System.Object
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  - GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Runtime.InteropServices.ClassInterfaceAttribute
+    ctor: System.Runtime.InteropServices.ClassInterfaceAttribute.#ctor(System.Runtime.InteropServices.ClassInterfaceType)
+    arguments:
+    - type: System.Runtime.InteropServices.ClassInterfaceType
+      value: 2
+  - type: System.Runtime.InteropServices.ComVisibleAttribute
+    ctor: System.Runtime.InteropServices.ComVisibleAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: true
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+  id: Browser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: Browser
+  nameWithType: GoogleMapsBrowser.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Browser
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 19
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public IBrowser Browser { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+    content.vb: Public ReadOnly Property Browser As IBrowser
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Browser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+  id: Repository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: Repository
+  nameWithType: GoogleMapsBrowser.Repository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Repository
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 22
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public IGoogleMapsJsReadonlyRepository Repository { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+    content.vb: Public ReadOnly Property Repository As IGoogleMapsJsReadonlyRepository
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Repository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapClick
+  id: OnMapClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMapClick
+  nameWithType: GoogleMapsBrowser.OnMapClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 28
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MapClickEventArgs>? OnMapClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Public Event OnMapClick As EventHandler(Of MapClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapDblClick
+  id: OnMapDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMapDblClick
+  nameWithType: GoogleMapsBrowser.OnMapDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapDblClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapDblClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 29
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MapClickEventArgs>? OnMapDblClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Public Event OnMapDblClick As EventHandler(Of MapClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapRightClick
+  id: OnMapRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMapRightClick
+  nameWithType: GoogleMapsBrowser.OnMapRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMapRightClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapRightClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 30
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MapClickEventArgs>? OnMapRightClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Public Event OnMapRightClick As EventHandler(Of MapClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerClick
+  id: OnMarkerClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerClick
+  nameWithType: GoogleMapsBrowser.OnMarkerClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 31
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerClickEventArgs>? OnMarkerClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Public Event OnMarkerClick As EventHandler(Of MarkerClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDblClick
+  id: OnMarkerDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerDblClick
+  nameWithType: GoogleMapsBrowser.OnMarkerDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDblClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerDblClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 32
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerClickEventArgs>? OnMarkerDblClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Public Event OnMarkerDblClick As EventHandler(Of MarkerClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerRightClick
+  id: OnMarkerRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerRightClick
+  nameWithType: GoogleMapsBrowser.OnMarkerRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerRightClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerRightClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerClickEventArgs>? OnMarkerRightClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Public Event OnMarkerRightClick As EventHandler(Of MarkerClickEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDrag
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDrag
+  id: OnMarkerDrag
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerDrag
+  nameWithType: GoogleMapsBrowser.OnMarkerDrag
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerDrag
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerDrag
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 34
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerDragEventArgs>? OnMarkerDrag
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+    content.vb: Public Event OnMarkerDrag As EventHandler(Of MarkerDragEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOver
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOver
+  id: OnMarkerMouseOver
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerMouseOver
+  nameWithType: GoogleMapsBrowser.OnMarkerMouseOver
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOver
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerMouseOver
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 35
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerMouseEventArgs>? OnMarkerMouseOver
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+    content.vb: Public Event OnMarkerMouseOver As EventHandler(Of MarkerMouseEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOut
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOut
+  id: OnMarkerMouseOut
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerMouseOut
+  nameWithType: GoogleMapsBrowser.OnMarkerMouseOut
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.OnMarkerMouseOut
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerMouseOut
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 36
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public event EventHandler<MarkerMouseEventArgs>? OnMarkerMouseOut
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+    content.vb: Public Event OnMarkerMouseOut As EventHandler(Of MarkerMouseEventArgs)
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)
+  id: '#ctor(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)'
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsBrowser(IBrowser)
+  nameWithType: GoogleMapsBrowser.GoogleMapsBrowser(IBrowser)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.GoogleMapsBrowser(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 39
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: public GoogleMapsBrowser(IBrowser browser)
+    parameters:
+    - id: browser
+      type: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+    content.vb: Public Sub New(browser As IBrowser)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor*
+  nameWithType.vb: GoogleMapsBrowser.New(IBrowser)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.New(GoogleMapsWrapper.JavascriptApi.Browser.IBrowser)
+  name.vb: New(IBrowser)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  id: Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: Navigate(GoogleMapsHtmlTemplate)
+  nameWithType: GoogleMapsBrowser.Navigate(GoogleMapsHtmlTemplate)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Navigate
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 46
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void Navigate(GoogleMapsHtmlTemplate template)
+    parameters:
+    - id: template
+      type: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+    content.vb: Public Sub Navigate(template As GoogleMapsHtmlTemplate)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: AddMarkerAsync(BoundMarker)
+  nameWithType: GoogleMapsBrowser.AddMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AddMarkerAsync
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 51
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public Task AddMarkerAsync(BoundMarker boundMarker)
+    parameters:
+    - id: boundMarker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function AddMarkerAsync(boundMarker As BoundMarker) As Task
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: RemoveMarkerAsync(BoundMarker)
+  nameWithType: GoogleMapsBrowser.RemoveMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: RemoveMarkerAsync
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 83
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public Task RemoveMarkerAsync(BoundMarker boundMarker)
+    parameters:
+    - id: boundMarker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function RemoveMarkerAsync(boundMarker As BoundMarker) As Task
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: UpdateMarkerAsync(BoundMarker)
+  nameWithType: GoogleMapsBrowser.UpdateMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: UpdateMarkerAsync
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 88
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public Task UpdateMarkerAsync(BoundMarker boundMarker)
+    parameters:
+    - id: boundMarker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function UpdateMarkerAsync(boundMarker As BoundMarker) As Task
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close
+  id: Close
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: GoogleMapsBrowser.Close()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Close
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 95
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void Close()
+    content.vb: Public Sub Close()
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync
+  id: LoadAsync
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: LoadAsync()
+  nameWithType: GoogleMapsBrowser.LoadAsync()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: LoadAsync
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 100
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: public Task LoadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function LoadAsync() As Task
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError(System.String)
+  id: _OnError(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnError(string)
+  nameWithType: GoogleMapsBrowser._OnError(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnError
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 106
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnError(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub _OnError(message As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnError(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError(String)
+  name.vb: _OnError(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick(System.String)
+  id: _OnMapClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMapClick(string)
+  nameWithType: GoogleMapsBrowser._OnMapClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 111
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMapClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Public Sub _OnMapClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMapClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick(String)
+  name.vb: _OnMapClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick(System.String)
+  id: _OnMapDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMapDblClick(string)
+  nameWithType: GoogleMapsBrowser._OnMapDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapDblClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 118
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMapDblClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Public Sub _OnMapDblClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMapDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick(String)
+  name.vb: _OnMapDblClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick(System.String)
+  id: _OnMapRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMapRightClick(string)
+  nameWithType: GoogleMapsBrowser._OnMapRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapRightClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 130
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMapRightClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Public Sub _OnMapRightClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMapRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick(String)
+  name.vb: _OnMapRightClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick(System.String)
+  id: _OnMarkerClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerClick(string)
+  nameWithType: GoogleMapsBrowser._OnMarkerClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 138
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub _OnMarkerClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick(String)
+  name.vb: _OnMarkerClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick(System.String)
+  id: _OnMarkerDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerDblClick(string)
+  nameWithType: GoogleMapsBrowser._OnMarkerDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerDblClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 143
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerDblClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub _OnMarkerDblClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick(String)
+  name.vb: _OnMarkerDblClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag(System.String,System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag(System.String,System.String)
+  id: _OnMarkerDrag(System.String,System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerDrag(string, string)
+  nameWithType: GoogleMapsBrowser._OnMarkerDrag(string, string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag(string, string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerDrag
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 148
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerDrag(string id, string coordinate)
+    parameters:
+    - id: id
+      type: System.String
+    - id: coordinate
+      type: System.String
+    content.vb: Public Sub _OnMarkerDrag(id As String, coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerDrag(String, String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag(String, String)
+  name.vb: _OnMarkerDrag(String, String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut(System.String)
+  id: _OnMarkerMouseOut(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerMouseOut(string)
+  nameWithType: GoogleMapsBrowser._OnMarkerMouseOut(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerMouseOut
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 153
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerMouseOut(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub _OnMarkerMouseOut(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerMouseOut(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut(String)
+  name.vb: _OnMarkerMouseOut(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver(System.String)
+  id: _OnMarkerMouseOver(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerMouseOver(string)
+  nameWithType: GoogleMapsBrowser._OnMarkerMouseOver(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerMouseOver
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 158
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerMouseOver(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub _OnMarkerMouseOver(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerMouseOver(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver(String)
+  name.vb: _OnMarkerMouseOver(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick(System.String)
+  id: _OnMarkerRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerRightClick(string)
+  nameWithType: GoogleMapsBrowser._OnMarkerRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Browser/GoogleMapsBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerRightClick
+    path: ../../JavascriptApi/Browser/GoogleMapsBrowser.cs
+    startLine: 163
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void _OnMarkerRightClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Public Sub _OnMarkerRightClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick*
+  implements:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  nameWithType.vb: GoogleMapsBrowser._OnMarkerRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick(String)
+  name.vb: _OnMarkerRightClick(String)
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html
+  name: IGoogleMapsBrowser
+  nameWithType: IGoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  parent: GoogleMapsWrapper.JavascriptApi.Sender
+  href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html
+  name: IGoogleMapsJsSendable
+  nameWithType: IGoogleMapsJsSendable
+  fullName: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  parent: GoogleMapsWrapper.JavascriptApi.Listener
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html
+  name: IGoogleMapsJsListenable
+  nameWithType: IGoogleMapsJsListenable
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.JavascriptApi.Sender
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Sender
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Sender
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Sender
+  fullName: GoogleMapsWrapper.JavascriptApi.Sender
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender
+    name: Sender
+    href: GoogleMapsWrapper.JavascriptApi.Sender.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender
+    name: Sender
+    href: GoogleMapsWrapper.JavascriptApi.Sender.html
+- uid: GoogleMapsWrapper.JavascriptApi.Listener
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Listener
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Listener
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Listener
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener
+    name: Listener
+    href: GoogleMapsWrapper.JavascriptApi.Listener.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener
+    name: Listener
+    href: GoogleMapsWrapper.JavascriptApi.Listener.html
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_Browser
+  name: Browser
+  nameWithType: GoogleMapsBrowser.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Browser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Browser
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Browser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Browser
+  name: Browser
+  nameWithType: IGoogleMapsBrowser.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Browser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html
+  name: IBrowser
+  nameWithType: IBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_Repository
+  name: Repository
+  nameWithType: GoogleMapsBrowser.Repository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Repository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Repository
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Repository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Repository
+  name: Repository
+  nameWithType: IGoogleMapsBrowser.Repository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Repository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.html
+  name: IGoogleMapsJsReadonlyRepository
+  nameWithType: IGoogleMapsJsReadonlyRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMapClick
+  name: OnMapClick
+  nameWithType: IGoogleMapsJsListenable.OnMapClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MapClickEventArgs>
+  nameWithType: EventHandler<MapClickEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs>
+  nameWithType.vb: EventHandler(Of MapClickEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs)
+  name.vb: EventHandler(Of MapClickEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs
+    name: MapClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs
+    name: MapClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMapDblClick
+  name: OnMapDblClick
+  nameWithType: IGoogleMapsJsListenable.OnMapDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMapRightClick
+  name: OnMapRightClick
+  nameWithType: IGoogleMapsJsListenable.OnMapRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerClick
+  name: OnMarkerClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerClickEventArgs>
+  nameWithType: EventHandler<MarkerClickEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerClickEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs)
+  name.vb: EventHandler(Of MarkerClickEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs
+    name: MarkerClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs
+    name: MarkerClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerDblClick
+  name: OnMarkerDblClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerRightClick
+  name: OnMarkerRightClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerDrag
+  name: OnMarkerDrag
+  nameWithType: IGoogleMapsJsListenable.OnMarkerDrag
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerDragEventArgs>
+  nameWithType: EventHandler<MarkerDragEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerDragEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs)
+  name.vb: EventHandler(Of MarkerDragEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs
+    name: MarkerDragEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs
+    name: MarkerDragEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerMouseOver
+  name: OnMarkerMouseOver
+  nameWithType: IGoogleMapsJsListenable.OnMarkerMouseOver
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerMouseEventArgs>
+  nameWithType: EventHandler<MarkerMouseEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerMouseEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs)
+  name.vb: EventHandler(Of MarkerMouseEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs
+    name: MarkerMouseEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs
+    name: MarkerMouseEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable_OnMarkerMouseOut
+  name: OnMarkerMouseOut
+  nameWithType: IGoogleMapsJsListenable.OnMarkerMouseOut
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.#ctor
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__ctor_GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_
+  name: GoogleMapsBrowser
+  nameWithType: GoogleMapsBrowser.GoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.GoogleMapsBrowser
+  nameWithType.vb: GoogleMapsBrowser.New
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.New
+  name.vb: New
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_Navigate_GoogleMapsWrapper_JavascriptApi_Html_GoogleMapsHtmlTemplate_
+  name: Navigate
+  nameWithType: GoogleMapsBrowser.Navigate
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Navigate
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Navigate_GoogleMapsWrapper_JavascriptApi_Html_GoogleMapsHtmlTemplate_
+  name: Navigate(GoogleMapsHtmlTemplate)
+  nameWithType: IGoogleMapsBrowser.Navigate(GoogleMapsHtmlTemplate)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+    name: Navigate
+    href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Navigate_GoogleMapsWrapper_JavascriptApi_Html_GoogleMapsHtmlTemplate_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+    name: GoogleMapsHtmlTemplate
+    href: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate.html
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Navigate(GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate)
+    name: Navigate
+    href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Navigate_GoogleMapsWrapper_JavascriptApi_Html_GoogleMapsHtmlTemplate_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+    name: GoogleMapsHtmlTemplate
+    href: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+  parent: GoogleMapsWrapper.JavascriptApi.Html
+  href: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate.html
+  name: GoogleMapsHtmlTemplate
+  nameWithType: GoogleMapsHtmlTemplate
+  fullName: GoogleMapsWrapper.JavascriptApi.Html.GoogleMapsHtmlTemplate
+- uid: GoogleMapsWrapper.JavascriptApi.Html
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Html
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Html
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Html
+  fullName: GoogleMapsWrapper.JavascriptApi.Html
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Html
+    name: Html
+    href: GoogleMapsWrapper.JavascriptApi.Html.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Html
+    name: Html
+    href: GoogleMapsWrapper.JavascriptApi.Html.html
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_AddMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: AddMarkerAsync
+  nameWithType: GoogleMapsBrowser.AddMarkerAsync
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.AddMarkerAsync
+- uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_AddMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: AddMarkerAsync(BoundMarker)
+  nameWithType: IGoogleMapsJsSendable.AddMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: AddMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_AddMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.AddMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: AddMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_AddMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+  parent: GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  name: BoundMarker
+  nameWithType: BoundMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: GoogleMapsWrapper.JavascriptApi.Elements
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Elements
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Elements
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_RemoveMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: RemoveMarkerAsync
+  nameWithType: GoogleMapsBrowser.RemoveMarkerAsync
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.RemoveMarkerAsync
+- uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_RemoveMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: RemoveMarkerAsync(BoundMarker)
+  nameWithType: IGoogleMapsJsSendable.RemoveMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: RemoveMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_RemoveMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.RemoveMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: RemoveMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_RemoveMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_UpdateMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: UpdateMarkerAsync
+  nameWithType: GoogleMapsBrowser.UpdateMarkerAsync
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.UpdateMarkerAsync
+- uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable
+  href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_UpdateMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: UpdateMarkerAsync(BoundMarker)
+  nameWithType: IGoogleMapsJsSendable.UpdateMarkerAsync(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: UpdateMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_UpdateMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.UpdateMarkerAsync(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+    name: UpdateMarkerAsync
+    href: GoogleMapsWrapper.JavascriptApi.Sender.IGoogleMapsJsSendable.html#GoogleMapsWrapper_JavascriptApi_Sender_IGoogleMapsJsSendable_UpdateMarkerAsync_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  - name: (
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_Close
+  name: Close
+  nameWithType: GoogleMapsBrowser.Close
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.Close
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Close
+  name: Close()
+  nameWithType: IGoogleMapsBrowser.Close()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close()
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close
+    name: Close
+    href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Close
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.Close
+    name: Close
+    href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsBrowser_Close
+  - name: (
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser_LoadAsync
+  name: LoadAsync
+  nameWithType: GoogleMapsBrowser.LoadAsync
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.LoadAsync
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnError_System_String_
+  name: _OnError
+  nameWithType: GoogleMapsBrowser._OnError
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnError
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnError_System_String_
+  name: _OnError(string)
+  nameWithType: IGoogleMapsJsListenable._OnError(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnError(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(String)
+  name.vb: _OnError(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+    name: _OnError
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnError_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+    name: _OnError
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnError_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMapClick_System_String_
+  name: _OnMapClick
+  nameWithType: GoogleMapsBrowser._OnMapClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapClick_System_String_
+  name: _OnMapClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(String)
+  name.vb: _OnMapClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+    name: _OnMapClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+    name: _OnMapClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMapDblClick_System_String_
+  name: _OnMapDblClick
+  nameWithType: GoogleMapsBrowser._OnMapDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapDblClick_System_String_
+  name: _OnMapDblClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(String)
+  name.vb: _OnMapDblClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+    name: _OnMapDblClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapDblClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+    name: _OnMapDblClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapDblClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMapRightClick_System_String_
+  name: _OnMapRightClick
+  nameWithType: GoogleMapsBrowser._OnMapRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMapRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapRightClick_System_String_
+  name: _OnMapRightClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(String)
+  name.vb: _OnMapRightClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+    name: _OnMapRightClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapRightClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+    name: _OnMapRightClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapRightClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerClick_System_String_
+  name: _OnMarkerClick
+  nameWithType: GoogleMapsBrowser._OnMarkerClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerClick_System_String_
+  name: _OnMarkerClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(String)
+  name.vb: _OnMarkerClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+    name: _OnMarkerClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+    name: _OnMarkerClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerDblClick_System_String_
+  name: _OnMarkerDblClick
+  nameWithType: GoogleMapsBrowser._OnMarkerDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDblClick_System_String_
+  name: _OnMarkerDblClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(String)
+  name.vb: _OnMarkerDblClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+    name: _OnMarkerDblClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDblClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+    name: _OnMarkerDblClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDblClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerDrag_System_String_System_String_
+  name: _OnMarkerDrag
+  nameWithType: GoogleMapsBrowser._OnMarkerDrag
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerDrag
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDrag_System_String_System_String_
+  name: _OnMarkerDrag(string, string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDrag(string, string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(string, string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerDrag(String, String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(String, String)
+  name.vb: _OnMarkerDrag(String, String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+    name: _OnMarkerDrag
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDrag_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+    name: _OnMarkerDrag
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDrag_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerMouseOut_System_String_
+  name: _OnMarkerMouseOut
+  nameWithType: GoogleMapsBrowser._OnMarkerMouseOut
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOut
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOut_System_String_
+  name: _OnMarkerMouseOut(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOut(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerMouseOut(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(String)
+  name.vb: _OnMarkerMouseOut(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+    name: _OnMarkerMouseOut
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOut_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+    name: _OnMarkerMouseOut
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOut_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerMouseOver_System_String_
+  name: _OnMarkerMouseOver
+  nameWithType: GoogleMapsBrowser._OnMarkerMouseOver
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerMouseOver
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOver_System_String_
+  name: _OnMarkerMouseOver(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOver(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerMouseOver(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(String)
+  name.vb: _OnMarkerMouseOver(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+    name: _OnMarkerMouseOver
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOver_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+    name: _OnMarkerMouseOver
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOver_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsBrowser__OnMarkerRightClick_System_String_
+  name: _OnMarkerRightClick
+  nameWithType: GoogleMapsBrowser._OnMarkerRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser._OnMarkerRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  isExternal: true
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerRightClick_System_String_
+  name: _OnMarkerRightClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(string)
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(String)
+  name.vb: _OnMarkerRightClick(String)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+    name: _OnMarkerRightClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerRightClick_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+    name: _OnMarkerRightClick
+    href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerRightClick_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

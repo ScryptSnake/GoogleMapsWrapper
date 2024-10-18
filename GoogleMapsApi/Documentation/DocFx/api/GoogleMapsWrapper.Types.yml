@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  id: GoogleMapsWrapper.Types
+  children:
+  - GoogleMapsWrapper.Types.ApiTypes
+  - GoogleMapsWrapper.Types.GpsCoordinate
+  - GoogleMapsWrapper.Types.MapImageFormats
+  - GoogleMapsWrapper.Types.MapScaleTypes
+  - GoogleMapsWrapper.Types.MapTypes
+  - GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  - GoogleMapsWrapper.Types.MarkerScaleTypes
+  - GoogleMapsWrapper.Types.MarkerSizes
+  - GoogleMapsWrapper.Types.RequestTypes
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Types.ApiTypes
+  commentId: T:GoogleMapsWrapper.Types.ApiTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.ApiTypes.html
+  name: ApiTypes
+  nameWithType: ApiTypes
+  fullName: GoogleMapsWrapper.Types.ApiTypes
+- uid: GoogleMapsWrapper.Types.GpsCoordinate
+  commentId: T:GoogleMapsWrapper.Types.GpsCoordinate
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  name: GpsCoordinate
+  nameWithType: GpsCoordinate
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate
+- uid: GoogleMapsWrapper.Types.MapImageFormats
+  commentId: T:GoogleMapsWrapper.Types.MapImageFormats
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MapImageFormats.html
+  name: MapImageFormats
+  nameWithType: MapImageFormats
+  fullName: GoogleMapsWrapper.Types.MapImageFormats
+- uid: GoogleMapsWrapper.Types.MapScaleTypes
+  commentId: T:GoogleMapsWrapper.Types.MapScaleTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MapScaleTypes.html
+  name: MapScaleTypes
+  nameWithType: MapScaleTypes
+  fullName: GoogleMapsWrapper.Types.MapScaleTypes
+- uid: GoogleMapsWrapper.Types.MapTypes
+  commentId: T:GoogleMapsWrapper.Types.MapTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MapTypes.html
+  name: MapTypes
+  nameWithType: MapTypes
+  fullName: GoogleMapsWrapper.Types.MapTypes
+- uid: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  commentId: T:GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html
+  name: MarkerIconAnchorTypes
+  nameWithType: MarkerIconAnchorTypes
+  fullName: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+- uid: GoogleMapsWrapper.Types.MarkerScaleTypes
+  commentId: T:GoogleMapsWrapper.Types.MarkerScaleTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerScaleTypes.html
+  name: MarkerScaleTypes
+  nameWithType: MarkerScaleTypes
+  fullName: GoogleMapsWrapper.Types.MarkerScaleTypes
+- uid: GoogleMapsWrapper.Types.MarkerSizes
+  commentId: T:GoogleMapsWrapper.Types.MarkerSizes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerSizes.html
+  name: MarkerSizes
+  nameWithType: MarkerSizes
+  fullName: GoogleMapsWrapper.Types.MarkerSizes
+- uid: GoogleMapsWrapper.Types.RequestTypes
+  commentId: T:GoogleMapsWrapper.Types.RequestTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.RequestTypes.html
+  name: RequestTypes
+  nameWithType: RequestTypes
+  fullName: GoogleMapsWrapper.Types.RequestTypes
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html

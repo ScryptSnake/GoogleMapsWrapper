@@ -1,0 +1,542 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi
+  commentId: T:GoogleMapsWrapper.Api.GoogleMapsApi
+  id: GoogleMapsApi
+  parent: GoogleMapsWrapper.Api
+  children:
+  - GoogleMapsWrapper.Api.GoogleMapsApi.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  - GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  - GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsApi
+  nameWithType: GoogleMapsApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/Api/GoogleMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GoogleMapsApi
+    path: ../../Api/GoogleMapsApi.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  summary: >-
+    The entry point of the wrapper. Sub-API's are exposed:
+
+    <p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi" data-throw-if-not-resolved="false"></xref></p><p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi" data-throw-if-not-resolved="false"></xref></p>
+  example: []
+  syntax:
+    content: public class GoogleMapsApi
+    content.vb: Public Class GoogleMapsApi
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  id: GeocodeApi
+  parent: GoogleMapsWrapper.Api.GoogleMapsApi
+  langs:
+  - csharp
+  - vb
+  name: GeocodeApi
+  nameWithType: GoogleMapsApi.GeocodeApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Api/GoogleMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GeocodeApi
+    path: ../../Api/GoogleMapsApi.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public GeocodeApi GeocodeApi { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Api.GeocodeApi
+    content.vb: Public Property GeocodeApi As GeocodeApi
+  overload: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi*
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  id: StaticMapsApi
+  parent: GoogleMapsWrapper.Api.GoogleMapsApi
+  langs:
+  - csharp
+  - vb
+  name: StaticMapsApi
+  nameWithType: GoogleMapsApi.StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Api/GoogleMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: StaticMapsApi
+    path: ../../Api/GoogleMapsApi.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public StaticMapsApi StaticMapsApi { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Api.StaticMapsApi
+    content.vb: Public Property StaticMapsApi As StaticMapsApi
+  overload: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi*
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:GoogleMapsWrapper.Api.GoogleMapsApi.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: GoogleMapsWrapper.Api.GoogleMapsApi
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsApi(HttpClient, IConfiguration)
+  nameWithType: GoogleMapsApi.GoogleMapsApi(HttpClient, IConfiguration)
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GoogleMapsApi(System.Net.Http.HttpClient, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Api/GoogleMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Api/GoogleMapsApi.cs
+    startLine: 26
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  summary: >-
+    Initializes a new instance of the class, using the provided <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref> 
+
+    and configuration settings.
+  example: []
+  syntax:
+    content: public GoogleMapsApi(HttpClient httpClient, IConfiguration config)
+    parameters:
+    - id: httpClient
+      type: System.Net.Http.HttpClient
+      description: An <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref> to be used to process web requests.
+    - id: config
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: An <xref href="Microsoft.Extensions.Configuration.IConfiguration" data-throw-if-not-resolved="false"></xref> which contains the API key.
+    content.vb: Public Sub New(httpClient As HttpClient, config As IConfiguration)
+  overload: GoogleMapsWrapper.Api.GoogleMapsApi.#ctor*
+  nameWithType.vb: GoogleMapsApi.New(HttpClient, IConfiguration)
+  fullName.vb: GoogleMapsWrapper.Api.GoogleMapsApi.New(System.Net.Http.HttpClient, Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: New(HttpClient, IConfiguration)
+references:
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_GeocodeApi
+  name: GeocodeApi
+  nameWithType: GoogleMapsApi.GeocodeApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_StaticMapsApi
+  name: StaticMapsApi
+  nameWithType: GoogleMapsApi.StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+- uid: GoogleMapsWrapper.Api
+  commentId: N:GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Api
+  nameWithType: GoogleMapsWrapper.Api
+  fullName: GoogleMapsWrapper.Api
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi*
+  commentId: Overload:GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_GeocodeApi
+  name: GeocodeApi
+  nameWithType: GoogleMapsApi.GeocodeApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
+- uid: GoogleMapsWrapper.Api.GeocodeApi
+  commentId: T:GoogleMapsWrapper.Api.GeocodeApi
+  parent: GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.Api.GeocodeApi.html
+  name: GeocodeApi
+  nameWithType: GeocodeApi
+  fullName: GoogleMapsWrapper.Api.GeocodeApi
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi*
+  commentId: Overload:GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_StaticMapsApi
+  name: StaticMapsApi
+  nameWithType: GoogleMapsApi.StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+- uid: GoogleMapsWrapper.Api.StaticMapsApi
+  commentId: T:GoogleMapsWrapper.Api.StaticMapsApi
+  parent: GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html
+  name: StaticMapsApi
+  nameWithType: StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: GoogleMapsWrapper.Api.GoogleMapsApi.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Api.GoogleMapsApi.#ctor
+  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi__ctor_System_Net_Http_HttpClient_Microsoft_Extensions_Configuration_IConfiguration_
+  name: GoogleMapsApi
+  nameWithType: GoogleMapsApi.GoogleMapsApi
+  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GoogleMapsApi
+  nameWithType.vb: GoogleMapsApi.New
+  fullName.vb: GoogleMapsWrapper.Api.GoogleMapsApi.New
+  name.vb: New
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration

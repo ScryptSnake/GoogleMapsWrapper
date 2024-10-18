@@ -1,0 +1,881 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  id: IGoogleMapsJsListenable
+  parent: GoogleMapsWrapper.JavascriptApi.Listener
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IGoogleMapsJsListenable
+  nameWithType: IGoogleMapsJsListenable
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IGoogleMapsJsListenable
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: public interface IGoogleMapsJsListenable
+    content.vb: Public Interface IGoogleMapsJsListenable
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  id: OnMapClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMapClick
+  nameWithType: IGoogleMapsJsListenable.OnMapClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MapClickEventArgs>? OnMapClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Event OnMapClick As EventHandler(Of MapClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  id: OnMapDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMapDblClick
+  nameWithType: IGoogleMapsJsListenable.OnMapDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapDblClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapDblClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MapClickEventArgs>? OnMapDblClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Event OnMapDblClick As EventHandler(Of MapClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  id: OnMapRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMapRightClick
+  nameWithType: IGoogleMapsJsListenable.OnMapRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMapRightClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMapRightClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 19
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MapClickEventArgs>? OnMapRightClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+    content.vb: Event OnMapRightClick As EventHandler(Of MapClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  id: OnMarkerClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 21
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerClickEventArgs>? OnMarkerClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Event OnMarkerClick As EventHandler(Of MarkerClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  id: OnMarkerDblClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerDblClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDblClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerDblClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 22
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerClickEventArgs>? OnMarkerDblClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Event OnMarkerDblClick As EventHandler(Of MarkerClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  id: OnMarkerRightClick
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerRightClick
+  nameWithType: IGoogleMapsJsListenable.OnMarkerRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerRightClick
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerRightClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 23
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerClickEventArgs>? OnMarkerRightClick
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+    content.vb: Event OnMarkerRightClick As EventHandler(Of MarkerClickEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  id: OnMarkerDrag
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerDrag
+  nameWithType: IGoogleMapsJsListenable.OnMarkerDrag
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerDrag
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerDrag
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 25
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerDragEventArgs>? OnMarkerDrag
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+    content.vb: Event OnMarkerDrag As EventHandler(Of MarkerDragEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  id: OnMarkerMouseOver
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerMouseOver
+  nameWithType: IGoogleMapsJsListenable.OnMarkerMouseOver
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOver
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerMouseOver
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 27
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerMouseEventArgs>? OnMarkerMouseOver
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+    content.vb: Event OnMarkerMouseOver As EventHandler(Of MarkerMouseEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  commentId: E:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  id: OnMarkerMouseOut
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: OnMarkerMouseOut
+  nameWithType: IGoogleMapsJsListenable.OnMarkerMouseOut
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.OnMarkerMouseOut
+  type: Event
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OnMarkerMouseOut
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 28
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: event EventHandler<MarkerMouseEventArgs>? OnMarkerMouseOut
+    return:
+      type: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+    content.vb: Event OnMarkerMouseOut As EventHandler(Of MarkerMouseEventArgs)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(System.String)
+  id: _OnError(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnError(string)
+  nameWithType: IGoogleMapsJsListenable._OnError(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnError
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnError(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub _OnError(message As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError*
+  nameWithType.vb: IGoogleMapsJsListenable._OnError(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError(String)
+  name.vb: _OnError(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(System.String)
+  id: _OnMapClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMapClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 35
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMapClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Sub _OnMapClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick(String)
+  name.vb: _OnMapClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(System.String)
+  id: _OnMapDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMapDblClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapDblClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 36
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMapDblClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Sub _OnMapDblClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick(String)
+  name.vb: _OnMapDblClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(System.String)
+  id: _OnMapRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMapRightClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMapRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMapRightClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 37
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMapRightClick(string coordinate)
+    parameters:
+    - id: coordinate
+      type: System.String
+    content.vb: Sub _OnMapRightClick(coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMapRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick(String)
+  name.vb: _OnMapRightClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(System.String)
+  id: _OnMarkerClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 40
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub _OnMarkerClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick(String)
+  name.vb: _OnMarkerClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(System.String)
+  id: _OnMarkerDblClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerDblClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDblClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerDblClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 41
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerDblClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub _OnMarkerDblClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerDblClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick(String)
+  name.vb: _OnMarkerDblClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(System.String)
+  id: _OnMarkerRightClick(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerRightClick(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerRightClick(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerRightClick
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 42
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerRightClick(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub _OnMarkerRightClick(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerRightClick(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick(String)
+  name.vb: _OnMarkerRightClick(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(System.String,System.String)
+  id: _OnMarkerDrag(System.String,System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerDrag(string, string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDrag(string, string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(string, string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerDrag
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 45
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerDrag(string id, string coordinate)
+    parameters:
+    - id: id
+      type: System.String
+    - id: coordinate
+      type: System.String
+    content.vb: Sub _OnMarkerDrag(id As String, coordinate As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerDrag(String, String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag(String, String)
+  name.vb: _OnMarkerDrag(String, String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(System.String)
+  id: _OnMarkerMouseOver(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerMouseOver(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOver(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerMouseOver
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 46
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerMouseOver(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub _OnMarkerMouseOver(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerMouseOver(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver(String)
+  name.vb: _OnMarkerMouseOver(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(System.String)
+  id: _OnMarkerMouseOut(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable
+  langs:
+  - csharp
+  - vb
+  name: _OnMarkerMouseOut(string)
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOut(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: _OnMarkerMouseOut
+    path: ../../JavascriptApi/Listener/IGoogleMapsJsListenable.cs
+    startLine: 47
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Listener
+  syntax:
+    content: void _OnMarkerMouseOut(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub _OnMarkerMouseOut(id As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut*
+  nameWithType.vb: IGoogleMapsJsListenable._OnMarkerMouseOut(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut(String)
+  name.vb: _OnMarkerMouseOut(String)
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Listener
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Listener
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Listener
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Listener
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener
+    name: Listener
+    href: GoogleMapsWrapper.JavascriptApi.Listener.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener
+    name: Listener
+    href: GoogleMapsWrapper.JavascriptApi.Listener.html
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MapClickEventArgs>
+  nameWithType: EventHandler<MapClickEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs>
+  nameWithType.vb: EventHandler(Of MapClickEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs)
+  name.vb: EventHandler(Of MapClickEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs
+    name: MapClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs
+    name: MapClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MapClickEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerClickEventArgs>
+  nameWithType: EventHandler<MarkerClickEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerClickEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs)
+  name.vb: EventHandler(Of MarkerClickEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs
+    name: MarkerClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs
+    name: MarkerClickEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerClickEventArgs.html
+  - name: )
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerDragEventArgs>
+  nameWithType: EventHandler<MarkerDragEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerDragEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs)
+  name.vb: EventHandler(Of MarkerDragEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs
+    name: MarkerDragEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs
+    name: MarkerDragEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.Listener.MarkerDragEventArgs.html
+  - name: )
+- uid: System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+  commentId: T:System.EventHandler{GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MarkerMouseEventArgs>
+  nameWithType: EventHandler<MarkerMouseEventArgs>
+  fullName: System.EventHandler<GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs>
+  nameWithType.vb: EventHandler(Of MarkerMouseEventArgs)
+  fullName.vb: System.EventHandler(Of GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs)
+  name.vb: EventHandler(Of MarkerMouseEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs
+    name: MarkerMouseEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs
+    name: MarkerMouseEventArgs
+    href: GoogleMapsWrapper.JavascriptApi.MarkerMouseEventArgs.html
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnError_System_String_
+  name: _OnError
+  nameWithType: IGoogleMapsJsListenable._OnError
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnError
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapClick_System_String_
+  name: _OnMapClick
+  nameWithType: IGoogleMapsJsListenable._OnMapClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapDblClick_System_String_
+  name: _OnMapDblClick
+  nameWithType: IGoogleMapsJsListenable._OnMapDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMapRightClick_System_String_
+  name: _OnMapRightClick
+  nameWithType: IGoogleMapsJsListenable._OnMapRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMapRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerClick_System_String_
+  name: _OnMarkerClick
+  nameWithType: IGoogleMapsJsListenable._OnMarkerClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDblClick_System_String_
+  name: _OnMarkerDblClick
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDblClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDblClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerRightClick_System_String_
+  name: _OnMarkerRightClick
+  nameWithType: IGoogleMapsJsListenable._OnMarkerRightClick
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerRightClick
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerDrag_System_String_System_String_
+  name: _OnMarkerDrag
+  nameWithType: IGoogleMapsJsListenable._OnMarkerDrag
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerDrag
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOver_System_String_
+  name: _OnMarkerMouseOver
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOver
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOver
+- uid: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut
+  href: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable.html#GoogleMapsWrapper_JavascriptApi_Listener_IGoogleMapsJsListenable__OnMarkerMouseOut_System_String_
+  name: _OnMarkerMouseOut
+  nameWithType: IGoogleMapsJsListenable._OnMarkerMouseOut
+  fullName: GoogleMapsWrapper.JavascriptApi.Listener.IGoogleMapsJsListenable._OnMarkerMouseOut

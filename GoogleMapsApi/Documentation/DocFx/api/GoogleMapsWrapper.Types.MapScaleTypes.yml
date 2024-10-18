@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Types.MapScaleTypes
+  commentId: T:GoogleMapsWrapper.Types.MapScaleTypes
+  id: MapScaleTypes
+  parent: GoogleMapsWrapper.Types
+  children:
+  - GoogleMapsWrapper.Types.MapScaleTypes.HighRes
+  - GoogleMapsWrapper.Types.MapScaleTypes.Normal
+  langs:
+  - csharp
+  - vb
+  name: MapScaleTypes
+  nameWithType: MapScaleTypes
+  fullName: GoogleMapsWrapper.Types.MapScaleTypes
+  type: Enum
+  source:
+    remote:
+      path: GoogleMapsApi/Types/MapScaleTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: MapScaleTypes
+    path: ../../Types/MapScaleTypes.cs
+    startLine: 9
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Type of scale that a map is displayed at. 1 = normal, 2 = high resolution.
+  example: []
+  syntax:
+    content: public enum MapScaleTypes
+    content.vb: Public Enum MapScaleTypes
+- uid: GoogleMapsWrapper.Types.MapScaleTypes.Normal
+  commentId: F:GoogleMapsWrapper.Types.MapScaleTypes.Normal
+  id: Normal
+  parent: GoogleMapsWrapper.Types.MapScaleTypes
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: MapScaleTypes.Normal
+  fullName: GoogleMapsWrapper.Types.MapScaleTypes.Normal
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/MapScaleTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Normal
+    path: ../../Types/MapScaleTypes.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: Normal = 1
+    return:
+      type: GoogleMapsWrapper.Types.MapScaleTypes
+- uid: GoogleMapsWrapper.Types.MapScaleTypes.HighRes
+  commentId: F:GoogleMapsWrapper.Types.MapScaleTypes.HighRes
+  id: HighRes
+  parent: GoogleMapsWrapper.Types.MapScaleTypes
+  langs:
+  - csharp
+  - vb
+  name: HighRes
+  nameWithType: MapScaleTypes.HighRes
+  fullName: GoogleMapsWrapper.Types.MapScaleTypes.HighRes
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Types/MapScaleTypes.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: HighRes
+    path: ../../Types/MapScaleTypes.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: HighRes = 2
+    return:
+      type: GoogleMapsWrapper.Types.MapScaleTypes
+references:
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Types.MapScaleTypes
+  commentId: T:GoogleMapsWrapper.Types.MapScaleTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MapScaleTypes.html
+  name: MapScaleTypes
+  nameWithType: MapScaleTypes
+  fullName: GoogleMapsWrapper.Types.MapScaleTypes

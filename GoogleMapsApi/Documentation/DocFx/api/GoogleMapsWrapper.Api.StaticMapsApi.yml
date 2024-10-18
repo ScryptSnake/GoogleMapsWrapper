@@ -1,0 +1,776 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Api.StaticMapsApi
+  commentId: T:GoogleMapsWrapper.Api.StaticMapsApi
+  id: StaticMapsApi
+  parent: GoogleMapsWrapper.Api
+  children:
+  - GoogleMapsWrapper.Api.StaticMapsApi.#ctor(GoogleMapsWrapper.Engine.IApiEngine)
+  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  langs:
+  - csharp
+  - vb
+  name: StaticMapsApi
+  nameWithType: StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/Api/StaticMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: StaticMapsApi
+    path: ../../Api/StaticMapsApi.cs
+    startLine: 20
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  summary: Provides methods for retrieiving a static image of a map from Google's Static API.
+  example: []
+  syntax:
+    content: public class StaticMapsApi
+    content.vb: Public Class StaticMapsApi
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.#ctor(GoogleMapsWrapper.Engine.IApiEngine)
+  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.#ctor(GoogleMapsWrapper.Engine.IApiEngine)
+  id: '#ctor(GoogleMapsWrapper.Engine.IApiEngine)'
+  parent: GoogleMapsWrapper.Api.StaticMapsApi
+  langs:
+  - csharp
+  - vb
+  name: StaticMapsApi(IApiEngine)
+  nameWithType: StaticMapsApi.StaticMapsApi(IApiEngine)
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.StaticMapsApi(GoogleMapsWrapper.Engine.IApiEngine)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Api/StaticMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Api/StaticMapsApi.cs
+    startLine: 34
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public StaticMapsApi(IApiEngine engine)
+    parameters:
+    - id: engine
+      type: GoogleMapsWrapper.Engine.IApiEngine
+    content.vb: Public Sub New(engine As IApiEngine)
+  overload: GoogleMapsWrapper.Api.StaticMapsApi.#ctor*
+  nameWithType.vb: StaticMapsApi.New(IApiEngine)
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.New(GoogleMapsWrapper.Engine.IApiEngine)
+  name.vb: New(IApiEngine)
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  id: GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  parent: GoogleMapsWrapper.Api.StaticMapsApi
+  langs:
+  - csharp
+  - vb
+  name: GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
+  nameWithType: StaticMapsApi.GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Api/StaticMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GetMapAsync
+    path: ../../Api/StaticMapsApi.cs
+    startLine: 47
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    parameters:
+    - id: mapSettings
+      type: GoogleMapsWrapper.Elements.Map
+    - id: markers
+      type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+    - id: paths
+      type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+    return:
+      type: System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
+    content.vb: Public Function GetMapAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing) As Task(Of IResponse(Of Byte()))
+  overload: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync*
+  nameWithType.vb: StaticMapsApi.GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline))
+  name.vb: GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  id: GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  parent: GoogleMapsWrapper.Api.StaticMapsApi
+  langs:
+  - csharp
+  - vb
+  name: GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
+  nameWithType: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Api/StaticMapsApi.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GetMapBytesAsync
+    path: ../../Api/StaticMapsApi.cs
+    startLine: 66
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    parameters:
+    - id: mapSettings
+      type: GoogleMapsWrapper.Elements.Map
+    - id: markers
+      type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+    - id: paths
+      type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+    content.vb: Public Function GetMapBytesAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing) As Task(Of Byte())
+  overload: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync*
+  nameWithType.vb: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline))
+  name.vb: GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
+references:
+- uid: GoogleMapsWrapper.Api
+  commentId: N:GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Api
+  nameWithType: GoogleMapsWrapper.Api
+  fullName: GoogleMapsWrapper.Api
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.#ctor
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi__ctor_GoogleMapsWrapper_Engine_IApiEngine_
+  name: StaticMapsApi
+  nameWithType: StaticMapsApi.StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.StaticMapsApi
+  nameWithType.vb: StaticMapsApi.New
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.New
+  name.vb: New
+- uid: GoogleMapsWrapper.Engine.IApiEngine
+  commentId: T:GoogleMapsWrapper.Engine.IApiEngine
+  parent: GoogleMapsWrapper.Engine
+  href: GoogleMapsWrapper.Engine.IApiEngine.html
+  name: IApiEngine
+  nameWithType: IApiEngine
+  fullName: GoogleMapsWrapper.Engine.IApiEngine
+- uid: GoogleMapsWrapper.Engine
+  commentId: N:GoogleMapsWrapper.Engine
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Engine
+  nameWithType: GoogleMapsWrapper.Engine
+  fullName: GoogleMapsWrapper.Engine
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Engine
+    name: Engine
+    href: GoogleMapsWrapper.Engine.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Engine
+    name: Engine
+    href: GoogleMapsWrapper.Engine.html
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__
+  name: GetMapAsync
+  nameWithType: StaticMapsApi.GetMapAsync
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
+- uid: GoogleMapsWrapper.Elements.Map
+  commentId: T:GoogleMapsWrapper.Elements.Map
+  parent: GoogleMapsWrapper.Elements
+  href: GoogleMapsWrapper.Elements.Map.html
+  name: Map
+  nameWithType: Map
+  fullName: GoogleMapsWrapper.Elements.Map
+- uid: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+  commentId: T:System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Marker>
+  nameWithType: IEnumerable<Marker>
+  fullName: System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>
+  nameWithType.vb: IEnumerable(Of Marker)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker)
+  name.vb: IEnumerable(Of Marker)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.Marker
+    name: Marker
+    href: GoogleMapsWrapper.Elements.Marker.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.Marker
+    name: Marker
+    href: GoogleMapsWrapper.Elements.Marker.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+  commentId: T:System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Polyline>
+  nameWithType: IEnumerable<Polyline>
+  fullName: System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>
+  nameWithType.vb: IEnumerable(Of Polyline)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline)
+  name.vb: IEnumerable(Of Polyline)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.Polyline
+    name: Polyline
+    href: GoogleMapsWrapper.Elements.Polyline.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.Polyline
+    name: Polyline
+    href: GoogleMapsWrapper.Elements.Polyline.html
+  - name: )
+- uid: System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
+  commentId: T:System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IResponse<byte[]>>
+  nameWithType: Task<IResponse<byte[]>>
+  fullName: System.Threading.Tasks.Task<GoogleMapsWrapper.Responses.IResponse<byte[]>>
+  nameWithType.vb: Task(Of IResponse(Of Byte()))
+  fullName.vb: System.Threading.Tasks.Task(Of GoogleMapsWrapper.Responses.IResponse(Of Byte()))
+  name.vb: Task(Of IResponse(Of Byte()))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: GoogleMapsWrapper.Elements
+  commentId: N:GoogleMapsWrapper.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Elements
+  nameWithType: GoogleMapsWrapper.Elements
+  fullName: GoogleMapsWrapper.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Elements
+    name: Elements
+    href: GoogleMapsWrapper.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Elements
+    name: Elements
+    href: GoogleMapsWrapper.Elements.html
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapBytesAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__
+  name: GetMapBytesAsync
+  nameWithType: StaticMapsApi.GetMapBytesAsync
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<byte[]>
+  nameWithType: Task<byte[]>
+  fullName: System.Threading.Tasks.Task<byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )

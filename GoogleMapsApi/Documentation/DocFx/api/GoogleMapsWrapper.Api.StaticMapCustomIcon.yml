@@ -1,0 +1,560 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  commentId: T:GoogleMapsWrapper.Api.StaticMapCustomIcon
+  id: StaticMapCustomIcon
+  parent: GoogleMapsWrapper.Api
+  children:
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  langs:
+  - csharp
+  - vb
+  name: StaticMapCustomIcon
+  nameWithType: StaticMapCustomIcon
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: StaticMapCustomIcon
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: 'public record StaticMapCustomIcon : IEquatable<StaticMapCustomIcon>'
+    content.vb: Public Class StaticMapCustomIcon Implements IEquatable(Of StaticMapCustomIcon)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Api.StaticMapCustomIcon}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  commentId: M:GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  id: '#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)'
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: StaticMapCustomIcon(Uri, MarkerIconAnchorTypes)
+  nameWithType: StaticMapCustomIcon.StaticMapCustomIcon(Uri, MarkerIconAnchorTypes)
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.StaticMapCustomIcon(System.Uri, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public StaticMapCustomIcon(Uri Uri, MarkerIconAnchorTypes AnchorType = MarkerIconAnchorTypes.Center)
+    parameters:
+    - id: Uri
+      type: System.Uri
+    - id: AnchorType
+      type: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+    content.vb: Public Sub New(Uri As Uri, AnchorType As MarkerIconAnchorTypes = MarkerIconAnchorTypes.Center)
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor*
+  nameWithType.vb: StaticMapCustomIcon.New(Uri, MarkerIconAnchorTypes)
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New(System.Uri, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  name.vb: New(Uri, MarkerIconAnchorTypes)
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  id: Uri
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: Uri
+  nameWithType: StaticMapCustomIcon.Uri
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Uri
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public Uri Uri { get; init; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property Uri As Uri
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  id: AnchorType
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AnchorType
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public MarkerIconAnchorTypes AnchorType { get; init; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+    content.vb: Public Property AnchorType As MarkerIconAnchorTypes
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  commentId: M:GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  id: '#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)'
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: StaticMapCustomIcon(string, MarkerIconAnchorTypes)
+  nameWithType: StaticMapCustomIcon.StaticMapCustomIcon(string, MarkerIconAnchorTypes)
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.StaticMapCustomIcon(string, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public StaticMapCustomIcon(string uri, MarkerIconAnchorTypes anchorType = MarkerIconAnchorTypes.Center)
+    parameters:
+    - id: uri
+      type: System.String
+    - id: anchorType
+      type: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+    content.vb: Public Sub New(uri As String, anchorType As MarkerIconAnchorTypes = MarkerIconAnchorTypes.Center)
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor*
+  nameWithType.vb: StaticMapCustomIcon.New(String, MarkerIconAnchorTypes)
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New(String, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  name.vb: New(String, MarkerIconAnchorTypes)
+references:
+- uid: GoogleMapsWrapper.Api
+  commentId: N:GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Api
+  nameWithType: GoogleMapsWrapper.Api
+  fullName: GoogleMapsWrapper.Api
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{GoogleMapsWrapper.Api.StaticMapCustomIcon}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Api.StaticMapCustomIcon}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<StaticMapCustomIcon>
+  nameWithType: IEquatable<StaticMapCustomIcon>
+  fullName: System.IEquatable<GoogleMapsWrapper.Api.StaticMapCustomIcon>
+  nameWithType.vb: IEquatable(Of StaticMapCustomIcon)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Api.StaticMapCustomIcon)
+  name.vb: IEquatable(Of StaticMapCustomIcon)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Api.StaticMapCustomIcon
+    name: StaticMapCustomIcon
+    href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Api.StaticMapCustomIcon
+    name: StaticMapCustomIcon
+    href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_System_Uri_GoogleMapsWrapper_Types_MarkerIconAnchorTypes_
+  name: StaticMapCustomIcon
+  nameWithType: StaticMapCustomIcon.StaticMapCustomIcon
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.StaticMapCustomIcon
+  nameWithType.vb: StaticMapCustomIcon.New
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New
+  name.vb: New
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  commentId: T:GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html
+  name: MarkerIconAnchorTypes
+  nameWithType: MarkerIconAnchorTypes
+  fullName: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri
+  name: Uri
+  nameWithType: StaticMapCustomIcon.Uri
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType
+  name: AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

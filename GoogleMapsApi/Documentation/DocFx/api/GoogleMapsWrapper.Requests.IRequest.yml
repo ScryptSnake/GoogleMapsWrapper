@@ -1,0 +1,293 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Requests.IRequest
+  commentId: T:GoogleMapsWrapper.Requests.IRequest
+  id: IRequest
+  parent: GoogleMapsWrapper.Requests
+  children:
+  - GoogleMapsWrapper.Requests.IRequest.Api
+  - GoogleMapsWrapper.Requests.IRequest.Category
+  - GoogleMapsWrapper.Requests.IRequest.Id
+  - GoogleMapsWrapper.Requests.IRequest.Query
+  - GoogleMapsWrapper.Requests.IRequest.Url
+  langs:
+  - csharp
+  - vb
+  name: IRequest
+  nameWithType: IRequest
+  fullName: GoogleMapsWrapper.Requests.IRequest
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IRequest
+    path: ../../Requests/IRequest.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: public interface IRequest
+    content.vb: Public Interface IRequest
+- uid: GoogleMapsWrapper.Requests.IRequest.Id
+  commentId: P:GoogleMapsWrapper.Requests.IRequest.Id
+  id: Id
+  parent: GoogleMapsWrapper.Requests.IRequest
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IRequest.Id
+  fullName: GoogleMapsWrapper.Requests.IRequest.Id
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Id
+    path: ../../Requests/IRequest.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: string? Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Id As String
+  overload: GoogleMapsWrapper.Requests.IRequest.Id*
+- uid: GoogleMapsWrapper.Requests.IRequest.Url
+  commentId: P:GoogleMapsWrapper.Requests.IRequest.Url
+  id: Url
+  parent: GoogleMapsWrapper.Requests.IRequest
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: IRequest.Url
+  fullName: GoogleMapsWrapper.Requests.IRequest.Url
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Url
+    path: ../../Requests/IRequest.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: Uri Url { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: ReadOnly Property Url As Uri
+  overload: GoogleMapsWrapper.Requests.IRequest.Url*
+- uid: GoogleMapsWrapper.Requests.IRequest.Query
+  commentId: P:GoogleMapsWrapper.Requests.IRequest.Query
+  id: Query
+  parent: GoogleMapsWrapper.Requests.IRequest
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: IRequest.Query
+  fullName: GoogleMapsWrapper.Requests.IRequest.Query
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Query
+    path: ../../Requests/IRequest.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: string Query { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Query As String
+  overload: GoogleMapsWrapper.Requests.IRequest.Query*
+- uid: GoogleMapsWrapper.Requests.IRequest.Api
+  commentId: P:GoogleMapsWrapper.Requests.IRequest.Api
+  id: Api
+  parent: GoogleMapsWrapper.Requests.IRequest
+  langs:
+  - csharp
+  - vb
+  name: Api
+  nameWithType: IRequest.Api
+  fullName: GoogleMapsWrapper.Requests.IRequest.Api
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Api
+    path: ../../Requests/IRequest.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: ApiTypes Api { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Types.ApiTypes
+    content.vb: ReadOnly Property Api As ApiTypes
+  overload: GoogleMapsWrapper.Requests.IRequest.Api*
+- uid: GoogleMapsWrapper.Requests.IRequest.Category
+  commentId: P:GoogleMapsWrapper.Requests.IRequest.Category
+  id: Category
+  parent: GoogleMapsWrapper.Requests.IRequest
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: IRequest.Category
+  fullName: GoogleMapsWrapper.Requests.IRequest.Category
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Requests/IRequest.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Category
+    path: ../../Requests/IRequest.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Requests
+  syntax:
+    content: RequestTypes Category { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Types.RequestTypes
+    content.vb: ReadOnly Property Category As RequestTypes
+  overload: GoogleMapsWrapper.Requests.IRequest.Category*
+references:
+- uid: GoogleMapsWrapper.Requests
+  commentId: N:GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Requests
+  nameWithType: GoogleMapsWrapper.Requests
+  fullName: GoogleMapsWrapper.Requests
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+- uid: GoogleMapsWrapper.Requests.IRequest.Id*
+  commentId: Overload:GoogleMapsWrapper.Requests.IRequest.Id
+  href: GoogleMapsWrapper.Requests.IRequest.html#GoogleMapsWrapper_Requests_IRequest_Id
+  name: Id
+  nameWithType: IRequest.Id
+  fullName: GoogleMapsWrapper.Requests.IRequest.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Requests.IRequest.Url*
+  commentId: Overload:GoogleMapsWrapper.Requests.IRequest.Url
+  href: GoogleMapsWrapper.Requests.IRequest.html#GoogleMapsWrapper_Requests_IRequest_Url
+  name: Url
+  nameWithType: IRequest.Url
+  fullName: GoogleMapsWrapper.Requests.IRequest.Url
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: GoogleMapsWrapper.Requests.IRequest.Query*
+  commentId: Overload:GoogleMapsWrapper.Requests.IRequest.Query
+  href: GoogleMapsWrapper.Requests.IRequest.html#GoogleMapsWrapper_Requests_IRequest_Query
+  name: Query
+  nameWithType: IRequest.Query
+  fullName: GoogleMapsWrapper.Requests.IRequest.Query
+- uid: GoogleMapsWrapper.Requests.IRequest.Api*
+  commentId: Overload:GoogleMapsWrapper.Requests.IRequest.Api
+  href: GoogleMapsWrapper.Requests.IRequest.html#GoogleMapsWrapper_Requests_IRequest_Api
+  name: Api
+  nameWithType: IRequest.Api
+  fullName: GoogleMapsWrapper.Requests.IRequest.Api
+- uid: GoogleMapsWrapper.Types.ApiTypes
+  commentId: T:GoogleMapsWrapper.Types.ApiTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.ApiTypes.html
+  name: ApiTypes
+  nameWithType: ApiTypes
+  fullName: GoogleMapsWrapper.Types.ApiTypes
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Requests.IRequest.Category*
+  commentId: Overload:GoogleMapsWrapper.Requests.IRequest.Category
+  href: GoogleMapsWrapper.Requests.IRequest.html#GoogleMapsWrapper_Requests_IRequest_Category
+  name: Category
+  nameWithType: IRequest.Category
+  fullName: GoogleMapsWrapper.Requests.IRequest.Category
+- uid: GoogleMapsWrapper.Types.RequestTypes
+  commentId: T:GoogleMapsWrapper.Types.RequestTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.RequestTypes.html
+  name: RequestTypes
+  nameWithType: RequestTypes
+  fullName: GoogleMapsWrapper.Types.RequestTypes

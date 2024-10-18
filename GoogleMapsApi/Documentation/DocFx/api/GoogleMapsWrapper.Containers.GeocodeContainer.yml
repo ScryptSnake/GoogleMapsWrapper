@@ -1,0 +1,899 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer
+  commentId: T:GoogleMapsWrapper.Containers.GeocodeContainer
+  id: GeocodeContainer
+  parent: GoogleMapsWrapper.Containers
+  children:
+  - GoogleMapsWrapper.Containers.GeocodeContainer.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)
+  - GoogleMapsWrapper.Containers.GeocodeContainer.Address
+  - GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+  - GoogleMapsWrapper.Containers.GeocodeContainer.City
+  - GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+  - GoogleMapsWrapper.Containers.GeocodeContainer.Country
+  - GoogleMapsWrapper.Containers.GeocodeContainer.County
+  - GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+  - GoogleMapsWrapper.Containers.GeocodeContainer.State
+  - GoogleMapsWrapper.Containers.GeocodeContainer.ToString
+  - GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+  langs:
+  - csharp
+  - vb
+  name: GeocodeContainer
+  nameWithType: GeocodeContainer
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GeocodeContainer
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: 'public record GeocodeContainer : IContainer, IEquatable<GeocodeContainer>'
+    content.vb: Public Class GeocodeContainer Implements IContainer, IEquatable(Of GeocodeContainer)
+  inheritance:
+  - System.Object
+  implements:
+  - GoogleMapsWrapper.Containers.IContainer
+  - System.IEquatable{GoogleMapsWrapper.Containers.GeocodeContainer}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)
+  commentId: M:GoogleMapsWrapper.Containers.GeocodeContainer.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)'
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: GeocodeContainer(string, string, string, string, string, int, string, GpsCoordinate?, object?)
+  nameWithType: GeocodeContainer.GeocodeContainer(string, string, string, string, string, int, string, GpsCoordinate?, object?)
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.GeocodeContainer(string, string, string, string, string, int, string, GoogleMapsWrapper.Types.GpsCoordinate?, object?)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public GeocodeContainer(string Country, string State, string County, string City, string Municipality, int ZipCode, string Address, GpsCoordinate? Coordinates, object? AssociatedData)
+    parameters:
+    - id: Country
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: country
+    - id: State
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: administrative_area_level_1
+    - id: County
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: administrative_area_level_2
+    - id: City
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: locality
+    - id: Municipality
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: administrative_area_level_3
+    - id: ZipCode
+      type: System.Int32
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: postal_code
+    - id: Address
+      type: System.String
+      attributes:
+      - type: Newtonsoft.Json.JsonPropertyAttribute
+        ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+        arguments:
+        - type: System.String
+          value: formatted_address
+    - id: Coordinates
+      type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+    - id: AssociatedData
+      type: System.Object
+    content.vb: Public Sub New(Country As String, State As String, County As String, City As String, Municipality As String, ZipCode As Integer, Address As String, Coordinates As GpsCoordinate?, AssociatedData As Object)
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.#ctor*
+  nameWithType.vb: GeocodeContainer.New(String, String, String, String, String, Integer, String, GpsCoordinate?, Object)
+  fullName.vb: GoogleMapsWrapper.Containers.GeocodeContainer.New(String, String, String, String, String, Integer, String, GoogleMapsWrapper.Types.GpsCoordinate?, Object)
+  name.vb: New(String, String, String, String, String, Integer, String, GpsCoordinate?, Object)
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Country
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.Country
+  id: Country
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: GeocodeContainer.Country
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Country
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Country
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string Country { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Country As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.Country*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.State
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.State
+  id: State
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: GeocodeContainer.State
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.State
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: State
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 20
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string State { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property State As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.State*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.County
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.County
+  id: County
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: County
+  nameWithType: GeocodeContainer.County
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.County
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: County
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 23
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string County { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property County As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.County*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.City
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.City
+  id: City
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: GeocodeContainer.City
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.City
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: City
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 26
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string City { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.City*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+  id: Municipality
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: Municipality
+  nameWithType: GeocodeContainer.Municipality
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Municipality
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 29
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string Municipality { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Municipality As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.Municipality*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+  id: ZipCode
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: ZipCode
+  nameWithType: GeocodeContainer.ZipCode
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ZipCode
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 32
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public int ZipCode { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ZipCode As Integer
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Address
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.Address
+  id: Address
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: GeocodeContainer.Address
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Address
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Address
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 35
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public string Address { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Address As String
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.Address*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+  id: Coordinates
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: Coordinates
+  nameWithType: GeocodeContainer.Coordinates
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Coordinates
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 39
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public GpsCoordinate? Coordinates { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+    content.vb: Public Property Coordinates As GpsCoordinate?
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+  commentId: P:GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+  id: AssociatedData
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: AssociatedData
+  nameWithType: GeocodeContainer.AssociatedData
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AssociatedData
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 41
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  syntax:
+    content: public object? AssociatedData { get; init; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property AssociatedData As Object
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData*
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.ToString
+  commentId: M:GoogleMapsWrapper.Containers.GeocodeContainer.ToString
+  id: ToString
+  parent: GoogleMapsWrapper.Containers.GeocodeContainer
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GeocodeContainer.ToString()
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.ToString()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Containers/GeocodeContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ToString
+    path: ../../Containers/GeocodeContainer.cs
+    startLine: 47
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: GoogleMapsWrapper.Containers.GeocodeContainer.ToString*
+references:
+- uid: GoogleMapsWrapper.Containers
+  commentId: N:GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Containers
+  nameWithType: GoogleMapsWrapper.Containers
+  fullName: GoogleMapsWrapper.Containers
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GoogleMapsWrapper.Containers.IContainer
+  commentId: T:GoogleMapsWrapper.Containers.IContainer
+  parent: GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.Containers.IContainer.html
+  name: IContainer
+  nameWithType: IContainer
+  fullName: GoogleMapsWrapper.Containers.IContainer
+- uid: System.IEquatable{GoogleMapsWrapper.Containers.GeocodeContainer}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Containers.GeocodeContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GeocodeContainer>
+  nameWithType: IEquatable<GeocodeContainer>
+  fullName: System.IEquatable<GoogleMapsWrapper.Containers.GeocodeContainer>
+  nameWithType.vb: IEquatable(Of GeocodeContainer)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Containers.GeocodeContainer)
+  name.vb: IEquatable(Of GeocodeContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Containers.GeocodeContainer
+    name: GeocodeContainer
+    href: GoogleMapsWrapper.Containers.GeocodeContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Containers.GeocodeContainer
+    name: GeocodeContainer
+    href: GoogleMapsWrapper.Containers.GeocodeContainer.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.#ctor
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer__ctor_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Nullable_GoogleMapsWrapper_Types_GpsCoordinate__System_Object_
+  name: GeocodeContainer
+  nameWithType: GeocodeContainer.GeocodeContainer
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.GeocodeContainer
+  nameWithType.vb: GeocodeContainer.New
+  fullName.vb: GoogleMapsWrapper.Containers.GeocodeContainer.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+  commentId: T:System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+  parent: System
+  definition: System.Nullable`1
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  name: GpsCoordinate?
+  nameWithType: GpsCoordinate?
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate?
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: '?'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Country*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.Country
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_Country
+  name: Country
+  nameWithType: GeocodeContainer.Country
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Country
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.State*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.State
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_State
+  name: State
+  nameWithType: GeocodeContainer.State
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.State
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.County*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.County
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_County
+  name: County
+  nameWithType: GeocodeContainer.County
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.County
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.City*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.City
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_City
+  name: City
+  nameWithType: GeocodeContainer.City
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.City
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Municipality*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_Municipality
+  name: Municipality
+  nameWithType: GeocodeContainer.Municipality
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Municipality
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_ZipCode
+  name: ZipCode
+  nameWithType: GeocodeContainer.ZipCode
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Address*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.Address
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_Address
+  name: Address
+  nameWithType: GeocodeContainer.Address
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Address
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_Coordinates
+  name: Coordinates
+  nameWithType: GeocodeContainer.Coordinates
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_AssociatedData
+  name: AssociatedData
+  nameWithType: GeocodeContainer.AssociatedData
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer.ToString*
+  commentId: Overload:GoogleMapsWrapper.Containers.GeocodeContainer.ToString
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html#GoogleMapsWrapper_Containers_GeocodeContainer_ToString
+  name: ToString
+  nameWithType: GeocodeContainer.ToString
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer.ToString

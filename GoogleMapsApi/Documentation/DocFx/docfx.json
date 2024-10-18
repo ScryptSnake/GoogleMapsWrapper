@@ -4,8 +4,9 @@
       "src": [
         {
           "files": [
-            "../GoogleMapsWrapper.csproj" // Use the relative path from the DocFx folder
-          ]
+            "GoogleMapsWrapper.csproj" // Use the relative path from the DocFx folder
+          ],
+          "src": "../../"
         }
       ],
       "dest": "api"

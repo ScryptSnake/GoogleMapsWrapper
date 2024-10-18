@@ -1,0 +1,1123 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Types.GpsCoordinate
+  commentId: T:GoogleMapsWrapper.Types.GpsCoordinate
+  id: GpsCoordinate
+  parent: GoogleMapsWrapper.Types
+  children:
+  - GoogleMapsWrapper.Types.GpsCoordinate.#ctor(System.Decimal,System.Decimal)
+  - GoogleMapsWrapper.Types.GpsCoordinate.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  - GoogleMapsWrapper.Types.GpsCoordinate.Equals(System.Object)
+  - GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode
+  - GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+  - GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+  - GoogleMapsWrapper.Types.GpsCoordinate.Parse(System.String)
+  - GoogleMapsWrapper.Types.GpsCoordinate.ToString
+  - GoogleMapsWrapper.Types.GpsCoordinate.ToString(System.String,System.IFormatProvider)
+  - GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.ReadOnlySpan{System.Char},GoogleMapsWrapper.Types.GpsCoordinate@)
+  - GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.String,GoogleMapsWrapper.Types.GpsCoordinate@)
+  - GoogleMapsWrapper.Types.GpsCoordinate.op_Equality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  - GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  langs:
+  - csharp
+  - vb
+  name: GpsCoordinate
+  nameWithType: GpsCoordinate
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate
+  type: Struct
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GpsCoordinate
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 3
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: 'public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable'
+    content.vb: Public Structure GpsCoordinate Implements IEquatable(Of GpsCoordinate), IFormattable
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}
+  - System.IFormattable
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.#ctor(System.Decimal,System.Decimal)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.#ctor(System.Decimal,System.Decimal)
+  id: '#ctor(System.Decimal,System.Decimal)'
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GpsCoordinate(decimal, decimal)
+  nameWithType: GpsCoordinate.GpsCoordinate(decimal, decimal)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.GpsCoordinate(decimal, decimal)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 5
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public GpsCoordinate(decimal latitude, decimal longitude)
+    parameters:
+    - id: latitude
+      type: System.Decimal
+    - id: longitude
+      type: System.Decimal
+    content.vb: Public Sub New(latitude As Decimal, longitude As Decimal)
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.#ctor*
+  nameWithType.vb: GpsCoordinate.New(Decimal, Decimal)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.New(Decimal, Decimal)
+  name.vb: New(Decimal, Decimal)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+  commentId: P:GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+  id: Latitude
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: GpsCoordinate.Latitude
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Latitude
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 10
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public decimal Latitude { get; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public ReadOnly Property Latitude As Decimal
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.Latitude*
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+  commentId: P:GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+  id: Longitude
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: GpsCoordinate.Longitude
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Longitude
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public decimal Longitude { get; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public ReadOnly Property Longitude As Decimal
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.Longitude*
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.ToString
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.ToString
+  id: ToString
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GpsCoordinate.ToString()
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ToString
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Returns the fully qualified type name of this instance.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The fully qualified type name.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.ToString*
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Parse(System.String)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.Parse(System.String)
+  id: Parse(System.String)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: GpsCoordinate.Parse(string)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Parse(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Parse
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public static GpsCoordinate Parse(string s)
+    parameters:
+    - id: s
+      type: System.String
+    return:
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    content.vb: Public Shared Function Parse(s As String) As GpsCoordinate
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.Parse*
+  nameWithType.vb: GpsCoordinate.Parse(String)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.Parse(String)
+  name.vb: Parse(String)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.String,GoogleMapsWrapper.Types.GpsCoordinate@)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.String,GoogleMapsWrapper.Types.GpsCoordinate@)
+  id: TryParse(System.String,GoogleMapsWrapper.Types.GpsCoordinate@)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: TryParse(string?, out GpsCoordinate)
+  nameWithType: GpsCoordinate.TryParse(string?, out GpsCoordinate)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(string?, out GoogleMapsWrapper.Types.GpsCoordinate)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: TryParse
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 22
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public static bool TryParse(string? s, out GpsCoordinate result)
+    parameters:
+    - id: s
+      type: System.String
+    - id: result
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As String, result As GpsCoordinate) As Boolean
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.TryParse*
+  nameWithType.vb: GpsCoordinate.TryParse(String, GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(String, GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: TryParse(String, GpsCoordinate)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.ReadOnlySpan{System.Char},GoogleMapsWrapper.Types.GpsCoordinate@)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.ReadOnlySpan{System.Char},GoogleMapsWrapper.Types.GpsCoordinate@)
+  id: TryParse(System.ReadOnlySpan{System.Char},GoogleMapsWrapper.Types.GpsCoordinate@)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: TryParse(ReadOnlySpan<char>, out GpsCoordinate)
+  nameWithType: GpsCoordinate.TryParse(ReadOnlySpan<char>, out GpsCoordinate)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.ReadOnlySpan<char>, out GoogleMapsWrapper.Types.GpsCoordinate)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: TryParse
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 25
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public static bool TryParse(ReadOnlySpan<char> s, out GpsCoordinate result)
+    parameters:
+    - id: s
+      type: System.ReadOnlySpan{System.Char}
+    - id: result
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryParse(s As ReadOnlySpan(Of Char), result As GpsCoordinate) As Boolean
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.TryParse*
+  nameWithType.vb: GpsCoordinate.TryParse(ReadOnlySpan(Of Char), GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.TryParse(System.ReadOnlySpan(Of Char), GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: TryParse(ReadOnlySpan(Of Char), GpsCoordinate)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.ToString(System.String,System.IFormatProvider)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?, IFormatProvider?)
+  nameWithType: GpsCoordinate.ToString(string?, IFormatProvider?)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.ToString(string?, System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ToString
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 42
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Formats the value of the current instance using the specified format.
+  example: []
+  syntax:
+    content: public string ToString(string? format, IFormatProvider? formatProvider)
+    parameters:
+    - id: format
+      type: System.String
+      description: >-
+        The format to use.  
+
+         -or-  
+
+         A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <xref href="System.IFormattable" data-throw-if-not-resolved="false"></xref> implementation.
+    - id: formatProvider
+      type: System.IFormatProvider
+      description: >-
+        The provider to use to format the value.  
+
+         -or-  
+
+         A null reference (<code>Nothing</code> in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.
+    return:
+      type: System.String
+      description: The value of the current instance in the specified format.
+    content.vb: Public Function ToString(format As String, formatProvider As IFormatProvider) As String
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.ToString*
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  nameWithType.vb: GpsCoordinate.ToString(String, IFormatProvider)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  id: Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(GpsCoordinate)
+  nameWithType: GpsCoordinate.Equals(GpsCoordinate)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Equals
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 48
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(GpsCoordinate other)
+    parameters:
+    - id: other
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As GpsCoordinate) As Boolean
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.Equals*
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Equals(System.Object)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: GpsCoordinate.Equals(object?)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Equals
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 50
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.Equals*
+  nameWithType.vb: GpsCoordinate.Equals(Object)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.Equals(Object)
+  name.vb: Equals(Object)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode
+  id: GetHashCode
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: GpsCoordinate.GetHashCode()
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GetHashCode
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 52
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode*
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Equality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.op_Equality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  id: op_Equality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: operator ==(GpsCoordinate, GpsCoordinate)
+  nameWithType: GpsCoordinate.operator ==(GpsCoordinate, GpsCoordinate)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.operator ==(GoogleMapsWrapper.Types.GpsCoordinate, GoogleMapsWrapper.Types.GpsCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: op_Equality
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 53
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public static bool operator ==(GpsCoordinate left, GpsCoordinate right)
+    parameters:
+    - id: left
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    - id: right
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As GpsCoordinate, right As GpsCoordinate) As Boolean
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.op_Equality*
+  nameWithType.vb: GpsCoordinate.=(GpsCoordinate, GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.=(GoogleMapsWrapper.Types.GpsCoordinate, GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: =(GpsCoordinate, GpsCoordinate)
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  commentId: M:GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  id: op_Inequality(GoogleMapsWrapper.Types.GpsCoordinate,GoogleMapsWrapper.Types.GpsCoordinate)
+  parent: GoogleMapsWrapper.Types.GpsCoordinate
+  langs:
+  - csharp
+  - vb
+  name: operator !=(GpsCoordinate, GpsCoordinate)
+  nameWithType: GpsCoordinate.operator !=(GpsCoordinate, GpsCoordinate)
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.operator !=(GoogleMapsWrapper.Types.GpsCoordinate, GoogleMapsWrapper.Types.GpsCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: GoogleMapsApi/Types/GpsCoordinate.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: op_Inequality
+    path: ../../Types/GpsCoordinate.cs
+    startLine: 55
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Types
+  syntax:
+    content: public static bool operator !=(GpsCoordinate left, GpsCoordinate right)
+    parameters:
+    - id: left
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    - id: right
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As GpsCoordinate, right As GpsCoordinate) As Boolean
+  overload: GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality*
+  nameWithType.vb: GpsCoordinate.<>(GpsCoordinate, GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.<>(GoogleMapsWrapper.Types.GpsCoordinate, GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: <>(GpsCoordinate, GpsCoordinate)
+references:
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GpsCoordinate>
+  nameWithType: IEquatable<GpsCoordinate>
+  fullName: System.IEquatable<GoogleMapsWrapper.Types.GpsCoordinate>
+  nameWithType.vb: IEquatable(Of GpsCoordinate)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: IEquatable(Of GpsCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: )
+- uid: System.IFormattable
+  commentId: T:System.IFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  name: IFormattable
+  nameWithType: IFormattable
+  fullName: System.IFormattable
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.#ctor
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate__ctor_System_Decimal_System_Decimal_
+  name: GpsCoordinate
+  nameWithType: GpsCoordinate.GpsCoordinate
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.GpsCoordinate
+  nameWithType.vb: GpsCoordinate.New
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.New
+  name.vb: New
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Latitude*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_Latitude
+  name: Latitude
+  nameWithType: GpsCoordinate.Latitude
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Latitude
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Longitude*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_Longitude
+  name: Longitude
+  nameWithType: GpsCoordinate.Longitude
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Longitude
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.ToString*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.ToString
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_ToString
+  name: ToString
+  nameWithType: GpsCoordinate.ToString
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Parse*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.Parse
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_Parse_System_String_
+  name: Parse
+  nameWithType: GpsCoordinate.Parse
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Parse
+- uid: GoogleMapsWrapper.Types.GpsCoordinate
+  commentId: T:GoogleMapsWrapper.Types.GpsCoordinate
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  name: GpsCoordinate
+  nameWithType: GpsCoordinate
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.TryParse*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.TryParse
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_TryParse_System_String_GoogleMapsWrapper_Types_GpsCoordinate__
+  name: TryParse
+  nameWithType: GpsCoordinate.TryParse
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.TryParse
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  name: ToString(string, IFormatProvider)
+  nameWithType: IFormattable.ToString(string, IFormatProvider)
+  fullName: System.IFormattable.ToString(string, System.IFormatProvider)
+  nameWithType.vb: IFormattable.ToString(String, IFormatProvider)
+  fullName.vb: System.IFormattable.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.Equals*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.Equals
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_Equals_GoogleMapsWrapper_Types_GpsCoordinate_
+  name: Equals
+  nameWithType: GpsCoordinate.Equals
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.Equals
+- uid: System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  commentId: M:System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  parent: System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(GpsCoordinate)
+  nameWithType: IEquatable<GpsCoordinate>.Equals(GpsCoordinate)
+  fullName: System.IEquatable<GoogleMapsWrapper.Types.GpsCoordinate>.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  nameWithType.vb: IEquatable(Of GpsCoordinate).Equals(GpsCoordinate)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Types.GpsCoordinate).Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{GoogleMapsWrapper.Types.GpsCoordinate}.Equals(GoogleMapsWrapper.Types.GpsCoordinate)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate
+    name: GpsCoordinate
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_GetHashCode
+  name: GetHashCode
+  nameWithType: GpsCoordinate.GetHashCode
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Equality*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.op_Equality
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_op_Equality_GoogleMapsWrapper_Types_GpsCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
+  name: operator ==
+  nameWithType: GpsCoordinate.operator ==
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.operator ==
+  nameWithType.vb: GpsCoordinate.=
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Equality*
+    name: ==
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_op_Equality_GoogleMapsWrapper_Types_GpsCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
+- uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality*
+  commentId: Overload:GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_op_Inequality_GoogleMapsWrapper_Types_GpsCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
+  name: operator !=
+  nameWithType: GpsCoordinate.operator !=
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate.operator !=
+  nameWithType.vb: GpsCoordinate.<>
+  fullName.vb: GoogleMapsWrapper.Types.GpsCoordinate.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: GoogleMapsWrapper.Types.GpsCoordinate.op_Inequality*
+    name: '!='
+    href: GoogleMapsWrapper.Types.GpsCoordinate.html#GoogleMapsWrapper_Types_GpsCoordinate_op_Inequality_GoogleMapsWrapper_Types_GpsCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Utilities
+  commentId: N:GoogleMapsWrapper.Utilities
+  id: GoogleMapsWrapper.Utilities
+  children:
+  - GoogleMapsWrapper.Utilities.PolylineEncoder
+  - GoogleMapsWrapper.Utilities.Utilities
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Utilities
+  nameWithType: GoogleMapsWrapper.Utilities
+  fullName: GoogleMapsWrapper.Utilities
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Utilities.PolylineEncoder
+  commentId: T:GoogleMapsWrapper.Utilities.PolylineEncoder
+  href: GoogleMapsWrapper.Utilities.PolylineEncoder.html
+  name: PolylineEncoder
+  nameWithType: PolylineEncoder
+  fullName: GoogleMapsWrapper.Utilities.PolylineEncoder
+- uid: GoogleMapsWrapper.Utilities.Utilities
+  commentId: T:GoogleMapsWrapper.Utilities.Utilities
+  href: GoogleMapsWrapper.Utilities.Utilities.html
+  name: Utilities
+  nameWithType: Utilities
+  fullName: GoogleMapsWrapper.Utilities.Utilities

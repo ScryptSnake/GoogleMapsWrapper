@@ -14,7 +14,11 @@ namespace GoogleMapsWrapper.Api;
 public class GoogleMapsApi
 {
     private ApiEngine engine;
+
+    /// <summary> Exposes the GeocodeApi instance. /// </summary>
     public GeocodeApi GeocodeApi { get; private set; }
+
+    /// <summary> Exposes the StaticMapsApi instance. /// </summary>
     public StaticMapsApi StaticMapsApi { get; private set; }
 
     /// <summary>

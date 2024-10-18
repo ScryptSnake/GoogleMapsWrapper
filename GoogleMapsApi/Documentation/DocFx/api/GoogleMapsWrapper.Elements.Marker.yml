@@ -1,0 +1,674 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Elements.Marker
+  commentId: T:GoogleMapsWrapper.Elements.Marker
+  id: Marker
+  parent: GoogleMapsWrapper.Elements
+  children:
+  - GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
+  - GoogleMapsWrapper.Elements.Marker.Coordinate
+  - GoogleMapsWrapper.Elements.Marker.CustomIcon
+  - GoogleMapsWrapper.Elements.Marker.Label
+  - GoogleMapsWrapper.Elements.Marker.Scale
+  - GoogleMapsWrapper.Elements.Marker.Size
+  langs:
+  - csharp
+  - vb
+  name: Marker
+  nameWithType: Marker
+  fullName: GoogleMapsWrapper.Elements.Marker
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Marker
+    path: ../../Elements/Marker.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: 'public class Marker : GoogleMapElement'
+    content.vb: Public Class Marker Inherits GoogleMapElement
+  inheritance:
+  - System.Object
+  - GoogleMapsWrapper.Elements.GoogleMapElement
+  inheritedMembers:
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Name
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Id
+  - GoogleMapsWrapper.Elements.GoogleMapElement.AssociatedData
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Color
+  - GoogleMapsWrapper.Elements.GoogleMapElement.SecondaryColor
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Visible
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Height
+  - GoogleMapsWrapper.Elements.GoogleMapElement.Width
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.Elements.Marker.Label
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Label
+  id: Label
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: Label
+  nameWithType: Marker.Label
+  fullName: GoogleMapsWrapper.Elements.Marker.Label
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Label
+    path: ../../Elements/Marker.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public char Label { get; set; }
+    parameters: []
+    return:
+      type: System.Char
+    content.vb: Public Property Label As Char
+  overload: GoogleMapsWrapper.Elements.Marker.Label*
+- uid: GoogleMapsWrapper.Elements.Marker.Scale
+  commentId: F:GoogleMapsWrapper.Elements.Marker.Scale
+  id: Scale
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: Marker.Scale
+  fullName: GoogleMapsWrapper.Elements.Marker.Scale
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Scale
+    path: ../../Elements/Marker.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public MarkerScaleTypes Scale
+    return:
+      type: GoogleMapsWrapper.Types.MarkerScaleTypes
+    content.vb: Public Scale As MarkerScaleTypes
+- uid: GoogleMapsWrapper.Elements.Marker.Size
+  commentId: F:GoogleMapsWrapper.Elements.Marker.Size
+  id: Size
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: Marker.Size
+  fullName: GoogleMapsWrapper.Elements.Marker.Size
+  type: Field
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Size
+    path: ../../Elements/Marker.cs
+    startLine: 34
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public MarkerSizes Size
+    return:
+      type: GoogleMapsWrapper.Types.MarkerSizes
+    content.vb: Public Size As MarkerSizes
+- uid: GoogleMapsWrapper.Elements.Marker.CustomIcon
+  commentId: P:GoogleMapsWrapper.Elements.Marker.CustomIcon
+  id: CustomIcon
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: CustomIcon
+  nameWithType: Marker.CustomIcon
+  fullName: GoogleMapsWrapper.Elements.Marker.CustomIcon
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: CustomIcon
+    path: ../../Elements/Marker.cs
+    startLine: 35
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public StaticMapCustomIcon? CustomIcon { get; set; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Api.StaticMapCustomIcon
+    content.vb: Public Property CustomIcon As StaticMapCustomIcon
+  overload: GoogleMapsWrapper.Elements.Marker.CustomIcon*
+- uid: GoogleMapsWrapper.Elements.Marker.Coordinate
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Coordinate
+  id: Coordinate
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: Coordinate
+  nameWithType: Marker.Coordinate
+  fullName: GoogleMapsWrapper.Elements.Marker.Coordinate
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Coordinate
+    path: ../../Elements/Marker.cs
+    startLine: 38
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public GpsCoordinate Coordinate { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    content.vb: Public ReadOnly Property Coordinate As GpsCoordinate
+  overload: GoogleMapsWrapper.Elements.Marker.Coordinate*
+- uid: GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
+  commentId: M:GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
+  id: '#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)'
+  parent: GoogleMapsWrapper.Elements.Marker
+  langs:
+  - csharp
+  - vb
+  name: Marker(GpsCoordinate, string?, string?)
+  nameWithType: Marker.Marker(GpsCoordinate, string?, string?)
+  fullName: GoogleMapsWrapper.Elements.Marker.Marker(GoogleMapsWrapper.Types.GpsCoordinate, string?, string?)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Marker.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Elements/Marker.cs
+    startLine: 39
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  syntax:
+    content: public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
+    parameters:
+    - id: Coordinate
+      type: GoogleMapsWrapper.Types.GpsCoordinate
+    - id: Id
+      type: System.String
+    - id: Name
+      type: System.String
+    content.vb: Public Sub New(Coordinate As GpsCoordinate, Id As String = Nothing, Name As String = Nothing)
+  overload: GoogleMapsWrapper.Elements.Marker.#ctor*
+  nameWithType.vb: Marker.New(GpsCoordinate, String, String)
+  fullName.vb: GoogleMapsWrapper.Elements.Marker.New(GoogleMapsWrapper.Types.GpsCoordinate, String, String)
+  name.vb: New(GpsCoordinate, String, String)
+references:
+- uid: GoogleMapsWrapper.Elements
+  commentId: N:GoogleMapsWrapper.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Elements
+  nameWithType: GoogleMapsWrapper.Elements
+  fullName: GoogleMapsWrapper.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Elements
+    name: Elements
+    href: GoogleMapsWrapper.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Elements
+    name: Elements
+    href: GoogleMapsWrapper.Elements.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement
+  commentId: T:GoogleMapsWrapper.Elements.GoogleMapElement
+  parent: GoogleMapsWrapper.Elements
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  name: GoogleMapElement
+  nameWithType: GoogleMapElement
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Name
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Name
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Name
+  name: Name
+  nameWithType: GoogleMapElement.Name
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Name
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Id
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Id
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Id
+  name: Id
+  nameWithType: GoogleMapElement.Id
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Id
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.AssociatedData
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.AssociatedData
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_AssociatedData
+  name: AssociatedData
+  nameWithType: GoogleMapElement.AssociatedData
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.AssociatedData
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Color
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Color
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Color
+  name: Color
+  nameWithType: GoogleMapElement.Color
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Color
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.SecondaryColor
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.SecondaryColor
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_SecondaryColor
+  name: SecondaryColor
+  nameWithType: GoogleMapElement.SecondaryColor
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.SecondaryColor
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Visible
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Visible
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Visible
+  name: Visible
+  nameWithType: GoogleMapElement.Visible
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Visible
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Height
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Height
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Height
+  name: Height
+  nameWithType: GoogleMapElement.Height
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Height
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.Width
+  commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Width
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Width
+  name: Width
+  nameWithType: GoogleMapElement.Width
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.Width
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Elements.Marker.Label*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Label
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Label
+  name: Label
+  nameWithType: Marker.Label
+  fullName: GoogleMapsWrapper.Elements.Marker.Label
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: GoogleMapsWrapper.Types.MarkerScaleTypes
+  commentId: T:GoogleMapsWrapper.Types.MarkerScaleTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerScaleTypes.html
+  name: MarkerScaleTypes
+  nameWithType: MarkerScaleTypes
+  fullName: GoogleMapsWrapper.Types.MarkerScaleTypes
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Types.MarkerSizes
+  commentId: T:GoogleMapsWrapper.Types.MarkerSizes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerSizes.html
+  name: MarkerSizes
+  nameWithType: MarkerSizes
+  fullName: GoogleMapsWrapper.Types.MarkerSizes
+- uid: GoogleMapsWrapper.Elements.Marker.CustomIcon*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.CustomIcon
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_CustomIcon
+  name: CustomIcon
+  nameWithType: Marker.CustomIcon
+  fullName: GoogleMapsWrapper.Elements.Marker.CustomIcon
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  commentId: T:GoogleMapsWrapper.Api.StaticMapCustomIcon
+  parent: GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html
+  name: StaticMapCustomIcon
+  nameWithType: StaticMapCustomIcon
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon
+- uid: GoogleMapsWrapper.Api
+  commentId: N:GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Api
+  nameWithType: GoogleMapsWrapper.Api
+  fullName: GoogleMapsWrapper.Api
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+- uid: GoogleMapsWrapper.Elements.Marker.Coordinate*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Coordinate
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Coordinate
+  name: Coordinate
+  nameWithType: Marker.Coordinate
+  fullName: GoogleMapsWrapper.Elements.Marker.Coordinate
+- uid: GoogleMapsWrapper.Types.GpsCoordinate
+  commentId: T:GoogleMapsWrapper.Types.GpsCoordinate
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.GpsCoordinate.html
+  name: GpsCoordinate
+  nameWithType: GpsCoordinate
+  fullName: GoogleMapsWrapper.Types.GpsCoordinate
+- uid: GoogleMapsWrapper.Elements.Marker.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.#ctor
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_System_String_System_String_
+  name: Marker
+  nameWithType: Marker.Marker
+  fullName: GoogleMapsWrapper.Elements.Marker.Marker
+  nameWithType.vb: Marker.New
+  fullName.vb: GoogleMapsWrapper.Elements.Marker.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

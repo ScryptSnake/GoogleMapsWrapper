@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.IMapBoundElement
+  commentId: T:GoogleMapsWrapper.JavascriptApi.IMapBoundElement
+  id: IMapBoundElement
+  parent: GoogleMapsWrapper.JavascriptApi
+  children:
+  - GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+  - GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize
+  langs:
+  - csharp
+  - vb
+  name: IMapBoundElement
+  nameWithType: IMapBoundElement
+  fullName: GoogleMapsWrapper.JavascriptApi.IMapBoundElement
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Elements/IMapBoundElement.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IMapBoundElement
+    path: ../../JavascriptApi/Elements/IMapBoundElement.cs
+    startLine: 8
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi
+  syntax:
+    content: public interface IMapBoundElement
+    content.vb: Public Interface IMapBoundElement
+- uid: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+  commentId: P:GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+  id: Id
+  parent: GoogleMapsWrapper.JavascriptApi.IMapBoundElement
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IMapBoundElement.Id
+  fullName: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Elements/IMapBoundElement.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Id
+    path: ../../JavascriptApi/Elements/IMapBoundElement.cs
+    startLine: 11
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi
+  syntax:
+    content: string? Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Id As String
+  overload: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id*
+- uid: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize
+  commentId: M:GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize
+  id: Serialize
+  parent: GoogleMapsWrapper.JavascriptApi.IMapBoundElement
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: IMapBoundElement.Serialize()
+  fullName: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/JavascriptApi/Elements/IMapBoundElement.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Serialize
+    path: ../../JavascriptApi/Elements/IMapBoundElement.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi
+  syntax:
+    content: string Serialize()
+    return:
+      type: System.String
+    content.vb: Function Serialize() As String
+  overload: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize*
+references:
+- uid: GoogleMapsWrapper.JavascriptApi
+  commentId: N:GoogleMapsWrapper.JavascriptApi
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi
+  nameWithType: GoogleMapsWrapper.JavascriptApi
+  fullName: GoogleMapsWrapper.JavascriptApi
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+- uid: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+  href: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.html#GoogleMapsWrapper_JavascriptApi_IMapBoundElement_Id
+  name: Id
+  nameWithType: IMapBoundElement.Id
+  fullName: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize
+  href: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.html#GoogleMapsWrapper_JavascriptApi_IMapBoundElement_Serialize
+  name: Serialize
+  nameWithType: IMapBoundElement.Serialize
+  fullName: GoogleMapsWrapper.JavascriptApi.IMapBoundElement.Serialize

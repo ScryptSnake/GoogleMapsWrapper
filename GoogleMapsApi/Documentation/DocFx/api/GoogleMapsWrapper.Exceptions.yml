@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Exceptions
+  commentId: N:GoogleMapsWrapper.Exceptions
+  id: GoogleMapsWrapper.Exceptions
+  children:
+  - GoogleMapsWrapper.Exceptions.GoogleMapsApiException
+  - GoogleMapsWrapper.Exceptions.GoogleMapsJavascriptException
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Exceptions
+  nameWithType: GoogleMapsWrapper.Exceptions
+  fullName: GoogleMapsWrapper.Exceptions
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Exceptions.GoogleMapsApiException
+  commentId: T:GoogleMapsWrapper.Exceptions.GoogleMapsApiException
+  href: GoogleMapsWrapper.Exceptions.GoogleMapsApiException.html
+  name: GoogleMapsApiException
+  nameWithType: GoogleMapsApiException
+  fullName: GoogleMapsWrapper.Exceptions.GoogleMapsApiException
+- uid: GoogleMapsWrapper.Exceptions.GoogleMapsJavascriptException
+  commentId: T:GoogleMapsWrapper.Exceptions.GoogleMapsJavascriptException
+  href: GoogleMapsWrapper.Exceptions.GoogleMapsJavascriptException.html
+  name: GoogleMapsJavascriptException
+  nameWithType: GoogleMapsJavascriptException
+  fullName: GoogleMapsWrapper.Exceptions.GoogleMapsJavascriptException
