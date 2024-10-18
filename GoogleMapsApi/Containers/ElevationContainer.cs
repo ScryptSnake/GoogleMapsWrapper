@@ -13,22 +13,22 @@ using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
 /// <summary>A object to hold parsed JSON data from Elevation API responses.</summary>
-/// <param name="ElevationMeters">The elevation in unit meters.</param>
-/// <param name="Resolution">The elevation in meters.</param>
 public record ElevationContainer(
+    ///<Summary>The elevation in meters.</summary>
     [JsonProperty("elevation")]
     double ElevationMeters,
-
+    
+    ///<Summary>Indicates the maximum distance between data points from which the elevation was interpolated, in meters.</summary>
     [JsonProperty("resolution")]
     double Resolution,
-
-    // Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API.
+    
+    ///<Summary>The elevation in feet. Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API. </summary>
     double ElevationFeet,
 
-    // Note: This property is not de-serialized. Rather, It is manually provided by the caller/setter.
+    ///<Summary>Location of the request.</summary>
     GpsCoordinate? Coordinates,
     
-    // A property to append any relevant information to the object.
+    ///<Summary>Holds any relevant data, such as the associated IRequest.</summary>
    object? AssociatedData
 
     ) : IContainer
