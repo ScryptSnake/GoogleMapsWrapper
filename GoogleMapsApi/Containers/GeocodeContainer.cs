@@ -15,25 +15,25 @@ using System.Xml;
 namespace GoogleMapsWrapper.Containers;
 /// <summary>A container to hold parsed JSON information from a GoecodeAPI response.</summary>
 public record GeocodeContainer(
-    /// <summary>The 'Country' parsed from the response. This property is set from the API's 'country' JSON property</summary>
+    /// <summary>The 'Country' parsed from the response. This property is acquired from the JSON response's 'country' property.</summary>
     [JsonProperty("country")]
     string Country,
-    /// <summary>The 'State' parsed from the response. This property is set from the API's 'administrative_area_level_1' JSON property.</summary>
+    /// <summary>The 'State' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_1' property.</summary>
     [JsonProperty("administrative_area_level_1")]
     string State,
-    /// <summary>The 'County' parsed from the response. This property is set from the API's 'administrative_area_level_2' JSON property.</summary>
+    /// <summary>The 'County' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_2' property.</summary>
     [JsonProperty("administrative_area_level_2")]
     string County,
-    /// <summary>The 'City' parsed from the response. This property is set from the API's 'locality' JSON property.</summary>
+    /// <summary>The 'City' parsed from the response. This property is acquired from the JSON response's 'locality' property.</summary>
     [JsonProperty("locality")]
     string City,
-    /// <summary>The 'Municipality' parsed from the response. This property is set from the API's 'administrative_area_level_2' JSON property.</summary>
+    /// <summary>The 'Municipality' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_3' property.</summary>
     [JsonProperty("administrative_area_level_3")]
     string Municipality,
-    /// <summary>The 'ZipCode' parsed from the response. This property is set from the API's 'postal_code' JSON property.</summary>
+    /// <summary>The 'ZipCode' parsed from the response. This property is acquired from the JSON response's 'postal_code' property..</summary>
     [JsonProperty("postal_code")]
     int ZipCode,
-    /// <summary>The 'Address' parsed from the response. This property is set from the API's 'formatted_address' JSON property.</summary>
+    /// <summary>The 'Address' parsed from the response. This property is acquired from the JSON response's 'formatted_address' property..</summary>
     [JsonProperty("formatted_address")]
     string Address,
 
