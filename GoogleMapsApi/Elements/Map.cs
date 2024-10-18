@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace GoogleMapsWrapper.Elements;
 /// <summary>
 /// Defines a 'map' object and it's characteristics. 
-/// In the context of this application, it is primarily used as a parameter for methods within the StaticMapsApi. 
+/// It is primarily used as a parameter for methods within the StaticMapsApi. 
 /// </summary>
 public class Map : GoogleMapElement
 {
