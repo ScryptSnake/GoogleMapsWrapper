@@ -13,9 +13,17 @@ using GoogleMapsWrapper.Api;
 
 
 namespace GoogleMapsWrapper.Elements;
+/// <summary>
+/// Defines a 'marker' (placemark) object and it's characteristics. 
+/// <para> It describes a point on a map and it's location and appearance, particularly within the StaticMapsApi.  
+/// </summary>
 public class Marker : GoogleMapElement
 {
     private char label = '\0'; //initialize to null character
+
+    ///<summary> A label applied to the marker.
+    ///<para> Accepts values that are alpha-numerical, uppercase only. Single character.
+    ///</summary>
     public char Label
     {
         get => label;
@@ -35,8 +43,9 @@ public class Marker : GoogleMapElement
     public MarkerSizes Size;
     public StaticMapCustomIcon? CustomIcon { get; set; }
 
-    //24 bit hexedcimal string from color value (for static maps API)
+    ///<summary> The location of the marker. </summary>
     public GpsCoordinate Coordinate { get; }
+    ///<summary> Constructs a new marker instance. </summary>
     public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
     {
         this.Coordinate = Coordinate;
