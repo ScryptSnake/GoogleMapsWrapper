@@ -11,6 +11,7 @@ using GoogleMapsWrapper.Requests;
 
 
 namespace GoogleMapsWrapper.Responses;
+///<Summary>A response from the Api Engine that contains content in JsonDocument form.</Summary>
 public class JsonResponse : IResponse<JsonDocument>
 {
     private IRequest sentRequest;
@@ -21,6 +22,11 @@ public class JsonResponse : IResponse<JsonDocument>
 
     private JsonDocument content;
     public JsonDocument Content { get=>content; }
+
+    ///<Summary>Constructs a new instance of this object.</Summary>
+    ///<param>name=SentRequest>The attached request associated with the response.</param>
+    ///<param>name=Content>The raw http response returned from the endpoint.</param>
+    ///<param>name=ResponseMessage> The response message from the HttpClient used to send the request.</param>
     public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
     {
         content = Content;
