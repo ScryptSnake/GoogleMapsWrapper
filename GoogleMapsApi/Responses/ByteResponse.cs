@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 
 namespace GoogleMapsWrapper.Responses;
+///<Summary>A response from the Api Engine that contains content in byte[] form.</Summary>
 public class ByteResponse : IResponse<byte[]>
 {
     private IRequest sentRequest;
@@ -18,6 +19,12 @@ public class ByteResponse : IResponse<byte[]>
 
     public byte[]? content;
     public byte[]? Content { get=>content; }
+
+
+    ///<Summary>Constructs a new instance of this object.</Summary>
+    ///<param>name=SentRequest>The attached request associated with the response.</param>
+    ///<param>name=Content>The raw http response returned from the endpoint.</param>
+    ///<param>name=ResponseMessage> The response message from the HttpClient used to send the request.</param>
     public ByteResponse(IRequest SentRequest, byte[] Content, HttpResponseMessage ResponseMessage)
     {
         this.sentRequest = SentRequest;
