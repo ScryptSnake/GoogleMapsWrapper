@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Requests;
+///<Summary>Defines a request to be sent to the engine for HTTP sending.</Summary>
+///<Remarks>Note: This object's Uri property should never contain the user's API key.</Remarks>
 internal class ApiRequest : IRequest
 {
     public string? Id { get; }
-    //note:  Url should not every contain the API Key!, this is done in the engine and never exposed in a returned reponse.
     public Uri Url { get; } 
     public string Query { get => Url.Query; }
     public ApiTypes Api { get; }
