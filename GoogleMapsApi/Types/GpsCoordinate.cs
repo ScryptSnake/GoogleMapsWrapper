@@ -1,8 +1,11 @@
 ﻿using System.Globalization;
 
 namespace GoogleMapsWrapper.Types;
+
+///<Summary>A primitive type that represents a latitude/longitude GPS coordinate on Earth.</Summary>
 public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable
 {
+    ///<Summary>Constructs a new GpsCoordinate struct.</Summary>
     public GpsCoordinate(decimal latitude, decimal longitude)
     {
         Latitude = latitude;
@@ -14,15 +17,22 @@ public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable
     public override string ToString()
         => ToString(null, null);
 
+    ///<Summary>Parses a string to this type.</Summary>
+    ///<Param>name=s>A string to be parsed. Must be in format: 'latitude,longitude'. 
+    /// Values should be in decimal degree notation and must not contain any non-numerical characters except decimal or comma.</Param>
     public static GpsCoordinate Parse(string s)
     {
         if (TryParse(s, out var result))
             return result;
         throw new FormatException();
     }
+
+    ///<Summary>Attempts to parse a string to this type.</Summary>
+    ///<Param>name=s>A string to be parsed. Must be in format: 'latitude,longitude'. 
     public static bool TryParse(string? s, out GpsCoordinate result)
         => TryParse(s.AsSpan(), out result);
 
+    ///<Summary>Attempts to parse a ReadOnlySpan<char> to this type.</Summary>
     public static bool TryParse(ReadOnlySpan<char> s, out GpsCoordinate result)
     {
         result = default;
@@ -42,6 +52,7 @@ public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable
     }
     public string ToString(string? format, IFormatProvider? formatProvider)
     {
+    //TODO
         if (format is not null)
             throw new NotImplementedException();
         return $"{Latitude},{Longitude}";
