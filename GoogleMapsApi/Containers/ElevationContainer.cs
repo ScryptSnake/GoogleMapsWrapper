@@ -12,27 +12,26 @@ using System.Threading.Tasks;
 using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
-/// <summary>A object to hold parsed JSON data from Elevation API responses.</summary>
+///<summary>A object to hold parsed JSON data from Elevation API responses.</summary>
+///<param name="ElevationMeters"> The elevation in meters. </param>
+///<param name="Resolution"> Indicates the maximum distance between data points 
+///     from which the elevation was interpolated, in meters. 
+///     This property is acquired from the JSON response's 'administrative_area_level_1' property.</param>
+///<param name="ElevationFeet">The elevation in feet. This property is mathematically converted and not instrinsic to the API. </param>
+///<param name="Coordinates"> The GPS coordinate for the request.</param>
+///<param name="AssociatedData">Associated information about the data or it's source. This contains the IResponse.</param>
+///</Summary>
 public record ElevationContainer(
-    ///<Summary>The elevation in meters.</summary>
     [JsonProperty("elevation")]
     double ElevationMeters,
     
-    ///<Summary>Indicates the maximum distance between data points from which the elevation was interpolated, in meters.
-    ///<para>This property is acquired from the JSON response's 'administrative_area_level_1' property.</para>
-    ///</summary>
     [JsonProperty("resolution")]
     double Resolution,
     
-    ///<Summary>The elevation in feet. 
-    ///<para>Note: This property is mathematically converted by the caller/setter and is not instrinsic to the API.</para>
-    </summary>
     double ElevationFeet,
 
-    ///<Summary>Location of the request.</summary>
     GpsCoordinate? Coordinates,
     
-    ///<Summary>Associated data related to the request. This contains the IRequest object.</summary>.</summary>
    object? AssociatedData
 
     ) : IContainer

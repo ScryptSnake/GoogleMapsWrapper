@@ -14,38 +14,51 @@ using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
 /// <summary>A container to hold parsed JSON information from a GoecodeAPI response.</summary>
+///<param name="Country">This property is acquired from the JSON response's 'country' property.</param>
+///<param name="State">This property is acquired from the JSON response's 'administrative_area_level_1' property.</param>
+///<param name="County">This property is acquired from the JSON response's 'administrative_area_level_2' property.</param>
+///<param name="City">This property is acquired from the JSON response's 'locality' property.</param>
+///<param name="Municipality">This property is acquired from the JSON response's 'administrative_area_level_3' property.</param>
+///<param name="ZipCode">This property is acquired from the JSON response's 'postal_code' property.</param>
+///<param name="Address">This property is acquired from the JSON response's 'formatted_address' property.</param>
+///<param name="Coordinates"> The GPS coordinate for the request.</param>
+///<param name="AssociatedData">Associated information about the data or it's source. This contains the IResponse.</param>
 public record GeocodeContainer(
-    /// <summary>The 'Country' parsed from the response. This property is acquired from the JSON response's 'country' property.</summary>
     [JsonProperty("country")]
     string Country,
-    /// <summary>The 'State' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_1' property.</summary>
+
     [JsonProperty("administrative_area_level_1")]
     string State,
-    /// <summary>The 'County' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_2' property.</summary>
+
     [JsonProperty("administrative_area_level_2")]
     string County,
-    /// <summary>The 'City' parsed from the response. This property is acquired from the JSON response's 'locality' property.</summary>
+
     [JsonProperty("locality")]
     string City,
-    /// <summary>The 'Municipality' parsed from the response. This property is acquired from the JSON response's 'administrative_area_level_3' property.</summary>
+    
     [JsonProperty("administrative_area_level_3")]
     string Municipality,
-    /// <summary>The 'ZipCode' parsed from the response. This property is acquired from the JSON response's 'postal_code' property..</summary>
+    
     [JsonProperty("postal_code")]
     int ZipCode,
-    /// <summary>The 'Address' parsed from the response. This property is acquired from the JSON response's 'formatted_address' property..</summary>
+    
     [JsonProperty("formatted_address")]
     string Address,
-
-    /// <summary>The Gps Coordinate the request targets.</summary>
+   
     GpsCoordinate? Coordinates,
-    /// <summary>Associated data related to the request. This contains the IRequest object.</summary>
+   
    object? AssociatedData
 
     ) : IContainer
 {
     object? IContainer.AssociatedData => AssociatedData;
 
+    /// <summary>
+    /// Converts to string.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="System.String" /> that represents this instance.
+    /// </returns>
     public override string ToString()
     {
         // Use string interpolation and handle null values

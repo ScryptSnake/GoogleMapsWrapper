@@ -21,18 +21,22 @@ public class GeocodeApi
     private IApiEngine apiEngine { get; set; }
     public ApiTypes apiType { get; private set; } = ApiTypes.Maps;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GeocodeApi"/> class.
+    /// </summary>
+    /// <param name="engine">Instance of the API engine.</param>
     public GeocodeApi(IApiEngine engine)
     {
-        this.apiEngine = engine;
+        apiEngine = engine;
     }
 
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. A reponse is returned.
+    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. A reponse is returned./>
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
+    /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
     public async Task<IResponse<JsonDocument>> GeocodeAsync(string latitude, string longitude, string? identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
@@ -40,11 +44,11 @@ public class GeocodeApi
     }
 
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. A reponse is returned.
+    /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
     /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request about. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
+    /// <returns><inheritdoc cref="GeocodeAsync(string, string, string?)"></inheritdoc></returns>
     public async Task<IResponse<JsonDocument>> GeocodeAsync(GpsCoordinate coordinate, string? identifier = default)
     {
         //Grab the main API Url...
@@ -84,14 +88,14 @@ public class GeocodeApi
         var response = await GeocodeAsync(coordinate);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
-    
+
     /// <summary>
     /// Makes a request to the API endpoint for receiving elevation data about a coordinate.  A response is returned.
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
+    /// <returns>An <see cref="IResponse{JsonDocument}}"/>containing the raw JSON response from the Google API.</returns>
     public async Task<IResponse<JsonDocument>>GetElevationAsync(string latitude, string longitude, string? identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
