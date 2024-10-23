@@ -25,7 +25,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ElevationContainer
     path: ../../Containers/ElevationContainer.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Containers/ElevationContainer.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
@@ -76,7 +76,7 @@ items:
     parameters:
     - id: ElevationMeters
       type: System.Double
-      description: The elevation in unit meters.
+      description: The elevation in meters.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -85,7 +85,10 @@ items:
           value: elevation
     - id: Resolution
       type: System.Double
-      description: The elevation in meters.
+      description: >-
+        Indicates the maximum distance between data points 
+                from which the elevation was interpolated, in meters. 
+                This property is acquired from the JSON response's 'administrative_area_level_1' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -94,10 +97,13 @@ items:
           value: resolution
     - id: ElevationFeet
       type: System.Double
+      description: The elevation in feet. This property is mathematically converted and not instrinsic to the API.
     - id: Coordinates
       type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+      description: The GPS coordinate for the request.
     - id: AssociatedData
       type: System.Object
+      description: Associated information about the data or it's source. This contains the IResponse.
     content.vb: Public Sub New(ElevationMeters As Double, Resolution As Double, ElevationFeet As Double, Coordinates As GpsCoordinate?, AssociatedData As Object)
   overload: GoogleMapsWrapper.Containers.ElevationContainer.#ctor*
   nameWithType.vb: ElevationContainer.New(Double, Double, Double, GpsCoordinate?, Object)
@@ -121,11 +127,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ElevationMeters
     path: ../../Containers/ElevationContainer.cs
-    startLine: 18
+    startLine: 23
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: The elevation in unit meters.
+  summary: The elevation in meters.
   example: []
   syntax:
     content: public double ElevationMeters { get; init; }
@@ -152,11 +158,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Resolution
     path: ../../Containers/ElevationContainer.cs
-    startLine: 21
+    startLine: 26
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: The elevation in meters.
+  summary: >-
+    Indicates the maximum distance between data points 
+            from which the elevation was interpolated, in meters. 
+            This property is acquired from the JSON response's 'administrative_area_level_1' property.
   example: []
   syntax:
     content: public double Resolution { get; init; }
@@ -183,10 +192,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ElevationFeet
     path: ../../Containers/ElevationContainer.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: The elevation in feet. This property is mathematically converted and not instrinsic to the API.
+  example: []
   syntax:
     content: public double ElevationFeet { get; init; }
     parameters: []
@@ -212,10 +223,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Coordinates
     path: ../../Containers/ElevationContainer.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: The GPS coordinate for the request.
+  example: []
   syntax:
     content: public GpsCoordinate? Coordinates { get; init; }
     parameters: []
@@ -241,10 +254,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: AssociatedData
     path: ../../Containers/ElevationContainer.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: Associated information about the data or it's source. This contains the IResponse.
+  example: []
   syntax:
     content: public object? AssociatedData { get; init; }
     parameters: []

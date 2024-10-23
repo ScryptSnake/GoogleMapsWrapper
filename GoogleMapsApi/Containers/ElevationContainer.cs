@@ -20,7 +20,6 @@ namespace GoogleMapsWrapper.Containers;
 ///<param name="ElevationFeet">The elevation in feet. This property is mathematically converted and not instrinsic to the API. </param>
 ///<param name="Coordinates"> The GPS coordinate for the request.</param>
 ///<param name="AssociatedData">Associated information about the data or it's source. This contains the IResponse.</param>
-///</Summary>
 public record ElevationContainer(
     [JsonProperty("elevation")]
     double ElevationMeters,

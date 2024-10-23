@@ -22,12 +22,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GoogleMapsApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
   summary: >-
-    The entry point of the wrapper. Sub-API's are exposed:
+    The entry point of the wrapper. Exposes API objects to interact with the endpoint:
 
     <p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi" data-throw-if-not-resolved="false"></xref></p><p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi" data-throw-if-not-resolved="false"></xref></p>
   example: []
@@ -62,10 +62,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: An instance of the GeocodeApi.//
+  example: []
   syntax:
     content: public GeocodeApi GeocodeApi { get; }
     parameters: []
@@ -91,10 +93,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: StaticMapsApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 17
+    startLine: 23
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: An instance of the StaticMapsApi.///
+  example: []
   syntax:
     content: public StaticMapsApi StaticMapsApi { get; }
     parameters: []
@@ -120,7 +124,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 26
+    startLine: 32
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -156,6 +160,44 @@ references:
   name: StaticMapsApi
   nameWithType: GoogleMapsApi.StaticMapsApi
   fullName: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
+- uid: GoogleMapsWrapper.Engine.ApiEngine
+  commentId: T:GoogleMapsWrapper.Engine.ApiEngine
+  href: GoogleMapsWrapper.Engine.ApiEngine.html
+  name: ApiEngine
+  nameWithType: ApiEngine
+  fullName: GoogleMapsWrapper.Engine.ApiEngine
+- uid: GoogleMapsWrapper.Requests.IRequest
+  commentId: T:GoogleMapsWrapper.Requests.IRequest
+  parent: GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.Requests.IRequest.html
+  name: IRequest
+  nameWithType: IRequest
+  fullName: GoogleMapsWrapper.Requests.IRequest
+- uid: GoogleMapsWrapper.Responses.IResponse`1
+  commentId: T:GoogleMapsWrapper.Responses.IResponse`1
+  href: GoogleMapsWrapper.Responses.IResponse-1.html
+  name: IResponse<TResponse>
+  nameWithType: IResponse<TResponse>
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>
+  nameWithType.vb: IResponse(Of TResponse)
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse)
+  name.vb: IResponse(Of TResponse)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
 - uid: GoogleMapsWrapper.Api
   commentId: N:GoogleMapsWrapper.Api
   href: GoogleMapsWrapper.html
@@ -408,6 +450,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: GoogleMapsWrapper.Requests
+  commentId: N:GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Requests
+  nameWithType: GoogleMapsWrapper.Requests
+  fullName: GoogleMapsWrapper.Requests
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
 - uid: System
   commentId: N:System
   isExternal: true

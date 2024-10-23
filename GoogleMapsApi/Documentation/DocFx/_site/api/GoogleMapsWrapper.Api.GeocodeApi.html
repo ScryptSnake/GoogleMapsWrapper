@@ -157,10 +157,11 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi__ctor_GoogleMapsWrapper_Engine_IApiEngine_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.#ctor(GoogleMapsWrapper.Engine.IApiEngine)">
   GeocodeApi(IApiEngine)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="GoogleMapsWrapper.Api.GeocodeApi.html">GeocodeApi</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -170,7 +171,8 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>engine</code> <a class="xref" href="GoogleMapsWrapper.Engine.IApiEngine.html">IApiEngine</a></dt>
-    <dd></dd>
+    <dd><p>An instance of the API engine.</p>
+</dd>
   </dl>
 
 
@@ -188,10 +190,10 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
 
-  <a id="GoogleMapsWrapper_Api_GeocodeApi_apiType_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.apiType*"></a>
+  <a id="GoogleMapsWrapper_Api_GeocodeApi_ApiType_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.ApiType*"></a>
 
-  <h3 id="GoogleMapsWrapper_Api_GeocodeApi_apiType" data-uid="GoogleMapsWrapper.Api.GeocodeApi.apiType">
-  apiType
+  <h3 id="GoogleMapsWrapper_Api_GeocodeApi_ApiType" data-uid="GoogleMapsWrapper.Api.GeocodeApi.ApiType">
+  ApiType
   <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -199,7 +201,7 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApiTypes apiType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ApiTypes ApiType { get; }</code></pre>
   </div>
 
 
@@ -227,10 +229,11 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeAsync_GoogleMapsWrapper_Types_GpsCoordinate_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeAsync(GoogleMapsWrapper.Types.GpsCoordinate,System.String)">
   GeocodeAsync(GpsCoordinate, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -240,15 +243,18 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd></dd>
+    <dd><p>GpsCoordinate to target the request.</p>
+</dd>
     <dt><code>identifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string appended to the request object for tracking or identification.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument">JsonDocument</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse&lt;TResponse&gt;</a> containing the raw JSON response from the Google API.</p>
+</dd>
   </dl>
 
 
@@ -265,10 +271,11 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeAsync_System_String_System_String_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeAsync(System.String,System.String,System.String)">
   GeocodeAsync(string, string, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -278,17 +285,21 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>latitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Decimal degrees gps latitude.</p>
+</dd>
     <dt><code>longitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Decimal degrees gps longitude.</p>
+</dd>
     <dt><code>identifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string appended to the request object for tracking or identification.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument">JsonDocument</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse&lt;TResponse&gt;</a> containing the raw JSON response from the Google API.</p>
+</dd>
   </dl>
 
 
@@ -303,31 +314,33 @@ Class GeocodeApi  <a class="header-action link-secondary" title="View source" hr
 
   <a id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeParseAsync_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync*"></a>
 
-  <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeParseAsync_GoogleMapsWrapper_Types_GpsCoordinate_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync(GoogleMapsWrapper.Types.GpsCoordinate)">
-  GeocodeParseAsync(GpsCoordinate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeParseAsync_GoogleMapsWrapper_Types_GpsCoordinate_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync(GoogleMapsWrapper.Types.GpsCoordinate,System.String)">
+  GeocodeParseAsync(GpsCoordinate, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate.
-The response is parsed into a &gt;GeocodeContainer</p>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GeocodeContainer&gt; GeocodeParseAsync(GpsCoordinate coordinate)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GeocodeContainer&gt; GeocodeParseAsync(GpsCoordinate coordinate, string? identifier = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd><p>GpsCoordinate to target the request about.</p>
+    <dd><p>GpsCoordinate to target the request.</p>
+</dd>
+    <dt><code>identifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string appended to the request object for tracking or identification.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Containers.GeocodeContainer.html">GeocodeContainer</a>&gt;</dt>
-    <dd><p>A &gt;GeocodeContainer holding parsed results.</p>
+    <dd><p>A <a class="xref" href="GoogleMapsWrapper.Containers.GeocodeContainer.html">GeocodeContainer</a> holding data parsed from <a class="xref" href="GoogleMapsWrapper.Parsers.GeocodeParser.html">GeocodeParser</a>.</p>
 </dd>
   </dl>
 
@@ -345,11 +358,10 @@ The response is parsed into a &gt;GeocodeContainer</p>
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GeocodeParseAsync_System_String_System_String_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync(System.String,System.String,System.String)">
   GeocodeParseAsync(string, string, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate.
-The response is parsed into a &gt;GeocodeContainer</p>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -373,7 +385,7 @@ The response is parsed into a &gt;GeocodeContainer</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Containers.GeocodeContainer.html">GeocodeContainer</a>&gt;</dt>
-    <dd><p>A &gt;GeocodeContainer holding parsed results.</p>
+    <dd><p>A <a class="xref" href="GoogleMapsWrapper.Containers.GeocodeContainer.html">GeocodeContainer</a> holding data parsed from <a class="xref" href="GoogleMapsWrapper.Parsers.GeocodeParser.html">GeocodeParser</a>.</p>
 </dd>
   </dl>
 
@@ -391,10 +403,11 @@ The response is parsed into a &gt;GeocodeContainer</p>
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GetElevationAsync_GoogleMapsWrapper_Types_GpsCoordinate_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GetElevationAsync(GoogleMapsWrapper.Types.GpsCoordinate,System.String)">
   GetElevationAsync(GpsCoordinate, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -404,15 +417,18 @@ The response is parsed into a &gt;GeocodeContainer</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd></dd>
+    <dd><p>GpsCoordinate to target the request about.</p>
+</dd>
     <dt><code>identifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string appended to the request object for tracking or identification.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument">JsonDocument</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse&lt;TResponse&gt;</a> containing the raw JSON response from the Google API.</p>
+</dd>
   </dl>
 
 
@@ -429,10 +445,11 @@ The response is parsed into a &gt;GeocodeContainer</p>
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GetElevationAsync_System_String_System_String_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GetElevationAsync(System.String,System.String,System.String)">
   GetElevationAsync(string, string, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -442,17 +459,21 @@ The response is parsed into a &gt;GeocodeContainer</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>latitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Decimal degrees gps latitude.</p>
+</dd>
     <dt><code>longitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Decimal degrees gps longitude.</p>
+</dd>
     <dt><code>identifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A string appended to the request object for tracking or identification.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument">JsonDocument</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse&lt;TResponse&gt;</a> containing the raw JSON response from the Google API.</p>
+</dd>
   </dl>
 
 
@@ -469,10 +490,10 @@ The response is parsed into a &gt;GeocodeContainer</p>
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GetElevationParsedAsync_GoogleMapsWrapper_Types_GpsCoordinate_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GetElevationParsedAsync(GoogleMapsWrapper.Types.GpsCoordinate,System.String)">
   GetElevationParsedAsync(GpsCoordinate, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for receiving elevation data about a coordinate.  A container of parsed data is returned.</p>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -493,7 +514,7 @@ The response is parsed into a &gt;GeocodeContainer</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Containers.ElevationContainer.html">ElevationContainer</a>&gt;</dt>
-    <dd><p>An &gt;ElevationContainer holding parsed results.</p>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Containers.ElevationContainer.html">ElevationContainer</a> holding data parsed from <a class="xref" href="GoogleMapsWrapper.Parsers.ElevationParser.html">ElevationParser</a>.</p>
 </dd>
   </dl>
 
@@ -511,10 +532,10 @@ The response is parsed into a &gt;GeocodeContainer</p>
 
   <h3 id="GoogleMapsWrapper_Api_GeocodeApi_GetElevationParsedAsync_System_String_System_String_System_String_" data-uid="GoogleMapsWrapper.Api.GeocodeApi.GetElevationParsedAsync(System.String,System.String,System.String)">
   GetElevationParsedAsync(string, string, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Api/GeocodeApi.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for receiving elevation data about a coordinate.  A container of parsed data is returned.</p>
+  <div class="markdown level1 summary"><p>Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -538,7 +559,7 @@ The response is parsed into a &gt;GeocodeContainer</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="GoogleMapsWrapper.Containers.ElevationContainer.html">ElevationContainer</a>&gt;</dt>
-    <dd><p>An &gt;ElevationContainer holding parsed results.</p>
+    <dd><p>An <a class="xref" href="GoogleMapsWrapper.Containers.ElevationContainer.html">ElevationContainer</a> holding data parsed from <a class="xref" href="GoogleMapsWrapper.Parsers.ElevationParser.html">ElevationParser</a>.</p>
 </dd>
   </dl>
 

@@ -17,35 +17,41 @@ using System.Collections.ObjectModel;
 namespace GoogleMapsWrapper.Api;
 /// <summary>
 /// Provides methods for retrieiving a static image of a map from Google's Static API.
+/// <Remarks>This object leverages an <see cref="IApiEngine"/> 
+/// to send <see cref="IRequest"/>s and return data in form of <see cref="IResponse{TResponse}"/>s.</Remarks>
 /// </summary>
 public class StaticMapsApi
 {
     // Maximum length of a URL per Google API documentation.
-    private const int MAX_URL_LENGTH = 16384;  
+    private const int MAX_URL_LENGTH = 16384;
 
-    private IApiEngine apiEngine;
+    private IApiEngine apiEngine { get; set; }
 
     private ApiTypes apiType = ApiTypes.Maps;
-
 
     /// <summary>
     /// Initializes a new instance of the StaticMapsAPI.
     /// </summary>
-    /// <param name="engine"> An <see cref="IApiEngine" to manage API requests and responses./></param>
+    /// <param name="engine"> An <see cref="IApiEngine"></see> to process API requests and responses./></param>
     public StaticMapsApi(IApiEngine engine)
     {
         this.apiEngine = engine;
     }
 
+
     /// <summary>
-    /// Retrieves a response containing image content from provided map settings, markers(placemarks), and paths(polylines).
+    /// Makes a request to the API endpoint for a static map image.
     /// </summary>
-    /// <param name="mapSettings">A <see cref=>"Map"/> element that defines key features about the map.></param>
-    /// <param name="markers">Optional. "Markers"/>s to be included in the map.</param>
-    /// <param name="paths">Optional. <see cref=>"Polyline"/>s to be included in the map.</param>
+    /// <param name="mapSettings">A <see cref="Map"/> element that defines key features about the map.></param>
+    /// <param name="markers"> Optional. <see cref="Marker"/>s to be included in the map.</param>
+    /// <param name="paths">Optional. <see cref="Polyline"/>s to be included in the map.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw byte[] response from the Google API.</returns>
-    public async Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers=null, IEnumerable<Polyline>? paths=null)
+    /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw byte[] response from the Google API.</returns>
+    public async Task<IResponse<byte[]>> GetMapAsync(
+        Map mapSettings, 
+        IEnumerable<Marker>? markers = null, 
+        IEnumerable<Polyline>? paths = null, 
+        string? identifier = default)
     {
         // Assemble a URL for the API.
         var url = BuildUrl(mapSettings, markers, paths);
@@ -56,25 +62,28 @@ public class StaticMapsApi
         return response;
     }
 
-    /// <summary>
-    /// Retrieves a byte array containing image content from provided map settings, markers(placemarks), and paths(polylines).
-    /// </summary>
-    /// <param name="mapSettings">A <see cref=>"Map"/> element that defines key features about the map.></param>
-    /// <param name="markers">Optional. "Markers"/>s to be included in the map.</param>
-    /// <param name="paths">Optional. <see cref=>"Polyline"/>s to be included in the map.</param>
-    /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>A byte array of the image.</returns>
-    public async Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
-    {
-        //shortcut method
-        var response = await GetMapAsync(mapSettings, markers, paths);
-        return response.Content;
-    }
 
-    ///<summary>Assembles the URL to be provided to the engine for http processing.
-    /// Example of the base format: staticmap?center=Berkeley,CA&zoom=14&size=400x400
-    ///</summary>
-    /// <returns>A URI object for Google's API.</returns>
+    /// <summary>
+    /// <inheritdoc cref="GetMapAsync(Map, IEnumerable{Marker}?, IEnumerable{Polyline}?, string?)"/>
+    /// </summary>
+    /// <param name="mapSettings">A <see cref="Map"/> element that defines key features about the map.></param>
+    /// <param name="markers"> Optional. <see cref="Marker"/>s to be included in the map.</param>
+    /// <param name="paths">Optional. <see cref="Polyline"/>s to be included in the map.</param>
+    /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
+    /// <returns>A <see cref="byte"/> array containing the raw byte[] data of the image.</returns>
+    public async Task<byte[]?> GetMapBytesAsync(
+        Map mapSettings,
+        IEnumerable<Marker>? markers = null,
+        IEnumerable<Polyline>? paths = null,
+        string? identifier = default)
+        {
+            // Shortcut reference.
+            var response = await GetMapAsync(mapSettings, markers, paths);
+            return response.Content;
+        }
+
+    ///<summary>Assembles the URL to be provided to the engine for http processing.</summary>
+    ///<returns>A URI object for Google's API.</returns>
     private Uri BuildUrl(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
     {
         // Assemble a URL builder object from the engine's base URL.  
@@ -93,7 +102,7 @@ public class StaticMapsApi
         // Build a list of marker parameters, append to the URL builder.
         if (markers != null)
         {
-            foreach (var marker in buildMarkers(markers))
+            foreach (var marker in BuildMarkers(markers))
             {
                 builder.AppendQueryParam("markers", marker, true);
             }
@@ -102,7 +111,7 @@ public class StaticMapsApi
         // Build a list of path parameters, append to the URL builder.
         if (paths!= null)
         {
-            foreach (var path in buildPaths(paths))
+            foreach (var path in BuildPaths(paths))
             {
                 builder.AppendQueryParam("path", path,false);
             }
@@ -116,12 +125,13 @@ public class StaticMapsApi
         return builder.ToUri();
     }
 
+
     ///<summary>Converts a list of marker objects into a list of string, 
     ///    representing a URL query for the marker(s).
-    /// Note: This method url encodes each query value in the resultant list before output.
     ///</summary>
+    ///<remarks>This method url encodes each query value in the resultant list before output.</remarks>
     ///<returns>A list of string, where each value in the list represents a URL query for a marker. 
-    private List<string> buildMarkers(IEnumerable<Marker> markers)
+    private List<string> BuildMarkers(IEnumerable<Marker> markers)
     {
         // Filter out null markers, group by custom icon / no custom icon.
         var groupedMarkers = markers.Where(m => m != null).GroupBy(m => m.CustomIcon == null);
@@ -182,13 +192,14 @@ public class StaticMapsApi
         return output;
     }
 
+
     ///<summary>Converts a list of Polyline objects into a list of string, 
-    ///    representing a URL query for the polylines(s).
-    /// Note: This method uses an implementation of Google's Polyline encoding algorithm.
-    /// Each value in the resultant list contains an encoded parameter with the algorithm.
+    ///representing a URL query for the polylines(s).
     ///</summary>
+    ///<remarks>This method uses an implementation of Google's Polyline encoding algorithm.
+    /// Each value in the resultant list contains an encoded parameter with the algorithm.</remarks>
     ///<returns>A list of string, where each value in the list represents a URL query for a Poyline. 
-    private List<string> buildPaths(IEnumerable<Polyline> paths)
+    private List<string> BuildPaths(IEnumerable<Polyline> paths)
     {
         // Establish a constant for the pipe delimeter.
         // Note: This is not URL encoded.

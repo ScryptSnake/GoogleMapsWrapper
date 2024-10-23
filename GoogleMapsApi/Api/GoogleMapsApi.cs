@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Api;
 /// <summary>
-/// The entry point of the wrapper. Sub-API's are exposed:
+/// The entry point of the wrapper. Exposes API objects to interact with the endpoint:
 /// <para><see cref="GeocodeApi"/></para>
 /// <para><see cref="StaticMapsApi"/></para>
 /// </summary>
+///<Remarks>This object instantiates a new  <see cref="ApiEngine"/> 
+/// to send <see cref="IRequest"/>s and return data in form of <see cref="IResponse{TResponse}"/>s.</Remarks>
 public class GoogleMapsApi
 {
     private ApiEngine engine;
 
-    /// <summary> Exposes the GeocodeApi instance. /// </summary>
+    ///<summary>An instance of the GeocodeApi.// </summary>
     public GeocodeApi GeocodeApi { get; private set; }
 
-    /// <summary> Exposes the StaticMapsApi instance. /// </summary>
+    ///<summary>An instance of the StaticMapsApi./// </summary>
     public StaticMapsApi StaticMapsApi { get; private set; }
 
     /// <summary>
@@ -30,10 +32,10 @@ public class GoogleMapsApi
     /// 
     public GoogleMapsApi(HttpClient httpClient, IConfiguration config)
     {
-        //Instantiate a new API engine, provide client and config.
+        // Instantiate a new API engine, provide client and config.
         engine = new ApiEngine(httpClient,config);
 
-        //Construct sub-APIs.
+        // Construct sub-APIs.
         this.GeocodeApi = new GeocodeApi(engine);
         this.StaticMapsApi = new StaticMapsApi(engine);
     }

@@ -20,16 +20,16 @@ public static class FlurlExtensions
     public static Url SetQueryParamWithDefault(this Url url, string name,
         object? value, object? defaultValue, bool isEncoded = false)
     {
-        //initialize null string
+        // Initialize null string.
         string? stringValue = null;
-        //check if value is not null;
+        // Check if value is not null;
         if (value is not null)
         {
-            //convert to string
+            // Convert to string
             stringValue = value.ToString();
             if (string.IsNullOrWhiteSpace(stringValue))
             {
-                //Set as null so SetQueryParam() removes/doesn't add.
+                // Set as null so SetQueryParam() removes/doesn't add.
                 stringValue = null;
             }
         }

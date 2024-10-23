@@ -24,10 +24,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: JsonResponse
     path: ../../Responses/JsonResponse.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
+  example: []
   syntax:
     content: 'public class JsonResponse : IResponse<JsonDocument>'
     content.vb: Public Class JsonResponse Implements IResponse(Of JsonDocument)
@@ -61,7 +62,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: SentRequest
     path: ../../Responses/JsonResponse.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -93,7 +94,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ResponseMessage
     path: ../../Responses/JsonResponse.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -125,7 +126,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Content
     path: ../../Responses/JsonResponse.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -157,10 +158,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Responses/JsonResponse.cs
-    startLine: 23
+    startLine: 29
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
+  example: []
   syntax:
     content: public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
     parameters:
@@ -193,7 +195,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Responses/JsonResponse.cs
-    startLine: 29
+    startLine: 35
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses

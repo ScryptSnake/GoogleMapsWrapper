@@ -1,0 +1,17 @@
+﻿/* custom.css */
+
+/* Set the background color to white */
+body {
+    background-color: #ffffff; /* White background */
+    color: #0000ff; /* Blue text color */
+}
+
+/* Optional: Change link color to blue (default behavior) */
+a {
+    color: #0000ff; /* Blue links */
+}
+
+/* Optional: If you want to adjust the color of headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #0000ff; /* Blue headers */
+}

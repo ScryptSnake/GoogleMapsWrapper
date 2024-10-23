@@ -24,10 +24,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: IRequest
     path: ../../Requests/IRequest.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests
+  example: []
   syntax:
     content: public interface IRequest
     content.vb: Public Interface IRequest
@@ -49,7 +50,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Id
     path: ../../Requests/IRequest.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests
@@ -78,7 +79,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Url
     path: ../../Requests/IRequest.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests
@@ -107,7 +108,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Query
     path: ../../Requests/IRequest.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests
@@ -136,7 +137,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Api
     path: ../../Requests/IRequest.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests
@@ -165,7 +166,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Category
     path: ../../Requests/IRequest.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Requests

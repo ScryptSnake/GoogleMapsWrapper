@@ -6,8 +6,8 @@ items:
   parent: GoogleMapsWrapper.Api
   children:
   - GoogleMapsWrapper.Api.StaticMapsApi.#ctor(GoogleMapsWrapper.Engine.IApiEngine)
-  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
-  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
+  - GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
   langs:
   - csharp
   - vb
@@ -22,11 +22,16 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: StaticMapsApi
     path: ../../Api/StaticMapsApi.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Provides methods for retrieiving a static image of a map from Google's Static API.
+  summary: >-
+    Provides methods for retrieiving a static image of a map from Google's Static API.
+
+    <Remarks>This object leverages an <xref href="GoogleMapsWrapper.Engine.IApiEngine" data-throw-if-not-resolved="false"></xref> 
+
+    to send <xref href="GoogleMapsWrapper.Requests.IRequest" data-throw-if-not-resolved="false"></xref>s and return data in form of <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref>s.</Remarks>
   example: []
   syntax:
     content: public class StaticMapsApi
@@ -59,30 +64,33 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Api/StaticMapsApi.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: Initializes a new instance of the StaticMapsAPI.
+  example: []
   syntax:
     content: public StaticMapsApi(IApiEngine engine)
     parameters:
     - id: engine
       type: GoogleMapsWrapper.Engine.IApiEngine
+      description: An <xref href="GoogleMapsWrapper.Engine.IApiEngine" data-throw-if-not-resolved="false"></xref> to process API requests and responses./&gt;
     content.vb: Public Sub New(engine As IApiEngine)
   overload: GoogleMapsWrapper.Api.StaticMapsApi.#ctor*
   nameWithType.vb: StaticMapsApi.New(IApiEngine)
   fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.New(GoogleMapsWrapper.Engine.IApiEngine)
   name.vb: New(IApiEngine)
-- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
-  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
-  id: GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
+  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
+  id: GetMapAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
   parent: GoogleMapsWrapper.Api.StaticMapsApi
   langs:
   - csharp
   - vb
-  name: GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
-  nameWithType: StaticMapsApi.GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
-  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?)
+  name: GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?, string?)
+  nameWithType: StaticMapsApi.GetMapAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?, string?)
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?, string?)
   type: Method
   source:
     remote:
@@ -91,36 +99,45 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetMapAsync
     path: ../../Api/StaticMapsApi.cs
-    startLine: 47
+    startLine: 49
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: Makes a request to the API endpoint for a static map image.
+  example: []
   syntax:
-    content: public Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    content: public Task<IResponse<byte[]>> GetMapAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null, string? identifier = null)
     parameters:
     - id: mapSettings
       type: GoogleMapsWrapper.Elements.Map
+      description: A <xref href="GoogleMapsWrapper.Elements.Map" data-throw-if-not-resolved="false"></xref> element that defines key features about the map.&gt;
     - id: markers
       type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+      description: Optional. <xref href="GoogleMapsWrapper.Elements.Marker" data-throw-if-not-resolved="false"></xref>s to be included in the map.
     - id: paths
       type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+      description: Optional. <xref href="GoogleMapsWrapper.Elements.Polyline" data-throw-if-not-resolved="false"></xref>s to be included in the map.
+    - id: identifier
+      type: System.String
+      description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
-    content.vb: Public Function GetMapAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing) As Task(Of IResponse(Of Byte()))
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw byte[] response from the Google API.
+    content.vb: Public Function GetMapAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing, identifier As String = Nothing) As Task(Of IResponse(Of Byte()))
   overload: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync*
-  nameWithType.vb: StaticMapsApi.GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
-  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline))
-  name.vb: GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
-- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
-  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
-  id: GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline})
+  nameWithType.vb: StaticMapsApi.GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline), String)
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline), String)
+  name.vb: GetMapAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline), String)
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
+  commentId: M:GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
+  id: GetMapBytesAsync(GoogleMapsWrapper.Elements.Map,System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker},System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline},System.String)
   parent: GoogleMapsWrapper.Api.StaticMapsApi
   langs:
   - csharp
   - vb
-  name: GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
-  nameWithType: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?)
-  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?)
+  name: GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?, string?)
+  nameWithType: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable<Marker>?, IEnumerable<Polyline>?, string?)
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Marker>?, System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Elements.Polyline>?, string?)
   type: Method
   source:
     remote:
@@ -129,27 +146,75 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetMapBytesAsync
     path: ../../Api/StaticMapsApi.cs
-    startLine: 66
+    startLine: 73
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: Makes a request to the API endpoint for a static map image.
+  example: []
   syntax:
-    content: public Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null)
+    content: public Task<byte[]?> GetMapBytesAsync(Map mapSettings, IEnumerable<Marker>? markers = null, IEnumerable<Polyline>? paths = null, string? identifier = null)
     parameters:
     - id: mapSettings
       type: GoogleMapsWrapper.Elements.Map
+      description: A <xref href="GoogleMapsWrapper.Elements.Map" data-throw-if-not-resolved="false"></xref> element that defines key features about the map.&gt;
     - id: markers
       type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
+      description: Optional. <xref href="GoogleMapsWrapper.Elements.Marker" data-throw-if-not-resolved="false"></xref>s to be included in the map.
     - id: paths
       type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Polyline}
+      description: Optional. <xref href="GoogleMapsWrapper.Elements.Polyline" data-throw-if-not-resolved="false"></xref>s to be included in the map.
+    - id: identifier
+      type: System.String
+      description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{System.Byte[]}
-    content.vb: Public Function GetMapBytesAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing) As Task(Of Byte())
+      description: A <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array containing the raw byte[] data of the image.
+    content.vb: Public Function GetMapBytesAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing, identifier As String = Nothing) As Task(Of Byte())
   overload: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync*
-  nameWithType.vb: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
-  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline))
-  name.vb: GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline))
+  nameWithType.vb: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline), String)
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync(GoogleMapsWrapper.Elements.Map, System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Marker), System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Elements.Polyline), String)
+  name.vb: GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline), String)
 references:
+- uid: GoogleMapsWrapper.Engine.IApiEngine
+  commentId: T:GoogleMapsWrapper.Engine.IApiEngine
+  parent: GoogleMapsWrapper.Engine
+  href: GoogleMapsWrapper.Engine.IApiEngine.html
+  name: IApiEngine
+  nameWithType: IApiEngine
+  fullName: GoogleMapsWrapper.Engine.IApiEngine
+- uid: GoogleMapsWrapper.Requests.IRequest
+  commentId: T:GoogleMapsWrapper.Requests.IRequest
+  parent: GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.Requests.IRequest.html
+  name: IRequest
+  nameWithType: IRequest
+  fullName: GoogleMapsWrapper.Requests.IRequest
+- uid: GoogleMapsWrapper.Responses.IResponse`1
+  commentId: T:GoogleMapsWrapper.Responses.IResponse`1
+  href: GoogleMapsWrapper.Responses.IResponse-1.html
+  name: IResponse<TResponse>
+  nameWithType: IResponse<TResponse>
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>
+  nameWithType.vb: IResponse(Of TResponse)
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse)
+  name.vb: IResponse(Of TResponse)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
 - uid: GoogleMapsWrapper.Api
   commentId: N:GoogleMapsWrapper.Api
   href: GoogleMapsWrapper.html
@@ -402,29 +467,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: GoogleMapsWrapper.Api.StaticMapsApi.#ctor*
-  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.#ctor
-  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi__ctor_GoogleMapsWrapper_Engine_IApiEngine_
-  name: StaticMapsApi
-  nameWithType: StaticMapsApi.StaticMapsApi
-  fullName: GoogleMapsWrapper.Api.StaticMapsApi.StaticMapsApi
-  nameWithType.vb: StaticMapsApi.New
-  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.New
-  name.vb: New
-- uid: GoogleMapsWrapper.Engine.IApiEngine
-  commentId: T:GoogleMapsWrapper.Engine.IApiEngine
-  parent: GoogleMapsWrapper.Engine
-  href: GoogleMapsWrapper.Engine.IApiEngine.html
-  name: IApiEngine
-  nameWithType: IApiEngine
-  fullName: GoogleMapsWrapper.Engine.IApiEngine
 - uid: GoogleMapsWrapper.Engine
   commentId: N:GoogleMapsWrapper.Engine
   href: GoogleMapsWrapper.html
@@ -447,12 +489,44 @@ references:
   - uid: GoogleMapsWrapper.Engine
     name: Engine
     href: GoogleMapsWrapper.Engine.html
-- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync*
-  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
-  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__
-  name: GetMapAsync
-  nameWithType: StaticMapsApi.GetMapAsync
-  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
+- uid: GoogleMapsWrapper.Requests
+  commentId: N:GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Requests
+  nameWithType: GoogleMapsWrapper.Requests
+  fullName: GoogleMapsWrapper.Requests
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.#ctor
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi__ctor_GoogleMapsWrapper_Engine_IApiEngine_
+  name: StaticMapsApi
+  nameWithType: StaticMapsApi.StaticMapsApi
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.StaticMapsApi
+  nameWithType.vb: StaticMapsApi.New
+  fullName.vb: GoogleMapsWrapper.Api.StaticMapsApi.New
+  name.vb: New
 - uid: GoogleMapsWrapper.Elements.Map
   commentId: T:GoogleMapsWrapper.Elements.Map
   parent: GoogleMapsWrapper.Elements
@@ -460,6 +534,25 @@ references:
   name: Map
   nameWithType: Map
   fullName: GoogleMapsWrapper.Elements.Map
+- uid: GoogleMapsWrapper.Elements.Marker
+  commentId: T:GoogleMapsWrapper.Elements.Marker
+  href: GoogleMapsWrapper.Elements.Marker.html
+  name: Marker
+  nameWithType: Marker
+  fullName: GoogleMapsWrapper.Elements.Marker
+- uid: GoogleMapsWrapper.Elements.Polyline
+  commentId: T:GoogleMapsWrapper.Elements.Polyline
+  parent: GoogleMapsWrapper.Elements
+  href: GoogleMapsWrapper.Elements.Polyline.html
+  name: Polyline
+  nameWithType: Polyline
+  fullName: GoogleMapsWrapper.Elements.Polyline
+- uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__System_String_
+  name: GetMapAsync
+  nameWithType: StaticMapsApi.GetMapAsync
+  fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapAsync
 - uid: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
   commentId: T:System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Elements.Marker}
   parent: System.Collections.Generic
@@ -526,6 +619,17 @@ references:
     name: Polyline
     href: GoogleMapsWrapper.Elements.Polyline.html
   - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
   commentId: T:System.Threading.Tasks.Task{GoogleMapsWrapper.Responses.IResponse{System.Byte[]}}
   parent: System.Threading.Tasks
@@ -729,9 +833,19 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
 - uid: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync*
   commentId: Overload:GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync
-  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapBytesAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__
+  href: GoogleMapsWrapper.Api.StaticMapsApi.html#GoogleMapsWrapper_Api_StaticMapsApi_GetMapBytesAsync_GoogleMapsWrapper_Elements_Map_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Marker__System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Elements_Polyline__System_String_
   name: GetMapBytesAsync
   nameWithType: StaticMapsApi.GetMapBytesAsync
   fullName: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync

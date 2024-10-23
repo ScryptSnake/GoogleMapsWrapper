@@ -14,16 +14,14 @@ using GoogleMapsWrapper.Api;
 
 namespace GoogleMapsWrapper.Elements;
 /// <summary>
-/// Defines a 'marker' (placemark) object and it's characteristics. 
-/// <para> It describes a point on a map and it's location and appearance, particularly within the StaticMapsApi.  
+/// Defines a 'marker' (placemark) object and it's characteristics.  
 /// </summary>
 public class Marker : GoogleMapElement
 {
     private char label = '\0'; //initialize to null character
 
-    ///<summary> A label applied to the marker.
-    ///<para> Accepts values that are alpha-numerical, uppercase only. Single character.
-    ///</summary>
+    ///<summary> A label applied to the marker.</summary>
+    ///<remarks>Accepts values that are alpha-numerical, uppercase only. Single character.</remarks>
     public char Label
     {
         get => label;
@@ -39,10 +37,10 @@ public class Marker : GoogleMapElement
         }
     }
     
-    ///<summary>Affects the scale of the marker graphic rendered on a static map. </summary>
+    ///<summary>Affects the scale of the marker graphic rendered on a static map.</summary>
     public MarkerScaleTypes Scale;
     
-    ///<summary>Affects the scale of the marker graphic rendered on a static map. </summary>
+    ///<summary>Affects the scale of the marker graphic rendered on a static map.</summary>
     public MarkerSizes Size;
 
     ///<summary>A custom icon to represent the marker. </summary>

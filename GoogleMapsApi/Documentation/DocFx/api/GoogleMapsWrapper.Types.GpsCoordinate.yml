@@ -32,10 +32,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GpsCoordinate
     path: ../../Types/GpsCoordinate.cs
-    startLine: 3
+    startLine: 5
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
+  example: []
   syntax:
     content: 'public readonly struct GpsCoordinate : IEquatable<GpsCoordinate>, IFormattable'
     content.vb: Public Structure GpsCoordinate Implements IEquatable(Of GpsCoordinate), IFormattable
@@ -64,10 +65,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Types/GpsCoordinate.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
+  example: []
   syntax:
     content: public GpsCoordinate(decimal latitude, decimal longitude)
     parameters:
@@ -98,7 +100,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Latitude
     path: ../../Types/GpsCoordinate.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -127,7 +129,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Longitude
     path: ../../Types/GpsCoordinate.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -156,7 +158,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ToString
     path: ../../Types/GpsCoordinate.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -188,10 +190,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Types/GpsCoordinate.cs
-    startLine: 16
+    startLine: 22
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
+  example: []
   syntax:
     content: public static GpsCoordinate Parse(string s)
     parameters:
@@ -222,7 +225,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: TryParse
     path: ../../Types/GpsCoordinate.cs
-    startLine: 22
+    startLine: 31
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -258,7 +261,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: TryParse
     path: ../../Types/GpsCoordinate.cs
-    startLine: 25
+    startLine: 35
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -294,7 +297,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ToString
     path: ../../Types/GpsCoordinate.cs
-    startLine: 42
+    startLine: 52
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -347,7 +350,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Equals
     path: ../../Types/GpsCoordinate.cs
-    startLine: 48
+    startLine: 59
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -384,7 +387,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Equals
     path: ../../Types/GpsCoordinate.cs
-    startLine: 50
+    startLine: 61
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -423,7 +426,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetHashCode
     path: ../../Types/GpsCoordinate.cs
-    startLine: 52
+    startLine: 63
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -455,7 +458,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: op_Equality
     path: ../../Types/GpsCoordinate.cs
-    startLine: 53
+    startLine: 64
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types
@@ -491,7 +494,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: op_Inequality
     path: ../../Types/GpsCoordinate.cs
-    startLine: 55
+    startLine: 66
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Types

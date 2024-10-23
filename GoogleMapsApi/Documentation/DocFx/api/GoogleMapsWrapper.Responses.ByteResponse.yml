@@ -25,10 +25,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ByteResponse
     path: ../../Responses/ByteResponse.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
+  example: []
   syntax:
     content: 'public class ByteResponse : IResponse<byte[]>'
     content.vb: Public Class ByteResponse Implements IResponse(Of Byte())
@@ -62,7 +63,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: SentRequest
     path: ../../Responses/ByteResponse.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -94,7 +95,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ResponseMessage
     path: ../../Responses/ByteResponse.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -126,7 +127,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: content
     path: ../../Responses/ByteResponse.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -153,7 +154,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Content
     path: ../../Responses/ByteResponse.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -185,10 +186,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Responses/ByteResponse.cs
-    startLine: 20
+    startLine: 27
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
+  example: []
   syntax:
     content: public ByteResponse(IRequest SentRequest, byte[] Content, HttpResponseMessage ResponseMessage)
     parameters:
@@ -221,7 +223,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Responses/ByteResponse.cs
-    startLine: 26
+    startLine: 33
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses

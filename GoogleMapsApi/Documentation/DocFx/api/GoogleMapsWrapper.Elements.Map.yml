@@ -33,7 +33,7 @@ items:
   summary: >-
     Defines a 'map' object and it's characteristics. 
 
-    In the context of this application, it is primarily used as a parameter for methods within the StaticMapsApi.
+    It is primarily used as a parameter for methods within the StaticMapsApi.
   example: []
   syntax:
     content: 'public class Map : GoogleMapElement'

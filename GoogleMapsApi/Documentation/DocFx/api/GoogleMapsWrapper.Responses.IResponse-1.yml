@@ -23,10 +23,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: IResponse
     path: ../../Responses/IResponse.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
+  example: []
   syntax:
     content: public interface IResponse<TResponse>
     typeParameters:
@@ -53,7 +54,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: SentRequest
     path: ../../Responses/IResponse.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -84,7 +85,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ResponseMessage
     path: ../../Responses/IResponse.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -115,7 +116,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Content
     path: ../../Responses/IResponse.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -146,7 +147,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Responses/IResponse.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses

@@ -21,10 +21,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ElevationParser
     path: ../../Parsers/ElevationParser.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
+  example: []
   syntax:
     content: 'public class ElevationParser : IParser<ElevationContainer, JsonDocument>'
     content.vb: Public Class ElevationParser Implements IParser(Of ElevationContainer, JsonDocument)
@@ -58,7 +59,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: TryParse
     path: ../../Parsers/ElevationParser.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
@@ -97,7 +98,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Parsers/ElevationParser.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers

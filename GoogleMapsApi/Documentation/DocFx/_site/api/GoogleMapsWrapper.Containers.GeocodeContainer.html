@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GeocodeContainer | docfx_site ">
       
-      
+      <meta name="description" content="A container to hold parsed JSON information from a GoecodeAPI response.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="GoogleMapsWrapper_Containers_GeocodeContainer" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer" class="text-break">
-Class GeocodeContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class GeocodeContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>GoogleMapsWrapper.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>A container to hold parsed JSON information from a GoecodeAPI response.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,10 +161,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer__ctor_System_String_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Nullable_GoogleMapsWrapper_Types_GpsCoordinate__System_Object_" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)">
   GeocodeContainer(string, string, string, string, string, int, string, GpsCoordinate?, object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A container to hold parsed JSON information from a GoecodeAPI response.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -173,23 +175,32 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>Country</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'country' property.</p>
+</dd>
     <dt><code>State</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'administrative_area_level_1' property.</p>
+</dd>
     <dt><code>County</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'administrative_area_level_2' property.</p>
+</dd>
     <dt><code>City</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'locality' property.</p>
+</dd>
     <dt><code>Municipality</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'administrative_area_level_3' property.</p>
+</dd>
     <dt><code>ZipCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'postal_code' property.</p>
+</dd>
     <dt><code>Address</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>This property is acquired from the JSON response's 'formatted_address' property.</p>
+</dd>
     <dt><code>Coordinates</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>?</dt>
-    <dd></dd>
+    <dd><p>The GPS coordinate for the request.</p>
+</dd>
     <dt><code>AssociatedData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>Associated information about the data or it's source. This contains the IResponse.</p>
+</dd>
   </dl>
 
 
@@ -211,10 +222,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_Address" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.Address">
   Address
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'formatted_address' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -242,10 +254,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_AssociatedData" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.AssociatedData">
   AssociatedData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Associated information about the data or it's source. This contains the IResponse.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -273,10 +286,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_City" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.City">
   City
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'locality' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -304,10 +318,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_Coordinates" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.Coordinates">
   Coordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The GPS coordinate for the request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -335,10 +350,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_Country" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.Country">
   Country
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'country' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -366,10 +382,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_County" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.County">
   County
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'administrative_area_level_2' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -397,10 +414,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_Municipality" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.Municipality">
   Municipality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'administrative_area_level_3' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -428,10 +446,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_State" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.State">
   State
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'administrative_area_level_1' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -459,10 +478,11 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_ZipCode" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.ZipCode">
   ZipCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This property is acquired from the JSON response's 'postal_code' property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -494,10 +514,10 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 
   <h3 id="GoogleMapsWrapper_Containers_GeocodeContainer_ToString" data-uid="GoogleMapsWrapper.Containers.GeocodeContainer.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+  <div class="markdown level1 summary"><p>Converts to string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -509,7 +529,7 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that represents the current object.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents this instance.</p>
 </dd>
   </dl>
 
@@ -527,7 +547,7 @@ Class GeocodeContainer  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/GeocodeContainer.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -21,10 +21,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeParser
     path: ../../Parsers/GoecodeParser.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
+  example: []
   syntax:
     content: 'public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>'
     content.vb: Public Class GeocodeParser Implements IParser(Of GeocodeContainer, JsonDocument)
@@ -58,7 +59,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: TryParse
     path: ../../Parsers/GoecodeParser.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
@@ -97,7 +98,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Parsers/GoecodeParser.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers

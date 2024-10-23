@@ -23,10 +23,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: StaticMapCustomIcon
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: An object that represents a custom icon for a marker. The source must be a Uri of an image.
+  example: []
   syntax:
     content: 'public record StaticMapCustomIcon : IEquatable<StaticMapCustomIcon>'
     content.vb: Public Class StaticMapCustomIcon Implements IEquatable(Of StaticMapCustomIcon)
@@ -60,10 +62,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
+  summary: An object that represents a custom icon for a marker. The source must be a Uri of an image.
+  example: []
   syntax:
     content: public StaticMapCustomIcon(Uri Uri, MarkerIconAnchorTypes AnchorType = MarkerIconAnchorTypes.Center)
     parameters:
@@ -94,7 +98,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Uri
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -123,7 +127,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: AnchorType
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -152,7 +156,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api

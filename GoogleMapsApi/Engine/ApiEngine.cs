@@ -22,9 +22,15 @@ using Microsoft.Extensions.Configuration;
 
 
 namespace GoogleMapsWrapper.Engine;
+
+/// <summary>
+/// An implementation of <see cref="IApiEngine"/> to send <see cref="IRequest"/>s
+/// and return data in form of <see cref="IResponse{TResponse}"/>s.
+/// </summary>
+/// <remarks>This layer of the application operates closest to the endpoint
+/// by using <see cref="HttpClient"/> to send HTTPGet requests.</remarks>
+/// <seealso cref="GoogleMapsWrapper.Engine.IApiEngine" />
 public class ApiEngine : IApiEngine
-    //The API engine is responsible for receiving IRequests and sending via http GET.
-    //The methods in the engine return an IResponse to the caller for processing.
 {
     private readonly string key;
     private readonly HttpClient httpClient;

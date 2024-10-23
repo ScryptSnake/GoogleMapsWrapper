@@ -30,10 +30,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeContainer
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: A container to hold parsed JSON information from a GoecodeAPI response.
+  example: []
   syntax:
     content: 'public record GeocodeContainer : IContainer, IEquatable<GeocodeContainer>'
     content.vb: Public Class GeocodeContainer Implements IContainer, IEquatable(Of GeocodeContainer)
@@ -67,15 +69,18 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: A container to hold parsed JSON information from a GoecodeAPI response.
+  example: []
   syntax:
     content: public GeocodeContainer(string Country, string State, string County, string City, string Municipality, int ZipCode, string Address, GpsCoordinate? Coordinates, object? AssociatedData)
     parameters:
     - id: Country
       type: System.String
+      description: This property is acquired from the JSON response's 'country' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -84,6 +89,7 @@ items:
           value: country
     - id: State
       type: System.String
+      description: This property is acquired from the JSON response's 'administrative_area_level_1' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -92,6 +98,7 @@ items:
           value: administrative_area_level_1
     - id: County
       type: System.String
+      description: This property is acquired from the JSON response's 'administrative_area_level_2' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -100,6 +107,7 @@ items:
           value: administrative_area_level_2
     - id: City
       type: System.String
+      description: This property is acquired from the JSON response's 'locality' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -108,6 +116,7 @@ items:
           value: locality
     - id: Municipality
       type: System.String
+      description: This property is acquired from the JSON response's 'administrative_area_level_3' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -116,6 +125,7 @@ items:
           value: administrative_area_level_3
     - id: ZipCode
       type: System.Int32
+      description: This property is acquired from the JSON response's 'postal_code' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -124,6 +134,7 @@ items:
           value: postal_code
     - id: Address
       type: System.String
+      description: This property is acquired from the JSON response's 'formatted_address' property.
       attributes:
       - type: Newtonsoft.Json.JsonPropertyAttribute
         ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
@@ -132,8 +143,10 @@ items:
           value: formatted_address
     - id: Coordinates
       type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+      description: The GPS coordinate for the request.
     - id: AssociatedData
       type: System.Object
+      description: Associated information about the data or it's source. This contains the IResponse.
     content.vb: Public Sub New(Country As String, State As String, County As String, City As String, Municipality As String, ZipCode As Integer, Address As String, Coordinates As GpsCoordinate?, AssociatedData As Object)
   overload: GoogleMapsWrapper.Containers.GeocodeContainer.#ctor*
   nameWithType.vb: GeocodeContainer.New(String, String, String, String, String, Integer, String, GpsCoordinate?, Object)
@@ -157,10 +170,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Country
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 17
+    startLine: 26
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'country' property.
+  example: []
   syntax:
     content: public string Country { get; init; }
     parameters: []
@@ -186,10 +201,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: State
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 20
+    startLine: 29
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'administrative_area_level_1' property.
+  example: []
   syntax:
     content: public string State { get; init; }
     parameters: []
@@ -215,10 +232,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: County
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 23
+    startLine: 32
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'administrative_area_level_2' property.
+  example: []
   syntax:
     content: public string County { get; init; }
     parameters: []
@@ -244,10 +263,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: City
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 26
+    startLine: 35
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'locality' property.
+  example: []
   syntax:
     content: public string City { get; init; }
     parameters: []
@@ -273,10 +294,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Municipality
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 29
+    startLine: 38
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'administrative_area_level_3' property.
+  example: []
   syntax:
     content: public string Municipality { get; init; }
     parameters: []
@@ -302,10 +325,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ZipCode
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 32
+    startLine: 41
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'postal_code' property.
+  example: []
   syntax:
     content: public int ZipCode { get; init; }
     parameters: []
@@ -331,10 +356,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Address
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 35
+    startLine: 44
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: This property is acquired from the JSON response's 'formatted_address' property.
+  example: []
   syntax:
     content: public string Address { get; init; }
     parameters: []
@@ -360,10 +387,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Coordinates
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 39
+    startLine: 47
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: The GPS coordinate for the request.
+  example: []
   syntax:
     content: public GpsCoordinate? Coordinates { get; init; }
     parameters: []
@@ -389,10 +418,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: AssociatedData
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 41
+    startLine: 49
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: Associated information about the data or it's source. This contains the IResponse.
+  example: []
   syntax:
     content: public object? AssociatedData { get; init; }
     parameters: []
@@ -418,17 +449,17 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ToString
     path: ../../Containers/GeocodeContainer.cs
-    startLine: 47
+    startLine: 61
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: Returns a string that represents the current object.
+  summary: Converts to string.
   example: []
   syntax:
     content: public override string ToString()
     return:
       type: System.String
-      description: A string that represents the current object.
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that represents this instance.
     content.vb: Public Overrides Function ToString() As String
   overridden: System.Object.ToString
   overload: GoogleMapsWrapper.Containers.GeocodeContainer.ToString*

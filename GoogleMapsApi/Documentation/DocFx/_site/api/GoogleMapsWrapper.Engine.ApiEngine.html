@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ApiEngine | docfx_site ">
       
-      
+      <meta name="description" content="An implementation of  to send s and return data in form of s.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="GoogleMapsWrapper_Engine_ApiEngine" data-uid="GoogleMapsWrapper.Engine.ApiEngine" class="text-break">
-Class ApiEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Class ApiEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,9 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>GoogleMapsWrapper.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>An implementation of <a class="xref" href="GoogleMapsWrapper.Engine.IApiEngine.html">IApiEngine</a> to send <a class="xref" href="GoogleMapsWrapper.Requests.IRequest.html">IRequest</a>s
+and return data in form of <a class="xref" href="GoogleMapsWrapper.Responses.IResponse-1.html">IResponse&lt;TResponse&gt;</a>s.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -152,6 +154,10 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h2 id="GoogleMapsWrapper_Engine_ApiEngine_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This layer of the application operates closest to the endpoint
+by using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> to send HTTPGet requests.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -162,7 +168,7 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="GoogleMapsWrapper_Engine_ApiEngine__ctor_System_Net_Http_HttpClient_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="GoogleMapsWrapper.Engine.ApiEngine.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)">
   ApiEngine(HttpClient, IConfiguration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -199,7 +205,7 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="GoogleMapsWrapper_Engine_ApiEngine_BaseUrl" data-uid="GoogleMapsWrapper.Engine.ApiEngine.BaseUrl">
   BaseUrl
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -234,7 +240,7 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="GoogleMapsWrapper_Engine_ApiEngine_GetBytesAsync_GoogleMapsWrapper_Requests_IRequest_" data-uid="GoogleMapsWrapper.Engine.ApiEngine.GetBytesAsync(GoogleMapsWrapper.Requests.IRequest)">
   GetBytesAsync(IRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Make a GET request to the API endpoint and return a byte array response.</p>
@@ -271,7 +277,7 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="GoogleMapsWrapper_Engine_ApiEngine_GetJsonAsync_GoogleMapsWrapper_Requests_IRequest_" data-uid="GoogleMapsWrapper.Engine.ApiEngine.GetJsonAsync(GoogleMapsWrapper.Requests.IRequest)">
   GetJsonAsync(IRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Make a GET request to the API endpoint and return a JSON response.</p>
@@ -304,11 +310,15 @@ Class ApiEngine  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="GoogleMapsWrapper.Engine.IApiEngine.html">IApiEngine</a></div>
+  </div>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/ApiEngine.cs/#L33" class="edit-link">Edit this page</a>
         </div>
 
 

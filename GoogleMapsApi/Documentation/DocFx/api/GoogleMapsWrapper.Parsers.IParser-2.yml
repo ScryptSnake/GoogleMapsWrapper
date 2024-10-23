@@ -21,10 +21,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: IParser
     path: ../../Parsers/IParser.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
+  example: []
   syntax:
     content: public interface IParser<TOutput, TInput>
     typeParameters:
@@ -52,7 +53,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Parsers/IParser.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers
@@ -85,7 +86,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: TryParse
     path: ../../Parsers/IParser.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Parsers

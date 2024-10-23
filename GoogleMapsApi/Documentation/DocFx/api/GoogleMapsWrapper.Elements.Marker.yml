@@ -25,10 +25,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Marker
     path: ../../Elements/Marker.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Defines a 'marker' (placemark) object and it's characteristics.
+  example: []
   syntax:
     content: 'public class Marker : GoogleMapElement'
     content.vb: Public Class Marker Inherits GoogleMapElement
@@ -69,10 +71,13 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Label
     path: ../../Elements/Marker.cs
-    startLine: 18
+    startLine: 24
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: A label applied to the marker.
+  remarks: Accepts values that are alpha-numerical, uppercase only. Single character.
+  example: []
   syntax:
     content: public char Label { get; set; }
     parameters: []
@@ -98,10 +103,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Scale
     path: ../../Elements/Marker.cs
-    startLine: 33
+    startLine: 40
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Affects the scale of the marker graphic rendered on a static map.
+  example: []
   syntax:
     content: public MarkerScaleTypes Scale
     return:
@@ -125,10 +132,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Size
     path: ../../Elements/Marker.cs
-    startLine: 34
+    startLine: 43
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Affects the scale of the marker graphic rendered on a static map.
+  example: []
   syntax:
     content: public MarkerSizes Size
     return:
@@ -152,10 +161,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: CustomIcon
     path: ../../Elements/Marker.cs
-    startLine: 35
+    startLine: 46
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: A custom icon to represent the marker.
+  example: []
   syntax:
     content: public StaticMapCustomIcon? CustomIcon { get; set; }
     parameters: []
@@ -181,10 +192,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Coordinate
     path: ../../Elements/Marker.cs
-    startLine: 38
+    startLine: 49
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: The location of the marker.
+  example: []
   syntax:
     content: public GpsCoordinate Coordinate { get; }
     parameters: []
@@ -210,10 +223,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/Marker.cs
-    startLine: 39
+    startLine: 53
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Constructs a new marker instance.
+  example: []
   syntax:
     content: public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
     parameters:

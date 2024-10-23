@@ -20,10 +20,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: IContainer
     path: ../../Containers/IContainer.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: Describes a container object used to hold parsed data from an API response.
+  example: []
   syntax:
     content: public interface IContainer
     content.vb: Public Interface IContainer
@@ -45,10 +47,12 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: AssociatedData
     path: ../../Containers/IContainer.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
+  summary: A propery to append data to the container.
+  example: []
   syntax:
     content: object? AssociatedData { get; }
     parameters: []

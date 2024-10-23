@@ -89,7 +89,7 @@
 
 
   <h1 id="GoogleMapsWrapper_Containers_ElevationContainer" data-uid="GoogleMapsWrapper.Containers.ElevationContainer" class="text-break">
-Class ElevationContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L18"><i class="bi bi-code-slash"></i></a>
+Class ElevationContainer  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -164,7 +164,7 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer__ctor_System_Double_System_Double_System_Double_System_Nullable_GoogleMapsWrapper_Types_GpsCoordinate__System_Object_" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.#ctor(System.Double,System.Double,System.Double,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.Object)">
   ElevationContainer(double, double, double, GpsCoordinate?, object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A object to hold parsed JSON data from Elevation API responses.</p>
@@ -178,17 +178,22 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ElevationMeters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The elevation in unit meters.</p>
-</dd>
-    <dt><code>Resolution</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The elevation in meters.</p>
 </dd>
+    <dt><code>Resolution</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Indicates the maximum distance between data points
+from which the elevation was interpolated, in meters.
+This property is acquired from the JSON response's 'administrative_area_level_1' property.</p>
+</dd>
     <dt><code>ElevationFeet</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>The elevation in feet. This property is mathematically converted and not instrinsic to the API.</p>
+</dd>
     <dt><code>Coordinates</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>?</dt>
-    <dd></dd>
+    <dd><p>The GPS coordinate for the request.</p>
+</dd>
     <dt><code>AssociatedData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>Associated information about the data or it's source. This contains the IResponse.</p>
+</dd>
   </dl>
 
 
@@ -210,10 +215,11 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer_AssociatedData" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.AssociatedData">
   AssociatedData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Associated information about the data or it's source. This contains the IResponse.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -241,10 +247,11 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer_Coordinates" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.Coordinates">
   Coordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The GPS coordinate for the request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -272,10 +279,11 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer_ElevationFeet" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.ElevationFeet">
   ElevationFeet
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The elevation in feet. This property is mathematically converted and not instrinsic to the API.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -303,10 +311,10 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer_ElevationMeters" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.ElevationMeters">
   ElevationMeters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The elevation in unit meters.</p>
+  <div class="markdown level1 summary"><p>The elevation in meters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,10 +343,12 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 
   <h3 id="GoogleMapsWrapper_Containers_ElevationContainer_Resolution" data-uid="GoogleMapsWrapper.Containers.ElevationContainer.Resolution">
   Resolution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The elevation in meters.</p>
+  <div class="markdown level1 summary"><p>Indicates the maximum distance between data points
+from which the elevation was interpolated, in meters.
+This property is acquired from the JSON response's 'administrative_area_level_1' property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -367,7 +377,7 @@ Class ElevationContainer  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Containers/ElevationContainer.cs/#L23" class="edit-link">Edit this page</a>
         </div>
 
 

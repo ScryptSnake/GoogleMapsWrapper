@@ -19,19 +19,21 @@ namespace GoogleMapsWrapper.Api;
 public class GeocodeApi
 {
     private IApiEngine apiEngine { get; set; }
-    public ApiTypes apiType { get; private set; } = ApiTypes.Maps;
+    public ApiTypes ApiType { get; private set; } = ApiTypes.Maps;
+
 
     /// <summary>
     /// Initializes a new instance of the <see cref="GeocodeApi"/> class.
     /// </summary>
-    /// <param name="engine">Instance of the API engine.</param>
+    /// <param name="engine">An instance of the API engine.</param>
     public GeocodeApi(IApiEngine engine)
     {
         apiEngine = engine;
     }
 
+
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. A reponse is returned./>
+    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate./>
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
@@ -43,98 +45,103 @@ public class GeocodeApi
         return await this.GeocodeAsync(coordinate,identifier);
     }
 
+
     /// <summary>
     /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
     /// </summary>
-    /// <param name="coordinate">GpsCoordinate to target the request about. </param>
+    /// <param name="coordinate">GpsCoordinate to target the request. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns><inheritdoc cref="GeocodeAsync(string, string, string?)"></inheritdoc></returns>
+    /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
     public async Task<IResponse<JsonDocument>> GeocodeAsync(GpsCoordinate coordinate, string? identifier = default)
     {
-        //Grab the main API Url...
+        // Grab the main API Url.
         var builder = new UriBuilder(apiEngine.BaseUrl + "geocode/json");
-        //build query
+        // Build query.
         builder.Query = $"?latlng={coordinate.ToString()}";
-        //build request
-        var request = new ApiRequest(builder.Uri, apiType, RequestTypes.Geocoding, identifier);
-        //send request
+        // Build a request.
+        var request = new ApiRequest(builder.Uri,ApiType, RequestTypes.Geocoding, identifier);
+        // Send the request.
         var response = await this.apiEngine.GetJsonAsync(request);
         return response;
     }
 
+
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. 
-    /// The response is parsed into a <see cref=">GeocodeContainer"/>
+    /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>A <see cref=">GeocodeContainer"/> holding parsed results.</returns>
+    /// <returns>A <see cref="GeocodeContainer"/> holding data parsed from <see cref="GeocodeParser"/>.</returns>
     public async Task<GeocodeContainer> GeocodeParseAsync(string latitude, string longitude, string? identifier = default)
     {
         var response =await GeocodeAsync(latitude, longitude,identifier);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
 
+
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate. 
-    /// The response is parsed into a <see cref=">GeocodeContainer"/>
+    /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
     /// </summary>
-    /// <param name="coordinate">GpsCoordinate to target the request about. </param>
+    /// <param name="coordinate">GpsCoordinate to target the request. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>A <see cref=">GeocodeContainer"/> holding parsed results.</returns>
-    public async Task<GeocodeContainer> GeocodeParseAsync(GpsCoordinate coordinate)
+    /// <returns>A <see cref="GeocodeContainer"/> holding data parsed from <see cref="GeocodeParser"/>.</returns>
+    public async Task<GeocodeContainer> GeocodeParseAsync(GpsCoordinate coordinate, string? identifier = default)
     {
-        var response = await GeocodeAsync(coordinate);
+        var response = await GeocodeAsync(coordinate,identifier);
         return response.Parse<GeocodeContainer>(new GeocodeParser());
     }
 
+
     /// <summary>
-    /// Makes a request to the API endpoint for receiving elevation data about a coordinate.  A response is returned.
+    /// Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./>
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref="IResponse{JsonDocument}}"/>containing the raw JSON response from the Google API.</returns>
+    /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
     public async Task<IResponse<JsonDocument>>GetElevationAsync(string latitude, string longitude, string? identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await GetElevationAsync(coordinate, identifier);
     }
 
+
     /// <summary>
-    /// Makes a request to the API endpoint for receiving elevation data about a coordinate.  A response is returned.
+    /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
     /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request about. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=>"IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
+    /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
     public async Task<IResponse<JsonDocument>> GetElevationAsync(GpsCoordinate coordinate, string? identifier = default)
     {
         var builder = new UriBuilder(apiEngine.BaseUrl + "elevation/json");
         builder.Query = $"?locations={coordinate.Latitude},{coordinate.Longitude}";
-        var request = new ApiRequest(builder.Uri, this.apiType, RequestTypes.Elevation, identifier);
+        var request = new ApiRequest(builder.Uri, ApiType, RequestTypes.Elevation, identifier);
         return await this.apiEngine.GetJsonAsync(request);
     }
-    
-        /// <summary>
-    /// Makes a request to the API endpoint for receiving elevation data about a coordinate.  A container of parsed data is returned.
+
+
+    /// <summary>
+    /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request for tracking or identification.</param>
-    /// <returns>An <see cref=">ElevationContainer"/> holding parsed results.</returns>
+    /// <returns>An <see cref="ElevationContainer"/> holding data parsed from <see cref="ElevationParser"/>.</returns>
     public async Task<ElevationContainer>GetElevationParsedAsync(string latitude, string longitude, string? identifier = default)
     {
         var coordinate = GpsCoordinate.Parse($"{latitude},{longitude}");
         return await GetElevationParsedAsync(coordinate,identifier);
     }
-    
-        /// <summary>
-    /// Makes a request to the API endpoint for receiving elevation data about a coordinate.  A container of parsed data is returned.
+
+
+    /// <summary>
+    /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
     /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request about. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
-    /// <returns>An <see cref=">ElevationContainer"/> holding parsed results.</returns>
+    /// <returns>An <see cref="ElevationContainer"/> holding data parsed from <see cref="ElevationParser"/>.</returns>
     public async Task<ElevationContainer> GetElevationParsedAsync(GpsCoordinate coordinate, string? identifier = default)
     {
         var response = await GetElevationAsync(coordinate, identifier);
