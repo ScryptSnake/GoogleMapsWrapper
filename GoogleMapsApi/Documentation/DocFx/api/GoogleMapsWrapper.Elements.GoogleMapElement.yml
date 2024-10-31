@@ -32,19 +32,21 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: >-
-    An abstract base class that contains properties from which map elements derrive.
+    An abstract base class that contains properties from which map elements derive.
 
-    A GoogleMapElement can be defined as a geolocational data type, such as a Map, Marker, or Polyline that is leveraged by the wrapper.
+    A GoogleMapElement can be defined as a geo-locational data type, such as a map, marker (placemark), or polyline (path) that is leveraged by the wrapper.
   example: []
   syntax:
-    content: public abstract class GoogleMapElement
-    content.vb: Public MustInherit Class GoogleMapElement
+    content: 'public abstract record GoogleMapElement : IEquatable<GoogleMapElement>'
+    content.vb: Public MustInherit Class GoogleMapElement Implements IEquatable(Of GoogleMapElement)
   inheritance:
   - System.Object
   derivedClasses:
   - GoogleMapsWrapper.Elements.Map
   - GoogleMapsWrapper.Elements.Marker
   - GoogleMapsWrapper.Elements.Polyline
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -76,7 +78,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public string? Name { get; set; }
+    content: public string? Name { get; init; }
     parameters: []
     return:
       type: System.String
@@ -105,7 +107,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public string? Id { get; set; }
+    content: public string? Id { get; init; }
     parameters: []
     return:
       type: System.String
@@ -134,7 +136,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public object? AssociatedData { get; set; }
+    content: public object? AssociatedData { get; init; }
     parameters: []
     return:
       type: System.Object
@@ -163,7 +165,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public Color Color { get; set; }
+    content: public Color Color { get; init; }
     parameters: []
     return:
       type: System.Drawing.Color
@@ -192,7 +194,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public Color SecondaryColor { get; set; }
+    content: public Color SecondaryColor { get; init; }
     parameters: []
     return:
       type: System.Drawing.Color
@@ -221,7 +223,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public bool Visible { get; set; }
+    content: public bool Visible { get; init; }
     parameters: []
     return:
       type: System.Boolean
@@ -250,7 +252,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public int Height { get; set; }
+    content: public int Height { get; init; }
     parameters: []
     return:
       type: System.Int32
@@ -279,7 +281,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: public int Width { get; set; }
+    content: public int Width { get; init; }
     parameters: []
     return:
       type: System.Int32
@@ -319,6 +321,39 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GoogleMapElement>
+  nameWithType: IEquatable<GoogleMapElement>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.GoogleMapElement>
+  nameWithType.vb: IEquatable(Of GoogleMapElement)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.GoogleMapElement)
+  name.vb: IEquatable(Of GoogleMapElement)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -545,6 +580,34 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: GoogleMapsWrapper.Elements.GoogleMapElement.Name*
   commentId: Overload:GoogleMapsWrapper.Elements.GoogleMapElement.Name
   href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_Name

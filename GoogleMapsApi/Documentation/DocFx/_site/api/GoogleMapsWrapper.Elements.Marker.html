@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Marker | docfx_site ">
       
-      <meta name="description" content="Defines a &#39;marker&#39; (placemark) object and it&#39;s characteristics.">
+      <meta name="description" content="Defines a marker (placemark) object and it&#39;s characteristics. It is primarily used as parameter to methods within the StaticMapsApi.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="GoogleMapsWrapper_Elements_Marker" data-uid="GoogleMapsWrapper.Elements.Marker" class="text-break">
-Class Marker  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L19"><i class="bi bi-code-slash"></i></a>
+Class Marker  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,13 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
   <dl><dt>Assembly</dt><dd>GoogleMapsWrapper.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines a 'marker' (placemark) object and it's characteristics.</p>
+  <div class="markdown summary"><p>Defines a marker (placemark) object and it's characteristics.
+<remarks>It is primarily used as parameter to methods within the StaticMapsApi.</remarks></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Marker : GoogleMapElement</code></pre>
+    <pre><code class="lang-csharp hljs">public record Marker : GoogleMapElement, IEquatable&lt;GoogleMapElement&gt;, IEquatable&lt;Marker&gt;</code></pre>
   </div>
 
 
@@ -117,6 +118,13 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Elements.GoogleMapElement.html">GoogleMapElement</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Elements.Marker.html">Marker</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -180,9 +188,9 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
 
   <a id="GoogleMapsWrapper_Elements_Marker__ctor_" data-uid="GoogleMapsWrapper.Elements.Marker.#ctor*"></a>
 
-  <h3 id="GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_System_String_System_String_" data-uid="GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)">
-  Marker(GpsCoordinate, string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <h3 id="GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_" data-uid="GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)">
+  Marker(GpsCoordinate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructs a new marker instance.</p>
@@ -190,87 +198,17 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Marker(GpsCoordinate Coordinate)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>Coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
     <dd></dd>
-    <dt><code>Id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>Name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
   </dl>
 
 
 
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="GoogleMapsWrapper_Elements_Marker_Scale" data-uid="GoogleMapsWrapper.Elements.Marker.Scale">
-  Scale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L41"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Affects the scale of the marker graphic rendered on a static map.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MarkerScaleTypes Scale</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="GoogleMapsWrapper.Types.MarkerScaleTypes.html">MarkerScaleTypes</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="GoogleMapsWrapper_Elements_Marker_Size" data-uid="GoogleMapsWrapper.Elements.Marker.Size">
-  Size
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L44"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Affects the scale of the marker graphic rendered on a static map.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MarkerSizes Size</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="GoogleMapsWrapper.Types.MarkerSizes.html">MarkerSizes</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -288,7 +226,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="GoogleMapsWrapper_Elements_Marker_Coordinate" data-uid="GoogleMapsWrapper.Elements.Marker.Coordinate">
   Coordinate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The location of the marker.</p>
@@ -296,7 +234,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GpsCoordinate Coordinate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GpsCoordinate Coordinate { get; init; }</code></pre>
   </div>
 
 
@@ -320,7 +258,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="GoogleMapsWrapper_Elements_Marker_CustomIcon" data-uid="GoogleMapsWrapper.Elements.Marker.CustomIcon">
   CustomIcon
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A custom icon to represent the marker.</p>
@@ -328,7 +266,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StaticMapCustomIcon? CustomIcon { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StaticMapCustomIcon? CustomIcon { get; init; }</code></pre>
   </div>
 
 
@@ -352,7 +290,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="GoogleMapsWrapper_Elements_Marker_Label" data-uid="GoogleMapsWrapper.Elements.Marker.Label">
   Label
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A label applied to the marker.</p>
@@ -360,7 +298,7 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char Label { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public char Label { get; init; }</code></pre>
   </div>
 
 
@@ -383,11 +321,75 @@ Class Marker  <a class="header-action link-secondary" title="View source" href="
 
 
 
+  <a id="GoogleMapsWrapper_Elements_Marker_Scale_" data-uid="GoogleMapsWrapper.Elements.Marker.Scale*"></a>
+
+  <h3 id="GoogleMapsWrapper_Elements_Marker_Scale" data-uid="GoogleMapsWrapper.Elements.Marker.Scale">
+  Scale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Affects the scale of the marker graphic rendered on a static map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarkerScaleTypes Scale { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GoogleMapsWrapper.Types.MarkerScaleTypes.html">MarkerScaleTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GoogleMapsWrapper_Elements_Marker_Size_" data-uid="GoogleMapsWrapper.Elements.Marker.Size*"></a>
+
+  <h3 id="GoogleMapsWrapper_Elements_Marker_Size" data-uid="GoogleMapsWrapper.Elements.Marker.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Affects the scale of the marker graphic rendered on a static map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarkerSizes Size { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GoogleMapsWrapper.Types.MarkerSizes.html">MarkerSizes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L19" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Marker.cs/#L20" class="edit-link">Edit this page</a>
         </div>
 
 

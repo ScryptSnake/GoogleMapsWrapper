@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 namespace GoogleMapsWrapper.Api;
 /// <summary>
 /// The entry point of the wrapper. Exposes API objects to interact with the endpoint:
-/// <para><see cref="GeocodeApi"/></para>
-/// <para><see cref="StaticMapsApi"/></para>
 /// </summary>
 ///<Remarks>This object instantiates a new  <see cref="ApiEngine"/> 
 /// to send <see cref="IRequest"/>s and return data in form of <see cref="IResponse{TResponse}"/>s.</Remarks>
@@ -22,6 +20,7 @@ public class GoogleMapsApi
 
     ///<summary>An instance of the StaticMapsApi./// </summary>
     public StaticMapsApi StaticMapsApi { get; private set; }
+
 
     /// <summary>
     /// Initializes a new instance of the class, using the provided <see cref="HttpClient"/> 

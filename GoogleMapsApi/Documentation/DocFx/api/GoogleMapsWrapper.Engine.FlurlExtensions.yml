@@ -5,7 +5,7 @@ items:
   id: FlurlExtensions
   parent: GoogleMapsWrapper.Engine
   children:
-  - GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
+  - GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
   langs:
   - csharp
   - vb
@@ -37,17 +37,17 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
-  commentId: M:GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
-  id: SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
+- uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
+  commentId: M:GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
+  id: SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
   isExtensionMethod: true
   parent: GoogleMapsWrapper.Engine.FlurlExtensions
   langs:
   - csharp
   - vb
-  name: SetQueryParamWithDefault(Url, string, object?, object?, bool)
-  nameWithType: FlurlExtensions.SetQueryParamWithDefault(Url, string, object?, object?, bool)
-  fullName: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, string, object?, object?, bool)
+  name: SetQueryParamWithDefault(Url, string, object?, object?)
+  nameWithType: FlurlExtensions.SetQueryParamWithDefault(Url, string, object?, object?)
+  fullName: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, string, object?, object?)
   type: Method
   source:
     remote:
@@ -61,14 +61,14 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine
   summary: >-
-    An extension method to flur url to SetQueryParam with a default value.
+    An extension method to flurl.url to SetQueryParam with a default value.
 
     If the value passed is null or an empty string, the default value is used.
 
     If the default value is null, Flurl.NullValueHandling.Remove is enacted.
   example: []
   syntax:
-    content: public static Url SetQueryParamWithDefault(this Url url, string name, object? value, object? defaultValue, bool isEncoded = false)
+    content: public static Url SetQueryParamWithDefault(this Url url, string name, object? value, object? defaultValue)
     parameters:
     - id: url
       type: Flurl.Url
@@ -78,15 +78,13 @@ items:
       type: System.Object
     - id: defaultValue
       type: System.Object
-    - id: isEncoded
-      type: System.Boolean
     return:
       type: Flurl.Url
-    content.vb: Public Shared Function SetQueryParamWithDefault(url As Url, name As String, value As Object, defaultValue As Object, isEncoded As Boolean = False) As Url
+    content.vb: Public Shared Function SetQueryParamWithDefault(url As Url, name As String, value As Object, defaultValue As Object) As Url
   overload: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault*
-  nameWithType.vb: FlurlExtensions.SetQueryParamWithDefault(Url, String, Object, Object, Boolean)
-  fullName.vb: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, String, Object, Object, Boolean)
-  name.vb: SetQueryParamWithDefault(Url, String, Object, Object, Boolean)
+  nameWithType.vb: FlurlExtensions.SetQueryParamWithDefault(Url, String, Object, Object)
+  fullName.vb: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, String, Object, Object)
+  name.vb: SetQueryParamWithDefault(Url, String, Object, Object)
 references:
 - uid: GoogleMapsWrapper.Engine
   commentId: N:GoogleMapsWrapper.Engine
@@ -349,7 +347,7 @@ references:
   fullName: System
 - uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault*
   commentId: Overload:GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault
-  href: GoogleMapsWrapper.Engine.FlurlExtensions.html#GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_System_Boolean_
+  href: GoogleMapsWrapper.Engine.FlurlExtensions.html#GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_
   name: SetQueryParamWithDefault
   nameWithType: FlurlExtensions.SetQueryParamWithDefault
   fullName: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault
@@ -371,17 +369,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: Flurl
   commentId: N:Flurl
   isExternal: true

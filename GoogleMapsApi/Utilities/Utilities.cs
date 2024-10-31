@@ -20,9 +20,8 @@ public static class Utilities
     /// in the color parameter, outputs 32 bit hex, else 24. 
     /// </summary>
     public static string ColorToHex(Color color)
-    //convert a color object to hexedcimal notati
     {
-        bool includeAlpha = color.A != 255;
+        var includeAlpha = color.A != 255;
         string hex;
         if (includeAlpha)
         {
@@ -34,13 +33,13 @@ public static class Utilities
         }
         return hex;
     }
+
     /// <summary>
     /// Convert a char to a URL encoded string representation.
     /// </summary>
     public static string UrlEncodeChar(char c)
     {
-        // Convert the character to its hexadecimal representation for URL
-        string hexValue = ((int)c).ToString("X2");
+        var hexValue = ((int)c).ToString("X2");
         return "%" + hexValue;
     }
 }

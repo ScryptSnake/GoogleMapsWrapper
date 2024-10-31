@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Engine;
-internal class KeyedRequest : IRequest 
-    //A typical IRequest is converted to a KeyedRequest in the API Engine, by appending the API Key. 
-    //It is never exposed outside the engine. 
+/// <summary>
+/// An <see cref="IRequest"/> which contains the user's API key. This specific request object is used internally by the <see cref="ApiEngine"/>./>
+/// </summary>
+/// <seealso cref="GoogleMapsWrapper.Requests.IRequest" />
+internal class KeyedRequest : IRequest
 {
     public string? Id { get; }
     public Uri Url { get; }

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 namespace GoogleMapsWrapper.Containers;
-///<summary>A object to hold parsed JSON data from Elevation API responses.</summary>
+///<summary>An object to hold parsed JSON data from Elevation API responses.</summary>
 ///<param name="ElevationMeters"> The elevation in meters. </param>
 ///<param name="Resolution"> Indicates the maximum distance between data points 
 ///     from which the elevation was interpolated, in meters. 

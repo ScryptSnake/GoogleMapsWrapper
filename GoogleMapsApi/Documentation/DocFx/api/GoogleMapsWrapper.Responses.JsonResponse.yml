@@ -62,7 +62,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: SentRequest
     path: ../../Responses/JsonResponse.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -94,7 +94,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ResponseMessage
     path: ../../Responses/JsonResponse.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -126,7 +126,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Content
     path: ../../Responses/JsonResponse.cs
-    startLine: 23
+    startLine: 20
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -158,21 +158,21 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Responses/JsonResponse.cs
-    startLine: 29
+    startLine: 26
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
   example: []
   syntax:
-    content: public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
+    content: public JsonResponse(IRequest sentRequest, JsonDocument content, HttpResponseMessage responseMessage)
     parameters:
-    - id: SentRequest
+    - id: sentRequest
       type: GoogleMapsWrapper.Requests.IRequest
-    - id: Content
+    - id: content
       type: System.Text.Json.JsonDocument
-    - id: ResponseMessage
+    - id: responseMessage
       type: System.Net.Http.HttpResponseMessage
-    content.vb: Public Sub New(SentRequest As IRequest, Content As JsonDocument, ResponseMessage As HttpResponseMessage)
+    content.vb: Public Sub New(sentRequest As IRequest, content As JsonDocument, responseMessage As HttpResponseMessage)
   overload: GoogleMapsWrapper.Responses.JsonResponse.#ctor*
   nameWithType.vb: JsonResponse.New(IRequest, JsonDocument, HttpResponseMessage)
   fullName.vb: GoogleMapsWrapper.Responses.JsonResponse.New(GoogleMapsWrapper.Requests.IRequest, System.Text.Json.JsonDocument, System.Net.Http.HttpResponseMessage)
@@ -195,7 +195,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Responses/JsonResponse.cs
-    startLine: 35
+    startLine: 33
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -217,6 +217,14 @@ items:
   fullName.vb: GoogleMapsWrapper.Responses.JsonResponse.Parse(Of T)(GoogleMapsWrapper.Parsers.IParser(Of T, System.Text.Json.JsonDocument))
   name.vb: Parse(Of T)(IParser(Of T, JsonDocument))
 references:
+- uid: System.Text.Json.JsonDocument
+  commentId: T:System.Text.Json.JsonDocument
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  name: JsonDocument
+  nameWithType: JsonDocument
+  fullName: System.Text.Json.JsonDocument
 - uid: GoogleMapsWrapper.Responses
   commentId: N:GoogleMapsWrapper.Responses
   href: GoogleMapsWrapper.html
@@ -502,6 +510,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
 - uid: System
   commentId: N:System
   isExternal: true
@@ -672,14 +717,6 @@ references:
   fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>.Content
   nameWithType.vb: IResponse(Of JsonDocument).Content
   fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument).Content
-- uid: System.Text.Json.JsonDocument
-  commentId: T:System.Text.Json.JsonDocument
-  parent: System.Text.Json
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
-  name: JsonDocument
-  nameWithType: JsonDocument
-  fullName: System.Text.Json.JsonDocument
 - uid: GoogleMapsWrapper.Responses.IResponse`1.Content
   commentId: P:GoogleMapsWrapper.Responses.IResponse`1.Content
   href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content
@@ -688,43 +725,6 @@ references:
   fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>.Content
   nameWithType.vb: IResponse(Of TResponse).Content
   fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse).Content
-- uid: System.Text.Json
-  commentId: N:System.Text.Json
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Text.Json
-  nameWithType: System.Text.Json
-  fullName: System.Text.Json
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Text
-    name: Text
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text
-  - name: .
-  - uid: System.Text.Json
-    name: Json
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Text
-    name: Text
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text
-  - name: .
-  - uid: System.Text.Json
-    name: Json
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.text.json
 - uid: GoogleMapsWrapper.Responses.JsonResponse.#ctor*
   commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.#ctor
   href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse__ctor_GoogleMapsWrapper_Requests_IRequest_System_Text_Json_JsonDocument_System_Net_Http_HttpResponseMessage_

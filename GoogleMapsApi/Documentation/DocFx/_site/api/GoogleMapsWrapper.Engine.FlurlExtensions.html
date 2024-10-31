@@ -154,19 +154,19 @@ Class FlurlExtensions  <a class="header-action link-secondary" title="View sourc
 
   <a id="GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_" data-uid="GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault*"></a>
 
-  <h3 id="GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_System_Boolean_" data-uid="GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)">
-  SetQueryParamWithDefault(Url, string, object?, object?, bool)
+  <h3 id="GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_" data-uid="GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)">
+  SetQueryParamWithDefault(Url, string, object?, object?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Engine/FlurlExtensions.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>An extension method to flur url to SetQueryParam with a default value.
+  <div class="markdown level1 summary"><p>An extension method to flurl.url to SetQueryParam with a default value.
 If the value passed is null or an empty string, the default value is used.
 If the default value is null, Flurl.NullValueHandling.Remove is enacted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Url SetQueryParamWithDefault(this Url url, string name, object? value, object? defaultValue, bool isEncoded = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Url SetQueryParamWithDefault(this Url url, string name, object? value, object? defaultValue)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -178,8 +178,6 @@ If the default value is null, Flurl.NullValueHandling.Remove is enacted.</p>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd></dd>
     <dt><code>defaultValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>isEncoded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 

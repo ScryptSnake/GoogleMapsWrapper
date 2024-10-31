@@ -11,50 +11,47 @@ using System.Threading.Tasks;
 namespace GoogleMapsWrapper.Elements;
 /// <summary>
 /// Defines a 'map' object and it's characteristics. 
-/// It is primarily used as a parameter for methods within the StaticMapsApi. 
+/// <Remarks>It is primarily used as a parameter for methods within the StaticMapsApi. </Remarks>
 /// </summary>
-public class Map : GoogleMapElement
+public record Map : GoogleMapElement
 {
-    private MapTypes mapType;
-    
-     ///<summary>The type or style of map to be rendered by the API.///</summary>
-    public MapTypes MapType { get => mapType; set => mapType=value; }
+    ///<summary>The type or style of map to be rendered by the API.///</summary>
+    public MapTypes MapType { get; init; } = MapTypes.Hybrid;
 
-
-    private MapScaleTypes scale;
     ///<summary>Scale type of the map./// </summary>
-    public MapScaleTypes Scale { get => scale; set => scale = value; } 
+    public MapScaleTypes Scale { get; init; }
 
-
-    private MapImageFormats imageFormat;
     ///<summary>Desired file format for an image of the map./// </summary>
-    public MapImageFormats ImageFormat { get => imageFormat; set => imageFormat = value; }
+    public MapImageFormats ImageFormat { get; init; } = MapImageFormats.Jpg;
 
-    private int zoom = 0;
+    /// <summary>
+    /// Sets the center of the map when rendered on the StaticMapsAPI. 
+    /// </summary>
+    public GpsCoordinate? Center { get; init; }
+
+
+    private readonly int zoom = 1;
     ///<summary>A zoom value for which the map should be displayed. 
-    /// Accepts values: 0 to 21, where zero (default) is considered 'ommitted'. 
-    /// If ommitted from a StaticMapsApi request, the Google API determines a zoom that best fits the map. 
+    /// Accepts values: 0 to 21, where zero (default) is considered 'omitted'. 
+    /// If omitted from a StaticMapsApi request, the Google API determines a zoom that best fits the map. 
     ///</summary>
     public int Zoom
     {
         get => zoom;
-        set
+        init
         {
-            if (value>=0 && value <= 21)
-            {
-                zoom = value;
-            }
-            else { throw new ArgumentOutOfRangeException("Invalid zoom value."); }
+            if (value<0 || value > 21) 
+                throw new ArgumentOutOfRangeException("Invalid zoom value.");
+            zoom = value;
         }
     }
 
-    private string dimensions = string.Empty;
-
+    private readonly string dimensions = "640x640";
     ///<summary>A string describing the size dimensions of the map. Format is:  {Height}x{Width}</summary>
     public string Dimensions
     {
         get => $"{Height}x{Width}";
-        set
+        init
         {
             try
             {
@@ -70,23 +67,8 @@ public class Map : GoogleMapElement
         }
     }
 
-    private GpsCoordinate? center;
-     ///<summary>The type or style of map to be rendered by the API.///</summary>
-    public GpsCoordinate? Center { get => center; set => center=value; }
+
     
-    public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.HighRes, 
-        GpsCoordinate? Center = null, string? Id = null, string? Name = null)
-    {
-        //note: map styles not supported in this API.
-        this.MapType = MapType;
-        this.Scale = Scale;
-        this.Center = Center;
-        this.Id = Id;
-    this.Name = Name;
-        //defaults:
-        this.Scale = MapScaleTypes.HighRes;
-        this.Dimensions = "640x640";
-        this.ImageFormat = MapImageFormats.Jpg;
-    }
+
 
 }

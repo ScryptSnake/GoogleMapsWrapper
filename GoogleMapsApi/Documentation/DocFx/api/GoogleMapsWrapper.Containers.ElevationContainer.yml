@@ -29,7 +29,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: A object to hold parsed JSON data from Elevation API responses.
+  summary: An object to hold parsed JSON data from Elevation API responses.
   example: []
   syntax:
     content: 'public record ElevationContainer : IContainer, IEquatable<ElevationContainer>'
@@ -69,7 +69,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: A object to hold parsed JSON data from Elevation API responses.
+  summary: An object to hold parsed JSON data from Elevation API responses.
   example: []
   syntax:
     content: public ElevationContainer(double ElevationMeters, double Resolution, double ElevationFeet, GpsCoordinate? Coordinates, object? AssociatedData)

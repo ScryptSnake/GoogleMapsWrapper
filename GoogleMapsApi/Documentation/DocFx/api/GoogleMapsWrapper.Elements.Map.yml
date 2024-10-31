@@ -5,7 +5,6 @@ items:
   id: Map
   parent: GoogleMapsWrapper.Elements
   children:
-  - GoogleMapsWrapper.Elements.Map.#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
   - GoogleMapsWrapper.Elements.Map.Center
   - GoogleMapsWrapper.Elements.Map.Dimensions
   - GoogleMapsWrapper.Elements.Map.ImageFormat
@@ -33,14 +32,17 @@ items:
   summary: >-
     Defines a 'map' object and it's characteristics. 
 
-    It is primarily used as a parameter for methods within the StaticMapsApi.
+    <Remarks>It is primarily used as a parameter for methods within the StaticMapsApi. </Remarks>
   example: []
   syntax:
-    content: 'public class Map : GoogleMapElement'
-    content.vb: Public Class Map Inherits GoogleMapElement
+    content: 'public record Map : GoogleMapElement, IEquatable<GoogleMapElement>, IEquatable<Map>'
+    content.vb: Public Class Map Inherits GoogleMapElement Implements IEquatable(Of GoogleMapElement), IEquatable(Of Map)
   inheritance:
   - System.Object
   - GoogleMapsWrapper.Elements.GoogleMapElement
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  - System.IEquatable{GoogleMapsWrapper.Elements.Map}
   inheritedMembers:
   - GoogleMapsWrapper.Elements.GoogleMapElement.Name
   - GoogleMapsWrapper.Elements.GoogleMapElement.Id
@@ -75,14 +77,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: MapType
     path: ../../Elements/Map.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: The type or style of map to be rendered by the API.///
   example: []
   syntax:
-    content: public MapTypes MapType { get; set; }
+    content: public MapTypes MapType { get; init; }
     parameters: []
     return:
       type: GoogleMapsWrapper.Types.MapTypes
@@ -106,14 +108,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Scale
     path: ../../Elements/Map.cs
-    startLine: 25
+    startLine: 21
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: Scale type of the map.///
   example: []
   syntax:
-    content: public MapScaleTypes Scale { get; set; }
+    content: public MapScaleTypes Scale { get; init; }
     parameters: []
     return:
       type: GoogleMapsWrapper.Types.MapScaleTypes
@@ -137,19 +139,50 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ImageFormat
     path: ../../Elements/Map.cs
-    startLine: 30
+    startLine: 24
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: Desired file format for an image of the map.///
   example: []
   syntax:
-    content: public MapImageFormats ImageFormat { get; set; }
+    content: public MapImageFormats ImageFormat { get; init; }
     parameters: []
     return:
       type: GoogleMapsWrapper.Types.MapImageFormats
     content.vb: Public Property ImageFormat As MapImageFormats
   overload: GoogleMapsWrapper.Elements.Map.ImageFormat*
+- uid: GoogleMapsWrapper.Elements.Map.Center
+  commentId: P:GoogleMapsWrapper.Elements.Map.Center
+  id: Center
+  parent: GoogleMapsWrapper.Elements.Map
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: Map.Center
+  fullName: GoogleMapsWrapper.Elements.Map.Center
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Map.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Center
+    path: ../../Elements/Map.cs
+    startLine: 29
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  summary: Sets the center of the map when rendered on the StaticMapsAPI.
+  example: []
+  syntax:
+    content: public GpsCoordinate? Center { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
+    content.vb: Public Property Center As GpsCoordinate?
+  overload: GoogleMapsWrapper.Elements.Map.Center*
 - uid: GoogleMapsWrapper.Elements.Map.Zoom
   commentId: P:GoogleMapsWrapper.Elements.Map.Zoom
   id: Zoom
@@ -174,11 +207,11 @@ items:
   namespace: GoogleMapsWrapper.Elements
   summary: >-
     A zoom value for which the map should be displayed. 
-         Accepts values: 0 to 21, where zero (default) is considered 'ommitted'. 
-         If ommitted from a StaticMapsApi request, the Google API determines a zoom that best fits the map.
+         Accepts values: 0 to 21, where zero (default) is considered 'omitted'. 
+         If omitted from a StaticMapsApi request, the Google API determines a zoom that best fits the map.
   example: []
   syntax:
-    content: public int Zoom { get; set; }
+    content: public int Zoom { get; init; }
     parameters: []
     return:
       type: System.Int32
@@ -202,90 +235,19 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Dimensions
     path: ../../Elements/Map.cs
-    startLine: 53
+    startLine: 50
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: 'A string describing the size dimensions of the map. Format is:  {Height}x{Width}'
   example: []
   syntax:
-    content: public string Dimensions { get; set; }
+    content: public string Dimensions { get; init; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property Dimensions As String
   overload: GoogleMapsWrapper.Elements.Map.Dimensions*
-- uid: GoogleMapsWrapper.Elements.Map.Center
-  commentId: P:GoogleMapsWrapper.Elements.Map.Center
-  id: Center
-  parent: GoogleMapsWrapper.Elements.Map
-  langs:
-  - csharp
-  - vb
-  name: Center
-  nameWithType: Map.Center
-  fullName: GoogleMapsWrapper.Elements.Map.Center
-  type: Property
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Map.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: Center
-    path: ../../Elements/Map.cs
-    startLine: 74
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  summary: The type or style of map to be rendered by the API.///
-  example: []
-  syntax:
-    content: public GpsCoordinate? Center { get; set; }
-    parameters: []
-    return:
-      type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
-    content.vb: Public Property Center As GpsCoordinate?
-  overload: GoogleMapsWrapper.Elements.Map.Center*
-- uid: GoogleMapsWrapper.Elements.Map.#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  commentId: M:GoogleMapsWrapper.Elements.Map.#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  id: '#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)'
-  parent: GoogleMapsWrapper.Elements.Map
-  langs:
-  - csharp
-  - vb
-  name: Map(MapTypes, MapScaleTypes, GpsCoordinate?, string?, string?)
-  nameWithType: Map.Map(MapTypes, MapScaleTypes, GpsCoordinate?, string?, string?)
-  fullName: GoogleMapsWrapper.Elements.Map.Map(GoogleMapsWrapper.Types.MapTypes, GoogleMapsWrapper.Types.MapScaleTypes, GoogleMapsWrapper.Types.GpsCoordinate?, string?, string?)
-  type: Constructor
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Map.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: .ctor
-    path: ../../Elements/Map.cs
-    startLine: 76
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public Map(MapTypes MapType, MapScaleTypes Scale = MapScaleTypes.HighRes, GpsCoordinate? Center = null, string? Id = null, string? Name = null)
-    parameters:
-    - id: MapType
-      type: GoogleMapsWrapper.Types.MapTypes
-    - id: Scale
-      type: GoogleMapsWrapper.Types.MapScaleTypes
-    - id: Center
-      type: System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate}
-    - id: Id
-      type: System.String
-    - id: Name
-      type: System.String
-    content.vb: Public Sub New(MapType As MapTypes, Scale As MapScaleTypes = MapScaleTypes.HighRes, Center As GpsCoordinate? = Nothing, Id As String = Nothing, Name As String = Nothing)
-  overload: GoogleMapsWrapper.Elements.Map.#ctor*
-  nameWithType.vb: Map.New(MapTypes, MapScaleTypes, GpsCoordinate?, String, String)
-  fullName.vb: GoogleMapsWrapper.Elements.Map.New(GoogleMapsWrapper.Types.MapTypes, GoogleMapsWrapper.Types.MapScaleTypes, GoogleMapsWrapper.Types.GpsCoordinate?, String, String)
-  name.vb: New(MapTypes, MapScaleTypes, GpsCoordinate?, String, String)
 references:
 - uid: GoogleMapsWrapper.Elements
   commentId: N:GoogleMapsWrapper.Elements
@@ -327,6 +289,72 @@ references:
   name: GoogleMapElement
   nameWithType: GoogleMapElement
   fullName: GoogleMapsWrapper.Elements.GoogleMapElement
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GoogleMapElement>
+  nameWithType: IEquatable<GoogleMapElement>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.GoogleMapElement>
+  nameWithType.vb: IEquatable(Of GoogleMapElement)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.GoogleMapElement)
+  name.vb: IEquatable(Of GoogleMapElement)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: )
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.Map}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.Map}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Map>
+  nameWithType: IEquatable<Map>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.Map>
+  nameWithType.vb: IEquatable(Of Map)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.Map)
+  name.vb: IEquatable(Of Map)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.Map
+    name: Map
+    href: GoogleMapsWrapper.Elements.Map.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.Map
+    name: Map
+    href: GoogleMapsWrapper.Elements.Map.html
+  - name: )
 - uid: GoogleMapsWrapper.Elements.GoogleMapElement.Name
   commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Name
   parent: GoogleMapsWrapper.Elements.GoogleMapElement
@@ -609,6 +637,34 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: GoogleMapsWrapper.Elements.Map.MapType*
   commentId: Overload:GoogleMapsWrapper.Elements.Map.MapType
   href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_MapType
@@ -670,40 +726,6 @@ references:
   name: MapImageFormats
   nameWithType: MapImageFormats
   fullName: GoogleMapsWrapper.Types.MapImageFormats
-- uid: GoogleMapsWrapper.Elements.Map.Zoom*
-  commentId: Overload:GoogleMapsWrapper.Elements.Map.Zoom
-  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Zoom
-  name: Zoom
-  nameWithType: Map.Zoom
-  fullName: GoogleMapsWrapper.Elements.Map.Zoom
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: GoogleMapsWrapper.Elements.Map.Dimensions*
-  commentId: Overload:GoogleMapsWrapper.Elements.Map.Dimensions
-  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Dimensions
-  name: Dimensions
-  nameWithType: Map.Dimensions
-  fullName: GoogleMapsWrapper.Elements.Map.Dimensions
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
 - uid: GoogleMapsWrapper.Elements.Map.Center*
   commentId: Overload:GoogleMapsWrapper.Elements.Map.Center
   href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Center
@@ -756,12 +778,37 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: GoogleMapsWrapper.Elements.Map.#ctor*
-  commentId: Overload:GoogleMapsWrapper.Elements.Map.#ctor
-  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor_GoogleMapsWrapper_Types_MapTypes_GoogleMapsWrapper_Types_MapScaleTypes_System_Nullable_GoogleMapsWrapper_Types_GpsCoordinate__System_String_System_String_
-  name: Map
-  nameWithType: Map.Map
-  fullName: GoogleMapsWrapper.Elements.Map.Map
-  nameWithType.vb: Map.New
-  fullName.vb: GoogleMapsWrapper.Elements.Map.New
-  name.vb: New
+- uid: GoogleMapsWrapper.Elements.Map.Zoom*
+  commentId: Overload:GoogleMapsWrapper.Elements.Map.Zoom
+  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Zoom
+  name: Zoom
+  nameWithType: Map.Zoom
+  fullName: GoogleMapsWrapper.Elements.Map.Zoom
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GoogleMapsWrapper.Elements.Map.Dimensions*
+  commentId: Overload:GoogleMapsWrapper.Elements.Map.Dimensions
+  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Dimensions
+  name: Dimensions
+  nameWithType: Map.Dimensions
+  fullName: GoogleMapsWrapper.Elements.Map.Dimensions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

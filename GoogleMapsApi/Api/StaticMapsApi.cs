@@ -16,7 +16,7 @@ using System.Collections.ObjectModel;
 
 namespace GoogleMapsWrapper.Api;
 /// <summary>
-/// Provides methods for retrieiving a static image of a map from Google's Static API.
+/// Provides methods for retrieving a static image of a map from Google's Static API.
 /// <Remarks>This object leverages an <see cref="IApiEngine"/> 
 /// to send <see cref="IRequest"/>s and return data in form of <see cref="IResponse{TResponse}"/>s.</Remarks>
 /// </summary>
@@ -63,9 +63,7 @@ public class StaticMapsApi
     }
 
 
-    /// <summary>
     /// <inheritdoc cref="GetMapAsync(Map, IEnumerable{Marker}?, IEnumerable{Polyline}?, string?)"/>
-    /// </summary>
     /// <param name="mapSettings">A <see cref="Map"/> element that defines key features about the map.></param>
     /// <param name="markers"> Optional. <see cref="Marker"/>s to be included in the map.</param>
     /// <param name="paths">Optional. <see cref="Polyline"/>s to be included in the map.</param>
@@ -81,6 +79,7 @@ public class StaticMapsApi
             var response = await GetMapAsync(mapSettings, markers, paths);
             return response.Content;
         }
+
 
     ///<summary>Assembles the URL to be provided to the engine for http processing.</summary>
     ///<returns>A URI object for Google's API.</returns>
@@ -127,11 +126,11 @@ public class StaticMapsApi
 
 
     ///<summary>Converts a list of marker objects into a list of string, 
-    ///    representing a URL query for the marker(s).
+    /// representing a URL query for the marker(s).
     ///</summary>
     ///<remarks>This method url encodes each query value in the resultant list before output.</remarks>
-    ///<returns>A list of string, where each value in the list represents a URL query for a marker. 
-    private List<string> BuildMarkers(IEnumerable<Marker> markers)
+    ///<returns>A list of string, where each value in the list represents a URL query for a marker.</returns>
+   private List<string> BuildMarkers(IEnumerable<Marker> markers)
     {
         // Filter out null markers, group by custom icon / no custom icon.
         var groupedMarkers = markers.Where(m => m != null).GroupBy(m => m.CustomIcon == null);
@@ -151,39 +150,41 @@ public class StaticMapsApi
             {
                 foreach (var marker in group)
                 {
-                    //convert size enum value to string representation:
+                    // Convert size enum value to string representation.
                     var markerSize = marker.Size.ToString().ToLower();
-                    //grab marker color, check if has value, convert to hex
+
+                    // Grab marker color, check has value, convert to hex.
                     var markerColor = marker.Color;
                     if (marker.Color == Color.Empty) markerColor = Color.Green;
                     var markerColorHex = Utilities.Utilities.ColorToHex(markerColor);
-                    //check if marker label supplied, if not, provide one
+
+                    // Check if marker label supplied, if not, provide one.
                     var markerLabel = marker.Label;
                     if (markerLabel == '\0') markerLabel = 'A'; 
-                    //url format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates
 
+                    // URL format: markers=size:mid|color:0xFFFF00|label:C|address_or_coordinates.
                     var outputString = $"size{COLON_ENCODED}{markerSize}" +
                         $"{PIPE_ENCODED}color{COLON_ENCODED}{markerColorHex}" +
                         $"{PIPE_ENCODED}";
 
                     if (marker.Label != '\0')
                     {
-                        //UrlEncodeChar is required to use certain characters that conflict with the %3A colon encoding.
-                        //for example:  label%3AB => label:Z works fine, But label%3AA => label:A expected,
-                        //but the API does not process it properly because 'A' conflicts with %3A
-                        //using a regular colon decoded in the URL works fine, but its poor practice to not encode it.
+                        // UrlEncodeChar is required to use certain characters that conflict with the %3A colon encoding.
+                        // For example:  label%3AB => label:Z works fine, But label%3AA => label:A expected,
+                        // But the API does not process it properly because 'A' conflicts with %3A
+                        // Using a regular colon decoded in the URL works fine, but its poor practice to not encode it.
                         var markerLabelEncoded = Utilities.Utilities.UrlEncodeChar(markerLabel);
                         outputString = outputString + $"label{COLON_ENCODED}{markerLabelEncoded}";
                     }
                     output.Add(outputString + $"{PIPE_ENCODED}{marker.Coordinate.ToString()}");
                 }
             }
-            else //custom icons
+            else // Markers WITH Custom icons.
             {
-                //url format:  markers = icon:http://tinyurl.com/jrhlvu6|coordinates
+                // Url format:  markers = icon:http://tinyurl.com/jrhlvu6|coordinates
                 foreach (var customMarker in group)
                 {
-                    //note: using null forgiving operator, as LINQ filtered by nulls.
+                    // Note: using null forgiving operator, as LINQ filtered by nulls.
                     output.Add($"icon:{customMarker.CustomIcon!.Uri.AbsoluteUri}" +
                         $"|{customMarker.Coordinate.ToString()}");
                 }
@@ -193,12 +194,12 @@ public class StaticMapsApi
     }
 
 
-    ///<summary>Converts a list of Polyline objects into a list of string, 
-    ///representing a URL query for the polylines(s).
+    ///<summary>Converts a list of <see cref="Polyline"/> into a list of string, 
+    /// representing a URL query for the polylines(s).
     ///</summary>
     ///<remarks>This method uses an implementation of Google's Polyline encoding algorithm.
     /// Each value in the resultant list contains an encoded parameter with the algorithm.</remarks>
-    ///<returns>A list of string, where each value in the list represents a URL query for a Poyline. 
+    ///<returns>A list of string, where each value in the list represents a URL query for a Poyline.</returns>
     private List<string> BuildPaths(IEnumerable<Polyline> paths)
     {
         // Establish a constant for the pipe delimeter.

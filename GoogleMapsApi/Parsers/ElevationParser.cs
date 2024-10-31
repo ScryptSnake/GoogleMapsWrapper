@@ -10,10 +10,9 @@ using System.Threading.Tasks;
 
 
 namespace GoogleMapsWrapper.Parsers;
-///<Summary>A parser for an Elevation API JSON response. Parses data and outputs an ElevationContainer.</Summary>
+///<Summary>A parser for an Elevation API JSON response. Parses data and outputs an see<see cref="ElevationContainer"/></Summary>
 public class ElevationParser : IParser<ElevationContainer, JsonDocument>
 {
-
     ///<Summary>Attempts to parse a JSON document.</Summary>
     public bool TryParse(JsonDocument input, out ElevationContainer? output)
     {
@@ -64,7 +63,7 @@ public class ElevationParser : IParser<ElevationContainer, JsonDocument>
 
 
     ///<Summary>Extracts the GpsCoordinate from a JsonElement. 
-    ///<para>Note:This method supplements the containerization operation in Parse() because the serializer cannot deserialize to this type. </para>
+    ///<Remarks>This method supplements the containerization operation in Parse() because the serializer cannot deserialize to this type.</Remarks>
     ///</Summary>
     private GpsCoordinate findGpsCoordinate(JsonElement jsonElement)
     {
@@ -73,6 +72,7 @@ public class ElevationParser : IParser<ElevationContainer, JsonDocument>
             // Initialize decimals.
             decimal latitude = 0;
             decimal longitude = 0;
+
             // Attempt to grab 'lat'/'lng' properties. 
             if (jsonElement.TryGetProperty("lat", out var latProperty) &&
                 (jsonElement.TryGetProperty("lng", out var lngProperty)))
@@ -81,6 +81,7 @@ public class ElevationParser : IParser<ElevationContainer, JsonDocument>
                 latProperty.TryGetDecimal(out latitude);
                 lngProperty.TryGetDecimal(out longitude);
             }
+
             // Attempt to parse decimal to GpsCoordinate.
             var output = new GpsCoordinate(latitude, longitude);
             return output;

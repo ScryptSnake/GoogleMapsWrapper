@@ -51,7 +51,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: A propery to append data to the container.
+  summary: A property to append data to the container.
   example: []
   syntax:
     content: object? AssociatedData { get; }

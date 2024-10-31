@@ -13,19 +13,19 @@ namespace GoogleMapsWrapper.Engine;
 public static class FlurlExtensions
 {
     /// <summary>
-    /// An extension method to flur url to SetQueryParam with a default value.
+    /// An extension method to flurl.url to SetQueryParam with a default value.
     /// If the value passed is null or an empty string, the default value is used.
     /// If the default value is null, Flurl.NullValueHandling.Remove is enacted.
     /// </summary>
     public static Url SetQueryParamWithDefault(this Url url, string name,
-        object? value, object? defaultValue, bool isEncoded = false)
+        object? value, object? defaultValue)
     {
         // Initialize null string.
         string? stringValue = null;
-        // Check if value is not null;
+        // Check if value is not null.
         if (value is not null)
         {
-            // Convert to string
+            // Convert to string.
             stringValue = value.ToString();
             if (string.IsNullOrWhiteSpace(stringValue))
             {

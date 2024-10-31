@@ -34,7 +34,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: A container to hold parsed JSON information from a GoecodeAPI response.
+  summary: A container to hold parsed JSON information from a <xref href="GoogleMapsWrapper.Api.GeocodeApi" data-throw-if-not-resolved="false"></xref> response.
   example: []
   syntax:
     content: 'public record GeocodeContainer : IContainer, IEquatable<GeocodeContainer>'
@@ -73,7 +73,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Containers
-  summary: A container to hold parsed JSON information from a GoecodeAPI response.
+  summary: A container to hold parsed JSON information from a <xref href="GoogleMapsWrapper.Api.GeocodeApi" data-throw-if-not-resolved="false"></xref> response.
   example: []
   syntax:
     content: public GeocodeContainer(string Country, string State, string County, string City, string Municipality, int ZipCode, string Address, GpsCoordinate? Coordinates, object? AssociatedData)
@@ -464,6 +464,13 @@ items:
   overridden: System.Object.ToString
   overload: GoogleMapsWrapper.Containers.GeocodeContainer.ToString*
 references:
+- uid: GoogleMapsWrapper.Api.GeocodeApi
+  commentId: T:GoogleMapsWrapper.Api.GeocodeApi
+  parent: GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.Api.GeocodeApi.html
+  name: GeocodeApi
+  nameWithType: GeocodeApi
+  fullName: GoogleMapsWrapper.Api.GeocodeApi
 - uid: GoogleMapsWrapper.Containers
   commentId: N:GoogleMapsWrapper.Containers
   href: GoogleMapsWrapper.html
@@ -732,6 +739,28 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: GoogleMapsWrapper.Api
+  commentId: N:GoogleMapsWrapper.Api
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Api
+  nameWithType: GoogleMapsWrapper.Api
+  fullName: GoogleMapsWrapper.Api
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Api
+    name: Api
+    href: GoogleMapsWrapper.Api.html
 - uid: System
   commentId: N:System
   isExternal: true

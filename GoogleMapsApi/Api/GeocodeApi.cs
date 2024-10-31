@@ -14,8 +14,8 @@ using System.Data.Common;
 namespace GoogleMapsWrapper.Api;
 
 /// <summary>
-/// Provides methods for retrieiving data from Google's Geocoding API.
-/// </summary>
+/// Provides methods for retrieving data from Google's Geocoding API.
+///</summary>
 public class GeocodeApi
 {
     private IApiEngine apiEngine { get; set; }
@@ -46,9 +46,7 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
     /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
     /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
@@ -66,9 +64,7 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
     /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
@@ -80,9 +76,8 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
+
     /// <inheritdoc cref="GeocodeAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
     /// <returns>A <see cref="GeocodeContainer"/> holding data parsed from <see cref="GeocodeParser"/>.</returns>
@@ -107,9 +102,8 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
+
     /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request about. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
     /// <returns>An <see cref="IResponse{JsonDocument}"/> containing the raw JSON response from the Google API.</returns>
@@ -122,9 +116,7 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
     /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
     /// <param name="identifier">A string appended to the request for tracking or identification.</param>
@@ -136,9 +128,7 @@ public class GeocodeApi
     }
 
 
-    /// <summary>
     /// <inheritdoc cref="GetElevationAsync(string, string, string?)"/>
-    /// </summary>
     /// <param name="coordinate">GpsCoordinate to target the request about. </param>
     /// <param name="identifier">A string appended to the request object for tracking or identification.</param>
     /// <returns>An <see cref="ElevationContainer"/> holding data parsed from <see cref="ElevationParser"/>.</returns>

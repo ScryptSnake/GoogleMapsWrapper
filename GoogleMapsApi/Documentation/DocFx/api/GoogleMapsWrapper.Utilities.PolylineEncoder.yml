@@ -20,12 +20,10 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: PolylineEncoder
     path: ../../Utilities/PolylineEncoder.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Utilities
-  summary: A static class to encode a list of GPS coordinates using Google's polyline shortening encoding algorithm.
-  example: []
   syntax:
     content: public static class PolylineEncoder
     content.vb: Public Module PolylineEncoder
@@ -57,7 +55,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Encode
     path: ../../Utilities/PolylineEncoder.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Utilities

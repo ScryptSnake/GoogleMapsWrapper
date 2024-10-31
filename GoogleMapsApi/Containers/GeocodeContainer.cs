@@ -13,7 +13,7 @@ using System.Xml;
 
 
 namespace GoogleMapsWrapper.Containers;
-/// <summary>A container to hold parsed JSON information from a GoecodeAPI response.</summary>
+/// <summary>A container to hold parsed JSON information from a <see cref="GeocodeApi"/> response.</summary>
 ///<param name="Country">This property is acquired from the JSON response's 'country' property.</param>
 ///<param name="State">This property is acquired from the JSON response's 'administrative_area_level_1' property.</param>
 ///<param name="County">This property is acquired from the JSON response's 'administrative_area_level_2' property.</param>

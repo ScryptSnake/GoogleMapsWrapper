@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExampleProject;
 public class HttpClientSingleton
-    //returns singleton instance of HttpClient.
+    //Returns singleton instance of HttpClient.
 {
     private HttpClientSingleton() { } //private constructor
 

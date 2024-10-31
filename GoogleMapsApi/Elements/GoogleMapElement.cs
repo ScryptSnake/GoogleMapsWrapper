@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Elements;
 /// <summary>
-/// An abstract base class that contains properties from which map elements derrive.
-/// A GoogleMapElement can be defined as a geolocational data type, such as a Map, Marker, or Polyline that is leveraged by the wrapper. 
+/// An abstract base class that contains properties from which map elements derive.
+/// A GoogleMapElement can be defined as a geo-locational data type, such as a map, marker (placemark), or polyline (path) that is leveraged by the wrapper. 
 /// </summary>
-public abstract class GoogleMapElement
+public abstract record GoogleMapElement
 {
-    public string? Name { get; set; }
-    public string? Id { get; set; }
-    public object? AssociatedData { get; set; }
-    public Color Color { get; set; }
-    public Color SecondaryColor {  get; set; }
-    public bool Visible { get; set; }
-    public int Height { get; set; }
-    public int Width { get; set; }
+    public string? Name { get; init; }
+    public string? Id { get; init; }
+    public object? AssociatedData { get; init; }
+    public Color Color { get; init; }
+    public Color SecondaryColor { get; init; }
+    public bool Visible { get; init; }
+    public int Height { get; init; }
+    public int Width { get; init; }
 
 }

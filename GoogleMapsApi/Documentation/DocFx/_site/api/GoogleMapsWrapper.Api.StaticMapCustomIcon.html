@@ -163,10 +163,11 @@ Class StaticMapCustomIcon  <a class="header-action link-secondary" title="View s
 
   <h3 id="GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_System_String_GoogleMapsWrapper_Types_MarkerIconAnchorTypes_" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)">
   StaticMapCustomIcon(string, MarkerIconAnchorTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/StaticMapCustomIcon.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/StaticMapCustomIcon.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="GoogleMapsWrapper.Api.StaticMapCustomIcon.html">StaticMapCustomIcon</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -176,9 +177,11 @@ Class StaticMapCustomIcon  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The image source.</p>
+</dd>
     <dt><code>anchorType</code> <a class="xref" href="GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html">MarkerIconAnchorTypes</a></dt>
-    <dd></dd>
+    <dd><p>How the icon is anchored.</p>
+</dd>
   </dl>
 
 
@@ -189,106 +192,12 @@ Class StaticMapCustomIcon  <a class="header-action link-secondary" title="View s
 
 
 
-
-
-
-  <a id="GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor*"></a>
-
-  <h3 id="GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_System_Uri_GoogleMapsWrapper_Types_MarkerIconAnchorTypes_" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)">
-  StaticMapCustomIcon(Uri, MarkerIconAnchorTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/StaticMapCustomIcon.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>An object that represents a custom icon for a marker. The source must be a Uri of an image.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StaticMapCustomIcon(Uri Uri, MarkerIconAnchorTypes AnchorType = MarkerIconAnchorTypes.Center)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
+  <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><code>Uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd></dd>
-    <dt><code>AnchorType</code> <a class="xref" href="GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html">MarkerIconAnchorTypes</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Uri provided contains invalid image format.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType_" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*"></a>
-
-  <h3 id="GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType">
-  AnchorType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/StaticMapCustomIcon.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MarkerIconAnchorTypes AnchorType { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html">MarkerIconAnchorTypes</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri_" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*"></a>
-
-  <h3 id="GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri" data-uid="GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri">
-  Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/StaticMapCustomIcon.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Uri Uri { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
 
 
 

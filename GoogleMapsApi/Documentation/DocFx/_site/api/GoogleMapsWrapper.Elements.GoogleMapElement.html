@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GoogleMapElement | docfx_site ">
       
-      <meta name="description" content="An abstract base class that contains properties from which map elements derrive. A GoogleMapElement can be defined as a geolocational data type, such as a Map, Marker, or Polyline that is leveraged by the wrapper.">
+      <meta name="description" content="An abstract base class that contains properties from which map elements derive. A GoogleMapElement can be defined as a geo-locational data type, such as a map, marker (placemark), or polyline (path) that is leveraged by the wrapper.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,13 +97,13 @@ Class GoogleMapElement  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>GoogleMapsWrapper.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>An abstract base class that contains properties from which map elements derrive.
-A GoogleMapElement can be defined as a geolocational data type, such as a Map, Marker, or Polyline that is leveraged by the wrapper.</p>
+  <div class="markdown summary"><p>An abstract base class that contains properties from which map elements derive.
+A GoogleMapElement can be defined as a geo-locational data type, such as a map, marker (placemark), or polyline (path) that is leveraged by the wrapper.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class GoogleMapElement</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract record GoogleMapElement : IEquatable&lt;GoogleMapElement&gt;</code></pre>
   </div>
 
 
@@ -117,6 +117,12 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Elements.GoogleMapElement.html">GoogleMapElement</a>&gt;</div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -173,7 +179,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object? AssociatedData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object? AssociatedData { get; init; }</code></pre>
   </div>
 
 
@@ -204,7 +210,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Color Color { get; init; }</code></pre>
   </div>
 
 
@@ -235,7 +241,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Height { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Height { get; init; }</code></pre>
   </div>
 
 
@@ -266,7 +272,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Id { get; init; }</code></pre>
   </div>
 
 
@@ -297,7 +303,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? Name { get; init; }</code></pre>
   </div>
 
 
@@ -328,7 +334,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color SecondaryColor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Color SecondaryColor { get; init; }</code></pre>
   </div>
 
 
@@ -359,7 +365,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Visible { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Visible { get; init; }</code></pre>
   </div>
 
 
@@ -390,7 +396,7 @@ A GoogleMapElement can be defined as a geolocational data type, such as a Map, M
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Width { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Width { get; init; }</code></pre>
   </div>
 
 

@@ -5,7 +5,7 @@ items:
   id: Marker
   parent: GoogleMapsWrapper.Elements
   children:
-  - GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
+  - GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)
   - GoogleMapsWrapper.Elements.Marker.Coordinate
   - GoogleMapsWrapper.Elements.Marker.CustomIcon
   - GoogleMapsWrapper.Elements.Marker.Label
@@ -25,18 +25,24 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Marker
     path: ../../Elements/Marker.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
-  summary: Defines a 'marker' (placemark) object and it's characteristics.
+  summary: >-
+    Defines a marker (placemark) object and it's characteristics.
+
+    <remarks>It is primarily used as parameter to methods within the StaticMapsApi.</remarks>
   example: []
   syntax:
-    content: 'public class Marker : GoogleMapElement'
-    content.vb: Public Class Marker Inherits GoogleMapElement
+    content: 'public record Marker : GoogleMapElement, IEquatable<GoogleMapElement>, IEquatable<Marker>'
+    content.vb: Public Class Marker Inherits GoogleMapElement Implements IEquatable(Of GoogleMapElement), IEquatable(Of Marker)
   inheritance:
   - System.Object
   - GoogleMapsWrapper.Elements.GoogleMapElement
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  - System.IEquatable{GoogleMapsWrapper.Elements.Marker}
   inheritedMembers:
   - GoogleMapsWrapper.Elements.GoogleMapElement.Name
   - GoogleMapsWrapper.Elements.GoogleMapElement.Id
@@ -71,7 +77,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Label
     path: ../../Elements/Marker.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
@@ -79,14 +85,14 @@ items:
   remarks: Accepts values that are alpha-numerical, uppercase only. Single character.
   example: []
   syntax:
-    content: public char Label { get; set; }
+    content: public char Label { get; init; }
     parameters: []
     return:
       type: System.Char
     content.vb: Public Property Label As Char
   overload: GoogleMapsWrapper.Elements.Marker.Label*
 - uid: GoogleMapsWrapper.Elements.Marker.Scale
-  commentId: F:GoogleMapsWrapper.Elements.Marker.Scale
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Scale
   id: Scale
   parent: GoogleMapsWrapper.Elements.Marker
   langs:
@@ -95,7 +101,7 @@ items:
   name: Scale
   nameWithType: Marker.Scale
   fullName: GoogleMapsWrapper.Elements.Marker.Scale
-  type: Field
+  type: Property
   source:
     remote:
       path: GoogleMapsApi/Elements/Marker.cs
@@ -103,19 +109,21 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Scale
     path: ../../Elements/Marker.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: Affects the scale of the marker graphic rendered on a static map.
   example: []
   syntax:
-    content: public MarkerScaleTypes Scale
+    content: public MarkerScaleTypes Scale { get; init; }
+    parameters: []
     return:
       type: GoogleMapsWrapper.Types.MarkerScaleTypes
-    content.vb: Public Scale As MarkerScaleTypes
+    content.vb: Public Property Scale As MarkerScaleTypes
+  overload: GoogleMapsWrapper.Elements.Marker.Scale*
 - uid: GoogleMapsWrapper.Elements.Marker.Size
-  commentId: F:GoogleMapsWrapper.Elements.Marker.Size
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Size
   id: Size
   parent: GoogleMapsWrapper.Elements.Marker
   langs:
@@ -124,7 +132,7 @@ items:
   name: Size
   nameWithType: Marker.Size
   fullName: GoogleMapsWrapper.Elements.Marker.Size
-  type: Field
+  type: Property
   source:
     remote:
       path: GoogleMapsApi/Elements/Marker.cs
@@ -132,17 +140,19 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Size
     path: ../../Elements/Marker.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: Affects the scale of the marker graphic rendered on a static map.
   example: []
   syntax:
-    content: public MarkerSizes Size
+    content: public MarkerSizes Size { get; init; }
+    parameters: []
     return:
       type: GoogleMapsWrapper.Types.MarkerSizes
-    content.vb: Public Size As MarkerSizes
+    content.vb: Public Property Size As MarkerSizes
+  overload: GoogleMapsWrapper.Elements.Marker.Size*
 - uid: GoogleMapsWrapper.Elements.Marker.CustomIcon
   commentId: P:GoogleMapsWrapper.Elements.Marker.CustomIcon
   id: CustomIcon
@@ -161,14 +171,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: CustomIcon
     path: ../../Elements/Marker.cs
-    startLine: 46
+    startLine: 47
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: A custom icon to represent the marker.
   example: []
   syntax:
-    content: public StaticMapCustomIcon? CustomIcon { get; set; }
+    content: public StaticMapCustomIcon? CustomIcon { get; init; }
     parameters: []
     return:
       type: GoogleMapsWrapper.Api.StaticMapCustomIcon
@@ -192,29 +202,29 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Coordinate
     path: ../../Elements/Marker.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: The location of the marker.
   example: []
   syntax:
-    content: public GpsCoordinate Coordinate { get; }
+    content: public GpsCoordinate Coordinate { get; init; }
     parameters: []
     return:
       type: GoogleMapsWrapper.Types.GpsCoordinate
-    content.vb: Public ReadOnly Property Coordinate As GpsCoordinate
+    content.vb: Public Property Coordinate As GpsCoordinate
   overload: GoogleMapsWrapper.Elements.Marker.Coordinate*
-- uid: GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
-  commentId: M:GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
-  id: '#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)'
+- uid: GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)
+  commentId: M:GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)
+  id: '#ctor(GoogleMapsWrapper.Types.GpsCoordinate)'
   parent: GoogleMapsWrapper.Elements.Marker
   langs:
   - csharp
   - vb
-  name: Marker(GpsCoordinate, string?, string?)
-  nameWithType: Marker.Marker(GpsCoordinate, string?, string?)
-  fullName: GoogleMapsWrapper.Elements.Marker.Marker(GoogleMapsWrapper.Types.GpsCoordinate, string?, string?)
+  name: Marker(GpsCoordinate)
+  nameWithType: Marker.Marker(GpsCoordinate)
+  fullName: GoogleMapsWrapper.Elements.Marker.Marker(GoogleMapsWrapper.Types.GpsCoordinate)
   type: Constructor
   source:
     remote:
@@ -223,26 +233,22 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/Marker.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   summary: Constructs a new marker instance.
   example: []
   syntax:
-    content: public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
+    content: public Marker(GpsCoordinate Coordinate)
     parameters:
     - id: Coordinate
       type: GoogleMapsWrapper.Types.GpsCoordinate
-    - id: Id
-      type: System.String
-    - id: Name
-      type: System.String
-    content.vb: Public Sub New(Coordinate As GpsCoordinate, Id As String = Nothing, Name As String = Nothing)
+    content.vb: Public Sub New(Coordinate As GpsCoordinate)
   overload: GoogleMapsWrapper.Elements.Marker.#ctor*
-  nameWithType.vb: Marker.New(GpsCoordinate, String, String)
-  fullName.vb: GoogleMapsWrapper.Elements.Marker.New(GoogleMapsWrapper.Types.GpsCoordinate, String, String)
-  name.vb: New(GpsCoordinate, String, String)
+  nameWithType.vb: Marker.New(GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Elements.Marker.New(GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: New(GpsCoordinate)
 references:
 - uid: GoogleMapsWrapper.Elements
   commentId: N:GoogleMapsWrapper.Elements
@@ -284,6 +290,72 @@ references:
   name: GoogleMapElement
   nameWithType: GoogleMapElement
   fullName: GoogleMapsWrapper.Elements.GoogleMapElement
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GoogleMapElement>
+  nameWithType: IEquatable<GoogleMapElement>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.GoogleMapElement>
+  nameWithType.vb: IEquatable(Of GoogleMapElement)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.GoogleMapElement)
+  name.vb: IEquatable(Of GoogleMapElement)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: )
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.Marker}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.Marker}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Marker>
+  nameWithType: IEquatable<Marker>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.Marker>
+  nameWithType.vb: IEquatable(Of Marker)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.Marker)
+  name.vb: IEquatable(Of Marker)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.Marker
+    name: Marker
+    href: GoogleMapsWrapper.Elements.Marker.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.Marker
+    name: Marker
+    href: GoogleMapsWrapper.Elements.Marker.html
+  - name: )
 - uid: GoogleMapsWrapper.Elements.GoogleMapElement.Name
   commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Name
   parent: GoogleMapsWrapper.Elements.GoogleMapElement
@@ -566,6 +638,34 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: GoogleMapsWrapper.Elements.Marker.Label*
   commentId: Overload:GoogleMapsWrapper.Elements.Marker.Label
   href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Label
@@ -583,6 +683,12 @@ references:
   nameWithType.vb: Char
   fullName.vb: Char
   name.vb: Char
+- uid: GoogleMapsWrapper.Elements.Marker.Scale*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Scale
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Scale
+  name: Scale
+  nameWithType: Marker.Scale
+  fullName: GoogleMapsWrapper.Elements.Marker.Scale
 - uid: GoogleMapsWrapper.Types.MarkerScaleTypes
   commentId: T:GoogleMapsWrapper.Types.MarkerScaleTypes
   parent: GoogleMapsWrapper.Types
@@ -612,6 +718,12 @@ references:
   - uid: GoogleMapsWrapper.Types
     name: Types
     href: GoogleMapsWrapper.Types.html
+- uid: GoogleMapsWrapper.Elements.Marker.Size*
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Size
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Size
+  name: Size
+  nameWithType: Marker.Size
+  fullName: GoogleMapsWrapper.Elements.Marker.Size
 - uid: GoogleMapsWrapper.Types.MarkerSizes
   commentId: T:GoogleMapsWrapper.Types.MarkerSizes
   parent: GoogleMapsWrapper.Types
@@ -669,21 +781,10 @@ references:
   fullName: GoogleMapsWrapper.Types.GpsCoordinate
 - uid: GoogleMapsWrapper.Elements.Marker.#ctor*
   commentId: Overload:GoogleMapsWrapper.Elements.Marker.#ctor
-  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_System_String_System_String_
+  href: GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_
   name: Marker
   nameWithType: Marker.Marker
   fullName: GoogleMapsWrapper.Elements.Marker.Marker
   nameWithType.vb: Marker.New
   fullName.vb: GoogleMapsWrapper.Elements.Marker.New
   name.vb: New
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String

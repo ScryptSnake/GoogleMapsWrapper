@@ -40,7 +40,6 @@ references:
   fullName: GoogleMapsWrapper.Elements.Marker
 - uid: GoogleMapsWrapper.Elements.Polyline
   commentId: T:GoogleMapsWrapper.Elements.Polyline
-  parent: GoogleMapsWrapper.Elements
   href: GoogleMapsWrapper.Elements.Polyline.html
   name: Polyline
   nameWithType: Polyline

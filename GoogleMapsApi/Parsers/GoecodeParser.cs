@@ -88,10 +88,13 @@ public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>
             {
                 // First item in "types[]" is 'property name' or key.
                 string? typeName = arrayElement.GetProperty("types")[0].GetString();
+
                 if (string.IsNullOrEmpty(typeName))
                     throw new System.Text.Json.JsonException($"Type name for address component is empty.");
+
                 // 'long_name' property is the value of interest.
                 var typeValue = arrayElement.GetProperty("long_name").GetString();
+
                 // Append the KVP to dictionary.
                 output.Add(typeName, typeValue);
             }
@@ -100,22 +103,32 @@ public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>
         //output.ToList().ForEach(kvp => Debug.Print($"{kvp.Key}: {kvp.Value}"));
     }
 
-    ///<Summary>Finds the GpsCoordinate within a JsonElement.</Summary>
-    private GpsCoordinate FindGpsCoordinate(JsonElement jsonElement)
+
+    ///<Summary>Extracts the GpsCoordinate from a JsonElement. 
+    ///<Remarks>This method supplements the containerization operation in Parse() because the serializer cannot deserialize to this type.</Remarks>
+    ///</Summary>
+    private GpsCoordinate findGpsCoordinate(JsonElement jsonElement)
     {
         try
         {
+            // Initialize decimals.
             decimal latitude = 0;
             decimal longitude = 0;
-            if (jsonElement.TryGetProperty("lat", out var latElement) &&
-                (jsonElement.TryGetProperty("lng", out var lngElement)))
+
+            // Attempt to grab 'lat'/'lng' properties. 
+            if (jsonElement.TryGetProperty("lat", out var latProperty) &&
+                (jsonElement.TryGetProperty("lng", out var lngProperty)))
             {
-                latElement.TryGetDecimal(out latitude);
-                lngElement.TryGetDecimal(out longitude);
+                // Attempt to parse prop values to decimal.
+                latProperty.TryGetDecimal(out latitude);
+                lngProperty.TryGetDecimal(out longitude);
             }
+
+            // Attempt to parse decimal to GpsCoordinate.
             var output = new GpsCoordinate(latitude, longitude);
             return output;
         }
         catch { throw new System.Text.Json.JsonException("Failed to parse coordinates."); }
     }
+
 }

@@ -11,31 +11,29 @@ using GoogleMapsWrapper.Requests;
 
 
 namespace GoogleMapsWrapper.Responses;
-///<Summary>A response from the Api Engine that contains content in JsonDocument form.</Summary>
+///<Summary>A response from the Api Engine that contains content in <see cref="JsonDocument"/> form.</Summary>
 public class JsonResponse : IResponse<JsonDocument>
 {
-    private IRequest sentRequest;
-    public IRequest SentRequest { get=> sentRequest;}
+    public IRequest SentRequest { get;}
 
-    private HttpResponseMessage responseMessage;
-    public HttpResponseMessage ResponseMessage => responseMessage;
+    public HttpResponseMessage ResponseMessage { get; }
 
-    private JsonDocument content;
-    public JsonDocument Content { get=>content; }
+    public JsonDocument Content { get; }
 
     ///<Summary>Constructs a new instance of this object.</Summary>
-    ///<param>name=SentRequest>The attached request associated with the response.</param>
-    ///<param>name=Content>The raw http response returned from the endpoint.</param>
-    ///<param>name=ResponseMessage> The response message from the HttpClient used to send the request.</param>
-    public JsonResponse(IRequest SentRequest, JsonDocument Content, HttpResponseMessage ResponseMessage)
+    ///<param>name=sentRequest>The attached request associated with the response.</param>
+    ///<param>name=content>The raw http response returned from the endpoint.</param>
+    ///<param>name=responseMessage> The response message from the HttpClient used to send the request.</param>
+    public JsonResponse(IRequest sentRequest, JsonDocument content, HttpResponseMessage responseMessage)
     {
-        content = Content;
-        sentRequest = SentRequest;
-        responseMessage = ResponseMessage;
+        Content = content;
+        SentRequest = sentRequest;
+        ResponseMessage = responseMessage;
     }
+
     public T Parse<T>(IParser<T,JsonDocument> parser)
     {
-        return parser.Parse(this.content);
+        return parser.Parse(Content);
     }
 }
 

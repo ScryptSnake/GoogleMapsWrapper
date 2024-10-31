@@ -10,7 +10,6 @@ items:
   - GoogleMapsWrapper.Responses.ByteResponse.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Byte[]})
   - GoogleMapsWrapper.Responses.ByteResponse.ResponseMessage
   - GoogleMapsWrapper.Responses.ByteResponse.SentRequest
-  - GoogleMapsWrapper.Responses.ByteResponse.content
   langs:
   - csharp
   - vb
@@ -63,7 +62,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: SentRequest
     path: ../../Responses/ByteResponse.cs
-    startLine: 14
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -95,7 +94,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ResponseMessage
     path: ../../Responses/ByteResponse.cs
-    startLine: 17
+    startLine: 15
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -109,33 +108,6 @@ items:
   overload: GoogleMapsWrapper.Responses.ByteResponse.ResponseMessage*
   implements:
   - GoogleMapsWrapper.Responses.IResponse{System.Byte[]}.ResponseMessage
-- uid: GoogleMapsWrapper.Responses.ByteResponse.content
-  commentId: F:GoogleMapsWrapper.Responses.ByteResponse.content
-  id: content
-  parent: GoogleMapsWrapper.Responses.ByteResponse
-  langs:
-  - csharp
-  - vb
-  name: content
-  nameWithType: ByteResponse.content
-  fullName: GoogleMapsWrapper.Responses.ByteResponse.content
-  type: Field
-  source:
-    remote:
-      path: GoogleMapsApi/Responses/ByteResponse.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: content
-    path: ../../Responses/ByteResponse.cs
-    startLine: 19
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Responses
-  syntax:
-    content: public byte[]? content
-    return:
-      type: System.Byte[]
-    content.vb: Public content As Byte()
 - uid: GoogleMapsWrapper.Responses.ByteResponse.Content
   commentId: P:GoogleMapsWrapper.Responses.ByteResponse.Content
   id: Content
@@ -154,7 +126,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Content
     path: ../../Responses/ByteResponse.cs
-    startLine: 20
+    startLine: 17
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -186,21 +158,21 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Responses/ByteResponse.cs
-    startLine: 27
+    startLine: 23
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
   example: []
   syntax:
-    content: public ByteResponse(IRequest SentRequest, byte[] Content, HttpResponseMessage ResponseMessage)
+    content: public ByteResponse(IRequest sentRequest, byte[] content, HttpResponseMessage responseMessage)
     parameters:
-    - id: SentRequest
+    - id: sentRequest
       type: GoogleMapsWrapper.Requests.IRequest
-    - id: Content
+    - id: content
       type: System.Byte[]
-    - id: ResponseMessage
+    - id: responseMessage
       type: System.Net.Http.HttpResponseMessage
-    content.vb: Public Sub New(SentRequest As IRequest, Content As Byte(), ResponseMessage As HttpResponseMessage)
+    content.vb: Public Sub New(sentRequest As IRequest, content As Byte(), responseMessage As HttpResponseMessage)
   overload: GoogleMapsWrapper.Responses.ByteResponse.#ctor*
   nameWithType.vb: ByteResponse.New(IRequest, Byte(), HttpResponseMessage)
   fullName.vb: GoogleMapsWrapper.Responses.ByteResponse.New(GoogleMapsWrapper.Requests.IRequest, Byte(), System.Net.Http.HttpResponseMessage)
@@ -223,7 +195,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Parse
     path: ../../Responses/ByteResponse.cs
-    startLine: 33
+    startLine: 29
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Responses
@@ -245,6 +217,16 @@ items:
   fullName.vb: GoogleMapsWrapper.Responses.ByteResponse.Parse(Of T)(GoogleMapsWrapper.Parsers.IParser(Of T, Byte()))
   name.vb: Parse(Of T)(IParser(Of T, Byte()))
 references:
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
 - uid: GoogleMapsWrapper.Responses
   commentId: N:GoogleMapsWrapper.Responses
   href: GoogleMapsWrapper.html
@@ -688,6 +670,22 @@ references:
     name: Http
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: GoogleMapsWrapper.Responses.ByteResponse.Content*
+  commentId: Overload:GoogleMapsWrapper.Responses.ByteResponse.Content
+  href: GoogleMapsWrapper.Responses.ByteResponse.html#GoogleMapsWrapper_Responses_ByteResponse_Content
+  name: Content
+  nameWithType: ByteResponse.Content
+  fullName: GoogleMapsWrapper.Responses.ByteResponse.Content
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Byte[]}.Content
+  commentId: P:GoogleMapsWrapper.Responses.IResponse{System.Byte[]}.Content
+  parent: GoogleMapsWrapper.Responses.IResponse{System.Byte[]}
+  definition: GoogleMapsWrapper.Responses.IResponse`1.Content
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content
+  name: Content
+  nameWithType: IResponse<byte[]>.Content
+  fullName: GoogleMapsWrapper.Responses.IResponse<byte[]>.Content
+  nameWithType.vb: IResponse(Of Byte()).Content
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of Byte()).Content
 - uid: System.Byte[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.byte
@@ -711,22 +709,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.byte
   - name: (
   - name: )
-- uid: GoogleMapsWrapper.Responses.ByteResponse.Content*
-  commentId: Overload:GoogleMapsWrapper.Responses.ByteResponse.Content
-  href: GoogleMapsWrapper.Responses.ByteResponse.html#GoogleMapsWrapper_Responses_ByteResponse_Content
-  name: Content
-  nameWithType: ByteResponse.Content
-  fullName: GoogleMapsWrapper.Responses.ByteResponse.Content
-- uid: GoogleMapsWrapper.Responses.IResponse{System.Byte[]}.Content
-  commentId: P:GoogleMapsWrapper.Responses.IResponse{System.Byte[]}.Content
-  parent: GoogleMapsWrapper.Responses.IResponse{System.Byte[]}
-  definition: GoogleMapsWrapper.Responses.IResponse`1.Content
-  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content
-  name: Content
-  nameWithType: IResponse<byte[]>.Content
-  fullName: GoogleMapsWrapper.Responses.IResponse<byte[]>.Content
-  nameWithType.vb: IResponse(Of Byte()).Content
-  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of Byte()).Content
 - uid: GoogleMapsWrapper.Responses.IResponse`1.Content
   commentId: P:GoogleMapsWrapper.Responses.IResponse`1.Content
   href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content

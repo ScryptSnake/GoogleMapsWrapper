@@ -14,18 +14,19 @@ using GoogleMapsWrapper.Api;
 
 namespace GoogleMapsWrapper.Elements;
 /// <summary>
-/// Defines a 'marker' (placemark) object and it's characteristics.  
+/// Defines a marker (placemark) object and it's characteristics.
+/// <remarks>It is primarily used as parameter to methods within the StaticMapsApi.</remarks>
 /// </summary>
-public class Marker : GoogleMapElement
+public record Marker : GoogleMapElement
 {
-    private char label = '\0'; //initialize to null character
+    private char label = '\0'; // Initialize to null character.
 
     ///<summary> A label applied to the marker.</summary>
     ///<remarks>Accepts values that are alpha-numerical, uppercase only. Single character.</remarks>
     public char Label
     {
         get => label;
-        set
+        init
         {
             bool isUppercaseAlphanumeric =
                 value == '\0' ||                    //allow null
@@ -36,30 +37,26 @@ public class Marker : GoogleMapElement
             label = value;
         }
     }
-    
+
     ///<summary>Affects the scale of the marker graphic rendered on a static map.</summary>
-    public MarkerScaleTypes Scale;
-    
+    public MarkerScaleTypes Scale { get; init; } = MarkerScaleTypes.Normal;
+
     ///<summary>Affects the scale of the marker graphic rendered on a static map.</summary>
-    public MarkerSizes Size;
+    public MarkerSizes Size { get; init; } = MarkerSizes.Mid;
 
     ///<summary>A custom icon to represent the marker. </summary>
-    public StaticMapCustomIcon? CustomIcon { get; set; }
+    public StaticMapCustomIcon? CustomIcon { get; init; }
 
     ///<summary> The location of the marker. </summary>
-    public GpsCoordinate Coordinate { get; }
+    public GpsCoordinate Coordinate { get; init; }
     
     ///<summary> Constructs a new marker instance. </summary>
     
-    public Marker(GpsCoordinate Coordinate, string? Id = null, string? Name = null)
+    public Marker(GpsCoordinate Coordinate)
     {
         this.Coordinate = Coordinate;
-        this.Id = Id;
-        this.Name = Name;
 
-        //defaults:
+        // Set default inherited properties.
         Color = Color.Red;
-        Scale = MarkerScaleTypes.Normal;
-        Size = MarkerSizes.Mid;
     }
 }

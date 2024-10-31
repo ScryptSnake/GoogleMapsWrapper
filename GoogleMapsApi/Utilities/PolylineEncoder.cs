@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsWrapper.Utilities;
 /// <summary>
-/// A static class to encode a list of GPS coordinates using Google's polyline shortening encoding algorithm.
+/// Encodes a list of GPS coordinates using Google's Polyline shortening encoder algorithm.
 /// </summary>
+/// <see href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm"></see>.
+///<see href="https://developers.google.com/maps/documentation/utilities/polylineutility></see>.
 public static class PolylineEncoder
 {
     public static string Encode(IList<GpsCoordinate> coordinates)

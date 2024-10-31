@@ -12,97 +12,63 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleMapsWrapper.Elements
+namespace GoogleMapsWrapper.Elements;
+
+public record Polyline : GoogleMapElement
 {
-    public class Polyline : GoogleMapElement
+    /// <summary> The weight of the line when rendered. In pixels.</summary>
+    public int Weight { get; init; } = 5;
+
+    /// <summary> Allows the line to follow the earth's contour.</summary>
+    public bool Geodesic { get; init; } = false;
+
+    /// <summary> Label displayed with the marker.</summary>
+    public char? Label { get; init; } = '\0';
+
+    /// <summary>
+    /// Gets the coordinates contained in the Polyline.
+    /// </summary>
+    public IReadOnlyCollection<GpsCoordinate> Coordinates
     {
-        public int Weight { get; set; } //pixels
-        public bool Geodesic { get; set; }
-        public char? Label { get; set; }
-
-        public IReadOnlyList<GpsCoordinate> Coordinates
-        {
-            get => coordinates.AsReadOnly();
-
-        }
-
-        private IList<GpsCoordinate> coordinates;
-
-        public Polyline(IList<GpsCoordinate> Coordinates, string? Id = null, string? Name = null)
-        {
-            this.coordinates = Coordinates;
-            this.Id = Id;
-            this.Name = Name;
-
-            //defaults:
-            this.Color = Color.Yellow;
-            Geodesic = false;
-            Weight = 5;
-        }
-
-        public void AddCoordinate(GpsCoordinate coordinate)
-        {
-            coordinates.Add(coordinate);
-        }
-
-        public void AddCoordinate(string coordinate)
-        {
-            var coord = GpsCoordinate.Parse(coordinate);
-            coordinates.Add(coord);
-        }
-
-        public void InsertCoordinate(GpsCoordinate coordinate, int index)
-        {
-            coordinates.Insert(index, coordinate);
-        }
-        public void RemoveCoordinate(GpsCoordinate coordinate)
-        {
-            coordinates.Remove(coordinate);
-            //note: this may remove duplicate values. IList uses the Equals operator to determine qualification for removal. 
-        }
-        public void RemoveCoordinate(int index)
-        {
-            coordinates.RemoveAt(index);
-        }
-
-        /// <summary>
-        /// Returns true if the object contains 2 or more coordinates.
-        /// </summary>
-        public bool IsEmpty()
-        {
-            if (this.coordinates.Count >1) return false; return true;
-        }
-
-        public override string ToString()
-        {
-            return string.Join(';', this.Coordinates);
-        }
-
-        public static Polyline Parse(string input, string separator)
-        {
-            var coordinates = new List<GpsCoordinate>();    
-            var array = input.Split(separator);
-            foreach (string value in array)
-            {
-                var coord = GpsCoordinate.Parse(value);
-                coordinates.Add(coord);
-            }
-            var output = new Polyline(coordinates);
-            return output;
-        }
-
-
+        get => coordinates.AsReadOnly();
     }
 
+    private readonly List<GpsCoordinate> coordinates;
 
+    /// <summary>
+    /// Initializes a new Polyline from a set of coordinate objects.
+    /// </summary>
+    public Polyline(IEnumerable<GpsCoordinate> Coordinates)
+    {
+        this.coordinates = new List<GpsCoordinate>(Coordinates);
 
+        // Inherited property defaults:
+        this.Color = Color.Yellow;
+    }
 
+    /// <summary>
+    /// Returns true if the Polyline contains zero coordinates.
+    /// </summary>
+    public bool IsEmpty()
+    {
+        if (this.coordinates.Count == 0) return true;
+        return false;
+    }
 
+    /// <summary>
+    /// Returns true if the Polyline contains more than 1 coordinate.
+    /// </summary>
+    public bool IsValid()
+    {
+        if (this.coordinates.Count > 1) return true;
+        return false;
+    }
 
-
-
-
-
-
-
+    /// <summary>
+    /// Returns a semicolon separated string of coordinates.
+    /// </summary>
+    public override string ToString()
+    {
+        return string.Join(';', this.Coordinates);
+    }
 }

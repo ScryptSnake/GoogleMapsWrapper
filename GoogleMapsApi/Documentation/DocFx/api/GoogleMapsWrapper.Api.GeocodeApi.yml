@@ -33,7 +33,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Provides methods for retrieiving data from Google's Geocoding API.
+  summary: Provides methods for retrieving data from Google's Geocoding API.
   example: []
   syntax:
     content: public class GeocodeApi
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 54
+    startLine: 52
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -215,7 +215,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeParseAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 75
+    startLine: 71
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -235,7 +235,7 @@ items:
       description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{GoogleMapsWrapper.Containers.GeocodeContainer}
-      description: A <xref href="GoogleMapsWrapper.Containers.GeocodeContainer" data-throw-if-not-resolved="false"></xref> holding data parsed from <xref href="GoogleMapsWrapper.Parsers.GeocodeParser" data-throw-if-not-resolved="false"></xref>.
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw JSON response from the Google API.
     content.vb: Public Function GeocodeParseAsync(latitude As String, longitude As String, identifier As String = Nothing) As Task(Of GeocodeContainer)
   overload: GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync*
   nameWithType.vb: GeocodeApi.GeocodeParseAsync(String, String, String)
@@ -259,7 +259,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeParseAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 88
+    startLine: 83
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -276,7 +276,7 @@ items:
       description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{GoogleMapsWrapper.Containers.GeocodeContainer}
-      description: A <xref href="GoogleMapsWrapper.Containers.GeocodeContainer" data-throw-if-not-resolved="false"></xref> holding data parsed from <xref href="GoogleMapsWrapper.Parsers.GeocodeParser" data-throw-if-not-resolved="false"></xref>.
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw JSON response from the Google API.
     content.vb: Public Function GeocodeParseAsync(coordinate As GpsCoordinate, identifier As String = Nothing) As Task(Of GeocodeContainer)
   overload: GoogleMapsWrapper.Api.GeocodeApi.GeocodeParseAsync*
   nameWithType.vb: GeocodeApi.GeocodeParseAsync(GpsCoordinate, String)
@@ -300,7 +300,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetElevationAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 102
+    startLine: 97
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -344,7 +344,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetElevationAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 115
+    startLine: 109
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -385,7 +385,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetElevationParsedAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 131
+    startLine: 123
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -402,10 +402,10 @@ items:
       description: Decimal degrees gps longitude.
     - id: identifier
       type: System.String
-      description: A string appended to the request for tracking or identification.
+      description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{GoogleMapsWrapper.Containers.ElevationContainer}
-      description: An <xref href="GoogleMapsWrapper.Containers.ElevationContainer" data-throw-if-not-resolved="false"></xref> holding data parsed from <xref href="GoogleMapsWrapper.Parsers.ElevationParser" data-throw-if-not-resolved="false"></xref>.
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw JSON response from the Google API.
     content.vb: Public Function GetElevationParsedAsync(latitude As String, longitude As String, identifier As String = Nothing) As Task(Of ElevationContainer)
   overload: GoogleMapsWrapper.Api.GeocodeApi.GetElevationParsedAsync*
   nameWithType.vb: GeocodeApi.GetElevationParsedAsync(String, String, String)
@@ -429,7 +429,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetElevationParsedAsync
     path: ../../Api/GeocodeApi.cs
-    startLine: 144
+    startLine: 134
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -446,7 +446,7 @@ items:
       description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{GoogleMapsWrapper.Containers.ElevationContainer}
-      description: An <xref href="GoogleMapsWrapper.Containers.ElevationContainer" data-throw-if-not-resolved="false"></xref> holding data parsed from <xref href="GoogleMapsWrapper.Parsers.ElevationParser" data-throw-if-not-resolved="false"></xref>.
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw JSON response from the Google API.
     content.vb: Public Function GetElevationParsedAsync(coordinate As GpsCoordinate, identifier As String = Nothing) As Task(Of ElevationContainer)
   overload: GoogleMapsWrapper.Api.GeocodeApi.GetElevationParsedAsync*
   nameWithType.vb: GeocodeApi.GetElevationParsedAsync(GpsCoordinate, String)

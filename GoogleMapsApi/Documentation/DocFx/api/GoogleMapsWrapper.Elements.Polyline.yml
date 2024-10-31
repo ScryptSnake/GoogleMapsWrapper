@@ -5,17 +5,12 @@ items:
   id: Polyline
   parent: GoogleMapsWrapper.Elements
   children:
-  - GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  - GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  - GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)
+  - GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})
   - GoogleMapsWrapper.Elements.Polyline.Coordinates
   - GoogleMapsWrapper.Elements.Polyline.Geodesic
-  - GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
   - GoogleMapsWrapper.Elements.Polyline.IsEmpty
+  - GoogleMapsWrapper.Elements.Polyline.IsValid
   - GoogleMapsWrapper.Elements.Polyline.Label
-  - GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)
-  - GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  - GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)
   - GoogleMapsWrapper.Elements.Polyline.ToString
   - GoogleMapsWrapper.Elements.Polyline.Weight
   langs:
@@ -37,11 +32,14 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
   syntax:
-    content: 'public class Polyline : GoogleMapElement'
-    content.vb: Public Class Polyline Inherits GoogleMapElement
+    content: 'public record Polyline : GoogleMapElement, IEquatable<GoogleMapElement>, IEquatable<Polyline>'
+    content.vb: Public Class Polyline Inherits GoogleMapElement Implements IEquatable(Of GoogleMapElement), IEquatable(Of Polyline)
   inheritance:
   - System.Object
   - GoogleMapsWrapper.Elements.GoogleMapElement
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  - System.IEquatable{GoogleMapsWrapper.Elements.Polyline}
   inheritedMembers:
   - GoogleMapsWrapper.Elements.GoogleMapElement.Name
   - GoogleMapsWrapper.Elements.GoogleMapElement.Id
@@ -75,12 +73,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Weight
     path: ../../Elements/Polyline.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: The weight of the line when rendered. In pixels.
+  example: []
   syntax:
-    content: public int Weight { get; set; }
+    content: public int Weight { get; init; }
     parameters: []
     return:
       type: System.Int32
@@ -104,12 +104,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Geodesic
     path: ../../Elements/Polyline.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Allows the line to follow the earth's contour.
+  example: []
   syntax:
-    content: public bool Geodesic { get; set; }
+    content: public bool Geodesic { get; init; }
     parameters: []
     return:
       type: System.Boolean
@@ -133,12 +135,14 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Label
     path: ../../Elements/Polyline.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Label displayed with the marker.
+  example: []
   syntax:
-    content: public char? Label { get; set; }
+    content: public char? Label { get; init; }
     parameters: []
     return:
       type: System.Nullable{System.Char}
@@ -162,27 +166,29 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Coordinates
     path: ../../Elements/Polyline.cs
-    startLine: 22
+    startLine: 30
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Gets the coordinates contained in the Polyline.
+  example: []
   syntax:
-    content: public IReadOnlyList<GpsCoordinate> Coordinates { get; }
+    content: public IReadOnlyCollection<GpsCoordinate> Coordinates { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.Types.GpsCoordinate}
-    content.vb: Public ReadOnly Property Coordinates As IReadOnlyList(Of GpsCoordinate)
+      type: System.Collections.Generic.IReadOnlyCollection{GoogleMapsWrapper.Types.GpsCoordinate}
+    content.vb: Public ReadOnly Property Coordinates As IReadOnlyCollection(Of GpsCoordinate)
   overload: GoogleMapsWrapper.Elements.Polyline.Coordinates*
-- uid: GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  id: '#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)'
+- uid: GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})
+  commentId: M:GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})
+  id: '#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})'
   parent: GoogleMapsWrapper.Elements.Polyline
   langs:
   - csharp
   - vb
-  name: Polyline(IList<GpsCoordinate>, string?, string?)
-  nameWithType: Polyline.Polyline(IList<GpsCoordinate>, string?, string?)
-  fullName: GoogleMapsWrapper.Elements.Polyline.Polyline(System.Collections.Generic.IList<GoogleMapsWrapper.Types.GpsCoordinate>, string?, string?)
+  name: Polyline(IEnumerable<GpsCoordinate>)
+  nameWithType: Polyline.Polyline(IEnumerable<GpsCoordinate>)
+  fullName: GoogleMapsWrapper.Elements.Polyline.Polyline(System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Types.GpsCoordinate>)
   type: Constructor
   source:
     remote:
@@ -191,180 +197,22 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/Polyline.cs
-    startLine: 30
+    startLine: 40
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
+  summary: Initializes a new Polyline from a set of coordinate objects.
+  example: []
   syntax:
-    content: public Polyline(IList<GpsCoordinate> Coordinates, string? Id = null, string? Name = null)
+    content: public Polyline(IEnumerable<GpsCoordinate> Coordinates)
     parameters:
     - id: Coordinates
-      type: System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate}
-    - id: Id
-      type: System.String
-    - id: Name
-      type: System.String
-    content.vb: Public Sub New(Coordinates As IList(Of GpsCoordinate), Id As String = Nothing, Name As String = Nothing)
+      type: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate}
+    content.vb: Public Sub New(Coordinates As IEnumerable(Of GpsCoordinate))
   overload: GoogleMapsWrapper.Elements.Polyline.#ctor*
-  nameWithType.vb: Polyline.New(IList(Of GpsCoordinate), String, String)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.New(System.Collections.Generic.IList(Of GoogleMapsWrapper.Types.GpsCoordinate), String, String)
-  name.vb: New(IList(Of GpsCoordinate), String, String)
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  id: AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: AddCoordinate(GpsCoordinate)
-  nameWithType: Polyline.AddCoordinate(GpsCoordinate)
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: AddCoordinate
-    path: ../../Elements/Polyline.cs
-    startLine: 42
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public void AddCoordinate(GpsCoordinate coordinate)
-    parameters:
-    - id: coordinate
-      type: GoogleMapsWrapper.Types.GpsCoordinate
-    content.vb: Public Sub AddCoordinate(coordinate As GpsCoordinate)
-  overload: GoogleMapsWrapper.Elements.Polyline.AddCoordinate*
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)
-  id: AddCoordinate(System.String)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: AddCoordinate(string)
-  nameWithType: Polyline.AddCoordinate(string)
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(string)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: AddCoordinate
-    path: ../../Elements/Polyline.cs
-    startLine: 47
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public void AddCoordinate(string coordinate)
-    parameters:
-    - id: coordinate
-      type: System.String
-    content.vb: Public Sub AddCoordinate(coordinate As String)
-  overload: GoogleMapsWrapper.Elements.Polyline.AddCoordinate*
-  nameWithType.vb: Polyline.AddCoordinate(String)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(String)
-  name.vb: AddCoordinate(String)
-- uid: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
-  id: InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: InsertCoordinate(GpsCoordinate, int)
-  nameWithType: Polyline.InsertCoordinate(GpsCoordinate, int)
-  fullName: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate, int)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: InsertCoordinate
-    path: ../../Elements/Polyline.cs
-    startLine: 53
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public void InsertCoordinate(GpsCoordinate coordinate, int index)
-    parameters:
-    - id: coordinate
-      type: GoogleMapsWrapper.Types.GpsCoordinate
-    - id: index
-      type: System.Int32
-    content.vb: Public Sub InsertCoordinate(coordinate As GpsCoordinate, index As Integer)
-  overload: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate*
-  nameWithType.vb: Polyline.InsertCoordinate(GpsCoordinate, Integer)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate, Integer)
-  name.vb: InsertCoordinate(GpsCoordinate, Integer)
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  id: RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: RemoveCoordinate(GpsCoordinate)
-  nameWithType: Polyline.RemoveCoordinate(GpsCoordinate)
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: RemoveCoordinate
-    path: ../../Elements/Polyline.cs
-    startLine: 57
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public void RemoveCoordinate(GpsCoordinate coordinate)
-    parameters:
-    - id: coordinate
-      type: GoogleMapsWrapper.Types.GpsCoordinate
-    content.vb: Public Sub RemoveCoordinate(coordinate As GpsCoordinate)
-  overload: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)
-  id: RemoveCoordinate(System.Int32)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: RemoveCoordinate(int)
-  nameWithType: Polyline.RemoveCoordinate(int)
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(int)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: RemoveCoordinate
-    path: ../../Elements/Polyline.cs
-    startLine: 62
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public void RemoveCoordinate(int index)
-    parameters:
-    - id: index
-      type: System.Int32
-    content.vb: Public Sub RemoveCoordinate(index As Integer)
-  overload: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*
-  nameWithType.vb: Polyline.RemoveCoordinate(Integer)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(Integer)
-  name.vb: RemoveCoordinate(Integer)
+  nameWithType.vb: Polyline.New(IEnumerable(Of GpsCoordinate))
+  fullName.vb: GoogleMapsWrapper.Elements.Polyline.New(System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Types.GpsCoordinate))
+  name.vb: New(IEnumerable(Of GpsCoordinate))
 - uid: GoogleMapsWrapper.Elements.Polyline.IsEmpty
   commentId: M:GoogleMapsWrapper.Elements.Polyline.IsEmpty
   id: IsEmpty
@@ -383,11 +231,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: IsEmpty
     path: ../../Elements/Polyline.cs
-    startLine: 70
+    startLine: 51
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
-  summary: Returns true if the object contains 2 or more coordinates.
+  summary: Returns true if the Polyline contains zero coordinates.
   example: []
   syntax:
     content: public bool IsEmpty()
@@ -395,6 +243,36 @@ items:
       type: System.Boolean
     content.vb: Public Function IsEmpty() As Boolean
   overload: GoogleMapsWrapper.Elements.Polyline.IsEmpty*
+- uid: GoogleMapsWrapper.Elements.Polyline.IsValid
+  commentId: M:GoogleMapsWrapper.Elements.Polyline.IsValid
+  id: IsValid
+  parent: GoogleMapsWrapper.Elements.Polyline
+  langs:
+  - csharp
+  - vb
+  name: IsValid()
+  nameWithType: Polyline.IsValid()
+  fullName: GoogleMapsWrapper.Elements.Polyline.IsValid()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Polyline.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IsValid
+    path: ../../Elements/Polyline.cs
+    startLine: 60
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  summary: Returns true if the Polyline contains more than 1 coordinate.
+  example: []
+  syntax:
+    content: public bool IsValid()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsValid() As Boolean
+  overload: GoogleMapsWrapper.Elements.Polyline.IsValid*
 - uid: GoogleMapsWrapper.Elements.Polyline.ToString
   commentId: M:GoogleMapsWrapper.Elements.Polyline.ToString
   id: ToString
@@ -413,56 +291,19 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ToString
     path: ../../Elements/Polyline.cs
-    startLine: 75
+    startLine: 69
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
-  summary: Returns a string that represents the current object.
+  summary: Returns a semicolon separated string of coordinates.
   example: []
   syntax:
     content: public override string ToString()
     return:
       type: System.String
-      description: A string that represents the current object.
     content.vb: Public Overrides Function ToString() As String
-  overridden: System.Object.ToString
+  overridden: GoogleMapsWrapper.Elements.GoogleMapElement.ToString
   overload: GoogleMapsWrapper.Elements.Polyline.ToString*
-- uid: GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)
-  id: Parse(System.String,System.String)
-  parent: GoogleMapsWrapper.Elements.Polyline
-  langs:
-  - csharp
-  - vb
-  name: Parse(string, string)
-  nameWithType: Polyline.Parse(string, string)
-  fullName: GoogleMapsWrapper.Elements.Polyline.Parse(string, string)
-  type: Method
-  source:
-    remote:
-      path: GoogleMapsApi/Elements/Polyline.cs
-      branch: master
-      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
-    id: Parse
-    path: ../../Elements/Polyline.cs
-    startLine: 80
-  assemblies:
-  - GoogleMapsWrapper
-  namespace: GoogleMapsWrapper.Elements
-  syntax:
-    content: public static Polyline Parse(string input, string separator)
-    parameters:
-    - id: input
-      type: System.String
-    - id: separator
-      type: System.String
-    return:
-      type: GoogleMapsWrapper.Elements.Polyline
-    content.vb: Public Shared Function Parse(input As String, separator As String) As Polyline
-  overload: GoogleMapsWrapper.Elements.Polyline.Parse*
-  nameWithType.vb: Polyline.Parse(String, String)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.Parse(String, String)
-  name.vb: Parse(String, String)
 references:
 - uid: GoogleMapsWrapper.Elements
   commentId: N:GoogleMapsWrapper.Elements
@@ -504,6 +345,72 @@ references:
   name: GoogleMapElement
   nameWithType: GoogleMapElement
   fullName: GoogleMapsWrapper.Elements.GoogleMapElement
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.GoogleMapElement}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GoogleMapElement>
+  nameWithType: IEquatable<GoogleMapElement>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.GoogleMapElement>
+  nameWithType.vb: IEquatable(Of GoogleMapElement)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.GoogleMapElement)
+  name.vb: IEquatable(Of GoogleMapElement)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement
+    name: GoogleMapElement
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html
+  - name: )
+- uid: System.IEquatable{GoogleMapsWrapper.Elements.Polyline}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.Elements.Polyline}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Polyline>
+  nameWithType: IEquatable<Polyline>
+  fullName: System.IEquatable<GoogleMapsWrapper.Elements.Polyline>
+  nameWithType.vb: IEquatable(Of Polyline)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.Elements.Polyline)
+  name.vb: IEquatable(Of Polyline)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.Elements.Polyline
+    name: Polyline
+    href: GoogleMapsWrapper.Elements.Polyline.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.Elements.Polyline
+    name: Polyline
+    href: GoogleMapsWrapper.Elements.Polyline.html
+  - name: )
 - uid: GoogleMapsWrapper.Elements.GoogleMapElement.Name
   commentId: P:GoogleMapsWrapper.Elements.GoogleMapElement.Name
   parent: GoogleMapsWrapper.Elements.GoogleMapElement
@@ -762,6 +669,34 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: GoogleMapsWrapper.Elements.Polyline.Weight*
   commentId: Overload:GoogleMapsWrapper.Elements.Polyline.Weight
   href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Weight
@@ -859,32 +794,32 @@ references:
   name: Coordinates
   nameWithType: Polyline.Coordinates
   fullName: GoogleMapsWrapper.Elements.Polyline.Coordinates
-- uid: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.Types.GpsCoordinate}
-  commentId: T:System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.Types.GpsCoordinate}
+- uid: System.Collections.Generic.IReadOnlyCollection{GoogleMapsWrapper.Types.GpsCoordinate}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{GoogleMapsWrapper.Types.GpsCoordinate}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  name: IReadOnlyList<GpsCoordinate>
-  nameWithType: IReadOnlyList<GpsCoordinate>
-  fullName: System.Collections.Generic.IReadOnlyList<GoogleMapsWrapper.Types.GpsCoordinate>
-  nameWithType.vb: IReadOnlyList(Of GpsCoordinate)
-  fullName.vb: System.Collections.Generic.IReadOnlyList(Of GoogleMapsWrapper.Types.GpsCoordinate)
-  name.vb: IReadOnlyList(Of GpsCoordinate)
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<GpsCoordinate>
+  nameWithType: IReadOnlyCollection<GpsCoordinate>
+  fullName: System.Collections.Generic.IReadOnlyCollection<GoogleMapsWrapper.Types.GpsCoordinate>
+  nameWithType.vb: IReadOnlyCollection(Of GpsCoordinate)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: IReadOnlyCollection(Of GpsCoordinate)
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
   - name: <
   - uid: GoogleMapsWrapper.Types.GpsCoordinate
     name: GpsCoordinate
     href: GoogleMapsWrapper.Types.GpsCoordinate.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
   - name: (
   - name: Of
   - name: " "
@@ -892,29 +827,29 @@ references:
     name: GpsCoordinate
     href: GoogleMapsWrapper.Types.GpsCoordinate.html
   - name: )
-- uid: System.Collections.Generic.IReadOnlyList`1
-  commentId: T:System.Collections.Generic.IReadOnlyList`1
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  name: IReadOnlyList<T>
-  nameWithType: IReadOnlyList<T>
-  fullName: System.Collections.Generic.IReadOnlyList<T>
-  nameWithType.vb: IReadOnlyList(Of T)
-  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
-  name.vb: IReadOnlyList(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
   - name: (
   - name: Of
   - name: " "
@@ -959,39 +894,39 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: GoogleMapsWrapper.Elements.Polyline.#ctor*
   commentId: Overload:GoogleMapsWrapper.Elements.Polyline.#ctor
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IList_GoogleMapsWrapper_Types_GpsCoordinate__System_String_System_String_
+  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Types_GpsCoordinate__
   name: Polyline
   nameWithType: Polyline.Polyline
   fullName: GoogleMapsWrapper.Elements.Polyline.Polyline
   nameWithType.vb: Polyline.New
   fullName.vb: GoogleMapsWrapper.Elements.Polyline.New
   name.vb: New
-- uid: System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate}
-  commentId: T:System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate}
+- uid: System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate}
+  commentId: T:System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.IList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<GpsCoordinate>
-  nameWithType: IList<GpsCoordinate>
-  fullName: System.Collections.Generic.IList<GoogleMapsWrapper.Types.GpsCoordinate>
-  nameWithType.vb: IList(Of GpsCoordinate)
-  fullName.vb: System.Collections.Generic.IList(Of GoogleMapsWrapper.Types.GpsCoordinate)
-  name.vb: IList(Of GpsCoordinate)
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GpsCoordinate>
+  nameWithType: IEnumerable<GpsCoordinate>
+  fullName: System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Types.GpsCoordinate>
+  nameWithType.vb: IEnumerable(Of GpsCoordinate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: IEnumerable(Of GpsCoordinate)
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
   - uid: GoogleMapsWrapper.Types.GpsCoordinate
     name: GpsCoordinate
     href: GoogleMapsWrapper.Types.GpsCoordinate.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: (
   - name: Of
   - name: " "
@@ -999,6 +934,71 @@ references:
     name: GpsCoordinate
     href: GoogleMapsWrapper.Types.GpsCoordinate.html
   - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.Elements.Polyline.IsEmpty*
+  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.IsEmpty
+  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsEmpty
+  name: IsEmpty
+  nameWithType: Polyline.IsEmpty
+  fullName: GoogleMapsWrapper.Elements.Polyline.IsEmpty
+- uid: GoogleMapsWrapper.Elements.Polyline.IsValid*
+  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.IsValid
+  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsValid
+  name: IsValid
+  nameWithType: Polyline.IsValid
+  fullName: GoogleMapsWrapper.Elements.Polyline.IsValid
+- uid: GoogleMapsWrapper.Elements.GoogleMapElement.ToString
+  commentId: M:GoogleMapsWrapper.Elements.GoogleMapElement.ToString
+  parent: GoogleMapsWrapper.Elements.GoogleMapElement
+  href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_ToString
+  name: ToString()
+  nameWithType: GoogleMapElement.ToString()
+  fullName: GoogleMapsWrapper.Elements.GoogleMapElement.ToString()
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement.ToString
+    name: ToString
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.Elements.GoogleMapElement.ToString
+    name: ToString
+    href: GoogleMapsWrapper.Elements.GoogleMapElement.html#GoogleMapsWrapper_Elements_GoogleMapElement_ToString
+  - name: (
+  - name: )
+- uid: GoogleMapsWrapper.Elements.Polyline.ToString*
+  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.ToString
+  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_ToString
+  name: ToString
+  nameWithType: Polyline.ToString
+  fullName: GoogleMapsWrapper.Elements.Polyline.ToString
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1010,127 +1010,3 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System.Collections.Generic.IList`1
-  commentId: T:System.Collections.Generic.IList`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<T>
-  nameWithType: IList<T>
-  fullName: System.Collections.Generic.IList<T>
-  nameWithType.vb: IList(Of T)
-  fullName.vb: System.Collections.Generic.IList(Of T)
-  name.vb: IList(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.AddCoordinate
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_AddCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
-  name: AddCoordinate
-  nameWithType: Polyline.AddCoordinate
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate
-- uid: GoogleMapsWrapper.Types.GpsCoordinate
-  commentId: T:GoogleMapsWrapper.Types.GpsCoordinate
-  parent: GoogleMapsWrapper.Types
-  href: GoogleMapsWrapper.Types.GpsCoordinate.html
-  name: GpsCoordinate
-  nameWithType: GpsCoordinate
-  fullName: GoogleMapsWrapper.Types.GpsCoordinate
-- uid: GoogleMapsWrapper.Types
-  commentId: N:GoogleMapsWrapper.Types
-  href: GoogleMapsWrapper.html
-  name: GoogleMapsWrapper.Types
-  nameWithType: GoogleMapsWrapper.Types
-  fullName: GoogleMapsWrapper.Types
-  spec.csharp:
-  - uid: GoogleMapsWrapper
-    name: GoogleMapsWrapper
-    href: GoogleMapsWrapper.html
-  - name: .
-  - uid: GoogleMapsWrapper.Types
-    name: Types
-    href: GoogleMapsWrapper.Types.html
-  spec.vb:
-  - uid: GoogleMapsWrapper
-    name: GoogleMapsWrapper
-    href: GoogleMapsWrapper.html
-  - name: .
-  - uid: GoogleMapsWrapper.Types
-    name: Types
-    href: GoogleMapsWrapper.Types.html
-- uid: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.InsertCoordinate
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_InsertCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_System_Int32_
-  name: InsertCoordinate
-  nameWithType: Polyline.InsertCoordinate
-  fullName: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
-  name: RemoveCoordinate
-  nameWithType: Polyline.RemoveCoordinate
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate
-- uid: GoogleMapsWrapper.Elements.Polyline.IsEmpty*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.IsEmpty
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsEmpty
-  name: IsEmpty
-  nameWithType: Polyline.IsEmpty
-  fullName: GoogleMapsWrapper.Elements.Polyline.IsEmpty
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-- uid: GoogleMapsWrapper.Elements.Polyline.ToString*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.ToString
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_ToString
-  name: ToString
-  nameWithType: Polyline.ToString
-  fullName: GoogleMapsWrapper.Elements.Polyline.ToString
-- uid: GoogleMapsWrapper.Elements.Polyline.Parse*
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.Parse
-  href: GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Parse_System_String_System_String_
-  name: Parse
-  nameWithType: Polyline.Parse
-  fullName: GoogleMapsWrapper.Elements.Polyline.Parse
-- uid: GoogleMapsWrapper.Elements.Polyline
-  commentId: T:GoogleMapsWrapper.Elements.Polyline
-  parent: GoogleMapsWrapper.Elements
-  href: GoogleMapsWrapper.Elements.Polyline.html
-  name: Polyline
-  nameWithType: Polyline
-  fullName: GoogleMapsWrapper.Elements.Polyline

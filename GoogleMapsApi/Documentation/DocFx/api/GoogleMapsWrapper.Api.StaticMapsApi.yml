@@ -27,7 +27,7 @@ items:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
   summary: >-
-    Provides methods for retrieiving a static image of a map from Google's Static API.
+    Provides methods for retrieving a static image of a map from Google's Static API.
 
     <Remarks>This object leverages an <xref href="GoogleMapsWrapper.Engine.IApiEngine" data-throw-if-not-resolved="false"></xref> 
 
@@ -146,7 +146,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetMapBytesAsync
     path: ../../Api/StaticMapsApi.cs
-    startLine: 73
+    startLine: 71
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -169,7 +169,7 @@ items:
       description: A string appended to the request object for tracking or identification.
     return:
       type: System.Threading.Tasks.Task{System.Byte[]}
-      description: A <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> array containing the raw byte[] data of the image.
+      description: An <xref href="GoogleMapsWrapper.Responses.IResponse%601" data-throw-if-not-resolved="false"></xref> containing the raw byte[] response from the Google API.
     content.vb: Public Function GetMapBytesAsync(mapSettings As Map, markers As IEnumerable(Of Marker) = Nothing, paths As IEnumerable(Of Polyline) = Nothing, identifier As String = Nothing) As Task(Of Byte())
   overload: GoogleMapsWrapper.Api.StaticMapsApi.GetMapBytesAsync*
   nameWithType.vb: StaticMapsApi.GetMapBytesAsync(Map, IEnumerable(Of Marker), IEnumerable(Of Polyline), String)
@@ -542,7 +542,6 @@ references:
   fullName: GoogleMapsWrapper.Elements.Marker
 - uid: GoogleMapsWrapper.Elements.Polyline
   commentId: T:GoogleMapsWrapper.Elements.Polyline
-  parent: GoogleMapsWrapper.Elements
   href: GoogleMapsWrapper.Elements.Polyline.html
   name: Polyline
   nameWithType: Polyline

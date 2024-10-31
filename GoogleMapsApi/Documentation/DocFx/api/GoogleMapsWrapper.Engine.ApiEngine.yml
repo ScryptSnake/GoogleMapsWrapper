@@ -23,7 +23,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: ApiEngine
     path: ../../Engine/ApiEngine.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine
@@ -38,9 +38,6 @@ items:
   syntax:
     content: 'public class ApiEngine : IApiEngine'
     content.vb: Public Class ApiEngine Implements IApiEngine
-  seealso:
-  - linkId: GoogleMapsWrapper.Engine.IApiEngine
-    commentId: T:GoogleMapsWrapper.Engine.IApiEngine
   inheritance:
   - System.Object
   implements:
@@ -71,7 +68,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: BaseUrl
     path: ../../Engine/ApiEngine.cs
-    startLine: 38
+    startLine: 36
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine
@@ -103,7 +100,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Engine/ApiEngine.cs
-    startLine: 41
+    startLine: 39
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine
@@ -137,7 +134,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetJsonAsync
     path: ../../Engine/ApiEngine.cs
-    startLine: 72
+    startLine: 77
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine
@@ -172,7 +169,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GetBytesAsync
     path: ../../Engine/ApiEngine.cs
-    startLine: 81
+    startLine: 88
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Engine

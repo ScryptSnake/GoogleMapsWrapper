@@ -211,15 +211,6 @@ references:
   fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New(String, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
   nameWithType: StaticMapCustomIcon.StaticMapCustomIcon(string, MarkerIconAnchorTypes)
   nameWithType.vb: StaticMapCustomIcon.New(String, MarkerIconAnchorTypes)
-- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
-  name: StaticMapCustomIcon(Uri, MarkerIconAnchorTypes)
-  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_System_Uri_GoogleMapsWrapper_Types_MarkerIconAnchorTypes_
-  commentId: M:GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.Uri,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
-  name.vb: New(Uri, MarkerIconAnchorTypes)
-  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.StaticMapCustomIcon(System.Uri, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
-  fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New(System.Uri, GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
-  nameWithType: StaticMapCustomIcon.StaticMapCustomIcon(Uri, MarkerIconAnchorTypes)
-  nameWithType.vb: StaticMapCustomIcon.New(Uri, MarkerIconAnchorTypes)
 - uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor*
   name: StaticMapCustomIcon
   href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon__ctor_
@@ -230,32 +221,6 @@ references:
   fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New
   nameWithType: StaticMapCustomIcon.StaticMapCustomIcon
   nameWithType.vb: StaticMapCustomIcon.New
-- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
-  name: AnchorType
-  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType
-  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
-  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
-  nameWithType: StaticMapCustomIcon.AnchorType
-- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
-  name: AnchorType
-  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType_
-  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
-  nameWithType: StaticMapCustomIcon.AnchorType
-- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
-  name: Uri
-  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri
-  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
-  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
-  nameWithType: StaticMapCustomIcon.Uri
-- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
-  name: Uri
-  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri_
-  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
-  nameWithType: StaticMapCustomIcon.Uri
 - uid: GoogleMapsWrapper.Api.StaticMapsApi
   name: StaticMapsApi
   href: api/GoogleMapsWrapper.Api.StaticMapsApi.html
@@ -705,25 +670,6 @@ references:
   commentId: T:GoogleMapsWrapper.Elements.Map
   fullName: GoogleMapsWrapper.Elements.Map
   nameWithType: Map
-- uid: GoogleMapsWrapper.Elements.Map.#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  name: Map(MapTypes, MapScaleTypes, GpsCoordinate?, string?, string?)
-  href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor_GoogleMapsWrapper_Types_MapTypes_GoogleMapsWrapper_Types_MapScaleTypes_System_Nullable_GoogleMapsWrapper_Types_GpsCoordinate__System_String_System_String_
-  commentId: M:GoogleMapsWrapper.Elements.Map.#ctor(GoogleMapsWrapper.Types.MapTypes,GoogleMapsWrapper.Types.MapScaleTypes,System.Nullable{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  name.vb: New(MapTypes, MapScaleTypes, GpsCoordinate?, String, String)
-  fullName: GoogleMapsWrapper.Elements.Map.Map(GoogleMapsWrapper.Types.MapTypes, GoogleMapsWrapper.Types.MapScaleTypes, GoogleMapsWrapper.Types.GpsCoordinate?, string?, string?)
-  fullName.vb: GoogleMapsWrapper.Elements.Map.New(GoogleMapsWrapper.Types.MapTypes, GoogleMapsWrapper.Types.MapScaleTypes, GoogleMapsWrapper.Types.GpsCoordinate?, String, String)
-  nameWithType: Map.Map(MapTypes, MapScaleTypes, GpsCoordinate?, string?, string?)
-  nameWithType.vb: Map.New(MapTypes, MapScaleTypes, GpsCoordinate?, String, String)
-- uid: GoogleMapsWrapper.Elements.Map.#ctor*
-  name: Map
-  href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor_
-  commentId: Overload:GoogleMapsWrapper.Elements.Map.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: GoogleMapsWrapper.Elements.Map.Map
-  fullName.vb: GoogleMapsWrapper.Elements.Map.New
-  nameWithType: Map.Map
-  nameWithType.vb: Map.New
 - uid: GoogleMapsWrapper.Elements.Map.Center
   name: Center
   href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Center
@@ -808,15 +754,15 @@ references:
   commentId: T:GoogleMapsWrapper.Elements.Marker
   fullName: GoogleMapsWrapper.Elements.Marker
   nameWithType: Marker
-- uid: GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
-  name: Marker(GpsCoordinate, string?, string?)
-  href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_System_String_System_String_
-  commentId: M:GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate,System.String,System.String)
-  name.vb: New(GpsCoordinate, String, String)
-  fullName: GoogleMapsWrapper.Elements.Marker.Marker(GoogleMapsWrapper.Types.GpsCoordinate, string?, string?)
-  fullName.vb: GoogleMapsWrapper.Elements.Marker.New(GoogleMapsWrapper.Types.GpsCoordinate, String, String)
-  nameWithType: Marker.Marker(GpsCoordinate, string?, string?)
-  nameWithType.vb: Marker.New(GpsCoordinate, String, String)
+- uid: GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)
+  name: Marker(GpsCoordinate)
+  href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_GoogleMapsWrapper_Types_GpsCoordinate_
+  commentId: M:GoogleMapsWrapper.Elements.Marker.#ctor(GoogleMapsWrapper.Types.GpsCoordinate)
+  name.vb: New(GpsCoordinate)
+  fullName: GoogleMapsWrapper.Elements.Marker.Marker(GoogleMapsWrapper.Types.GpsCoordinate)
+  fullName.vb: GoogleMapsWrapper.Elements.Marker.New(GoogleMapsWrapper.Types.GpsCoordinate)
+  nameWithType: Marker.Marker(GpsCoordinate)
+  nameWithType.vb: Marker.New(GpsCoordinate)
 - uid: GoogleMapsWrapper.Elements.Marker.#ctor*
   name: Marker
   href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker__ctor_
@@ -869,13 +815,27 @@ references:
 - uid: GoogleMapsWrapper.Elements.Marker.Scale
   name: Scale
   href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Scale
-  commentId: F:GoogleMapsWrapper.Elements.Marker.Scale
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Scale
+  fullName: GoogleMapsWrapper.Elements.Marker.Scale
+  nameWithType: Marker.Scale
+- uid: GoogleMapsWrapper.Elements.Marker.Scale*
+  name: Scale
+  href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Scale_
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Scale
+  isSpec: "True"
   fullName: GoogleMapsWrapper.Elements.Marker.Scale
   nameWithType: Marker.Scale
 - uid: GoogleMapsWrapper.Elements.Marker.Size
   name: Size
   href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Size
-  commentId: F:GoogleMapsWrapper.Elements.Marker.Size
+  commentId: P:GoogleMapsWrapper.Elements.Marker.Size
+  fullName: GoogleMapsWrapper.Elements.Marker.Size
+  nameWithType: Marker.Size
+- uid: GoogleMapsWrapper.Elements.Marker.Size*
+  name: Size
+  href: api/GoogleMapsWrapper.Elements.Marker.html#GoogleMapsWrapper_Elements_Marker_Size_
+  commentId: Overload:GoogleMapsWrapper.Elements.Marker.Size
+  isSpec: "True"
   fullName: GoogleMapsWrapper.Elements.Marker.Size
   nameWithType: Marker.Size
 - uid: GoogleMapsWrapper.Elements.Polyline
@@ -884,15 +844,15 @@ references:
   commentId: T:GoogleMapsWrapper.Elements.Polyline
   fullName: GoogleMapsWrapper.Elements.Polyline
   nameWithType: Polyline
-- uid: GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  name: Polyline(IList<GpsCoordinate>, string?, string?)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IList_GoogleMapsWrapper_Types_GpsCoordinate__System_String_System_String_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)
-  name.vb: New(IList(Of GpsCoordinate), String, String)
-  fullName: GoogleMapsWrapper.Elements.Polyline.Polyline(System.Collections.Generic.IList<GoogleMapsWrapper.Types.GpsCoordinate>, string?, string?)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.New(System.Collections.Generic.IList(Of GoogleMapsWrapper.Types.GpsCoordinate), String, String)
-  nameWithType: Polyline.Polyline(IList<GpsCoordinate>, string?, string?)
-  nameWithType.vb: Polyline.New(IList(Of GpsCoordinate), String, String)
+- uid: GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})
+  name: Polyline(IEnumerable<GpsCoordinate>)
+  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Types_GpsCoordinate__
+  commentId: M:GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})
+  name.vb: New(IEnumerable(Of GpsCoordinate))
+  fullName: GoogleMapsWrapper.Elements.Polyline.Polyline(System.Collections.Generic.IEnumerable<GoogleMapsWrapper.Types.GpsCoordinate>)
+  fullName.vb: GoogleMapsWrapper.Elements.Polyline.New(System.Collections.Generic.IEnumerable(Of GoogleMapsWrapper.Types.GpsCoordinate))
+  nameWithType: Polyline.Polyline(IEnumerable<GpsCoordinate>)
+  nameWithType.vb: Polyline.New(IEnumerable(Of GpsCoordinate))
 - uid: GoogleMapsWrapper.Elements.Polyline.#ctor*
   name: Polyline
   href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline__ctor_
@@ -903,28 +863,6 @@ references:
   fullName.vb: GoogleMapsWrapper.Elements.Polyline.New
   nameWithType: Polyline.Polyline
   nameWithType.vb: Polyline.New
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  name: AddCoordinate(GpsCoordinate)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_AddCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  nameWithType: Polyline.AddCoordinate(GpsCoordinate)
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)
-  name: AddCoordinate(string)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_AddCoordinate_System_String_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)
-  name.vb: AddCoordinate(String)
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(string)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.AddCoordinate(String)
-  nameWithType: Polyline.AddCoordinate(string)
-  nameWithType.vb: Polyline.AddCoordinate(String)
-- uid: GoogleMapsWrapper.Elements.Polyline.AddCoordinate*
-  name: AddCoordinate
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_AddCoordinate_
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.AddCoordinate
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Elements.Polyline.AddCoordinate
-  nameWithType: Polyline.AddCoordinate
 - uid: GoogleMapsWrapper.Elements.Polyline.Coordinates
   name: Coordinates
   href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Coordinates
@@ -951,22 +889,6 @@ references:
   isSpec: "True"
   fullName: GoogleMapsWrapper.Elements.Polyline.Geodesic
   nameWithType: Polyline.Geodesic
-- uid: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
-  name: InsertCoordinate(GpsCoordinate, int)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_InsertCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_System_Int32_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)
-  name.vb: InsertCoordinate(GpsCoordinate, Integer)
-  fullName: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate, int)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate, Integer)
-  nameWithType: Polyline.InsertCoordinate(GpsCoordinate, int)
-  nameWithType.vb: Polyline.InsertCoordinate(GpsCoordinate, Integer)
-- uid: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate*
-  name: InsertCoordinate
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_InsertCoordinate_
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.InsertCoordinate
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Elements.Polyline.InsertCoordinate
-  nameWithType: Polyline.InsertCoordinate
 - uid: GoogleMapsWrapper.Elements.Polyline.IsEmpty
   name: IsEmpty()
   href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsEmpty
@@ -980,6 +902,19 @@ references:
   isSpec: "True"
   fullName: GoogleMapsWrapper.Elements.Polyline.IsEmpty
   nameWithType: Polyline.IsEmpty
+- uid: GoogleMapsWrapper.Elements.Polyline.IsValid
+  name: IsValid()
+  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsValid
+  commentId: M:GoogleMapsWrapper.Elements.Polyline.IsValid
+  fullName: GoogleMapsWrapper.Elements.Polyline.IsValid()
+  nameWithType: Polyline.IsValid()
+- uid: GoogleMapsWrapper.Elements.Polyline.IsValid*
+  name: IsValid
+  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_IsValid_
+  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.IsValid
+  isSpec: "True"
+  fullName: GoogleMapsWrapper.Elements.Polyline.IsValid
+  nameWithType: Polyline.IsValid
 - uid: GoogleMapsWrapper.Elements.Polyline.Label
   name: Label
   href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Label
@@ -993,44 +928,6 @@ references:
   isSpec: "True"
   fullName: GoogleMapsWrapper.Elements.Polyline.Label
   nameWithType: Polyline.Label
-- uid: GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)
-  name: Parse(string, string)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Parse_System_String_System_String_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)
-  name.vb: Parse(String, String)
-  fullName: GoogleMapsWrapper.Elements.Polyline.Parse(string, string)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.Parse(String, String)
-  nameWithType: Polyline.Parse(string, string)
-  nameWithType.vb: Polyline.Parse(String, String)
-- uid: GoogleMapsWrapper.Elements.Polyline.Parse*
-  name: Parse
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_Parse_
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.Parse
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Elements.Polyline.Parse
-  nameWithType: Polyline.Parse
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  name: RemoveCoordinate(GpsCoordinate)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)
-  nameWithType: Polyline.RemoveCoordinate(GpsCoordinate)
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)
-  name: RemoveCoordinate(int)
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_System_Int32_
-  commentId: M:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)
-  name.vb: RemoveCoordinate(Integer)
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(int)
-  fullName.vb: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(Integer)
-  nameWithType: Polyline.RemoveCoordinate(int)
-  nameWithType.vb: Polyline.RemoveCoordinate(Integer)
-- uid: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*
-  name: RemoveCoordinate
-  href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_
-  commentId: Overload:GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate
-  isSpec: "True"
-  fullName: GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate
-  nameWithType: Polyline.RemoveCoordinate
 - uid: GoogleMapsWrapper.Elements.Polyline.ToString
   name: ToString()
   href: api/GoogleMapsWrapper.Elements.Polyline.html#GoogleMapsWrapper_Elements_Polyline_ToString
@@ -1133,15 +1030,15 @@ references:
   commentId: T:GoogleMapsWrapper.Engine.FlurlExtensions
   fullName: GoogleMapsWrapper.Engine.FlurlExtensions
   nameWithType: FlurlExtensions
-- uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
-  name: SetQueryParamWithDefault(Url, string, object?, object?, bool)
-  href: api/GoogleMapsWrapper.Engine.FlurlExtensions.html#GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_System_Boolean_
-  commentId: M:GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object,System.Boolean)
-  name.vb: SetQueryParamWithDefault(Url, String, Object, Object, Boolean)
-  fullName: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, string, object?, object?, bool)
-  fullName.vb: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, String, Object, Object, Boolean)
-  nameWithType: FlurlExtensions.SetQueryParamWithDefault(Url, string, object?, object?, bool)
-  nameWithType.vb: FlurlExtensions.SetQueryParamWithDefault(Url, String, Object, Object, Boolean)
+- uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
+  name: SetQueryParamWithDefault(Url, string, object?, object?)
+  href: api/GoogleMapsWrapper.Engine.FlurlExtensions.html#GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_Flurl_Url_System_String_System_Object_System_Object_
+  commentId: M:GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url,System.String,System.Object,System.Object)
+  name.vb: SetQueryParamWithDefault(Url, String, Object, Object)
+  fullName: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, string, object?, object?)
+  fullName.vb: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault(Flurl.Url, String, Object, Object)
+  nameWithType: FlurlExtensions.SetQueryParamWithDefault(Url, string, object?, object?)
+  nameWithType.vb: FlurlExtensions.SetQueryParamWithDefault(Url, String, Object, Object)
 - uid: GoogleMapsWrapper.Engine.FlurlExtensions.SetQueryParamWithDefault*
   name: SetQueryParamWithDefault
   href: api/GoogleMapsWrapper.Engine.FlurlExtensions.html#GoogleMapsWrapper_Engine_FlurlExtensions_SetQueryParamWithDefault_
@@ -3578,12 +3475,6 @@ references:
   isSpec: "True"
   fullName: GoogleMapsWrapper.Responses.ByteResponse.SentRequest
   nameWithType: ByteResponse.SentRequest
-- uid: GoogleMapsWrapper.Responses.ByteResponse.content
-  name: content
-  href: api/GoogleMapsWrapper.Responses.ByteResponse.html#GoogleMapsWrapper_Responses_ByteResponse_content
-  commentId: F:GoogleMapsWrapper.Responses.ByteResponse.content
-  fullName: GoogleMapsWrapper.Responses.ByteResponse.content
-  nameWithType: ByteResponse.content
 - uid: GoogleMapsWrapper.Responses.IResponse`1
   name: IResponse<TResponse>
   href: api/GoogleMapsWrapper.Responses.IResponse-1.html

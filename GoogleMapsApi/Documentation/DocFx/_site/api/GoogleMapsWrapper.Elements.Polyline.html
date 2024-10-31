@@ -101,7 +101,7 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Polyline : GoogleMapElement</code></pre>
+    <pre><code class="lang-csharp hljs">public record Polyline : GoogleMapElement, IEquatable&lt;GoogleMapElement&gt;, IEquatable&lt;Polyline&gt;</code></pre>
   </div>
 
 
@@ -116,6 +116,13 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Elements.GoogleMapElement.html">GoogleMapElement</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Elements.Polyline.html">Polyline</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -176,25 +183,22 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <a id="GoogleMapsWrapper_Elements_Polyline__ctor_" data-uid="GoogleMapsWrapper.Elements.Polyline.#ctor*"></a>
 
-  <h3 id="GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IList_GoogleMapsWrapper_Types_GpsCoordinate__System_String_System_String_" data-uid="GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IList{GoogleMapsWrapper.Types.GpsCoordinate},System.String,System.String)">
-  Polyline(IList&lt;GpsCoordinate&gt;, string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <h3 id="GoogleMapsWrapper_Elements_Polyline__ctor_System_Collections_Generic_IEnumerable_GoogleMapsWrapper_Types_GpsCoordinate__" data-uid="GoogleMapsWrapper.Elements.Polyline.#ctor(System.Collections.Generic.IEnumerable{GoogleMapsWrapper.Types.GpsCoordinate})">
+  Polyline(IEnumerable&lt;GpsCoordinate&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new Polyline from a set of coordinate objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Polyline(IList&lt;GpsCoordinate&gt; Coordinates, string? Id = null, string? Name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Polyline(IEnumerable&lt;GpsCoordinate&gt; Coordinates)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>Coordinates</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>&gt;</dt>
-    <dd></dd>
-    <dt><code>Id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>Name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>Coordinates</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -217,14 +221,15 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_Coordinates" data-uid="GoogleMapsWrapper.Elements.Polyline.Coordinates">
   Coordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the coordinates contained in the Polyline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;GpsCoordinate&gt; Coordinates { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;GpsCoordinate&gt; Coordinates { get; }</code></pre>
   </div>
 
 
@@ -233,7 +238,7 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -248,14 +253,15 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_Geodesic" data-uid="GoogleMapsWrapper.Elements.Polyline.Geodesic">
   Geodesic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows the line to follow the earth's contour.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Geodesic { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Geodesic { get; init; }</code></pre>
   </div>
 
 
@@ -279,14 +285,15 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_Label" data-uid="GoogleMapsWrapper.Elements.Polyline.Label">
   Label
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Label displayed with the marker.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char? Label { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public char? Label { get; init; }</code></pre>
   </div>
 
 
@@ -310,14 +317,15 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_Weight" data-uid="GoogleMapsWrapper.Elements.Polyline.Weight">
   Weight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The weight of the line when rendered. In pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Weight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Weight { get; init; }</code></pre>
   </div>
 
 
@@ -341,109 +349,14 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 </h2>
 
 
-  <a id="GoogleMapsWrapper_Elements_Polyline_AddCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.AddCoordinate*"></a>
-
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_AddCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.AddCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)">
-  AddCoordinate(GpsCoordinate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddCoordinate(GpsCoordinate coordinate)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="GoogleMapsWrapper_Elements_Polyline_AddCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.AddCoordinate*"></a>
-
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_AddCoordinate_System_String_" data-uid="GoogleMapsWrapper.Elements.Polyline.AddCoordinate(System.String)">
-  AddCoordinate(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddCoordinate(string coordinate)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>coordinate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="GoogleMapsWrapper_Elements_Polyline_InsertCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.InsertCoordinate*"></a>
-
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_InsertCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_System_Int32_" data-uid="GoogleMapsWrapper.Elements.Polyline.InsertCoordinate(GoogleMapsWrapper.Types.GpsCoordinate,System.Int32)">
-  InsertCoordinate(GpsCoordinate, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L54"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InsertCoordinate(GpsCoordinate coordinate, int index)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd></dd>
-    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="GoogleMapsWrapper_Elements_Polyline_IsEmpty_" data-uid="GoogleMapsWrapper.Elements.Polyline.IsEmpty*"></a>
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_IsEmpty" data-uid="GoogleMapsWrapper.Elements.Polyline.IsEmpty">
   IsEmpty()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns true if the object contains 2 or more coordinates.</p>
+  <div class="markdown level1 summary"><p>Returns true if the Polyline contains zero coordinates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -468,95 +381,27 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <a id="GoogleMapsWrapper_Elements_Polyline_Parse_" data-uid="GoogleMapsWrapper.Elements.Polyline.Parse*"></a>
+  <a id="GoogleMapsWrapper_Elements_Polyline_IsValid_" data-uid="GoogleMapsWrapper.Elements.Polyline.IsValid*"></a>
 
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_Parse_System_String_System_String_" data-uid="GoogleMapsWrapper.Elements.Polyline.Parse(System.String,System.String)">
-  Parse(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <h3 id="GoogleMapsWrapper_Elements_Polyline_IsValid" data-uid="GoogleMapsWrapper.Elements.Polyline.IsValid">
+  IsValid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns true if the Polyline contains more than 1 coordinate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Polyline Parse(string input, string separator)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>separator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="GoogleMapsWrapper.Elements.Polyline.html">Polyline</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*"></a>
-
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_GoogleMapsWrapper_Types_GpsCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(GoogleMapsWrapper.Types.GpsCoordinate)">
-  RemoveCoordinate(GpsCoordinate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L58"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveCoordinate(GpsCoordinate coordinate)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>coordinate</code> <a class="xref" href="GoogleMapsWrapper.Types.GpsCoordinate.html">GpsCoordinate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_" data-uid="GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate*"></a>
-
-  <h3 id="GoogleMapsWrapper_Elements_Polyline_RemoveCoordinate_System_Int32_" data-uid="GoogleMapsWrapper.Elements.Polyline.RemoveCoordinate(System.Int32)">
-  RemoveCoordinate(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L63"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveCoordinate(int index)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
 
 
 
@@ -572,10 +417,10 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="GoogleMapsWrapper_Elements_Polyline_ToString" data-uid="GoogleMapsWrapper.Elements.Polyline.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ScryptSnake/GoogleMapsWrapper/blob/master/GoogleMapsApi/Elements/Polyline.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+  <div class="markdown level1 summary"><p>Returns a semicolon separated string of coordinates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -587,8 +432,7 @@ Class Polyline  <a class="header-action link-secondary" title="View source" href
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>A string that represents the current object.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
