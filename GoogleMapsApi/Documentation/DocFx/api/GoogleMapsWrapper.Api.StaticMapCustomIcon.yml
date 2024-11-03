@@ -6,6 +6,8 @@ items:
   parent: GoogleMapsWrapper.Api
   children:
   - GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  - GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
   langs:
   - csharp
   - vb
@@ -41,6 +43,64 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  id: Uri
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: Uri
+  nameWithType: StaticMapCustomIcon.Uri
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Uri
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public Uri Uri { get; init; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property Uri As Uri
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  id: AnchorType
+  parent: GoogleMapsWrapper.Api.StaticMapCustomIcon
+  langs:
+  - csharp
+  - vb
+  name: AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/StaticMapCustomIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AnchorType
+    path: ../../Elements/StaticMapCustomIcon.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Api
+  syntax:
+    content: public MarkerIconAnchorTypes AnchorType { get; init; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+    content.vb: Public Property AnchorType As MarkerIconAnchorTypes
+  overload: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
 - uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
   commentId: M:GoogleMapsWrapper.Api.StaticMapCustomIcon.#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)
   id: '#ctor(System.String,GoogleMapsWrapper.Types.MarkerIconAnchorTypes)'
@@ -59,7 +119,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Elements/StaticMapCustomIcon.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -70,7 +130,6 @@ items:
     parameters:
     - id: uri
       type: System.String
-      description: The image source.
     - id: anchorType
       type: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
       description: How the icon is anchored.
@@ -404,6 +463,55 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri
+  name: Uri
+  nameWithType: StaticMapCustomIcon.Uri
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  href: GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType
+  name: AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+- uid: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  commentId: T:GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+  parent: GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html
+  name: MarkerIconAnchorTypes
+  nameWithType: MarkerIconAnchorTypes
+  fullName: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
+- uid: GoogleMapsWrapper.Types
+  commentId: N:GoogleMapsWrapper.Types
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Types
+  nameWithType: GoogleMapsWrapper.Types
+  fullName: GoogleMapsWrapper.Types
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Types
+    name: Types
+    href: GoogleMapsWrapper.Types.html
 - uid: GoogleMapsWrapper.Api.StaticMapCustomIcon
   commentId: T:GoogleMapsWrapper.Api.StaticMapCustomIcon
   parent: GoogleMapsWrapper.Api
@@ -438,32 +546,3 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
-  commentId: T:GoogleMapsWrapper.Types.MarkerIconAnchorTypes
-  parent: GoogleMapsWrapper.Types
-  href: GoogleMapsWrapper.Types.MarkerIconAnchorTypes.html
-  name: MarkerIconAnchorTypes
-  nameWithType: MarkerIconAnchorTypes
-  fullName: GoogleMapsWrapper.Types.MarkerIconAnchorTypes
-- uid: GoogleMapsWrapper.Types
-  commentId: N:GoogleMapsWrapper.Types
-  href: GoogleMapsWrapper.html
-  name: GoogleMapsWrapper.Types
-  nameWithType: GoogleMapsWrapper.Types
-  fullName: GoogleMapsWrapper.Types
-  spec.csharp:
-  - uid: GoogleMapsWrapper
-    name: GoogleMapsWrapper
-    href: GoogleMapsWrapper.html
-  - name: .
-  - uid: GoogleMapsWrapper.Types
-    name: Types
-    href: GoogleMapsWrapper.Types.html
-  spec.vb:
-  - uid: GoogleMapsWrapper
-    name: GoogleMapsWrapper
-    href: GoogleMapsWrapper.html
-  - name: .
-  - uid: GoogleMapsWrapper.Types
-    name: Types
-    href: GoogleMapsWrapper.Types.html

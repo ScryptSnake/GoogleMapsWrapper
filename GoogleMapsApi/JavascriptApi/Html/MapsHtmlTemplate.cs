@@ -13,7 +13,7 @@ namespace GoogleMapsWrapper.JavascriptApi.Html
 
     public class GoogleMapsHtmlTemplate
     {
-        //the template source html
+        // The template source html
         private string templateHtml = string.Empty;
         public string TemplateHtml { get => templateHtml; }
 
@@ -39,7 +39,14 @@ namespace GoogleMapsWrapper.JavascriptApi.Html
             var defaultMapCenter = GpsCoordinate.Parse("40.7128,-74.0060");
 
             //use var map to set params, establish default map obj if null
-            var map = loadMap ?? new Map(MapTypes.Hybrid, MapScaleTypes.HighRes, defaultMapCenter) { Zoom=8};
+            var map = loadMap ?? new Map()
+            {
+                MapType = MapTypes.Hybrid,
+                Zoom = 8,
+                Center = defaultMapCenter,
+            };
+
+
 
             //check if loadMap.Center has a value, otherwise can't access properties of nullable struct
             var centerCoord = map.Center ?? defaultMapCenter;

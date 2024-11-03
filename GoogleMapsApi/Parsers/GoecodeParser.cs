@@ -107,7 +107,7 @@ public class GeocodeParser : IParser<GeocodeContainer, JsonDocument>
     ///<Summary>Extracts the GpsCoordinate from a JsonElement. 
     ///<Remarks>This method supplements the containerization operation in Parse() because the serializer cannot deserialize to this type.</Remarks>
     ///</Summary>
-    private GpsCoordinate findGpsCoordinate(JsonElement jsonElement)
+    private GpsCoordinate FindGpsCoordinate(JsonElement jsonElement)
     {
         try
         {

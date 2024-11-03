@@ -15,6 +15,8 @@ namespace GoogleMapsWrapper.Api;
 ///<summary>An object that represents a custom icon for a marker. The source must be a Uri of an image.</summary>
 public record StaticMapCustomIcon
 {
+    public Uri Uri { get; init; }
+    public MarkerIconAnchorTypes AnchorType { get; init; }
     /// <summary>
     /// Initializes a new instance of the <see cref="StaticMapCustomIcon"/> class.
     /// </summary>
@@ -22,20 +24,14 @@ public record StaticMapCustomIcon
     /// <param name="anchorType">How the icon is anchored.</param>
     /// <Remarks>Acceptable formats are:  .PNG, .GIF, .JPG/.JPEG. PNG is preferred.</Remarks>
     /// <exception cref="ArgumentException">Uri provided contains invalid image format.</exception>
-    ///
-    ///
-    ///
-    ///
-    ///
-    
 
-    public Uri Uri { get; init }
-    public MarkerIconAnchorTypes
-
-    public StaticMapCustomIcon(string Uri, MarkerIconAnchorTypes anchorType=MarkerIconAnchorTypes.Center)
+    public StaticMapCustomIcon(string uri, MarkerIconAnchorTypes anchorType=MarkerIconAnchorTypes.Center)
     {
+        Uri = new Uri(uri);
+        AnchorType = anchorType;
+
         // Validate the uri is an acceptable format: JPEG, PNG, or GIF (PNG preferred).
-        var uriFormat = Path.GetExtension(Uri);
+        var uriFormat = Path.GetExtension(uri);
         // Allowable extensions.
         var formatsAllowed = new string[]{ ".PNG", ".GIF", ".JPG", ".JPEG" };
         // Check extension.

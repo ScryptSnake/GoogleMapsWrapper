@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>This is the HOMEPAGE. | docfx_site </title>
+      <title>&#127760; Google Maps Wrapper &#128506;️ | GoogleMapsWrapper </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="This is the HOMEPAGE. | docfx_site ">
+      <meta name="title" content="&#127760; Google Maps Wrapper &#128506;️ | GoogleMapsWrapper ">
       
       
       <link rel="icon" href="favicon.ico">
@@ -39,13 +39,13 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="logo.svg" alt="docfx_site">
-            docfx_site
+            <img id="logo" class="svg" src="logo.svg" alt="GoogleMapsWrapper">
+            GoogleMapsWrapper
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -71,13 +71,89 @@
         </div>
 
         <article data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="-google-maps-wrapper-">🌐 <strong>Google Maps Wrapper</strong> 🗺️</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p><em>A .NET wrapper to intergrate with Google Maps APIs.</em> <br>
+Supports: <a href="https://developers.google.com/maps/documentation/maps-static/%5D">Static API</a>, <a href="https://developers.google.com/maps/documentation/elevation/overview">Elevation API</a>, <a href="https://developers.google.com/maps/documentation/geocoding">Geocoding API</a>  <a href="https://developers.google.com/maps/documentation/javascript">Javascript API</a></p>
+<p>Project Owner:
+@ScryptSnake 🐍
+<a href="https://github.com/ScryptSnake/GoogleMapsWrapper">https://github.com/ScryptSnake/GoogleMapsWrapper</a></p>
+<p>GoogleMapsWrapper is a project that interfaces with <a href="https://mapsplatform.google.com/maps-products/">Google Maps Platform APIs</a>. <br>
+This project does not attempt to provide a one-to-one .NET mapping of Google's platforms,
+but rather, is a tool that provides utility by using these API services.
+This project is best suited as a supplement to other projects, but can be used as a standalone tool.
+This is a class library that targets NET 7.0.</p>
+<blockquote>
+<p><em>GeocodeAPI:</em>  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.</p>
+</blockquote>
+<blockquote>
+<p><em>StaticMapsAPI:</em> produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map.</p>
+</blockquote>
+<blockquote>
+<p><em>JavascriptAPI:</em> spawns a web browser to work interactively with a map. Data can be sent/received from .NET. <br>
+<a href="##Project-Status:">See Project Status</a></p>
+</blockquote>
+<h2 id="-getting-started">⭐ Getting Started</h2>
+<p>Clone the repository and create a project reference to GoogleMapsWrapper and begin implementing into your project.
+Additionally, a simple Winforms demo app is included to showcase some basic features of the wrapper.</p>
+<blockquote>
+<p><em>Note: This application requires a valid Google Maps API key and can be obtained from <a href="https://developers.google.com/maps">here</a></em>.</p>
+</blockquote>
+<p>Keys should be contained within an IConfiguration passed to the application entry point.
+The consumer of the configuration is the engine and uses the key directly to create <em>KeyedRequests</em>.</p>
+<h4 id="security-note--keyed-requests">Security Note / Keyed Requests:</h4>
+<p>A user�s API key should be contained within the IConfiguration passed at the application entry point.
+The engine takes the config as a constructor parameter and therefore has access to the key.
+When requests are created and passed to the engine for sending, the provided requests Uri does not contain the key.
+Likewise, when a response is returned from the engine, the SentRequest property (stored request) of the response
+does not contain the Uri with the key.
+The engine constructs a private KeyedRequest object from the received request,
+which contains the key, and therefore can be appended to the Uri and sent via HttpClient.
+This choice in design was chosen to ensure stored requests within responses (<em>SentRequest</em> property)
+do not expose the key to other parts of the application.</p>
+<h2 id="-project-status">💡 Project Status</h2>
+<p>This project continues to be contributed to over time. Users should avoid the Javascript API and consider it's current status <em>experimental</em>.</p>
+<h2 id="-usage-disclaimer">❗ Usage Disclaimer</h2>
+<p>This software attempts to optimize the use of requests to Google�s API.
+However, users are solely responsible for all requests made from their accounts.
+The developer assumes no liability for any charges incurred due to excessive requests or for the frequency of requests sent to Google�s services.
+Further, the developer does not make any guarantees of accuracy of data yielded from this software.</p>
+<h2 id="-architecture">🔧 Architecture</h2>
+<p>This application can be conceptually divided into 7 primary components.</p>
+<ul>
+<li><p><strong>API</strong> <br>
+High level objects that contain the core functionality of end usage.
+The primary entry point of the application is GoogleMapsApi which exposes each <em>sub-API</em> (GeocodeApi and StaticMapsApi).</p>
+</li>
+<li><p><strong>Engine</strong> <br>
+Responsible for sending requests and receiving responses to the API endpoint.
+Request objects are constructed in an API and passed to the engine for http processing.
+The engine is capable of retrieving http responses in two types:  JsonDocument and byte array.</p>
+</li>
+<li><p><strong>Requests</strong> <br>
+Constructed by an API and contains relevant details about the request, as well as the Uri.
+A request is attached to a response object and returned from the engine.
+A user API key is never be contained within this object.</p>
+</li>
+<li><p><strong>Responses</strong> <br>
+Holds data returned from the engine/endpoint and relevant information about the request.
+A response contains a Parse() method allowing the consumer to parse the response with a Parser into a container.</p>
+</li>
+<li><p><strong>Parsers</strong> <br>
+A parser is an object which is responsible for taking a response of some data type (JSON or byte array)
+and containerizing the data into an IContainer (container).</p>
+</li>
+<li><p><strong>Containers</strong> <br>
+These are DTOs or data containers that hold parsed information from a response. Usually provided via a <em>Parser</em>.</p>
+</li>
+<li><p><strong>Elements</strong> <br>
+DTO objects which model map features. This includes Map, Marker, Polyline.
+Elements are used throughout the application, primarily for passing as parameters to an API method.</p>
+</li>
+</ul>
+<p><em>The javascript API is conceptualized as a different component entirely.</em></p>
+<h2 id="-credits">✅ Credits</h2>
+<p>Thank you for viewing this project. I hope you find it interesting.</p>
 
 </article>
 

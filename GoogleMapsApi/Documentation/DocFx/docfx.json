@@ -41,8 +41,8 @@
       "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" // Bootstrap
     ],
     "globalMetadata": {
-      "_appName": "docfx_site",
-      "_appTitle": "docfx_site",
+      "_appName": "GoogleMapsWrapper",
+      "_appTitle": "GoogleMapsWrapper",
       "_enableSearch": true,
       "pdf": true
     }

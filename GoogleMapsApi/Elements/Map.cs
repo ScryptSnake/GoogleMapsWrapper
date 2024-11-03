@@ -29,7 +29,6 @@ public record Map : GoogleMapElement
     /// </summary>
     public GpsCoordinate? Center { get; init; }
 
-
     private readonly int zoom = 1;
     ///<summary>A zoom value for which the map should be displayed. 
     /// Accepts values: 0 to 21, where zero (default) is considered 'omitted'. 
@@ -46,7 +45,6 @@ public record Map : GoogleMapElement
         }
     }
 
-    private readonly string dimensions = "640x640";
     ///<summary>A string describing the size dimensions of the map. Format is:  {Height}x{Width}</summary>
     public string Dimensions
     {
@@ -55,10 +53,8 @@ public record Map : GoogleMapElement
         {
             try
             {
-                value = value.ToLower();
                 this.Height = int.Parse(value.Split('x')[0]);
                 this.Width = int.Parse(value.Split('x')[1]);
-                dimensions = value;
             }
             catch
             {
@@ -66,9 +62,13 @@ public record Map : GoogleMapElement
             }
         }
     }
-
-
     
-
-
+    /// <summary>
+    /// Constructs a new instance of a map.
+    /// </summary>
+    public Map()
+    {
+        // Set default 'Dimensions' property.
+        Dimensions = "640x640";
+    }
 }

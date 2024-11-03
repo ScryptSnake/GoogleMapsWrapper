@@ -209,27 +209,32 @@ public partial class MainForm : Form
             polylines.Add(new Polyline(coordinates) { Color = Color.OrangeRed });
         }
 
-        //assemble a Map element to pass to the wrapper:
-        var map = new GoogleMapsWrapper.Elements.Map(mapType);
-        //check if zoom provided by user:
-        var zoomValue = cbZoom.Text;
-        if (zoomValue != "Automatic") { map.Zoom = Convert.ToInt32(zoomValue); }
-        map.ImageFormat = MapImageFormats.Jpg;
+        // Declare a Map variable to pass to the static API. 
+        // Check if user provided Zoom value in UI. 
+        var zoom = 0;
+        if (cbZoom.Text != "Automatic" && int.TryParse(cbZoom.Text, out zoom)) ;
 
-        //process the request:
+        var map = new Map()
+        {
+            MapType = mapType,
+            ImageFormat = MapImageFormats.Png,
+            Zoom = zoom
+        };
+
+        // Process the request.
         var response = await api.StaticMapsApi.GetMapAsync(map, markers, polylines);
 
-        //byte array of image
+        // Grab the byte array (image data):
         var image = response.Content;
 
-        //set to control
+        // Display in control.
         if (image != null)
         {
             MemoryStream ms = new MemoryStream(image);
             pictureBox1.Image = Image.FromStream(ms);
         }
 
-        //display request Uri:
+        // Display request Uri.
         lbStaticRequest.Items.Add(response.SentRequest.Url.ToString());
 
         progBar.Visible = false;

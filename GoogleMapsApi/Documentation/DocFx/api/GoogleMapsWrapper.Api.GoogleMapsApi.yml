@@ -22,14 +22,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GoogleMapsApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 15
+    startLine: 13
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: >-
-    The entry point of the wrapper. Exposes API objects to interact with the endpoint:
-
-    <p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi" data-throw-if-not-resolved="false"></xref></p><p><xref href="GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi" data-throw-if-not-resolved="false"></xref></p>
+  summary: 'The entry point of the wrapper. Exposes API objects to interact with the endpoint:'
   example: []
   syntax:
     content: public class GoogleMapsApi
@@ -62,11 +59,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: GeocodeApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: An instance of the GeocodeApi.//
+  summary: An instance of the GeocodeApi.
   example: []
   syntax:
     content: public GeocodeApi GeocodeApi { get; }
@@ -93,11 +90,11 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: StaticMapsApi
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 23
+    startLine: 21
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: An instance of the StaticMapsApi.///
+  summary: An instance of the StaticMapsApi.
   example: []
   syntax:
     content: public StaticMapsApi StaticMapsApi { get; }
@@ -124,7 +121,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: .ctor
     path: ../../Api/GoogleMapsApi.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
@@ -148,18 +145,6 @@ items:
   fullName.vb: GoogleMapsWrapper.Api.GoogleMapsApi.New(System.Net.Http.HttpClient, Microsoft.Extensions.Configuration.IConfiguration)
   name.vb: New(HttpClient, IConfiguration)
 references:
-- uid: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
-  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
-  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_GeocodeApi
-  name: GeocodeApi
-  nameWithType: GoogleMapsApi.GeocodeApi
-  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.GeocodeApi
-- uid: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
-  commentId: P:GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
-  href: GoogleMapsWrapper.Api.GoogleMapsApi.html#GoogleMapsWrapper_Api_GoogleMapsApi_StaticMapsApi
-  name: StaticMapsApi
-  nameWithType: GoogleMapsApi.StaticMapsApi
-  fullName: GoogleMapsWrapper.Api.GoogleMapsApi.StaticMapsApi
 - uid: GoogleMapsWrapper.Engine.ApiEngine
   commentId: T:GoogleMapsWrapper.Engine.ApiEngine
   href: GoogleMapsWrapper.Engine.ApiEngine.html

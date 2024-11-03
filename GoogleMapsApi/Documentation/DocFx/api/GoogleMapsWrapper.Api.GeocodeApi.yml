@@ -134,7 +134,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<IResponse<JsonDocument>> GeocodeAsync(string latitude, string longitude, string? identifier = null)
@@ -178,7 +178,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<IResponse<JsonDocument>> GeocodeAsync(GpsCoordinate coordinate, string? identifier = null)
@@ -219,7 +219,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<GeocodeContainer> GeocodeParseAsync(string latitude, string longitude, string? identifier = null)
@@ -263,7 +263,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for geocoding a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<GeocodeContainer> GeocodeParseAsync(GpsCoordinate coordinate, string? identifier = null)
@@ -304,7 +304,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<IResponse<JsonDocument>> GetElevationAsync(string latitude, string longitude, string? identifier = null)
@@ -348,7 +348,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<IResponse<JsonDocument>> GetElevationAsync(GpsCoordinate coordinate, string? identifier = null)
@@ -389,7 +389,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<ElevationContainer> GetElevationParsedAsync(string latitude, string longitude, string? identifier = null)
@@ -433,7 +433,7 @@ items:
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Api
-  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./&gt;
+  summary: Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate.
   example: []
   syntax:
     content: public Task<ElevationContainer> GetElevationParsedAsync(GpsCoordinate coordinate, string? identifier = null)

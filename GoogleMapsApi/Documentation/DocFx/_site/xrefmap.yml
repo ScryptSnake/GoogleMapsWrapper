@@ -221,6 +221,32 @@ references:
   fullName.vb: GoogleMapsWrapper.Api.StaticMapCustomIcon.New
   nameWithType: StaticMapCustomIcon.StaticMapCustomIcon
   nameWithType.vb: StaticMapCustomIcon.New
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  name: AnchorType
+  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType*
+  name: AnchorType
+  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_AnchorType_
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  isSpec: "True"
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.AnchorType
+  nameWithType: StaticMapCustomIcon.AnchorType
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  name: Uri
+  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri
+  commentId: P:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  nameWithType: StaticMapCustomIcon.Uri
+- uid: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri*
+  name: Uri
+  href: api/GoogleMapsWrapper.Api.StaticMapCustomIcon.html#GoogleMapsWrapper_Api_StaticMapCustomIcon_Uri_
+  commentId: Overload:GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  isSpec: "True"
+  fullName: GoogleMapsWrapper.Api.StaticMapCustomIcon.Uri
+  nameWithType: StaticMapCustomIcon.Uri
 - uid: GoogleMapsWrapper.Api.StaticMapsApi
   name: StaticMapsApi
   href: api/GoogleMapsWrapper.Api.StaticMapsApi.html
@@ -670,6 +696,25 @@ references:
   commentId: T:GoogleMapsWrapper.Elements.Map
   fullName: GoogleMapsWrapper.Elements.Map
   nameWithType: Map
+- uid: GoogleMapsWrapper.Elements.Map.#ctor
+  name: Map()
+  href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor
+  commentId: M:GoogleMapsWrapper.Elements.Map.#ctor
+  name.vb: New()
+  fullName: GoogleMapsWrapper.Elements.Map.Map()
+  fullName.vb: GoogleMapsWrapper.Elements.Map.New()
+  nameWithType: Map.Map()
+  nameWithType.vb: Map.New()
+- uid: GoogleMapsWrapper.Elements.Map.#ctor*
+  name: Map
+  href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor_
+  commentId: Overload:GoogleMapsWrapper.Elements.Map.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: GoogleMapsWrapper.Elements.Map.Map
+  fullName.vb: GoogleMapsWrapper.Elements.Map.New
+  nameWithType: Map.Map
+  nameWithType.vb: Map.New
 - uid: GoogleMapsWrapper.Elements.Map.Center
   name: Center
   href: api/GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map_Center

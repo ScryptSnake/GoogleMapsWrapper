@@ -1,4 +1,7 @@
-- name: Docs
-  href: C:\Users\WIN11PC\source\repos\GoogleMapsWrapper\GoogleMapsApi\Documentation/
+
+- name: Overview
+  href: index.md
+
 - name: API
   href: api/
+

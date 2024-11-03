@@ -15,10 +15,10 @@ public class GoogleMapsApi
 {
     private ApiEngine engine;
 
-    ///<summary>An instance of the GeocodeApi.// </summary>
+    ///<summary>An instance of the GeocodeApi.</summary>
     public GeocodeApi GeocodeApi { get; private set; }
 
-    ///<summary>An instance of the StaticMapsApi./// </summary>
+    ///<summary>An instance of the StaticMapsApi.</summary>
     public StaticMapsApi StaticMapsApi { get; private set; }
 
 

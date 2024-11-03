@@ -5,6 +5,7 @@ items:
   id: Map
   parent: GoogleMapsWrapper.Elements
   children:
+  - GoogleMapsWrapper.Elements.Map.#ctor
   - GoogleMapsWrapper.Elements.Map.Center
   - GoogleMapsWrapper.Elements.Map.Dimensions
   - GoogleMapsWrapper.Elements.Map.ImageFormat
@@ -201,7 +202,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Zoom
     path: ../../Elements/Map.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
@@ -235,7 +236,7 @@ items:
       repo: https://github.com/ScryptSnake/GoogleMapsWrapper
     id: Dimensions
     path: ../../Elements/Map.cs
-    startLine: 50
+    startLine: 48
   assemblies:
   - GoogleMapsWrapper
   namespace: GoogleMapsWrapper.Elements
@@ -248,6 +249,37 @@ items:
       type: System.String
     content.vb: Public Property Dimensions As String
   overload: GoogleMapsWrapper.Elements.Map.Dimensions*
+- uid: GoogleMapsWrapper.Elements.Map.#ctor
+  commentId: M:GoogleMapsWrapper.Elements.Map.#ctor
+  id: '#ctor'
+  parent: GoogleMapsWrapper.Elements.Map
+  langs:
+  - csharp
+  - vb
+  name: Map()
+  nameWithType: Map.Map()
+  fullName: GoogleMapsWrapper.Elements.Map.Map()
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsApi/Elements/Map.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Elements/Map.cs
+    startLine: 68
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Elements
+  summary: Constructs a new instance of a map.
+  example: []
+  syntax:
+    content: public Map()
+    content.vb: Public Sub New()
+  overload: GoogleMapsWrapper.Elements.Map.#ctor*
+  nameWithType.vb: Map.New()
+  fullName.vb: GoogleMapsWrapper.Elements.Map.New()
+  name.vb: New()
 references:
 - uid: GoogleMapsWrapper.Elements
   commentId: N:GoogleMapsWrapper.Elements
@@ -812,3 +844,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: GoogleMapsWrapper.Elements.Map.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Elements.Map.#ctor
+  href: GoogleMapsWrapper.Elements.Map.html#GoogleMapsWrapper_Elements_Map__ctor
+  name: Map
+  nameWithType: Map.Map
+  fullName: GoogleMapsWrapper.Elements.Map.Map
+  nameWithType.vb: Map.New
+  fullName.vb: GoogleMapsWrapper.Elements.Map.New
+  name.vb: New

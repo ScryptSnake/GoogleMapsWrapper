@@ -33,7 +33,7 @@ public class GeocodeApi
 
 
     /// <summary>
-    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate./>
+    /// Makes a request to the API endpoint for geocoding a lat/lng coordinate.
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
@@ -89,7 +89,7 @@ public class GeocodeApi
 
 
     /// <summary>
-    /// Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate./>
+    /// Makes a request to the API endpoint for acquiring elevation data about a lat/lng coordinate.
     /// </summary>
     /// <param name="latitude">Decimal degrees gps latitude. </param>
     /// <param name="longitude">Decimal degrees gps longitude.</param>
