@@ -8,6 +8,8 @@ Project Owner:
 @ScryptSnake :snake:
 https://github.com/ScryptSnake/GoogleMapsWrapper
 
+**See official documentation on [GitHub Pages](https://scryptsnake.github.io/GoogleMapsWrapper/index.html)**
+
 
 GoogleMapsWrapper is a project that interfaces with [Google Maps Platform APIs](https://mapsplatform.google.com/maps-products/). \
 This project does not attempt to provide a one-to-one .NET mapping of Google's platforms, 

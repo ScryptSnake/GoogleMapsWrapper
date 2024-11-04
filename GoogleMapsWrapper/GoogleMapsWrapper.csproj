@@ -33,16 +33,17 @@
     <Using Include="GoogleMapsWrapper.Utilities" />
   </ItemGroup>
 
-
+	<!-- Post build event:  Rebuild DocFX, Copy _site folder to docs root folder for GitHubPages. -->
+	<!-- Replace README.md with index.md produced by DocFX-->
 	<Target Name="PostBuild" AfterTargets="Build">
 		<Exec Command="docfx Documentation/DocFx/docfx.json" />
-		<Exec Command="robocopy Documentation/DocFX/_site ..\docs /E /LOG:copy.log" />
+		<Exec Command="robocopy Documentation/DocFX/_site ..\docs /E /LOG:copy.log || exit 0" />
+		<Exec Command="cmd /c echo Copying index.md to ..\README.md &amp;&amp; copy /Y &quot;Documentation\DocFx\index.md&quot; &quot;..\README.md&quot; || exit 0" />
 	</Target>
 
-
 	<ItemGroup>
-    <Folder Include="Documentation\" />
-  </ItemGroup>
+		<Folder Include="Documentation\" />
+	</ItemGroup>
 </Project>
 
 
