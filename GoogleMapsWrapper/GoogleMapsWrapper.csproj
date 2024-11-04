@@ -32,9 +32,4 @@
     <Using Include="GoogleMapsWrapper.Types" />
     <Using Include="GoogleMapsWrapper.Utilities" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd &quot;$(ProjectDir)\Documentation\DocFx&quot; &amp;&amp; docfx build" />
-  </Target>
-
 </Project>

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoogleMapsApi\GoogleMapsWrapper.csproj" />
+    <ProjectReference Include="..\GoogleMapsWrapper\GoogleMapsWrapper.csproj" />
   </ItemGroup>
 
 </Project>
