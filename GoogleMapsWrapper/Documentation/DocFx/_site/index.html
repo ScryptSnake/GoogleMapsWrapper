@@ -84,16 +84,15 @@ This project does not attempt to provide a one-to-one .NET mapping of Google's p
 but rather, is a tool that provides utility by using these API services.
 This project is best suited as a supplement to other projects, but can be used as a standalone tool.
 This is a class library that targets NET 7.0.</p>
-<blockquote>
-<p><em>GeocodeAPI:</em>  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.</p>
-</blockquote>
-<blockquote>
-<p><em>StaticMapsAPI:</em> produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map.</p>
-</blockquote>
-<blockquote>
-<p><em>JavascriptAPI:</em> spawns a web browser to work interactively with a map. Data can be sent/received from .NET. <br>
+<ul>
+<li><p><strong>GeocodeAPI:</strong>  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.</p>
+</li>
+<li><p><strong>StaticMapsAPI:</strong> produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map.</p>
+</li>
+<li><p><strong>JavascriptAPI:</strong> spawns a web browser to work interactively with a map. Data can be sent/received from .NET. <br>
 <a href="##Project-Status:">See Project Status</a></p>
-</blockquote>
+</li>
+</ul>
 <h2 id="-getting-started">⭐ Getting Started</h2>
 <p>Clone the repository and create a project reference to GoogleMapsWrapper and begin implementing into your project.
 Additionally, a simple Winforms demo app is included to showcase some basic features of the wrapper.</p>
@@ -103,6 +102,7 @@ Additionally, a simple Winforms demo app is included to showcase some basic feat
 <p>Keys should be contained within an IConfiguration passed to the application entry point.
 The consumer of the configuration is the engine and uses the key directly to create <em>KeyedRequests</em>.</p>
 <h4 id="security-note--keyed-requests">Security Note / Keyed Requests:</h4>
+<blockquote>
 <p>A user�s API key should be contained within the IConfiguration passed at the application entry point.
 The engine takes the config as a constructor parameter and therefore has access to the key.
 When requests are created and passed to the engine for sending, the provided requests Uri does not contain the key.
@@ -112,6 +112,7 @@ The engine constructs a private KeyedRequest object from the received request,
 which contains the key, and therefore can be appended to the Uri and sent via HttpClient.
 This choice in design was chosen to ensure stored requests within responses (<em>SentRequest</em> property)
 do not expose the key to other parts of the application.</p>
+</blockquote>
 <h2 id="-project-status">💡 Project Status</h2>
 <p>This project continues to be contributed to over time. Users should avoid the Javascript API and consider it's current status <em>experimental</em>.</p>
 <h2 id="-usage-disclaimer">❗ Usage Disclaimer</h2>

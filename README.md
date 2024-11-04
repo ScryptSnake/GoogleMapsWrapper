@@ -17,11 +17,11 @@ but rather, is a tool that provides utility by using these API services.
 This project is best suited as a supplement to other projects, but can be used as a standalone tool.
 This is a class library that targets NET 7.0.
 
-> *GeocodeAPI:*  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.
+- **GeocodeAPI:**  acquires geolocation data, to include street address, local municipality, state, country and other information. Elevation information can also be returned from this service. All requests in this service are passed a single GPS coordinate parameter to retrieve data.
 
-> *StaticMapsAPI:* produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map. 
+- **StaticMapsAPI:** produces a static image of a map. Maps are highly customizable and may contains placemarks and other objects on the map. 
 
-> *JavascriptAPI:* spawns a web browser to work interactively with a map. Data can be sent/received from .NET. \
+- **JavascriptAPI:** spawns a web browser to work interactively with a map. Data can be sent/received from .NET. \
 [See Project Status](##Project-Status:)
 
 
@@ -35,7 +35,7 @@ Keys should be contained within an IConfiguration passed to the application entr
 The consumer of the configuration is the engine and uses the key directly to create *KeyedRequests*.
 
  #### Security Note / Keyed Requests:
-A user’s API key should be contained within the IConfiguration passed at the application entry point. 
+>A user’s API key should be contained within the IConfiguration passed at the application entry point. 
 The engine takes the config as a constructor parameter and therefore has access to the key. 
 When requests are created and passed to the engine for sending, the provided requests Uri does not contain the key.
 Likewise, when a response is returned from the engine, the SentRequest property (stored request) of the response 
