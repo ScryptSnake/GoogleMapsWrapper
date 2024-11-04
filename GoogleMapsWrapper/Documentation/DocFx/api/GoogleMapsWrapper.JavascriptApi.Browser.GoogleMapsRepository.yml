@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  id: GoogleMapsRepository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsRepository
+  nameWithType: GoogleMapsRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: GoogleMapsRepository
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 9
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: public class GoogleMapsRepository
+    content.vb: Public Class GoogleMapsRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+  id: Source
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: GoogleMapsRepository.Source
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Source
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public IGoogleMapsBrowser? Source { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+    content.vb: Public ReadOnly Property Source As IGoogleMapsBrowser
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly
+  id: AsReadonly
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: AsReadonly()
+  nameWithType: GoogleMapsRepository.AsReadonly()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AsReadonly
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public IGoogleMapsJsReadonlyRepository AsReadonly()
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+    content.vb: Public Function AsReadonly() As IGoogleMapsJsReadonlyRepository
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor
+  id: '#ctor'
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsRepository()
+  nameWithType: GoogleMapsRepository.GoogleMapsRepository()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.GoogleMapsRepository()
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 25
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: public GoogleMapsRepository()
+    content.vb: Public Sub New()
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor*
+  nameWithType.vb: GoogleMapsRepository.New()
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.New()
+  name.vb: New()
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+  id: Markers
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: Markers
+  nameWithType: GoogleMapsRepository.Markers
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Markers
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 31
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public IReadOnlyList<BoundMarker> Markers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+    content.vb: Public ReadOnly Property Markers As IReadOnlyList(Of BoundMarker)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: AddMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: AddMarker(BoundMarker)
+  nameWithType: GoogleMapsRepository.AddMarker(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AddMarker
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void AddMarker(BoundMarker marker)
+    parameters:
+    - id: marker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    content.vb: Public Sub AddMarker(marker As BoundMarker)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: RemoveMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: RemoveMarker(BoundMarker)
+  nameWithType: GoogleMapsRepository.RemoveMarker(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: RemoveMarker
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 38
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void RemoveMarker(BoundMarker marker)
+    parameters:
+    - id: marker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    content.vb: Public Sub RemoveMarker(marker As BoundMarker)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: UpdateMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateMarker(BoundMarker)
+  nameWithType: GoogleMapsRepository.UpdateMarker(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: UpdateMarker
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 43
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public void UpdateMarker(BoundMarker marker)
+    parameters:
+    - id: marker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    content.vb: Public Sub UpdateMarker(marker As BoundMarker)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  id: ContainsMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  langs:
+  - csharp
+  - vb
+  name: ContainsMarker(BoundMarker)
+  nameWithType: GoogleMapsRepository.ContainsMarker(BoundMarker)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker(GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/GoogleMapsRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ContainsMarker
+    path: ../../JavascriptApi/Browser/GoogleMapsRepository.cs
+    startLine: 48
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  example: []
+  syntax:
+    content: public bool ContainsMarker(BoundMarker marker)
+    parameters:
+    - id: marker
+      type: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsMarker(marker As BoundMarker) As Boolean
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker*
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_Source
+  name: Source
+  nameWithType: GoogleMapsRepository.Source
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Source
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html
+  name: IGoogleMapsBrowser
+  nameWithType: IGoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_AsReadonly
+  name: AsReadonly
+  nameWithType: GoogleMapsRepository.AsReadonly
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AsReadonly
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.html
+  name: IGoogleMapsJsReadonlyRepository
+  nameWithType: IGoogleMapsJsReadonlyRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.#ctor
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository__ctor
+  name: GoogleMapsRepository
+  nameWithType: GoogleMapsRepository.GoogleMapsRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.GoogleMapsRepository
+  nameWithType.vb: GoogleMapsRepository.New
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.New
+  name.vb: New
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_Markers
+  name: Markers
+  nameWithType: GoogleMapsRepository.Markers
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.Markers
+- uid: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+  commentId: T:System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<BoundMarker>
+  nameWithType: IReadOnlyList<BoundMarker>
+  fullName: System.Collections.Generic.IReadOnlyList<GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker>
+  nameWithType.vb: IReadOnlyList(Of BoundMarker)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  name.vb: IReadOnlyList(Of BoundMarker)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_AddMarker_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: AddMarker
+  nameWithType: GoogleMapsRepository.AddMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.AddMarker
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+  parent: GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  name: BoundMarker
+  nameWithType: BoundMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+- uid: GoogleMapsWrapper.JavascriptApi.Elements
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Elements
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Elements
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_RemoveMarker_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: RemoveMarker
+  nameWithType: GoogleMapsRepository.RemoveMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.RemoveMarker
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_UpdateMarker_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: UpdateMarker
+  nameWithType: GoogleMapsRepository.UpdateMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.UpdateMarker
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_GoogleMapsRepository_ContainsMarker_GoogleMapsWrapper_JavascriptApi_Elements_BoundMarker_
+  name: ContainsMarker
+  nameWithType: GoogleMapsRepository.ContainsMarker
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.ContainsMarker
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

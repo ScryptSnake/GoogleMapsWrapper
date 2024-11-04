@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  id: IBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject(System.String,System.Object)
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.Uri)
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject
+  langs:
+  - csharp
+  - vb
+  name: IBrowser
+  nameWithType: IBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IBrowser
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  summary: >-
+    Defines the minimum requirements needed for a 
+
+    browser-like object to interact with an IGoogleMapsBrowser.
+  example: []
+  syntax:
+    content: public interface IBrowser
+    content.vb: Public Interface IBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject
+  id: SourceObject
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: SourceObject()
+  nameWithType: IBrowser.SourceObject()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: SourceObject
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: object SourceObject()
+    return:
+      type: System.Object
+    content.vb: Function SourceObject() As Object
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+  id: Html
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: Html
+  nameWithType: IBrowser.Html
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Html
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: string Html { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Html As String
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject(System.String,System.Object)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject(System.String,System.Object)
+  id: BindObject(System.String,System.Object)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: BindObject(string, object)
+  nameWithType: IBrowser.BindObject(string, object)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject(string, object)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: BindObject
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 19
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: void BindObject(string name, object sourceObject)
+    parameters:
+    - id: name
+      type: System.String
+    - id: sourceObject
+      type: System.Object
+    content.vb: Sub BindObject(name As String, sourceObject As Object)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject*
+  nameWithType.vb: IBrowser.BindObject(String, Object)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject(String, Object)
+  name.vb: BindObject(String, Object)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.String)
+  id: Navigate(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: Navigate(string)
+  nameWithType: IBrowser.Navigate(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Navigate
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 21
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: void Navigate(string html)
+    parameters:
+    - id: html
+      type: System.String
+    content.vb: Sub Navigate(html As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate*
+  nameWithType.vb: IBrowser.Navigate(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(String)
+  name.vb: Navigate(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.Uri)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.Uri)
+  id: Navigate(System.Uri)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: Navigate(Uri)
+  nameWithType: IBrowser.Navigate(Uri)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Navigate
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 23
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: void Navigate(Uri source)
+    parameters:
+    - id: source
+      type: System.Uri
+    content.vb: Sub Navigate(source As Uri)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate*
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync(System.String)
+  id: ExecuteScriptAsync(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: ExecuteScriptAsync(string)
+  nameWithType: IBrowser.ExecuteScriptAsync(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ExecuteScriptAsync
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 25
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: Task<ScriptResult> ExecuteScriptAsync(string script)
+    parameters:
+    - id: script
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult}
+    content.vb: Function ExecuteScriptAsync(script As String) As Task(Of ScriptResult)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync*
+  nameWithType.vb: IBrowser.ExecuteScriptAsync(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync(String)
+  name.vb: ExecuteScriptAsync(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke(System.String)
+  id: ExecuteScriptAsyncInvoke(System.String)
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: ExecuteScriptAsyncInvoke(string)
+  nameWithType: IBrowser.ExecuteScriptAsyncInvoke(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke(string)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ExecuteScriptAsyncInvoke
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 27
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: Task<ScriptResult> ExecuteScriptAsyncInvoke(string script)
+    parameters:
+    - id: script
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult}
+    content.vb: Function ExecuteScriptAsyncInvoke(script As String) As Task(Of ScriptResult)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke*
+  nameWithType.vb: IBrowser.ExecuteScriptAsyncInvoke(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke(String)
+  name.vb: ExecuteScriptAsyncInvoke(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close
+  id: Close
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: IBrowser.Close()
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IBrowser.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Close
+    path: ../../JavascriptApi/Browser/IBrowser.cs
+    startLine: 29
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: void Close()
+    content.vb: Sub Close()
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close*
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_SourceObject
+  name: SourceObject
+  nameWithType: IBrowser.SourceObject
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.SourceObject
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_Html
+  name: Html
+  nameWithType: IBrowser.Html
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_BindObject_System_String_System_Object_
+  name: BindObject
+  nameWithType: IBrowser.BindObject
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.BindObject
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_Navigate_System_String_
+  name: Navigate
+  nameWithType: IBrowser.Navigate
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Navigate
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_ExecuteScriptAsync_System_String_
+  name: ExecuteScriptAsync
+  nameWithType: IBrowser.ExecuteScriptAsync
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsync
+- uid: System.Threading.Tasks.Task{GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult}
+  commentId: T:System.Threading.Tasks.Task{GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ScriptResult>
+  nameWithType: Task<ScriptResult>
+  fullName: System.Threading.Tasks.Task<GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult>
+  nameWithType.vb: Task(Of ScriptResult)
+  fullName.vb: System.Threading.Tasks.Task(Of GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult)
+  name.vb: Task(Of ScriptResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+    name: ScriptResult
+    href: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+    name: ScriptResult
+    href: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_ExecuteScriptAsyncInvoke_System_String_
+  name: ExecuteScriptAsyncInvoke
+  nameWithType: IBrowser.ExecuteScriptAsyncInvoke
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.ExecuteScriptAsyncInvoke
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html#GoogleMapsWrapper_JavascriptApi_Browser_IBrowser_Close
+  name: Close
+  nameWithType: IBrowser.Close
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.Close

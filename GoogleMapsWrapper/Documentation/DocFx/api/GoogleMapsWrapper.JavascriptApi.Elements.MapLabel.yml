@@ -1,0 +1,735 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  id: MapLabel
+  parent: GoogleMapsWrapper.JavascriptApi.Elements
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String,System.Drawing.Color,System.Double,System.Int32,System.Drawing.Color)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+  langs:
+  - csharp
+  - vb
+  name: MapLabel
+  nameWithType: MapLabel
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: MapLabel
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: 'public record MapLabel : IEquatable<MapLabel>'
+    content.vb: Public Class MapLabel Implements IEquatable(Of MapLabel)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapLabel}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String,System.Drawing.Color,System.Double,System.Int32,System.Drawing.Color)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String,System.Drawing.Color,System.Double,System.Int32,System.Drawing.Color)
+  id: '#ctor(System.String,System.Drawing.Color,System.Double,System.Int32,System.Drawing.Color)'
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: MapLabel(string, Color, double, int, Color)
+  nameWithType: MapLabel.MapLabel(string, Color, double, int, Color)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.MapLabel(string, System.Drawing.Color, double, int, System.Drawing.Color)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public MapLabel(string Text, Color Color, double Scale = 1, int FontWeight = 400, Color BackgroundColor = default)
+    parameters:
+    - id: Text
+      type: System.String
+    - id: Color
+      type: System.Drawing.Color
+    - id: Scale
+      type: System.Double
+    - id: FontWeight
+      type: System.Int32
+    - id: BackgroundColor
+      type: System.Drawing.Color
+    content.vb: Public Sub New(Text As String, Color As Color, Scale As Double = 1, FontWeight As Integer = 400, BackgroundColor As Color = Nothing)
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor*
+  nameWithType.vb: MapLabel.New(String, Color, Double, Integer, Color)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.New(String, System.Drawing.Color, Double, Integer, System.Drawing.Color)
+  name.vb: New(String, Color, Double, Integer, Color)
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+  id: Text
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: MapLabel.Text
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Text
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public string Text { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+  id: Color
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: MapLabel.Color
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Color
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public Color Color { get; init; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Property Color As Color
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+  id: Scale
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: MapLabel.Scale
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Scale
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public double Scale { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Scale As Double
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+  id: FontWeight
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: FontWeight
+  nameWithType: MapLabel.FontWeight
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: FontWeight
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public int FontWeight { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FontWeight As Integer
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+  id: BackgroundColor
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColor
+  nameWithType: MapLabel.BackgroundColor
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: BackgroundColor
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 19
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public Color BackgroundColor { get; init; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Property BackgroundColor As Color
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: MapLabel(string)
+  nameWithType: MapLabel.MapLabel(string)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.MapLabel(string)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 25
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public MapLabel(string Text)
+    parameters:
+    - id: Text
+      type: System.String
+    content.vb: Public Sub New(Text As String)
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor*
+  nameWithType.vb: MapLabel.New(String)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.New(String)
+  name.vb: New(String)
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize
+  id: Serialize
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: MapLabel.Serialize()
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapLabel.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Serialize
+    path: ../../JavascriptApi/Elements/MapLabel.cs
+    startLine: 29
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public string Serialize()
+    return:
+      type: System.String
+    content.vb: Public Function Serialize() As String
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize*
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Elements
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Elements
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Elements
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapLabel}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapLabel}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MapLabel>
+  nameWithType: IEquatable<MapLabel>
+  fullName: System.IEquatable<GoogleMapsWrapper.JavascriptApi.Elements.MapLabel>
+  nameWithType.vb: IEquatable(Of MapLabel)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.JavascriptApi.Elements.MapLabel)
+  name.vb: IEquatable(Of MapLabel)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+    name: MapLabel
+    href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel
+    name: MapLabel
+    href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.#ctor
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel__ctor_System_String_System_Drawing_Color_System_Double_System_Int32_System_Drawing_Color_
+  name: MapLabel
+  nameWithType: MapLabel.MapLabel
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.MapLabel
+  nameWithType.vb: MapLabel.New
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_Text
+  name: Text
+  nameWithType: MapLabel.Text
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Text
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_Color
+  name: Color
+  nameWithType: MapLabel.Color
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Color
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_Scale
+  name: Scale
+  nameWithType: MapLabel.Scale
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Scale
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_FontWeight
+  name: FontWeight
+  nameWithType: MapLabel.FontWeight
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.FontWeight
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_BackgroundColor
+  name: BackgroundColor
+  nameWithType: MapLabel.BackgroundColor
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.BackgroundColor
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.html#GoogleMapsWrapper_JavascriptApi_Elements_MapLabel_Serialize
+  name: Serialize
+  nameWithType: MapLabel.Serialize
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapLabel.Serialize

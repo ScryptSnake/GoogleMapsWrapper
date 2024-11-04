@@ -32,4 +32,18 @@
     <Using Include="GoogleMapsWrapper.Types" />
     <Using Include="GoogleMapsWrapper.Utilities" />
   </ItemGroup>
+
+
+	<Target Name="PostBuild" AfterTargets="Build">
+		<Exec Command="docfx Documentation/DocFx/docfx.json" />
+		<Exec Command="robocopy Documentation/DocFX/_site ..\docs /E /LOG:copy.log" />
+	</Target>
+
+
+	<ItemGroup>
+    <Folder Include="Documentation\" />
+  </ItemGroup>
 </Project>
+
+
+

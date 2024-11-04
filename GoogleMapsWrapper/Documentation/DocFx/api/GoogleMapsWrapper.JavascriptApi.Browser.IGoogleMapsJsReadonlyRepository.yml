@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  id: IGoogleMapsJsReadonlyRepository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+  langs:
+  - csharp
+  - vb
+  name: IGoogleMapsJsReadonlyRepository
+  nameWithType: IGoogleMapsJsReadonlyRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IGoogleMapsJsReadOnlyRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IGoogleMapsJsReadonlyRepository
+    path: ../../JavascriptApi/Browser/IGoogleMapsJsReadOnlyRepository.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  summary: A repository for storing map state. Data is loaded into this object by IGoogleMapsJsRepository
+  example: []
+  syntax:
+    content: public interface IGoogleMapsJsReadonlyRepository
+    content.vb: Public Interface IGoogleMapsJsReadonlyRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+  id: Markers
+  parent: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  langs:
+  - csharp
+  - vb
+  name: Markers
+  nameWithType: IGoogleMapsJsReadonlyRepository.Markers
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Browser/IGoogleMapsJsReadOnlyRepository.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Markers
+    path: ../../JavascriptApi/Browser/IGoogleMapsJsReadOnlyRepository.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Browser
+  syntax:
+    content: IReadOnlyList<BoundMarker> Markers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+    content.vb: ReadOnly Property Markers As IReadOnlyList(Of BoundMarker)
+  overload: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers*
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.html#GoogleMapsWrapper_JavascriptApi_Browser_IGoogleMapsJsReadonlyRepository_Markers
+  name: Markers
+  nameWithType: IGoogleMapsJsReadonlyRepository.Markers
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.Markers
+- uid: System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+  commentId: T:System.Collections.Generic.IReadOnlyList{GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<BoundMarker>
+  nameWithType: IReadOnlyList<BoundMarker>
+  fullName: System.Collections.Generic.IReadOnlyList<GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker>
+  nameWithType.vb: IReadOnlyList(Of BoundMarker)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker)
+  name.vb: IReadOnlyList(Of BoundMarker)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker
+    name: BoundMarker
+    href: GoogleMapsWrapper.JavascriptApi.Elements.BoundMarker.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

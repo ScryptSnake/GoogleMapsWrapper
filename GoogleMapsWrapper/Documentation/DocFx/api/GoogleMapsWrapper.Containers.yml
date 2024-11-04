@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Containers
+  commentId: N:GoogleMapsWrapper.Containers
+  id: GoogleMapsWrapper.Containers
+  children:
+  - GoogleMapsWrapper.Containers.ElevationContainer
+  - GoogleMapsWrapper.Containers.GeocodeContainer
+  - GoogleMapsWrapper.Containers.IContainer
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Containers
+  nameWithType: GoogleMapsWrapper.Containers
+  fullName: GoogleMapsWrapper.Containers
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Containers.ElevationContainer
+  commentId: T:GoogleMapsWrapper.Containers.ElevationContainer
+  parent: GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.Containers.ElevationContainer.html
+  name: ElevationContainer
+  nameWithType: ElevationContainer
+  fullName: GoogleMapsWrapper.Containers.ElevationContainer
+- uid: GoogleMapsWrapper.Containers.GeocodeContainer
+  commentId: T:GoogleMapsWrapper.Containers.GeocodeContainer
+  parent: GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.Containers.GeocodeContainer.html
+  name: GeocodeContainer
+  nameWithType: GeocodeContainer
+  fullName: GoogleMapsWrapper.Containers.GeocodeContainer
+- uid: GoogleMapsWrapper.Containers.IContainer
+  commentId: T:GoogleMapsWrapper.Containers.IContainer
+  parent: GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.Containers.IContainer.html
+  name: IContainer
+  nameWithType: IContainer
+  fullName: GoogleMapsWrapper.Containers.IContainer
+- uid: GoogleMapsWrapper.Containers
+  commentId: N:GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Containers
+  nameWithType: GoogleMapsWrapper.Containers
+  fullName: GoogleMapsWrapper.Containers
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html

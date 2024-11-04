@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Parsers
+  commentId: N:GoogleMapsWrapper.Parsers
+  id: GoogleMapsWrapper.Parsers
+  children:
+  - GoogleMapsWrapper.Parsers.ElevationParser
+  - GoogleMapsWrapper.Parsers.GeocodeParser
+  - GoogleMapsWrapper.Parsers.IParser`2
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Parsers
+  nameWithType: GoogleMapsWrapper.Parsers
+  fullName: GoogleMapsWrapper.Parsers
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Parsers.ElevationParser
+  commentId: T:GoogleMapsWrapper.Parsers.ElevationParser
+  href: GoogleMapsWrapper.Parsers.ElevationParser.html
+  name: ElevationParser
+  nameWithType: ElevationParser
+  fullName: GoogleMapsWrapper.Parsers.ElevationParser
+- uid: GoogleMapsWrapper.Parsers.GeocodeParser
+  commentId: T:GoogleMapsWrapper.Parsers.GeocodeParser
+  href: GoogleMapsWrapper.Parsers.GeocodeParser.html
+  name: GeocodeParser
+  nameWithType: GeocodeParser
+  fullName: GoogleMapsWrapper.Parsers.GeocodeParser
+- uid: GoogleMapsWrapper.Parsers.IParser`2
+  commentId: T:GoogleMapsWrapper.Parsers.IParser`2
+  href: GoogleMapsWrapper.Parsers.IParser-2.html
+  name: IParser<TOutput, TInput>
+  nameWithType: IParser<TOutput, TInput>
+  fullName: GoogleMapsWrapper.Parsers.IParser<TOutput, TInput>
+  nameWithType.vb: IParser(Of TOutput, TInput)
+  fullName.vb: GoogleMapsWrapper.Parsers.IParser(Of TOutput, TInput)
+  name.vb: IParser(Of TOutput, TInput)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: <
+  - name: TOutput
+  - name: ','
+  - name: " "
+  - name: TInput
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOutput
+  - name: ','
+  - name: " "
+  - name: TInput
+  - name: )

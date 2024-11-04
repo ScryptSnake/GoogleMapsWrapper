@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Engine
+  commentId: N:GoogleMapsWrapper.Engine
+  id: GoogleMapsWrapper.Engine
+  children:
+  - GoogleMapsWrapper.Engine.ApiEngine
+  - GoogleMapsWrapper.Engine.FlurlExtensions
+  - GoogleMapsWrapper.Engine.IApiEngine
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.Engine
+  nameWithType: GoogleMapsWrapper.Engine
+  fullName: GoogleMapsWrapper.Engine
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.Engine.ApiEngine
+  commentId: T:GoogleMapsWrapper.Engine.ApiEngine
+  href: GoogleMapsWrapper.Engine.ApiEngine.html
+  name: ApiEngine
+  nameWithType: ApiEngine
+  fullName: GoogleMapsWrapper.Engine.ApiEngine
+- uid: GoogleMapsWrapper.Engine.FlurlExtensions
+  commentId: T:GoogleMapsWrapper.Engine.FlurlExtensions
+  href: GoogleMapsWrapper.Engine.FlurlExtensions.html
+  name: FlurlExtensions
+  nameWithType: FlurlExtensions
+  fullName: GoogleMapsWrapper.Engine.FlurlExtensions
+- uid: GoogleMapsWrapper.Engine.IApiEngine
+  commentId: T:GoogleMapsWrapper.Engine.IApiEngine
+  parent: GoogleMapsWrapper.Engine
+  href: GoogleMapsWrapper.Engine.IApiEngine.html
+  name: IApiEngine
+  nameWithType: IApiEngine
+  fullName: GoogleMapsWrapper.Engine.IApiEngine
+- uid: GoogleMapsWrapper.Engine
+  commentId: N:GoogleMapsWrapper.Engine
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Engine
+  nameWithType: GoogleMapsWrapper.Engine
+  fullName: GoogleMapsWrapper.Engine
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Engine
+    name: Engine
+    href: GoogleMapsWrapper.Engine.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Engine
+    name: Engine
+    href: GoogleMapsWrapper.Engine.html

@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  id: GoogleMapsWrapper.JavascriptApi.Browser
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsReadonlyRepository
+  - GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  - GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  - GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  - GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+  langs:
+  - csharp
+  - vb
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  type: Namespace
+  assemblies:
+  - GoogleMapsWrapper
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser.html
+  name: GoogleMapsBrowser
+  nameWithType: GoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsReadonlyRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsReadonlyRepository
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsReadonlyRepository.html
+  name: GoogleMapsReadonlyRepository
+  nameWithType: GoogleMapsReadonlyRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsReadonlyRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+  href: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository.html
+  name: GoogleMapsRepository
+  nameWithType: GoogleMapsRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.GoogleMapsRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser.html
+  name: IBrowser
+  nameWithType: IBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser.html
+  name: IGoogleMapsBrowser
+  nameWithType: IGoogleMapsBrowser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsBrowser
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+  parent: GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository.html
+  name: IGoogleMapsJsReadonlyRepository
+  nameWithType: IGoogleMapsJsReadonlyRepository
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.IGoogleMapsJsReadonlyRepository
+- uid: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+  href: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult.html
+  name: ScriptResult
+  nameWithType: ScriptResult
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser.ScriptResult
+- uid: GoogleMapsWrapper.JavascriptApi.Browser
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Browser
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Browser
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Browser
+  fullName: GoogleMapsWrapper.JavascriptApi.Browser
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Browser
+    name: Browser
+    href: GoogleMapsWrapper.JavascriptApi.Browser.html

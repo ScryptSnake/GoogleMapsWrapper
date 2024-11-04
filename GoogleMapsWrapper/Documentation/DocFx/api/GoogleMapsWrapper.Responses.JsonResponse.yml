@@ -1,0 +1,950 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Responses.JsonResponse
+  commentId: T:GoogleMapsWrapper.Responses.JsonResponse
+  id: JsonResponse
+  parent: GoogleMapsWrapper.Responses
+  children:
+  - GoogleMapsWrapper.Responses.JsonResponse.#ctor(GoogleMapsWrapper.Requests.IRequest,System.Text.Json.JsonDocument,System.Net.Http.HttpResponseMessage)
+  - GoogleMapsWrapper.Responses.JsonResponse.Content
+  - GoogleMapsWrapper.Responses.JsonResponse.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+  - GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+  - GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+  langs:
+  - csharp
+  - vb
+  name: JsonResponse
+  nameWithType: JsonResponse
+  fullName: GoogleMapsWrapper.Responses.JsonResponse
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: JsonResponse
+    path: ../../Responses/JsonResponse.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: 'public class JsonResponse : IResponse<JsonDocument>'
+    content.vb: Public Class JsonResponse Implements IResponse(Of JsonDocument)
+  inheritance:
+  - System.Object
+  implements:
+  - GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+  commentId: P:GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+  id: SentRequest
+  parent: GoogleMapsWrapper.Responses.JsonResponse
+  langs:
+  - csharp
+  - vb
+  name: SentRequest
+  nameWithType: JsonResponse.SentRequest
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: SentRequest
+    path: ../../Responses/JsonResponse.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: public IRequest SentRequest { get; }
+    parameters: []
+    return:
+      type: GoogleMapsWrapper.Requests.IRequest
+    content.vb: Public ReadOnly Property SentRequest As IRequest
+  overload: GoogleMapsWrapper.Responses.JsonResponse.SentRequest*
+  implements:
+  - GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.SentRequest
+- uid: GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+  commentId: P:GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+  id: ResponseMessage
+  parent: GoogleMapsWrapper.Responses.JsonResponse
+  langs:
+  - csharp
+  - vb
+  name: ResponseMessage
+  nameWithType: JsonResponse.ResponseMessage
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: ResponseMessage
+    path: ../../Responses/JsonResponse.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: public HttpResponseMessage ResponseMessage { get; }
+    parameters: []
+    return:
+      type: System.Net.Http.HttpResponseMessage
+    content.vb: Public ReadOnly Property ResponseMessage As HttpResponseMessage
+  overload: GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage*
+  implements:
+  - GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.ResponseMessage
+- uid: GoogleMapsWrapper.Responses.JsonResponse.Content
+  commentId: P:GoogleMapsWrapper.Responses.JsonResponse.Content
+  id: Content
+  parent: GoogleMapsWrapper.Responses.JsonResponse
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: JsonResponse.Content
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.Content
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Content
+    path: ../../Responses/JsonResponse.cs
+    startLine: 20
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: public JsonDocument Content { get; }
+    parameters: []
+    return:
+      type: System.Text.Json.JsonDocument
+    content.vb: Public ReadOnly Property Content As JsonDocument
+  overload: GoogleMapsWrapper.Responses.JsonResponse.Content*
+  implements:
+  - GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Content
+- uid: GoogleMapsWrapper.Responses.JsonResponse.#ctor(GoogleMapsWrapper.Requests.IRequest,System.Text.Json.JsonDocument,System.Net.Http.HttpResponseMessage)
+  commentId: M:GoogleMapsWrapper.Responses.JsonResponse.#ctor(GoogleMapsWrapper.Requests.IRequest,System.Text.Json.JsonDocument,System.Net.Http.HttpResponseMessage)
+  id: '#ctor(GoogleMapsWrapper.Requests.IRequest,System.Text.Json.JsonDocument,System.Net.Http.HttpResponseMessage)'
+  parent: GoogleMapsWrapper.Responses.JsonResponse
+  langs:
+  - csharp
+  - vb
+  name: JsonResponse(IRequest, JsonDocument, HttpResponseMessage)
+  nameWithType: JsonResponse.JsonResponse(IRequest, JsonDocument, HttpResponseMessage)
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.JsonResponse(GoogleMapsWrapper.Requests.IRequest, System.Text.Json.JsonDocument, System.Net.Http.HttpResponseMessage)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../Responses/JsonResponse.cs
+    startLine: 26
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: public JsonResponse(IRequest sentRequest, JsonDocument content, HttpResponseMessage responseMessage)
+    parameters:
+    - id: sentRequest
+      type: GoogleMapsWrapper.Requests.IRequest
+    - id: content
+      type: System.Text.Json.JsonDocument
+    - id: responseMessage
+      type: System.Net.Http.HttpResponseMessage
+    content.vb: Public Sub New(sentRequest As IRequest, content As JsonDocument, responseMessage As HttpResponseMessage)
+  overload: GoogleMapsWrapper.Responses.JsonResponse.#ctor*
+  nameWithType.vb: JsonResponse.New(IRequest, JsonDocument, HttpResponseMessage)
+  fullName.vb: GoogleMapsWrapper.Responses.JsonResponse.New(GoogleMapsWrapper.Requests.IRequest, System.Text.Json.JsonDocument, System.Net.Http.HttpResponseMessage)
+  name.vb: New(IRequest, JsonDocument, HttpResponseMessage)
+- uid: GoogleMapsWrapper.Responses.JsonResponse.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+  commentId: M:GoogleMapsWrapper.Responses.JsonResponse.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+  id: Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+  parent: GoogleMapsWrapper.Responses.JsonResponse
+  langs:
+  - csharp
+  - vb
+  name: Parse<T>(IParser<T, JsonDocument>)
+  nameWithType: JsonResponse.Parse<T>(IParser<T, JsonDocument>)
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.Parse<T>(GoogleMapsWrapper.Parsers.IParser<T, System.Text.Json.JsonDocument>)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/Responses/JsonResponse.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Parse
+    path: ../../Responses/JsonResponse.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Responses
+  example: []
+  syntax:
+    content: public T Parse<T>(IParser<T, JsonDocument> parser)
+    parameters:
+    - id: parser
+      type: GoogleMapsWrapper.Parsers.IParser{{T},System.Text.Json.JsonDocument}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Parse(Of T)(parser As IParser(Of T, JsonDocument)) As T
+  overload: GoogleMapsWrapper.Responses.JsonResponse.Parse*
+  implements:
+  - GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Parse``1(GoogleMapsWrapper.Parsers.IParser{{T},System.Text.Json.JsonDocument})
+  nameWithType.vb: JsonResponse.Parse(Of T)(IParser(Of T, JsonDocument))
+  fullName.vb: GoogleMapsWrapper.Responses.JsonResponse.Parse(Of T)(GoogleMapsWrapper.Parsers.IParser(Of T, System.Text.Json.JsonDocument))
+  name.vb: Parse(Of T)(IParser(Of T, JsonDocument))
+references:
+- uid: System.Text.Json.JsonDocument
+  commentId: T:System.Text.Json.JsonDocument
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  name: JsonDocument
+  nameWithType: JsonDocument
+  fullName: System.Text.Json.JsonDocument
+- uid: GoogleMapsWrapper.Responses
+  commentId: N:GoogleMapsWrapper.Responses
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Responses
+  nameWithType: GoogleMapsWrapper.Responses
+  fullName: GoogleMapsWrapper.Responses
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Responses
+    name: Responses
+    href: GoogleMapsWrapper.Responses.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Responses
+    name: Responses
+    href: GoogleMapsWrapper.Responses.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  commentId: T:GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  parent: GoogleMapsWrapper.Responses
+  definition: GoogleMapsWrapper.Responses.IResponse`1
+  href: GoogleMapsWrapper.Responses.IResponse-1.html
+  name: IResponse<JsonDocument>
+  nameWithType: IResponse<JsonDocument>
+  fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>
+  nameWithType.vb: IResponse(Of JsonDocument)
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument)
+  name.vb: IResponse(Of JsonDocument)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: <
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GoogleMapsWrapper.Responses.IResponse`1
+  commentId: T:GoogleMapsWrapper.Responses.IResponse`1
+  href: GoogleMapsWrapper.Responses.IResponse-1.html
+  name: IResponse<TResponse>
+  nameWithType: IResponse<TResponse>
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>
+  nameWithType.vb: IResponse(Of TResponse)
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse)
+  name.vb: IResponse(Of TResponse)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: <
+  - name: TResponse
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1
+    name: IResponse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResponse
+  - name: )
+- uid: GoogleMapsWrapper.Responses.JsonResponse.SentRequest*
+  commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+  href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse_SentRequest
+  name: SentRequest
+  nameWithType: JsonResponse.SentRequest
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.SentRequest
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.SentRequest
+  commentId: P:GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.SentRequest
+  parent: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  definition: GoogleMapsWrapper.Responses.IResponse`1.SentRequest
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_SentRequest
+  name: SentRequest
+  nameWithType: IResponse<JsonDocument>.SentRequest
+  fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>.SentRequest
+  nameWithType.vb: IResponse(Of JsonDocument).SentRequest
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument).SentRequest
+- uid: GoogleMapsWrapper.Requests.IRequest
+  commentId: T:GoogleMapsWrapper.Requests.IRequest
+  parent: GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.Requests.IRequest.html
+  name: IRequest
+  nameWithType: IRequest
+  fullName: GoogleMapsWrapper.Requests.IRequest
+- uid: GoogleMapsWrapper.Responses.IResponse`1.SentRequest
+  commentId: P:GoogleMapsWrapper.Responses.IResponse`1.SentRequest
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_SentRequest
+  name: SentRequest
+  nameWithType: IResponse<TResponse>.SentRequest
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>.SentRequest
+  nameWithType.vb: IResponse(Of TResponse).SentRequest
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse).SentRequest
+- uid: GoogleMapsWrapper.Requests
+  commentId: N:GoogleMapsWrapper.Requests
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Requests
+  nameWithType: GoogleMapsWrapper.Requests
+  fullName: GoogleMapsWrapper.Requests
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Requests
+    name: Requests
+    href: GoogleMapsWrapper.Requests.html
+- uid: GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage*
+  commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+  href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse_ResponseMessage
+  name: ResponseMessage
+  nameWithType: JsonResponse.ResponseMessage
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.ResponseMessage
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.ResponseMessage
+  commentId: P:GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.ResponseMessage
+  parent: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  definition: GoogleMapsWrapper.Responses.IResponse`1.ResponseMessage
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_ResponseMessage
+  name: ResponseMessage
+  nameWithType: IResponse<JsonDocument>.ResponseMessage
+  fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>.ResponseMessage
+  nameWithType.vb: IResponse(Of JsonDocument).ResponseMessage
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument).ResponseMessage
+- uid: System.Net.Http.HttpResponseMessage
+  commentId: T:System.Net.Http.HttpResponseMessage
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpresponsemessage
+  name: HttpResponseMessage
+  nameWithType: HttpResponseMessage
+  fullName: System.Net.Http.HttpResponseMessage
+- uid: GoogleMapsWrapper.Responses.IResponse`1.ResponseMessage
+  commentId: P:GoogleMapsWrapper.Responses.IResponse`1.ResponseMessage
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_ResponseMessage
+  name: ResponseMessage
+  nameWithType: IResponse<TResponse>.ResponseMessage
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>.ResponseMessage
+  nameWithType.vb: IResponse(Of TResponse).ResponseMessage
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse).ResponseMessage
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: GoogleMapsWrapper.Responses.JsonResponse.Content*
+  commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.Content
+  href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse_Content
+  name: Content
+  nameWithType: JsonResponse.Content
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.Content
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Content
+  commentId: P:GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Content
+  parent: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  definition: GoogleMapsWrapper.Responses.IResponse`1.Content
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content
+  name: Content
+  nameWithType: IResponse<JsonDocument>.Content
+  fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>.Content
+  nameWithType.vb: IResponse(Of JsonDocument).Content
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument).Content
+- uid: GoogleMapsWrapper.Responses.IResponse`1.Content
+  commentId: P:GoogleMapsWrapper.Responses.IResponse`1.Content
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Content
+  name: Content
+  nameWithType: IResponse<TResponse>.Content
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>.Content
+  nameWithType.vb: IResponse(Of TResponse).Content
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse).Content
+- uid: GoogleMapsWrapper.Responses.JsonResponse.#ctor*
+  commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.#ctor
+  href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse__ctor_GoogleMapsWrapper_Requests_IRequest_System_Text_Json_JsonDocument_System_Net_Http_HttpResponseMessage_
+  name: JsonResponse
+  nameWithType: JsonResponse.JsonResponse
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.JsonResponse
+  nameWithType.vb: JsonResponse.New
+  fullName.vb: GoogleMapsWrapper.Responses.JsonResponse.New
+  name.vb: New
+- uid: GoogleMapsWrapper.Responses.JsonResponse.Parse*
+  commentId: Overload:GoogleMapsWrapper.Responses.JsonResponse.Parse
+  href: GoogleMapsWrapper.Responses.JsonResponse.html#GoogleMapsWrapper_Responses_JsonResponse_Parse__1_GoogleMapsWrapper_Parsers_IParser___0_System_Text_Json_JsonDocument__
+  name: Parse
+  nameWithType: JsonResponse.Parse
+  fullName: GoogleMapsWrapper.Responses.JsonResponse.Parse
+- uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Parse``1(GoogleMapsWrapper.Parsers.IParser{{T},System.Text.Json.JsonDocument})
+  commentId: M:GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+  parent: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}
+  definition: GoogleMapsWrapper.Responses.IResponse`1.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,`0})
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  name: Parse<T>(IParser<T, JsonDocument>)
+  nameWithType: IResponse<JsonDocument>.Parse<T>(IParser<T, JsonDocument>)
+  fullName: GoogleMapsWrapper.Responses.IResponse<System.Text.Json.JsonDocument>.Parse<T>(GoogleMapsWrapper.Parsers.IParser<T, System.Text.Json.JsonDocument>)
+  nameWithType.vb: IResponse(Of JsonDocument).Parse(Of T)(IParser(Of T, JsonDocument))
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of System.Text.Json.JsonDocument).Parse(Of T)(GoogleMapsWrapper.Parsers.IParser(Of T, System.Text.Json.JsonDocument))
+  name.vb: Parse(Of T)(IParser(Of T, JsonDocument))
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+    name: Parse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse{System.Text.Json.JsonDocument}.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument})
+    name: Parse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: )
+  - name: )
+- uid: GoogleMapsWrapper.Parsers.IParser{{T},System.Text.Json.JsonDocument}
+  commentId: T:GoogleMapsWrapper.Parsers.IParser{``0,System.Text.Json.JsonDocument}
+  parent: GoogleMapsWrapper.Parsers
+  definition: GoogleMapsWrapper.Parsers.IParser`2
+  href: GoogleMapsWrapper.Parsers.IParser-2.html
+  name: IParser<T, JsonDocument>
+  nameWithType: IParser<T, JsonDocument>
+  fullName: GoogleMapsWrapper.Parsers.IParser<T, System.Text.Json.JsonDocument>
+  nameWithType.vb: IParser(Of T, JsonDocument)
+  fullName.vb: GoogleMapsWrapper.Parsers.IParser(Of T, System.Text.Json.JsonDocument)
+  name.vb: IParser(Of T, JsonDocument)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonDocument
+    name: JsonDocument
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsondocument
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: GoogleMapsWrapper.Responses.IResponse`1.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,`0})
+  commentId: M:GoogleMapsWrapper.Responses.IResponse`1.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,`0})
+  href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  name: Parse<T>(IParser<T, TResponse>)
+  nameWithType: IResponse<TResponse>.Parse<T>(IParser<T, TResponse>)
+  fullName: GoogleMapsWrapper.Responses.IResponse<TResponse>.Parse<T>(GoogleMapsWrapper.Parsers.IParser<T, TResponse>)
+  nameWithType.vb: IResponse(Of TResponse).Parse(Of T)(IParser(Of T, TResponse))
+  fullName.vb: GoogleMapsWrapper.Responses.IResponse(Of TResponse).Parse(Of T)(GoogleMapsWrapper.Parsers.IParser(Of T, TResponse))
+  name.vb: Parse(Of T)(IParser(Of T, TResponse))
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,`0})
+    name: Parse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GoogleMapsWrapper.Responses.IResponse`1.Parse``1(GoogleMapsWrapper.Parsers.IParser{``0,`0})
+    name: Parse
+    href: GoogleMapsWrapper.Responses.IResponse-1.html#GoogleMapsWrapper_Responses_IResponse_1_Parse__1_GoogleMapsWrapper_Parsers_IParser___0__0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResponse
+  - name: )
+  - name: )
+- uid: GoogleMapsWrapper.Parsers.IParser`2
+  commentId: T:GoogleMapsWrapper.Parsers.IParser`2
+  href: GoogleMapsWrapper.Parsers.IParser-2.html
+  name: IParser<TOutput, TInput>
+  nameWithType: IParser<TOutput, TInput>
+  fullName: GoogleMapsWrapper.Parsers.IParser<TOutput, TInput>
+  nameWithType.vb: IParser(Of TOutput, TInput)
+  fullName.vb: GoogleMapsWrapper.Parsers.IParser(Of TOutput, TInput)
+  name.vb: IParser(Of TOutput, TInput)
+  spec.csharp:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: <
+  - name: TOutput
+  - name: ','
+  - name: " "
+  - name: TInput
+  - name: '>'
+  spec.vb:
+  - uid: GoogleMapsWrapper.Parsers.IParser`2
+    name: IParser
+    href: GoogleMapsWrapper.Parsers.IParser-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOutput
+  - name: ','
+  - name: " "
+  - name: TInput
+  - name: )
+- uid: GoogleMapsWrapper.Parsers
+  commentId: N:GoogleMapsWrapper.Parsers
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Parsers
+  nameWithType: GoogleMapsWrapper.Parsers
+  fullName: GoogleMapsWrapper.Parsers
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Parsers
+    name: Parsers
+    href: GoogleMapsWrapper.Parsers.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Parsers
+    name: Parsers
+    href: GoogleMapsWrapper.Parsers.html
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

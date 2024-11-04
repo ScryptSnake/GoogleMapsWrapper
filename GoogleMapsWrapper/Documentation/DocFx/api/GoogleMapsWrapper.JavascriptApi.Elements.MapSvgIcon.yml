@@ -1,0 +1,865 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  id: MapSvgIcon
+  parent: GoogleMapsWrapper.JavascriptApi.Elements
+  children:
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor(System.String,System.Drawing.Color,System.Double,System.Drawing.Color,System.Double,System.Double)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon(System.Drawing.Color,System.Double)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon(System.Drawing.Color,System.Double)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon(System.Drawing.Color,System.Double)
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize
+  - GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+  langs:
+  - csharp
+  - vb
+  name: MapSvgIcon
+  nameWithType: MapSvgIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  type: Class
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: MapSvgIcon
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: 'public record MapSvgIcon : IEquatable<MapSvgIcon>'
+    content.vb: Public Class MapSvgIcon Implements IEquatable(Of MapSvgIcon)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor(System.String,System.Drawing.Color,System.Double,System.Drawing.Color,System.Double,System.Double)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor(System.String,System.Drawing.Color,System.Double,System.Drawing.Color,System.Double,System.Double)
+  id: '#ctor(System.String,System.Drawing.Color,System.Double,System.Drawing.Color,System.Double,System.Double)'
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: MapSvgIcon(string, Color, double, Color, double, double)
+  nameWithType: MapSvgIcon.MapSvgIcon(string, Color, double, Color, double, double)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.MapSvgIcon(string, System.Drawing.Color, double, System.Drawing.Color, double, double)
+  type: Constructor
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: .ctor
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public MapSvgIcon(string SvgPath, Color Color, double Scale = 1, Color OutlineColor = default, double OutlineWeight = 1, double Opacity = 1)
+    parameters:
+    - id: SvgPath
+      type: System.String
+    - id: Color
+      type: System.Drawing.Color
+    - id: Scale
+      type: System.Double
+    - id: OutlineColor
+      type: System.Drawing.Color
+    - id: OutlineWeight
+      type: System.Double
+    - id: Opacity
+      type: System.Double
+    content.vb: Public Sub New(SvgPath As String, Color As Color, Scale As Double = 1, OutlineColor As Color = Nothing, OutlineWeight As Double = 1, Opacity As Double = 1)
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor*
+  nameWithType.vb: MapSvgIcon.New(String, Color, Double, Color, Double, Double)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.New(String, System.Drawing.Color, Double, System.Drawing.Color, Double, Double)
+  name.vb: New(String, Color, Double, Color, Double, Double)
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+  id: SvgPath
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: SvgPath
+  nameWithType: MapSvgIcon.SvgPath
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: SvgPath
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 13
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public string SvgPath { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SvgPath As String
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+  id: Color
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: MapSvgIcon.Color
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Color
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 14
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public Color Color { get; init; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Property Color As Color
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+  id: Scale
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: MapSvgIcon.Scale
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Scale
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 15
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public double Scale { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Scale As Double
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+  id: OutlineColor
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: OutlineColor
+  nameWithType: MapSvgIcon.OutlineColor
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OutlineColor
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 16
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public Color OutlineColor { get; init; }
+    parameters: []
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Property OutlineColor As Color
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+  id: OutlineWeight
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: OutlineWeight
+  nameWithType: MapSvgIcon.OutlineWeight
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: OutlineWeight
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 17
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public double OutlineWeight { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property OutlineWeight As Double
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+  commentId: P:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+  id: Opacity
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: Opacity
+  nameWithType: MapSvgIcon.Opacity
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Opacity
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 18
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public double Opacity { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Opacity As Double
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize
+  id: Serialize
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: MapSvgIcon.Serialize()
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize()
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: Serialize
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 22
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public string Serialize()
+    return:
+      type: System.String
+    content.vb: Public Function Serialize() As String
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize*
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon(System.Drawing.Color,System.Double)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon(System.Drawing.Color,System.Double)
+  id: PinIcon(System.Drawing.Color,System.Double)
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: PinIcon(Color, double)
+  nameWithType: MapSvgIcon.PinIcon(Color, double)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon(System.Drawing.Color, double)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: PinIcon
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 33
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public static MapSvgIcon PinIcon(Color color, double scale = 1)
+    parameters:
+    - id: color
+      type: System.Drawing.Color
+    - id: scale
+      type: System.Double
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+    content.vb: Public Shared Function PinIcon(color As Color, scale As Double = 1) As MapSvgIcon
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon*
+  nameWithType.vb: MapSvgIcon.PinIcon(Color, Double)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon(System.Drawing.Color, Double)
+  name.vb: PinIcon(Color, Double)
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon(System.Drawing.Color,System.Double)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon(System.Drawing.Color,System.Double)
+  id: CircleHollowIcon(System.Drawing.Color,System.Double)
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: CircleHollowIcon(Color, double)
+  nameWithType: MapSvgIcon.CircleHollowIcon(Color, double)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon(System.Drawing.Color, double)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: CircleHollowIcon
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 39
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public static MapSvgIcon CircleHollowIcon(Color color, double scale = 1)
+    parameters:
+    - id: color
+      type: System.Drawing.Color
+    - id: scale
+      type: System.Double
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+    content.vb: Public Shared Function CircleHollowIcon(color As Color, scale As Double = 1) As MapSvgIcon
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon*
+  nameWithType.vb: MapSvgIcon.CircleHollowIcon(Color, Double)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon(System.Drawing.Color, Double)
+  name.vb: CircleHollowIcon(Color, Double)
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon(System.Drawing.Color,System.Double)
+  commentId: M:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon(System.Drawing.Color,System.Double)
+  id: CircleIcon(System.Drawing.Color,System.Double)
+  parent: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  langs:
+  - csharp
+  - vb
+  name: CircleIcon(Color, double)
+  nameWithType: MapSvgIcon.CircleIcon(Color, double)
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon(System.Drawing.Color, double)
+  type: Method
+  source:
+    remote:
+      path: GoogleMapsWrapper/JavascriptApi/Elements/MapSvgIcon.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: CircleIcon
+    path: ../../JavascriptApi/Elements/MapSvgIcon.cs
+    startLine: 45
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.JavascriptApi.Elements
+  syntax:
+    content: public static MapSvgIcon CircleIcon(Color color, double scale = 1)
+    parameters:
+    - id: color
+      type: System.Drawing.Color
+    - id: scale
+      type: System.Double
+    return:
+      type: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+    content.vb: Public Shared Function CircleIcon(color As Color, scale As Double = 1) As MapSvgIcon
+  overload: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon*
+  nameWithType.vb: MapSvgIcon.CircleIcon(Color, Double)
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon(System.Drawing.Color, Double)
+  name.vb: CircleIcon(Color, Double)
+references:
+- uid: GoogleMapsWrapper.JavascriptApi.Elements
+  commentId: N:GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.JavascriptApi.Elements
+  nameWithType: GoogleMapsWrapper.JavascriptApi.Elements
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi
+    name: JavascriptApi
+    href: GoogleMapsWrapper.JavascriptApi.html
+  - name: .
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements
+    name: Elements
+    href: GoogleMapsWrapper.JavascriptApi.Elements.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon}
+  commentId: T:System.IEquatable{GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MapSvgIcon>
+  nameWithType: IEquatable<MapSvgIcon>
+  fullName: System.IEquatable<GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon>
+  nameWithType.vb: IEquatable(Of MapSvgIcon)
+  fullName.vb: System.IEquatable(Of GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon)
+  name.vb: IEquatable(Of MapSvgIcon)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+    name: MapSvgIcon
+    href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+    name: MapSvgIcon
+    href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.#ctor
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon__ctor_System_String_System_Drawing_Color_System_Double_System_Drawing_Color_System_Double_System_Double_
+  name: MapSvgIcon
+  nameWithType: MapSvgIcon.MapSvgIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.MapSvgIcon
+  nameWithType.vb: MapSvgIcon.New
+  fullName.vb: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_SvgPath
+  name: SvgPath
+  nameWithType: MapSvgIcon.SvgPath
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.SvgPath
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_Color
+  name: Color
+  nameWithType: MapSvgIcon.Color
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Color
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_Scale
+  name: Scale
+  nameWithType: MapSvgIcon.Scale
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Scale
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_OutlineColor
+  name: OutlineColor
+  nameWithType: MapSvgIcon.OutlineColor
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineColor
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_OutlineWeight
+  name: OutlineWeight
+  nameWithType: MapSvgIcon.OutlineWeight
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.OutlineWeight
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_Opacity
+  name: Opacity
+  nameWithType: MapSvgIcon.Opacity
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Opacity
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_Serialize
+  name: Serialize
+  nameWithType: MapSvgIcon.Serialize
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.Serialize
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_PinIcon_System_Drawing_Color_System_Double_
+  name: PinIcon
+  nameWithType: MapSvgIcon.PinIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.PinIcon
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  commentId: T:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+  parent: GoogleMapsWrapper.JavascriptApi.Elements
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html
+  name: MapSvgIcon
+  nameWithType: MapSvgIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_CircleHollowIcon_System_Drawing_Color_System_Double_
+  name: CircleHollowIcon
+  nameWithType: MapSvgIcon.CircleHollowIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleHollowIcon
+- uid: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon*
+  commentId: Overload:GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon
+  href: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.html#GoogleMapsWrapper_JavascriptApi_Elements_MapSvgIcon_CircleIcon_System_Drawing_Color_System_Double_
+  name: CircleIcon
+  nameWithType: MapSvgIcon.CircleIcon
+  fullName: GoogleMapsWrapper.JavascriptApi.Elements.MapSvgIcon.CircleIcon

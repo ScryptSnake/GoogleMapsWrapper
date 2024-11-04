@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: GoogleMapsWrapper.Containers.IContainer
+  commentId: T:GoogleMapsWrapper.Containers.IContainer
+  id: IContainer
+  parent: GoogleMapsWrapper.Containers
+  children:
+  - GoogleMapsWrapper.Containers.IContainer.AssociatedData
+  langs:
+  - csharp
+  - vb
+  name: IContainer
+  nameWithType: IContainer
+  fullName: GoogleMapsWrapper.Containers.IContainer
+  type: Interface
+  source:
+    remote:
+      path: GoogleMapsWrapper/Containers/IContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: IContainer
+    path: ../../Containers/IContainer.cs
+    startLine: 9
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  summary: Describes a container object used to hold parsed data from an API response.
+  example: []
+  syntax:
+    content: public interface IContainer
+    content.vb: Public Interface IContainer
+- uid: GoogleMapsWrapper.Containers.IContainer.AssociatedData
+  commentId: P:GoogleMapsWrapper.Containers.IContainer.AssociatedData
+  id: AssociatedData
+  parent: GoogleMapsWrapper.Containers.IContainer
+  langs:
+  - csharp
+  - vb
+  name: AssociatedData
+  nameWithType: IContainer.AssociatedData
+  fullName: GoogleMapsWrapper.Containers.IContainer.AssociatedData
+  type: Property
+  source:
+    remote:
+      path: GoogleMapsWrapper/Containers/IContainer.cs
+      branch: master
+      repo: https://github.com/ScryptSnake/GoogleMapsWrapper
+    id: AssociatedData
+    path: ../../Containers/IContainer.cs
+    startLine: 12
+  assemblies:
+  - GoogleMapsWrapper
+  namespace: GoogleMapsWrapper.Containers
+  summary: A property to append data to the container.
+  example: []
+  syntax:
+    content: object? AssociatedData { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly Property AssociatedData As Object
+  overload: GoogleMapsWrapper.Containers.IContainer.AssociatedData*
+references:
+- uid: GoogleMapsWrapper.Containers
+  commentId: N:GoogleMapsWrapper.Containers
+  href: GoogleMapsWrapper.html
+  name: GoogleMapsWrapper.Containers
+  nameWithType: GoogleMapsWrapper.Containers
+  fullName: GoogleMapsWrapper.Containers
+  spec.csharp:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html
+  spec.vb:
+  - uid: GoogleMapsWrapper
+    name: GoogleMapsWrapper
+    href: GoogleMapsWrapper.html
+  - name: .
+  - uid: GoogleMapsWrapper.Containers
+    name: Containers
+    href: GoogleMapsWrapper.Containers.html
+- uid: GoogleMapsWrapper.Containers.IContainer.AssociatedData*
+  commentId: Overload:GoogleMapsWrapper.Containers.IContainer.AssociatedData
+  href: GoogleMapsWrapper.Containers.IContainer.html#GoogleMapsWrapper_Containers_IContainer_AssociatedData
+  name: AssociatedData
+  nameWithType: IContainer.AssociatedData
+  fullName: GoogleMapsWrapper.Containers.IContainer.AssociatedData
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
