@@ -35,7 +35,7 @@ Keys should be contained within an IConfiguration passed to the application entr
 The consumer of the configuration is the engine and uses the key directly to create *KeyedRequests*.
 
  #### Security Note / Keyed Requests:
->A user’s API key should be contained within the IConfiguration passed at the application entry point. 
+>A userâ€™s API key should be contained within the IConfiguration passed at the application entry point. 
 The engine takes the config as a constructor parameter and therefore has access to the key. 
 When requests are created and passed to the engine for sending, the provided requests Uri does not contain the key.
 Likewise, when a response is returned from the engine, the SentRequest property (stored request) of the response 
@@ -49,9 +49,9 @@ do not expose the key to other parts of the application.
 This project continues to be contributed to over time. Users should avoid the Javascript API and consider it's current status *experimental*.
 
 ## :exclamation: Usage Disclaimer
-This software attempts to optimize the use of requests to Google’s API.
+This software attempts to optimize the use of requests to Googleâ€™s API.
 However, users are solely responsible for all requests made from their accounts. 
-The developer assumes no liability for any charges incurred due to excessive requests or for the frequency of requests sent to Google’s services.
+The developer assumes no liability for any charges incurred due to excessive requests or for the frequency of requests sent to Googleâ€™s services.
 Further, the developer does not make any guarantees of accuracy of data yielded from this software. 
 
 ##  :wrench: Architecture
@@ -68,7 +68,7 @@ The engine is capable of retrieving http responses in two types:  JsonDocument a
 - **Requests** \
 Constructed by an API and contains relevant details about the request, as well as the Uri.
 A request is attached to a response object and returned from the engine.
-A user API key is never be contained within this object.
+A user API key is never to be contained within this object.
 
 
 - **Responses** \
